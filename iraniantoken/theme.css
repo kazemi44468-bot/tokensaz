@@ -257,3 +257,6 @@ body{color:var(--it-text)!important;background-color:#f6f9fc!important}
 .hero-visual:before{background:radial-gradient(circle,rgba(48,166,210,.12),transparent 68%)!important}
 .token-card{background:linear-gradient(145deg,rgba(5,25,46,.94),rgba(12,65,94,.82))!important}
 @media(max-width:640px){.hero h1{font-size:28px!important}}
+
+/* BODY BACKGROUND ASSET — 024-pattern */
+html,body{background-color:transparent!important;background-image:url("./assets/images/024-pattern.png")!important;background-repeat:repeat!important;background-position:center top!important;background-size:auto!important}
