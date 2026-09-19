@@ -243,3 +243,17 @@ body{color:var(--it-text)!important;background-color:#f6f9fc!important}
 .stats{background:#081d31!important}.stat-item{background:rgba(255,255,255,.035)!important}
 .form-input,.form-select,.form-textarea{background:#fbfdff!important;border-color:#d6e2eb!important;color:#10283d!important}.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:#3aa8df!important;box-shadow:0 0 0 4px rgba(58,168,223,.1)!important}
 .footer{background:#fff url("./assets/images/Bg.png.gif") repeat center center!important;background-size:auto!important}.footer:before,.footer:after{display:none!important}.footer-shell{background:transparent!important}.footer-branding strong{color:#10283d!important}.footer-branding span{color:#5d7487!important}.footer-intro{color:#365269!important}.footer-logo{background:rgba(255,255,255,.78)!important;border-color:rgba(16,40,61,.12)!important;box-shadow:0 10px 24px rgba(12,48,76,.07)!important}
+
+/* HERO COLOR + TYPOGRAPHY FINAL */
+.hero{background:linear-gradient(135deg,#071b2d 0%,#0b3554 58%,#124b69 100%)!important}
+.hero:before{border-color:rgba(65,190,202,.12)!important;box-shadow:0 0 0 70px rgba(65,190,202,.018),0 0 0 140px rgba(65,190,202,.012)!important}
+.hero:after{border-color:rgba(194,157,67,.13)!important}
+.hero h1{font-size:clamp(24px,3vw,30px)!important;line-height:1.45!important;letter-spacing:-.4px!important}
+.hero h1 .gradient-text{background:linear-gradient(135deg,#e2c46b,#f0dfa6)!important;-webkit-background-clip:text!important;background-clip:text!important}
+.hero p{color:#c8d7e1!important}
+.hero-badge{color:#a9e7ea!important;background:rgba(65,190,202,.07)!important;border-color:rgba(65,190,202,.2)!important}
+.hero .btn-primary{background:linear-gradient(135deg,#1976c8,#299fc5)!important}
+.hero .btn-ghost{border-color:rgba(255,255,255,.18)!important;color:#e2edf3!important;background:rgba(255,255,255,.055)!important}
+.hero-visual:before{background:radial-gradient(circle,rgba(48,166,210,.12),transparent 68%)!important}
+.token-card{background:linear-gradient(145deg,rgba(5,25,46,.94),rgba(12,65,94,.82))!important}
+@media(max-width:640px){.hero h1{font-size:28px!important}}
