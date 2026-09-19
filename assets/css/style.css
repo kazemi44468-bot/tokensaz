@@ -1002,8 +1002,8 @@ body{background-blend-mode:normal!important}
 }
 
 
-/* BUTTON TEXTURE — b1.png — small, subtle repeating tile on light buttons */
-.secondary,.outline-btn{
+/* BUTTON TEXTURE — b1.png — small, subtle repeating tile on light actions and top navigation */
+.secondary,.outline-btn,.mainnav>a,.drop>button{
   background-color:#fff!important;
   background-image:linear-gradient(rgba(255,255,255,.68),rgba(255,255,255,.68)),url("../images/b1.png")!important;
   background-repeat:repeat!important;
@@ -1011,7 +1011,7 @@ body{background-blend-mode:normal!important}
   background-size:32px 32px!important;
   background-blend-mode:normal!important;
 }
-.secondary:hover,.outline-btn:hover{
+.secondary:hover,.outline-btn:hover,.mainnav>a:hover,.drop:hover>button,.drop:focus-within>button{
   background-image:linear-gradient(rgba(255,255,255,.58),rgba(255,255,255,.58)),url("../images/b1.png")!important;
   background-repeat:repeat!important;
   background-position:center center!important;
