@@ -289,3 +289,41 @@ html,body{background-color:transparent!important;background-image:url("./assets/
 @media(max-width:900px){
   .feature-card,.process-step,.model-card,.arch-layer,.eco-card,.principle,.card,.example-box,.it-architecture>div,.filter-bar,.project-card,.stat-card,.settings-nav{backdrop-filter:blur(4px)!important;-webkit-backdrop-filter:blur(4px)!important}
 }
+
+/* FINAL CONTENT SURFACE — transparent patterned centered cards */
+html,body{background-image:url("./assets/images/body.gif")!important;background-repeat:repeat!important;background-position:center top!important;background-size:auto!important}
+.section,.section-alt{background:transparent!important}
+.section>.container,.section-alt>.container{display:flex!important;flex-direction:column!important;align-items:center!important}
+.section-header{text-align:center!important;margin-left:auto!important;margin-right:auto!important}
+.features-grid,.process-timeline,.models-grid,.arch-layers,.eco-grid,.principles,.it-architecture,.flow-container{width:min(1120px,100%)!important;margin-left:auto!important;margin-right:auto!important;justify-content:center!important}
+.feature-card,.process-step,.model-card,.arch-layer,.eco-card,.principle,.it-architecture>div,.flow-item,.example-box{
+  background:rgba(255,255,255,.30)!important;
+  background-image:
+    linear-gradient(135deg,rgba(255,255,255,.34),rgba(255,255,255,.08) 48%,rgba(23,105,194,.045)),
+    repeating-linear-gradient(135deg,rgba(23,105,194,.035) 0 1px,transparent 1px 16px),
+    repeating-linear-gradient(45deg,rgba(201,163,74,.025) 0 1px,transparent 1px 24px)!important;
+  border:1px solid rgba(255,255,255,.52)!important;
+  box-shadow:0 12px 30px rgba(12,48,76,.045),inset 0 1px 0 rgba(255,255,255,.55)!important;
+  backdrop-filter:blur(3px)!important;
+  -webkit-backdrop-filter:blur(3px)!important;
+}
+.features-grid,.models-grid,.principles{justify-items:stretch!important}
+.feature-card,.model-card,.eco-card,.principle{text-align:center!important}
+.feature-card .feature-icon,.eco-card .eco-icon{margin-left:auto!important;margin-right:auto!important}
+.process-step{text-align:center!important}
+.process-step .step-number{margin-left:auto!important;margin-right:auto!important}
+.arch-layer{text-align:center!important;justify-content:center!important}
+.arch-layer-content{text-align:center!important}
+.arch-layer-num{flex:0 0 auto!important}
+.it-architecture{text-align:center!important}
+.it-architecture b{margin-bottom:8px!important}
+.example-box{width:min(1120px,100%)!important;text-align:center!important}
+.example-flow{justify-content:center!important}
+.principles{justify-items:center!important}
+.principle{width:100%!important;justify-content:center!important;text-align:center!important}
+.principle-num{flex:0 0 auto!important}
+@media(max-width:640px){
+  .section>.container,.section-alt>.container{align-items:center!important}
+  .features-grid,.process-timeline,.models-grid,.arch-layers,.eco-grid,.principles,.it-architecture,.flow-container{width:100%!important}
+  .feature-card,.process-step,.model-card,.arch-layer,.eco-card,.principle,.it-architecture>div,.example-box{border-radius:22px 10px 22px 10px!important}
+}
