@@ -1002,24 +1002,26 @@ body{background-blend-mode:normal!important}
 }
 
 
-/* BUTTON TEXTURE — b1.png */
+/* BUTTON TEXTURE — b1.png — visible final application */
 .primary,.navbtn,.drawer-cta,.circlebtn{
-  background-color:var(--navy)!important;
   background-image:url("../images/b1.png")!important;
   background-repeat:repeat!important;
-  background-position:center!important;
-  background-size:auto!important;
-  background-blend-mode:screen!important;
+  background-position:center center!important;
+  background-size:100% 100%!important;
+  background-color:transparent!important;
+  background-blend-mode:normal!important;
 }
 .secondary,.outline-btn{
-  background-color:#fff!important;
   background-image:url("../images/b1.png")!important;
   background-repeat:repeat!important;
-  background-position:center!important;
-  background-size:auto!important;
-  background-blend-mode:soft-light!important;
+  background-position:center center!important;
+  background-size:100% 100%!important;
+  background-color:transparent!important;
+  background-blend-mode:normal!important;
 }
 .primary:hover,.navbtn:hover,.drawer-cta:hover,.circlebtn:hover,.secondary:hover,.outline-btn:hover{
   background-image:url("../images/b1.png")!important;
-  background-position:center!important;
+  background-position:center center!important;
+  background-size:100% 100%!important;
+  background-color:transparent!important;
 }
