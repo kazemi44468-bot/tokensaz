@@ -1000,3 +1000,26 @@ body{background-blend-mode:normal!important}
   .clarity-box,.feature-band,.contact-form,.contact-info,.price-note,.contact-faq{margin-inline:0!important}
   .story-panel>div,.platform-stack>div,.vision-grid article,.estimate-grid>div,.purpose-panel>div,.work-grid>div,.capability-grid article,.road-step,.vision-band>div{padding-inline:20px!important}
 }
+
+
+/* BUTTON TEXTURE — b1.png */
+.primary,.navbtn,.drawer-cta,.circlebtn{
+  background-color:var(--navy)!important;
+  background-image:url("../images/b1.png")!important;
+  background-repeat:repeat!important;
+  background-position:center!important;
+  background-size:auto!important;
+  background-blend-mode:screen!important;
+}
+.secondary,.outline-btn{
+  background-color:#fff!important;
+  background-image:url("../images/b1.png")!important;
+  background-repeat:repeat!important;
+  background-position:center!important;
+  background-size:auto!important;
+  background-blend-mode:soft-light!important;
+}
+.primary:hover,.navbtn:hover,.drawer-cta:hover,.circlebtn:hover,.secondary:hover,.outline-btn:hover{
+  background-image:url("../images/b1.png")!important;
+  background-position:center!important;
+}
