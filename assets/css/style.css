@@ -662,3 +662,55 @@ body{background-blend-mode:normal!important}
   background-size:auto!important;
   opacity:.5!important;
 }
+
+/* FINAL HEADER / FOOTER TEXTURE OPACITY — image itself, no dark overlay */
+.top{
+  position:sticky!important;
+  background:#061b2c!important;
+  background-image:none!important;
+  overflow:hidden!important;
+}
+.top:before{
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  inset:0!important;
+  z-index:0!important;
+  pointer-events:none!important;
+  background-image:url("../images/box3.png")!important;
+  background-repeat:repeat!important;
+  background-position:top right!important;
+  background-size:auto!important;
+  opacity:.15!important;
+}
+.top .nav{
+  position:relative!important;
+  z-index:1!important;
+}
+.site-footer{
+  position:relative!important;
+  background:#061b2c!important;
+  background-image:none!important;
+  overflow:hidden!important;
+}
+.site-footer:before{
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  inset:0!important;
+  z-index:0!important;
+  pointer-events:none!important;
+  background-image:url("../images/box3.png")!important;
+  background-repeat:repeat!important;
+  background-position:top right!important;
+  background-size:auto!important;
+  opacity:.20!important;
+}
+.site-footer:after{
+  z-index:1!important;
+}
+.site-footer .footer-main,
+.site-footer .footer-bottom{
+  position:relative!important;
+  z-index:2!important;
+}
