@@ -327,3 +327,71 @@ html,body{background-image:url("./assets/images/body.gif")!important;background-
   .features-grid,.process-timeline,.models-grid,.arch-layers,.eco-grid,.principles,.it-architecture,.flow-container{width:100%!important}
   .feature-card,.process-step,.model-card,.arch-layer,.eco-card,.principle,.it-architecture>div,.example-box{border-radius:22px 10px 22px 10px!important}
 }
+
+/* FINAL CARD SYSTEM — structured, transparent, patterned, aligned */
+:root{--it-card-pattern:linear-gradient(145deg,rgba(255,255,255,.72),rgba(255,255,255,.38)),repeating-linear-gradient(135deg,rgba(23,105,194,.035) 0 1px,transparent 1px 18px),repeating-linear-gradient(45deg,rgba(201,163,74,.025) 0 1px,transparent 1px 28px)}
+.feature-card,.process-step,.model-card,.arch-layer,.eco-card,.principle,.card,.example-box,.it-architecture>div,.filter-bar,.project-card,.stat-card,.settings-nav{
+ background:var(--it-card-pattern)!important;
+ border:1px solid rgba(185,207,224,.68)!important;
+ border-radius:28px 12px 28px 12px!important;
+ box-shadow:0 14px 34px rgba(8,45,67,.065),inset 0 1px 0 rgba(255,255,255,.75)!important;
+ backdrop-filter:blur(7px)!important;-webkit-backdrop-filter:blur(7px)!important;
+}
+.feature-card:hover,.model-card:hover,.eco-card:hover,.principle:hover,.project-card:hover,.stat-card:hover{
+ transform:translateY(-4px)!important;
+ box-shadow:0 20px 42px rgba(8,45,67,.095),inset 0 1px 0 rgba(255,255,255,.82)!important;
+}
+.features-grid,.models-grid,.principles,.eco-grid{align-items:stretch!important}
+.feature-card,.model-card,.eco-card,.principle{height:100%!important;text-align:center!important}
+.feature-card .feature-icon,.eco-card .eco-icon,.principle-num{margin-inline:auto!important}
+.process-timeline{align-items:stretch!important}
+.process-step{height:100%!important;text-align:center!important}
+.step-number{margin-inline:auto!important}
+.arch-layers{align-items:stretch!important}
+.arch-layer{min-height:150px!important}
+.it-architecture{align-items:stretch!important}
+.it-architecture>div{height:100%!important;text-align:center!important}
+.section-header{max-width:850px!important}
+.section-header h2{font-size:30px!important;line-height:1.55!important}
+@media(max-width:700px){
+ .feature-card,.process-step,.model-card,.arch-layer,.eco-card,.principle,.card,.example-box,.it-architecture>div,.filter-bar,.project-card,.stat-card,.settings-nav{border-radius:22px 10px 22px 10px!important}
+ .section-header h2{font-size:26px!important}
+}
+
+/* AUTH — same IranianToken card language */
+body{background-image:url("./assets/images/body.gif")!important;background-repeat:repeat!important;background-position:center top!important}
+.auth-wrapper{background:transparent!important}
+.brand-panel{
+ background-color:#09253d!important;background-image:url("./assets/images/Bg.png.gif")!important;
+ background-repeat:repeat!important;background-position:center!important;background-size:auto!important;
+}
+.form-panel{
+ background-color:rgba(255,255,255,.18)!important;background-image:url("./assets/images/body.gif")!important;
+ background-repeat:repeat!important;background-position:center!important;background-size:auto!important;
+}
+.form-container{
+ padding:28px!important;
+ border:1px solid rgba(185,207,224,.62)!important;
+ border-radius:28px 12px 28px 12px!important;
+ background:linear-gradient(145deg,rgba(255,255,255,.62),rgba(255,255,255,.38)),repeating-linear-gradient(135deg,rgba(23,105,194,.028) 0 1px,transparent 1px 18px),repeating-linear-gradient(45deg,rgba(201,163,74,.02) 0 1px,transparent 1px 26px)!important;
+ box-shadow:0 18px 42px rgba(8,45,67,.075),inset 0 1px 0 rgba(255,255,255,.72)!important;
+ backdrop-filter:blur(9px)!important;-webkit-backdrop-filter:blur(9px)!important;
+}
+.auth-tabs{
+ background:rgba(255,255,255,.42)!important;border:1px solid rgba(185,207,224,.5)!important;
+ border-radius:18px 8px 18px 8px!important;
+}
+.input-wrap input,.input-wrap select,.otp-input,.social-btn{
+ background:rgba(255,255,255,.48)!important;
+ border:1px solid rgba(185,207,224,.72)!important;
+ border-radius:18px 8px 18px 8px!important;
+ box-shadow:inset 0 1px 0 rgba(255,255,255,.7)!important;
+}
+.strength-requirements{
+ background:rgba(255,255,255,.38)!important;
+ border:1px solid rgba(185,207,224,.55)!important;
+ border-radius:18px 8px 18px 8px!important;
+}
+.social-btn:hover,.input-wrap input:focus,.input-wrap select:focus,.otp-input:focus{background:rgba(255,255,255,.72)!important}
+@media(max-width:900px){.form-container{padding:22px!important}}
+@media(max-width:520px){.form-container{padding:16px!important;border-radius:22px 10px 22px 10px!important}}
