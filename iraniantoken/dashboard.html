@@ -53,12 +53,12 @@ body {
   position: fixed;
   top: 0; right: 0; bottom: 0;
   width: var(--sidebar-w);
-  background-color: #09253d;
+  background-color:transparent!important;
   background-image: url("./assets/images/Bg.png.gif");
   background-repeat: repeat;
   background-position: center top;
   background-size: auto;
-  background-blend-mode: normal;
+  background-blend-mode:normal!important;
   color: #fff;
   z-index: 100;
   display: flex;
@@ -982,6 +982,17 @@ body:has(.sidebar) .sidebar{
 .sidebar::before,.sidebar::after,
 body:has(.sidebar) .sidebar::before,
 body:has(.sidebar) .sidebar::after{display:none!important;content:none!important}
+.sidebar-brand{background:transparent!important}
+
+
+/* === DEFINITIVE SIDEBAR IMAGE: Bg.png.gif only === */
+.sidebar{
+  background:transparent url("./assets/images/Bg.png.gif") repeat center top!important;
+  background-size:auto!important;
+  background-blend-mode:normal!important;
+}
+.sidebar::before,.sidebar::after{display:none!important;background:none!important;content:none!important}
+.sidebar>*{position:relative;z-index:1}
 .sidebar-brand{background:transparent!important}
 
 </style>
