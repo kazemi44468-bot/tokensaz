@@ -942,7 +942,19 @@ tbody tr:last-child td { border-bottom: none; }
 }
 </style>
 <link rel="stylesheet" href="theme.css">
-</head>
+<style>
+.it-module-grid{margin:26px 0 20px;padding:26px;border:1px solid rgba(117,151,174,.2);border-radius:28px 12px 28px 12px;background:linear-gradient(145deg,rgba(255,255,255,.78),rgba(255,255,255,.48));box-shadow:0 18px 44px rgba(18,55,80,.07);backdrop-filter:blur(8px)}
+.it-module-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:20px}.it-module-head h2{margin:4px 0 5px;font-size:21px;color:#10283d}.it-module-head p{margin:0;color:#60788b;font-size:12px}
+.it-module-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.it-module-card{display:flex;align-items:center;gap:12px;padding:16px;text-decoration:none;color:#10283d;border:1px solid rgba(117,151,174,.2);border-radius:22px 9px 22px 9px;background:rgba(255,255,255,.58);transition:.22s}
+.it-module-card:hover{transform:translateY(-3px);border-color:rgba(23,105,194,.3);box-shadow:0 12px 26px rgba(18,55,80,.08)}
+.it-module-icon{width:40px;height:40px;display:grid;place-items:center;border-radius:13px;background:rgba(23,105,194,.08);color:#1769c2;font-size:18px;flex:0 0 auto}.it-module-card div{min-width:0;flex:1}.it-module-card b{display:block;font-size:13px}.it-module-card small{display:block;margin-top:4px;color:#71879a;font-size:10px;line-height:1.7}.it-module-card>strong{color:#1769c2}
+.it-management-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:20px 0}.it-management-card{scroll-margin-top:100px}
+.it-model-list,.it-validation-list{display:flex;flex-direction:column;gap:9px}.it-model-list>div,.it-validation-list>div{display:grid;grid-template-columns:1.2fr 1fr auto;align-items:center;gap:10px;padding:11px 12px;border:1px solid #edf1f4;border-radius:13px;background:#fbfdfe}.it-model-list b,.it-validation-list span{font-size:12px}.it-model-list span,.it-validation-list b{font-size:11px;color:#71879a}.it-model-list em,.it-validation-list em{font-style:normal;font-size:10px;color:#15936a;background:rgba(21,147,106,.08);padding:4px 7px;border-radius:999px}.it-validation-list em{color:#b47b00;background:rgba(201,163,74,.1)}
+.it-role-grid,.it-report-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.it-role-grid>div{padding:13px;border:1px solid #edf1f4;border-radius:14px;background:#fbfdfe}.it-role-grid b,.it-role-grid span,.it-role-grid strong{display:block}.it-role-grid b{font-size:12px}.it-role-grid span{font-size:10px;color:#71879a;margin-top:3px}.it-role-grid strong{font-size:13px;color:#1769c2;margin-top:7px}.it-report-grid>div{text-align:center;padding:18px 8px;border-radius:15px;background:linear-gradient(145deg,#f7fafc,#fff);border:1px solid #edf1f4}.it-report-grid strong{display:block;font-size:24px;color:#1769c2}.it-report-grid span{font-size:10px;color:#71879a}
+@media(max-width:800px){.it-module-head{align-items:flex-start;flex-direction:column}.it-module-cards{grid-template-columns:1fr 1fr}.it-management-grid{grid-template-columns:1fr}}
+@media(max-width:520px){.it-module-grid{padding:18px}.it-module-cards{grid-template-columns:1fr}.it-module-card{padding:13px}.it-management-grid{gap:12px}}
+</style></head>
 <body>
 
 <!-- ==================== OVERLAY ==================== -->
@@ -963,12 +975,12 @@ tbody tr:last-child td { border-bottom: none; }
     <div class="nav-section-title">مرکز مدیریت</div>
     <a class="nav-item active" href="dashboard.html"><span class="icon">◫</span><span class="label">داشبورد</span></a>
     <a class="nav-item " href="projects.html"><span class="icon">▦</span><span class="label">پروژه‌ها و دارایی‌ها</span><span class="badge">۱۲</span></a>
-    <a class="nav-item" href="dashboard.html#token-distribution"><span class="icon">◈</span><span class="label">مدل‌های توکن</span></a>
+    <a class="nav-item" href="dashboard.html#token-models"><span class="icon">◈</span><span class="label">مدل‌های توکن</span></a>
     <a class="nav-item" href="dashboard.html#documents"><span class="icon">▤</span><span class="label">مرکز اسناد</span></a>
     <div class="nav-section-title">کنترل و گزارش</div>
-    <a class="nav-item" href="dashboard.html#access"><span class="icon">◌</span><span class="label">کاربران و نقش‌ها</span></a>
-    <a class="nav-item" href="dashboard.html#activity"><span class="icon">✓</span><span class="label">اعتبارسنجی</span><span class="badge">۳</span></a>
-    <a class="nav-item" href="dashboard.html#trend"><span class="icon">⌁</span><span class="label">گزارش‌ها</span></a>
+    <a class="nav-item" href="dashboard.html#users-roles"><span class="icon">◌</span><span class="label">کاربران و نقش‌ها</span></a>
+    <a class="nav-item" href="dashboard.html#validation"><span class="icon">✓</span><span class="label">اعتبارسنجی</span><span class="badge">۳</span></a>
+    <a class="nav-item" href="dashboard.html#reports"><span class="icon">⌁</span><span class="label">گزارش‌ها</span></a>
     <a class="nav-item" href="dashboard.html#audit"><span class="icon">◷</span><span class="label">ثبت رویدادها</span></a>
     <div class="nav-section-title">حساب و سامانه</div>
     <a class="nav-item " href="settings.html"><span class="icon">⚙</span><span class="label">تنظیمات</span></a>
@@ -1334,6 +1346,23 @@ tbody tr:last-child td { border-bottom: none; }
 
   <div class="card audit-panel" id="audit" style="margin-top:20px"><div class="card-header"><div><h3>ثبت رویدادهای سامانه</h3><p>ردگیری تغییرات مهم و عملیات مدیریتی</p></div><span class="status-pill">فعال</span></div><div class="audit-row"><span>آخرین ورود مدیریتی</span><strong>امروز، ۱۸:۴۲</strong></div><div class="audit-row"><span>آخرین اعتبارسنجی</span><strong>امروز، ۱۸:۲۸</strong></div><div class="audit-row"><span>آخرین تغییر تنظیمات</span><strong>امروز، ۱۷:۵۵</strong></div></div>
 
+<section class="it-module-grid" aria-label="مرکز ماژول‌های داشبورد">
+<div class="it-module-head"><div><span class="it-eyebrow">WORKSPACE MODULES</span><h2>مرکز یکپارچه مدیریت</h2><p>تمام اجزای عملیاتی ایرانیان توکن از یک فضای مدیریتی قابل دسترسی و پیگیری هستند.</p></div><a href="projects.html" class="btn btn-primary btn-sm">مدیریت پروژه‌ها</a></div>
+<div class="it-module-cards">
+<a class="it-module-card" href="#token-models"><span class="it-module-icon">◈</span><div><b>مدل‌های توکن</b><small>تعریف، مقایسه و پایش مدل‌های مورد استفاده پروژه‌ها</small></div><strong>→</strong></a>
+<a class="it-module-card" href="#documents"><span class="it-module-icon">▤</span><div><b>مرکز اسناد</b><small>اسناد پروژه، وضعیت تکمیل و موارد نیازمند بررسی</small></div><strong>→</strong></a>
+<a class="it-module-card" href="#users-roles"><span class="it-module-icon">◌</span><div><b>کاربران و نقش‌ها</b><small>مدیریت کاربران، مسئولیت‌ها و سطح دسترسی</small></div><strong>→</strong></a>
+<a class="it-module-card" href="#validation"><span class="it-module-icon">✓</span><div><b>اعتبارسنجی</b><small>صف بررسی، موارد تأییدنشده و وضعیت کنترل داده</small></div><strong>→</strong></a>
+<a class="it-module-card" href="#reports"><span class="it-module-icon">⌁</span><div><b>گزارش‌ها</b><small>روند پروژه‌ها، شاخص‌های عملکرد و خروجی مدیریتی</small></div><strong>→</strong></a>
+<a class="it-module-card" href="#audit"><span class="it-module-icon">◷</span><div><b>ثبت رویدادها</b><small>ردگیری ورودها، تغییرات و عملیات مهم سامانه</small></div><strong>→</strong></a>
+</div></section>
+
+<section class="it-management-grid">
+<div class="card it-management-card" id="token-models"><div class="card-header"><div><h3>مدل‌های توکن</h3><p>نمایش ساختار مدل‌های فعال در اکوسیستم</p></div><span class="status-pill">۸ مدل</span></div><div class="it-model-list"><div><b>ظرفیت تولید</b><span>۳ پروژه</span><em>فعال</em></div><div><b>درآمدی</b><span>۲ پروژه</span><em>فعال</em></div><div><b>دارایی‌محور</b><span>۲ پروژه</span><em>در حال بررسی</em></div><div><b>ترکیبی</b><span>۳ پروژه</span><em>فعال</em></div></div></div>
+<div class="card it-management-card" id="users-roles"><div class="card-header"><div><h3>کاربران و نقش‌ها</h3><p>خلاصه دسترسی و مسئولیت‌ها</p></div><a href="settings.html" class="btn btn-outline btn-sm">تنظیمات حساب</a></div><div class="it-role-grid"><div><b>مدیر سامانه</b><span>دسترسی کامل</span><strong>۲ نفر</strong></div><div><b>مدیر پروژه</b><span>مدیریت پروژه</span><strong>۶ نفر</strong></div><div><b>اعتبارسنج</b><span>بررسی اسناد</span><strong>۴ نفر</strong></div><div><b>مشاهده‌گر</b><span>دسترسی خواندن</span><strong>۹ نفر</strong></div></div></div>
+<div class="card it-management-card" id="validation"><div class="card-header"><div><h3>اعتبارسنجی</h3><p>صف کنترل و بررسی موارد ثبت‌شده</p></div><span class="badge warning">۳ مورد در انتظار</span></div><div class="it-validation-list"><div><span>اسناد مالکیت</span><b>۱ مورد</b><em>بررسی</em></div><div><span>اطلاعات اقتصادی</span><b>۱ مورد</b><em>بررسی</em></div><div><span>ساختار توکن</span><b>۱ مورد</b><em>بررسی</em></div></div></div>
+<div class="card it-management-card" id="reports"><div class="card-header"><div><h3>گزارش‌ها</h3><p>شاخص‌های مدیریتی و خروجی‌های کلیدی</p></div><button class="btn btn-outline btn-sm" type="button">خروجی گزارش</button></div><div class="it-report-grid"><div><strong>۱۲</strong><span>پروژه فعال</span></div><div><strong>۹۲٪</strong><span>کامل بودن داده</span></div><div><strong>۸۱٪</strong><span>نرخ تخصیص</span></div><div><strong>۴۷</strong><span>سند تأییدشده</span></div></div></div>
+</section>
 <footer class="it-footer"><div class="it-footer-inner"><div><div class="it-footer-brand"><img src="assets/images/logo.png" alt="ایرانیان توکن"><div><h4>ایرانیان توکن</h4><small>VALUE & TOKEN INFRASTRUCTURE</small></div></div><p>لایه‌ای برای مدیریت پروژه، دارایی، مدل توکن، داده و جریان ارزش؛ در امتداد زیرساخت توکن‌ساز.</p></div><div><h5>سامانه</h5><a href="dashboard.html">داشبورد</a><a href="projects.html">پروژه‌ها و دارایی‌ها</a><a href="settings.html">تنظیمات</a></div><div><h5>کنترل</h5><a href="#documents">اسناد</a><a href="#activity">اعتبارسنجی</a><a href="#audit">ثبت رویدادها</a></div><div><h5>توکن‌ساز</h5><a href="../index.html">صفحه اصلی</a><a href="../solutions.html">راهکارها</a><a href="../contact.html">ارتباط</a></div></div><div class="it-footer-copy">IranianToken Platform · A TokenSaz ecosystem layer</div></footer>
 </main>
 </div>
