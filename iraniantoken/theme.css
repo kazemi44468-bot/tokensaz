@@ -222,3 +222,8 @@ body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;back
 .footer:before{background:rgba(255,255,255,.08)!important;opacity:1!important}
 .footer-shell{position:relative!important;z-index:3!important}
 .footer-branding strong{color:#10253c!important}.footer-branding span{color:#4c6578!important}.footer-intro{color:#304e64!important}.footer-logo{background:rgba(255,255,255,.72)!important;border-color:rgba(16,37,60,.14)!important;box-shadow:0 10px 24px rgba(16,37,60,.08)!important}
+
+/* FORCE FOOTER IMAGE ONLY */
+.footer{background:#fff url("./assets/images/Bg.png.gif") repeat center center!important;background-size:auto!important;}
+.footer:before,.footer:after{display:none!important}
+.footer-shell{background:transparent!important}
