@@ -1,0 +1,2471 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مدیریت پروژه‌ها و توکن‌ها | ایرانیان توکن</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+:root {
+  --primary: #1a5fb4;
+  --primary-dark: #0d3b7a;
+  --primary-light: #3584e4;
+  --accent: #f5c211;
+  --accent-dark: #c79a00;
+  --dark: #0f1729;
+  --dark-2: #1a2332;
+  --gray: #64748b;
+  --gray-light: #94a3b8;
+  --bg: #f1f5f9;
+  --bg-alt: #ffffff;
+  --border: #e2e8f0;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --info: #3b82f6;
+  --purple: #8b5cf6;
+  --gradient: linear-gradient(135deg, #1a5fb4 0%, #3584e4 100%);
+  --gradient-gold: linear-gradient(135deg, #f5c211 0%, #ffd94a 100%);
+  --shadow-sm: 0 1px 2px rgba(15,23,41,0.05);
+  --shadow: 0 4px 12px rgba(15,23,41,0.06);
+  --shadow-lg: 0 12px 32px rgba(15,23,41,0.1);
+  --shadow-xl: 0 24px 60px rgba(15,23,41,0.15);
+  --radius: 14px;
+  --radius-lg: 20px;
+  --sidebar-w: 260px;
+  --sidebar-collapsed: 78px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Vazirmatn', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--dark);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ==================== SIDEBAR ==================== */
+.sidebar {
+  position: fixed;
+  top: 0; right: 0; bottom: 0;
+  width: var(--sidebar-w);
+  background: var(--dark);
+  color: #fff;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  border-left: 1px solid rgba(255,255,255,0.05);
+}
+
+.sidebar.collapsed { width: var(--sidebar-collapsed); }
+
+.sidebar-brand {
+  padding: 22px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  min-height: 82px;
+}
+
+.sidebar-logo {
+  width: 42px; height: 42px;
+  border-radius: 12px;
+  background: var(--gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+  box-shadow: 0 8px 20px rgba(26,95,180,0.4);
+}
+
+.sidebar-brand-text {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+
+.sidebar.collapsed .sidebar-brand-text { opacity: 0; }
+.sidebar-brand-text strong { font-size: 15px; font-weight: 800; }
+.sidebar-brand-text small { font-size: 11px; color: var(--gray-light); }
+
+.sidebar-nav {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidebar-nav::-webkit-scrollbar { width: 4px; }
+.sidebar-nav::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 4px; }
+
+.nav-section-title {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--gray);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 16px 12px 8px;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+
+.sidebar.collapsed .nav-section-title { opacity: 0; }
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 11px 14px;
+  border-radius: 10px;
+  color: var(--gray-light);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.nav-item:hover { background: rgba(255,255,255,0.06); color: #fff; }
+
+.nav-item.active {
+  background: var(--gradient);
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(26,95,180,0.35);
+}
+
+.nav-item .icon { font-size: 18px; flex-shrink: 0; width: 22px; text-align: center; }
+.nav-item .label { opacity: 1; transition: opacity 0.2s; }
+.sidebar.collapsed .nav-item .label { opacity: 0; }
+
+.nav-item .badge {
+  margin-right: auto;
+  background: var(--accent);
+  color: var(--dark);
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 50px;
+  transition: opacity 0.2s;
+}
+
+.sidebar.collapsed .nav-item .badge { opacity: 0; }
+
+.sidebar-footer {
+  padding: 16px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.user-mini {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.04);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.user-mini:hover { background: rgba(255,255,255,0.08); }
+
+.user-avatar {
+  width: 38px; height: 38px;
+  border-radius: 10px;
+  background: var(--gradient-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: var(--dark);
+  flex-shrink: 0;
+  font-size: 14px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+  overflow: hidden;
+}
+
+.sidebar.collapsed .user-info { opacity: 0; }
+.user-info strong { font-size: 13px; color: #fff; }
+.user-info small { font-size: 11px; color: var(--gray-light); }
+
+/* ==================== MAIN ==================== */
+.main {
+  margin-right: var(--sidebar-w);
+  transition: margin 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main.expanded { margin-right: var(--sidebar-collapsed); }
+
+/* ==================== TOPBAR ==================== */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.toggle-btn {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: var(--dark);
+  transition: all 0.2s;
+}
+
+.toggle-btn:hover { background: var(--bg); }
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--gray);
+}
+
+.breadcrumb .current { color: var(--dark); font-weight: 600; }
+
+.topbar-search {
+  margin-right: auto;
+  position: relative;
+  flex: 0 1 320px;
+}
+
+.topbar-search input {
+  width: 100%;
+  padding: 10px 42px 10px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  font-family: inherit;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+
+.topbar-search input:focus {
+  outline: none;
+  border-color: var(--primary-light);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(53,132,228,0.1);
+}
+
+.topbar-search .search-icon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gray);
+  font-size: 15px;
+}
+
+.topbar-actions { display: flex; align-items: center; gap: 8px; }
+
+.icon-btn {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--gray);
+  transition: all 0.2s;
+  position: relative;
+}
+
+.icon-btn:hover { background: var(--bg); color: var(--primary); }
+
+.icon-btn .dot {
+  position: absolute;
+  top: 8px; left: 8px;
+  width: 8px; height: 8px;
+  background: var(--danger);
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+/* ==================== CONTENT ==================== */
+.content { padding: 28px; flex: 1; }
+
+.page { display: none; }
+.page.active { display: block; animation: fadeIn 0.4s ease; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.page-title h1 {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 6px;
+}
+
+.page-title p {
+  font-size: 14px;
+  color: var(--gray);
+}
+
+.page-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+/* ==================== BUTTONS ==================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 20px;
+  border-radius: 11px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--gradient);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(26,95,180,0.28);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(26,95,180,0.38);
+}
+
+.btn-outline {
+  background: #fff;
+  color: var(--dark);
+  border: 1px solid var(--border);
+}
+
+.btn-outline:hover { background: var(--bg); border-color: var(--primary-light); color: var(--primary); }
+
+.btn-gold {
+  background: var(--gradient-gold);
+  color: var(--dark);
+  box-shadow: 0 8px 20px rgba(245,194,17,0.35);
+}
+
+.btn-gold:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(245,194,17,0.45); }
+
+.btn-sm { padding: 8px 14px; font-size: 13px; }
+
+/* ==================== FILTER BAR ==================== */
+.filter-bar {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 180px;
+}
+
+.filter-group label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gray);
+  white-space: nowrap;
+}
+
+.filter-group select,
+.filter-group input {
+  width: 100%;
+  padding: 9px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  font-family: inherit;
+  font-size: 13px;
+  color: var(--dark);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-group select:focus,
+.filter-group input:focus {
+  outline: none;
+  border-color: var(--primary-light);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(53,132,228,0.1);
+}
+
+.search-input-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 220px;
+}
+
+.search-input-wrap input {
+  width: 100%;
+  padding: 9px 40px 9px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  font-family: inherit;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+
+.search-input-wrap input:focus {
+  outline: none;
+  border-color: var(--primary-light);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(53,132,228,0.1);
+}
+
+.search-input-wrap .s-icon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gray);
+  font-size: 14px;
+}
+
+.view-toggle {
+  display: flex;
+  gap: 4px;
+  background: var(--bg);
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.view-toggle button {
+  width: 34px; height: 34px;
+  border-radius: 7px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  color: var(--gray);
+  transition: all 0.2s;
+}
+
+.view-toggle button.active { background: #fff; color: var(--primary); box-shadow: var(--shadow-sm); }
+
+/* ==================== PROJECTS GRID ==================== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.projects-grid.list-view {
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.project-card {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+  border-color: transparent;
+}
+
+.project-card-cover {
+  height: 120px;
+  background: var(--gradient);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+
+.project-card-cover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255,255,255,0.2), transparent 50%),
+    radial-gradient(circle at 70% 70%, rgba(255,255,255,0.1), transparent 50%);
+}
+
+.project-card-cover.green { background: linear-gradient(135deg, #10b981, #34d399); }
+.project-card-cover.gold { background: linear-gradient(135deg, #f59e0b, #fbbf24); }
+.project-card-cover.purple { background: linear-gradient(135deg, #8b5cf6, #a78bfa); }
+.project-card-cover.red { background: linear-gradient(135deg, #ef4444, #f87171); }
+
+.project-card-status {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  padding: 5px 12px;
+  border-radius: 50px;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.project-card-status::before {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.project-card-status.active { color: var(--success); }
+.project-card-status.pending { color: var(--warning); }
+.project-card-status.paused { color: var(--danger); }
+.project-card-status.done { color: var(--info); }
+
+.project-card-code {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+  padding: 4px 10px;
+  border-radius: 50px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #fff;
+  font-family: monospace;
+}
+
+.project-card-body { padding: 20px; }
+
+.project-card-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.project-card-title .model-tag {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: rgba(26,95,180,0.1);
+  color: var(--primary);
+  white-space: nowrap;
+}
+
+.project-card-desc {
+  font-size: 13px;
+  color: var(--gray);
+  margin-bottom: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.8;
+}
+
+.project-card-meta {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 14px;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.meta-item .label {
+  font-size: 10px;
+  color: var(--gray);
+  font-weight: 600;
+}
+
+.meta-item .value {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.meta-item .value.gold { color: var(--accent-dark); }
+.meta-item .value.green { color: var(--success); }
+
+.project-progress {
+  margin-bottom: 14px;
+}
+
+.project-progress-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.project-progress-header .label { color: var(--gray); font-weight: 600; }
+.project-progress-header .value { color: var(--dark); font-weight: 800; }
+
+.progress-bar-lg {
+  height: 8px;
+  background: var(--bg);
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.progress-bar-lg .fill {
+  height: 100%;
+  border-radius: 50px;
+  background: var(--gradient);
+  transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card-footer {
+  display: flex;
+  gap: 8px;
+}
+
+.project-card-footer .btn { flex: 1; justify-content: center; padding: 9px; font-size: 12px; }
+
+/* List view overrides */
+.projects-grid.list-view .project-card {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  gap: 20px;
+  align-items: center;
+  padding: 16px 20px;
+}
+
+.projects-grid.list-view .project-card-cover {
+  height: 80px;
+  border-radius: 12px;
+  font-size: 32px;
+}
+
+.projects-grid.list-view .project-card-body {
+  padding: 0;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.projects-grid.list-view .project-card-title { margin: 0; font-size: 15px; }
+.projects-grid.list-view .project-card-desc { display: none; }
+.projects-grid.list-view .project-card-meta { border: none; padding: 0; margin: 0; justify-content: flex-start; gap: 24px; }
+.projects-grid.list-view .project-progress { margin: 0; }
+.projects-grid.list-view .project-card-footer { flex: 0; }
+.projects-grid.list-view .project-card-footer .btn { padding: 8px 12px; flex: 0; }
+.projects-grid.list-view .project-card-status,
+.projects-grid.list-view .project-card-code { display: none; }
+
+/* ==================== TOKEN STATS ==================== */
+.token-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.token-stat {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.token-stat::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--gradient);
+}
+
+.token-stat.gold::before { background: var(--gradient-gold); }
+.token-stat.green::before { background: linear-gradient(180deg, #10b981, #34d399); }
+.token-stat.purple::before { background: linear-gradient(180deg, #8b5cf6, #a78bfa); }
+
+.token-stat:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+
+.token-stat-icon {
+  width: 52px; height: 52px;
+  border-radius: 14px;
+  background: rgba(26,95,180,0.1);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.token-stat.gold .token-stat-icon { background: rgba(245,194,17,0.15); color: var(--accent-dark); }
+.token-stat.green .token-stat-icon { background: rgba(16,185,129,0.12); color: var(--success); }
+.token-stat.purple .token-stat-icon { background: rgba(139,92,246,0.12); color: var(--purple); }
+
+.token-stat-body { flex: 1; min-width: 0; }
+
+.token-stat-body .value {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--dark);
+  line-height: 1.2;
+  margin-bottom: 2px;
+}
+
+.token-stat-body .label {
+  font-size: 12px;
+  color: var(--gray);
+  font-weight: 600;
+}
+
+/* ==================== TOKEN CARDS ==================== */
+.tokens-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 20px;
+}
+
+.token-card {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.token-card::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--gradient-gold);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s;
+}
+
+.token-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+  border-color: transparent;
+}
+
+.token-card:hover::before { transform: scaleX(1); }
+
+.token-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.token-coin {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: var(--gradient-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--dark);
+  flex-shrink: 0;
+  box-shadow: 0 8px 20px rgba(245,194,17,0.35);
+  position: relative;
+}
+
+.token-coin::after {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  border: 2px dashed rgba(255,255,255,0.5);
+  animation: spin 12s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.token-coin.blue { background: var(--gradient); box-shadow: 0 8px 20px rgba(26,95,180,0.35); color: #fff; }
+.token-coin.purple { background: linear-gradient(135deg, #8b5cf6, #a78bfa); box-shadow: 0 8px 20px rgba(139,92,246,0.35); color: #fff; }
+.token-coin.green { background: linear-gradient(135deg, #10b981, #34d399); box-shadow: 0 8px 20px rgba(16,185,129,0.35); color: #fff; }
+
+.token-card-title { flex: 1; min-width: 0; }
+
+.token-card-title h4 {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 4px;
+}
+
+.token-card-title .symbol {
+  font-size: 12px;
+  font-family: monospace;
+  color: var(--gray);
+  font-weight: 600;
+}
+
+.token-card-badges {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.mini-badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--gray);
+  border: 1px solid var(--border);
+}
+
+.mini-badge.gold { background: rgba(245,194,17,0.15); color: var(--accent-dark); border-color: rgba(245,194,17,0.3); }
+.mini-badge.blue { background: rgba(26,95,180,0.1); color: var(--primary); border-color: rgba(26,95,180,0.2); }
+.mini-badge.green { background: rgba(16,185,129,0.12); color: var(--success); border-color: rgba(16,185,129,0.25); }
+.mini-badge.purple { background: rgba(139,92,246,0.12); color: var(--purple); border-color: rgba(139,92,246,0.25); }
+
+.token-card-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  padding: 16px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 16px;
+}
+
+.token-stat-item .label {
+  font-size: 10px;
+  color: var(--gray);
+  font-weight: 600;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.token-stat-item .value {
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--dark);
+  font-family: 'Vazirmatn', monospace;
+}
+
+.token-stat-item .value.gold { color: var(--accent-dark); }
+.token-stat-item .value.green { color: var(--success); }
+.token-stat-item .value.blue { color: var(--primary); }
+
+.token-allocation {
+  margin-bottom: 16px;
+}
+
+.token-allocation-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--gray);
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.token-allocation-bar {
+  height: 10px;
+  border-radius: 50px;
+  overflow: hidden;
+  display: flex;
+  background: var(--bg);
+}
+
+.token-allocation-bar .seg {
+  height: 100%;
+  transition: all 0.3s;
+}
+
+.token-card-footer {
+  display: flex;
+  gap: 8px;
+}
+
+.token-card-footer .btn { flex: 1; justify-content: center; padding: 9px; font-size: 12px; }
+
+/* ==================== DETAIL PANEL ==================== */
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15,23,41,0.5);
+  backdrop-filter: blur(4px);
+  z-index: 200;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.drawer-overlay.active { opacity: 1; pointer-events: auto; }
+
+.drawer {
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  width: 560px;
+  max-width: 100%;
+  background: var(--bg-alt);
+  z-index: 210;
+  transform: translateX(-100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-xl);
+}
+
+.drawer.open { transform: translateX(0); }
+
+.drawer-header {
+  padding: 22px 24px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.drawer-header h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--dark);
+}
+
+.drawer-header small {
+  display: block;
+  font-size: 12px;
+  color: var(--gray);
+  margin-top: 3px;
+  font-weight: 500;
+}
+
+.drawer-close {
+  width: 36px; height: 36px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--gray);
+  transition: all 0.2s;
+}
+
+.drawer-close:hover { background: var(--danger); color: #fff; border-color: var(--danger); }
+
+.drawer-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px;
+}
+
+.drawer-body::-webkit-scrollbar { width: 6px; }
+.drawer-body::-webkit-scrollbar-thumb { background: var(--border); border-radius: 6px; }
+
+.drawer-hero {
+  background: var(--gradient);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  color: #fff;
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.drawer-hero::after {
+  content: '';
+  position: absolute;
+  top: -50%; right: -20%;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(255,255,255,0.15), transparent 70%);
+  border-radius: 50%;
+}
+
+.drawer-hero h2 {
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.drawer-hero p {
+  font-size: 13px;
+  color: rgba(255,255,255,0.85);
+  position: relative;
+  line-height: 1.8;
+}
+
+.drawer-hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.drawer-hero-stat {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  padding: 12px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.drawer-hero-stat .v {
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 2px;
+}
+
+.drawer-hero-stat .l {
+  font-size: 10px;
+  color: rgba(255,255,255,0.8);
+  font-weight: 600;
+}
+
+.drawer-section {
+  margin-bottom: 24px;
+}
+
+.drawer-section-title {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--gray);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.drawer-section-title::before {
+  content: '';
+  width: 4px;
+  height: 16px;
+  background: var(--gradient);
+  border-radius: 4px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.info-item {
+  background: var(--bg);
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.info-item .label {
+  font-size: 11px;
+  color: var(--gray);
+  font-weight: 600;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.info-item .value {
+  font-size: 13px;
+  color: var(--dark);
+  font-weight: 700;
+  word-break: break-word;
+}
+
+.info-item .value.mono { font-family: monospace; font-size: 12px; }
+
+/* Documents list */
+.doc-list { display: flex; flex-direction: column; gap: 10px; }
+
+.doc-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 14px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: all 0.2s;
+}
+
+.doc-item:hover { border-color: var(--primary-light); background: #fff; }
+
+.doc-icon {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  background: #fff;
+  flex-shrink: 0;
+}
+
+.doc-body { flex: 1; min-width: 0; }
+.doc-body strong { display: block; font-size: 13px; color: var(--dark); font-weight: 700; }
+.doc-body small { font-size: 11px; color: var(--gray); }
+
+.doc-status {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.doc-status.verified { background: rgba(16,185,129,0.12); color: var(--success); }
+.doc-status.pending { background: rgba(245,158,11,0.14); color: var(--warning); }
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding-right: 24px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 8px; right: 7px; bottom: 8px;
+  width: 2px;
+  background: var(--border);
+}
+
+.tl-item {
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.tl-item:last-child { padding-bottom: 0; }
+
+.tl-item::before {
+  content: '';
+  position: absolute;
+  top: 4px; right: -24px;
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid var(--primary);
+  z-index: 2;
+}
+
+.tl-item.done::before { border-color: var(--success); }
+.tl-item.pending::before { border-color: var(--border); }
+
+.tl-item h5 {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 3px;
+}
+
+.tl-item small {
+  font-size: 11px;
+  color: var(--gray);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.tl-item p {
+  font-size: 12px;
+  color: var(--gray);
+  line-height: 1.7;
+}
+
+.drawer-footer {
+  padding: 16px 24px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+  background: var(--bg-alt);
+}
+
+.drawer-footer .btn { flex: 1; justify-content: center; }
+
+/* ==================== PAGINATION ==================== */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin-top: 28px;
+}
+
+.pagination button {
+  width: 38px; height: 38px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--dark);
+  transition: all 0.2s;
+}
+
+.pagination button:hover { background: var(--bg); border-color: var(--primary-light); color: var(--primary); }
+.pagination button.active { background: var(--gradient); color: #fff; border-color: transparent; box-shadow: 0 6px 16px rgba(26,95,180,0.3); }
+.pagination button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+/* ==================== EMPTY STATE ==================== */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.empty-state .icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.empty-state h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+
+.empty-state p {
+  font-size: 14px;
+  color: var(--gray);
+  margin-bottom: 20px;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 1100px) {
+  .projects-grid.list-view .project-card-body { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 900px) {
+  .sidebar { transform: translateX(100%); width: var(--sidebar-w) !important; }
+  .sidebar.mobile-open { transform: translateX(0); }
+  .sidebar.collapsed .sidebar-brand-text,
+  .sidebar.collapsed .nav-item .label,
+  .sidebar.collapsed .nav-section-title,
+  .sidebar.collapsed .user-info,
+  .sidebar.collapsed .nav-item .badge { opacity: 1; }
+  .main { margin-right: 0 !important; }
+  .content { padding: 20px 16px; }
+  .topbar { padding: 12px 16px; }
+  .topbar-search { display: none; }
+  .projects-grid.list-view .project-card { grid-template-columns: 60px 1fr; }
+  .projects-grid.list-view .project-card-body { grid-template-columns: 1fr; gap: 8px; }
+  .projects-grid.list-view .project-card-footer { display: none; }
+  .drawer { width: 100%; }
+}
+
+@media (max-width: 640px) {
+  .projects-grid { grid-template-columns: 1fr; }
+  .tokens-grid { grid-template-columns: 1fr; }
+  .token-stats-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .token-stat { padding: 14px; gap: 10px; }
+  .token-stat-icon { width: 42px; height: 42px; font-size: 18px; }
+  .token-stat-body .value { font-size: 18px; }
+  .page-title h1 { font-size: 20px; }
+  .page-actions { width: 100%; }
+  .page-actions .btn { flex: 1; justify-content: center; }
+  .breadcrumb { display: none; }
+  .filter-bar { padding: 14px; }
+  .filter-group { min-width: 100%; }
+  .info-grid { grid-template-columns: 1fr; }
+  .drawer-hero-stats { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 420px) {
+  .token-stats-grid { grid-template-columns: 1fr; }
+}
+
+/* ==================== UTILITY ==================== */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15,23,41,0.5);
+  backdrop-filter: blur(4px);
+  z-index: 90;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.overlay.active { opacity: 1; pointer-events: auto; }
+</style>
+</head>
+<body>
+
+<div class="overlay" id="overlay"></div>
+
+<!-- ==================== SIDEBAR ==================== -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <div class="sidebar-logo">🇮🇷</div>
+    <div class="sidebar-brand-text">
+      <strong>ایرانیان توکن</strong>
+      <small>پنل مدیریت پروژه</small>
+    </div>
+  </div>
+
+  <nav class="sidebar-nav">
+    <div class="nav-section-title">منوی اصلی</div>
+    <a class="nav-item" data-page="dashboard">
+      <span class="icon">📊</span>
+      <span class="label">داشبورد</span>
+    </a>
+    <a class="nav-item active" data-page="projects">
+      <span class="icon">📁</span>
+      <span class="label">پروژه‌ها</span>
+      <span class="badge">۱۲</span>
+    </a>
+    <a class="nav-item" data-page="tokens">
+      <span class="icon">🪙</span>
+      <span class="label">توکن‌ها</span>
+    </a>
+    <a class="nav-item" data-page="documents">
+      <span class="icon">📄</span>
+      <span class="label">اسناد</span>
+    </a>
+
+    <div class="nav-section-title">مدیریت</div>
+    <a class="nav-item" data-page="users">
+      <span class="icon">👥</span>
+      <span class="label">کاربران و نقش‌ها</span>
+    </a>
+    <a class="nav-item" data-page="validation">
+      <span class="icon">✅</span>
+      <span class="label">اعتبارسنجی</span>
+      <span class="badge">۳</span>
+    </a>
+    <a class="nav-item" data-page="reports">
+      <span class="icon">📈</span>
+      <span class="label">گزارش‌ها</span>
+    </a>
+    <a class="nav-item" data-page="audit">
+      <span class="icon">🕐</span>
+      <span class="label">Audit Trail</span>
+    </a>
+
+    <div class="nav-section-title">سیستم</div>
+    <a class="nav-item" data-page="settings">
+      <span class="icon">⚙️</span>
+      <span class="label">تنظیمات</span>
+    </a>
+    <a class="nav-item" data-page="support">
+      <span class="icon">💬</span>
+      <span class="label">پشتیبانی</span>
+    </a>
+  </nav>
+
+  <div class="sidebar-footer">
+    <div class="user-mini">
+      <div class="user-avatar">م.ا</div>
+      <div class="user-info">
+        <strong>محمد احمدی</strong>
+        <small>مدیر کل سیستم</small>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<!-- ==================== MAIN ==================== -->
+<div class="main" id="main">
+
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <button class="toggle-btn" id="toggleBtn">☰</button>
+    <div class="breadcrumb" id="breadcrumb">
+      <span>خانه</span>
+      <span>›</span>
+      <span class="current">پروژه‌ها</span>
+    </div>
+
+    <div class="topbar-search">
+      <span class="search-icon">🔍</span>
+      <input type="text" placeholder="جستجوی سریع...">
+    </div>
+
+    <div class="topbar-actions">
+      <button class="icon-btn">🔔<span class="dot"></span></button>
+      <button class="icon-btn">💬</button>
+      <button class="icon-btn">⚙️</button>
+    </div>
+  </header>
+
+  <!-- CONTENT -->
+  <main class="content">
+
+    <!-- ==================== PAGE: PROJECTS ==================== -->
+    <div class="page active" id="page-projects">
+
+      <div class="page-header">
+        <div class="page-title">
+          <h1>مدیریت پروژه‌ها 📁</h1>
+          <p>مدیریت، فیلتر و مشاهده جزئیات تمام پروژه‌های ثبت‌شده</p>
+        </div>
+        <div class="page-actions">
+          <button class="btn btn-outline">📥 خروجی Excel</button>
+          <button class="btn btn-primary">➕ پروژه جدید</button>
+        </div>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar">
+        <div class="search-input-wrap">
+          <span class="s-icon">🔍</span>
+          <input type="text" placeholder="جستجو در نام، کد، مالک...">
+        </div>
+        <div class="filter-group" style="flex: 0 0 160px;">
+          <select>
+            <option>همه مدل‌ها</option>
+            <option>دارایی‌محور</option>
+            <option>درآمدی</option>
+            <option>مشارکتی</option>
+            <option>ترکیبی</option>
+          </select>
+        </div>
+        <div class="filter-group" style="flex: 0 0 140px;">
+          <select>
+            <option>همه وضعیت‌ها</option>
+            <option>فعال</option>
+            <option>در انتظار</option>
+            <option>متوقف</option>
+            <option>تکمیل شده</option>
+          </select>
+        </div>
+        <div class="view-toggle">
+          <button class="active" data-view="grid" title="نمایش کارتی">▦</button>
+          <button data-view="list" title="نمایش لیستی">☰</button>
+        </div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid" id="projectsGrid">
+
+        <div class="project-card" data-project="1">
+          <div class="project-card-cover">
+            🐄
+            <span class="project-card-status active">فعال</span>
+            <span class="project-card-code">IRT-1403-001</span>
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-title">
+              دامداری نمونه
+              <span class="model-tag">ظرفیت تولید</span>
+            </div>
+            <div class="project-card-desc">پروژه دامپروری با ظرفیت ۵۰۰ راس دام مولد و تولید شیر و گوشت</div>
+            <div class="project-card-meta">
+              <div class="meta-item">
+                <span class="label">مالک</span>
+                <span class="value">شرکت دام‌آوران</span>
+              </div>
+              <div class="meta-item">
+                <span class="label">ارزش</span>
+                <span class="value gold">۱۲.۵ میلیارد</span>
+              </div>
+              <div class="meta-item">
+                <span class="label">توکن</span>
+                <span class="value green">۳,۰۰۰</span>
+              </div>
+            </div>
+            <div class="project-progress">
+              <div class="project-progress-header">
+                <span class="label">پیشرفت پروژه</span>
+                <span class="value">۷۲٪</span>
+              </div>
+              <div class="progress-bar-lg"><div class="fill" style="width: 72%;"></div></div>
+            </div>
+            <div class="project-card-footer">
+              <button class="btn btn-outline btn-sm" onclick="openProject(1)">👁️ مشاهده</button>
+              <button class="btn btn-primary btn-sm">✏️ ویرایش</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-project="2">
+          <div class="project-card-cover green">
+            🌾
+            <span class="project-card-status active">فعال</span>
+            <span class="project-card-code">IRT-1403-002</span>
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-title">
+              کشاورزی پایدار
+              <span class="model-tag">درآمدی</span>
+            </div>
+            <div class="project-card-desc">پروژه کشت و صنعت با تمرکز بر محصولات ارگانیک و صادرات</div>
+            <div class="project-card-meta">
+              <div class="meta-item">
+                <span class="label">مالک</span>
+                <span class="value">تعاونی سبز</span>
+              </div>
+              <div class="meta-item">
+                <span class="label">ارزش</span>
+                <span class="value gold">۸.۲ میلیارد</span>
+              </div>
+              <div class="meta-item">
+                <span class="label">توکن</span>
+                <span class="value green">۲,۵۰۰</span>
+              </div>
+            </div>
+            <div class="project-progress">
+              <div class="project-progress-header">
+                <span class="label">پیشرفت پروژه</span>
+                <span class="value">۴۵٪</span>
+              </div>
+              <div class="progress-bar-lg"><div class="fill" style="width: 45%;"></div></div>
+            </div>
+            <div class="project-card-footer">
+              <button class="btn btn-outline btn-sm" onclick="openProject(2)">👁️ مشاهده</button>
+              <button class="btn btn-primary btn-sm">✏️ ویرایش</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-project="3">
+          <div class="project-card-cover gold">
+            🏗️
+            <span class="project-card-status pending">در انتظار</span>
+            <span class="project-card-code">IRT-1403-003</span>
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-title">
+              برج تجاری آرین
+              <span class="model-tag">دارایی‌محور</span>
+            </div>
+            <div class="project-card-desc">ساخت برج تجاری ۲۰ طبقه در مرکز شهر با کاربری اداری و تجاری</div>
+            <div class="project-card-meta">
+              <div class="meta-item">
+                <span class="label">مالک</span>
+                <span class="value">گروه آرین</span>
+              </div>
+              <div class="meta-item">
+                <span class="label">ارزش</span>
+                <span class="value gold">۴۵ میلیارد</span>
+              </div>
+              <div class="meta-item">
+                <span class="label">توکن</span>
+                <span class="value green">۵,۰۰۰</span>
+              </div>
+            </div>
+            <div class="project-progress">
+              <div class="project-progress-header">
+                <span class="label">پیشرفت پروژه</span>
+                <span class="value">۳۰٪</span>
+              </div>
+              <div class="progress-bar-lg"><div class="fill" style="width: 30%;"></div></div>
+            </div>
+            <div class="project-card-footer">
+              <button class="btn btn-outline btn-sm" onclick="openProject(3)">👁️ مشاهده</button>
+              <button class="btn btn-primary btn-sm">✏️ ویرایش</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-project="4">
+          <div class="project-card-cover purple">
+            ⚡
+            <span class="project-card-status active">فعال</span>
+            <span class="project-card-code">IRT-1403-004</span>
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-title">
+              نیروگاه خورشیدی
+              <span class="model-tag">ترکیبی</span>
+            </div>
+            <div class="project-card-desc">نیروگاه خورشیدی ۱۰ مگاواتی با ظرفیت تولید سالانه ۱۸ گیگاوات‌ساعت</div>
+            <div class="project-card-meta">
+              <div class="meta-item">
+                <span class="label">مالک</span>
+                <span class="value">انرژی پاک</span>
+              </div>
+              <div class="meta-item">
+                <span class="label">ارزش</span>
+                <span class="value gold">۳۲ میلیارد</span>
+              </div>
+              <div class="meta-item">
+                <span class="label">توکن</span>
+                <span class="value green">۵,۰۰۰</span>
+              </div>
+            </div>
+            <div class="project-progress">
+              <div class="project-progress-header">
+                <span class="label">پیشرفت پروژه</span>
+                <span class="value">۸۸٪</span>
+              </div>
+              <div class="progress-bar-lg"><div class="fill" style="width: 88%;"></div></div>
+            </div>
+            <div class="project-card-footer">
+              <button class="btn btn-outline btn-sm" onclick="openProject(4)">👁️ مشاهده</button>
+              <button class="btn btn-primary btn-sm">✏️ ویرایش</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-project="5">
+          <div class="project-card-cover red">
+            🏭
+            <span class="project-card-status paused">متوقف</span>
+            <span class="project-card-code">IRT-1403-005</span>
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-title">
+              کارخانه فولاد
+              <span class="model-tag">دارایی‌محور</span>
+            </div>
+            <div class="project-card-desc">کارخانه تولید فولاد با ظرفیت ۱۰۰ هزار تن در سال</div>
+            <div class="project-card-meta">
+              <div class="meta-item">
+                <span class="label">مالک</span>
+                <span class="value">فولاد پارس</span>
+              </div>
+              <div class="meta-item">
+                <span class="label">ارزش</span>
+                <span class="value gold">۸۵ میلیارد</span>
+              </div>
+              <div class="meta-item">
+                <span class="label">توکن</span>
+                <span class="value green">۱۰,۰۰۰</span>
+              </div>
+            </div>
+            <div class="project-progress">
+              <div class="project-progress-header">
+                <span class="label">پیشرفت پروژه</span>
+                <span class="value">۱۵٪</span>
+              </div>
+              <div class="progress-bar-lg"><div class="fill" style="width: 15%;"></div></div>
+            </div>
+            <div class="project-card-footer">
+              <button class="btn btn-outline btn-sm" onclick="openProject(5)">👁️ مشاهده</button>
+              <button class="btn btn-primary btn-sm">✏️ ویرایش</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-project="6">
+          <div class="project-card-cover">
+            🏨
+            <span class="project-card-status done">تکمیل</span>
+            <span class="project-card-code">IRT-1403-006</span>
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-title">
+              هتل گردشگری کیش
+              <span class="model-tag">درآمدی</span>
+            </div>
+            <div class="project-card-desc">هتل ۵ ستاره با ۲۰۰ اتاق در جزیره کیش</div>
+            <div class="project-card-meta">
+              <div class="meta-item">
+                <span class="label">مالک</span>
+                <span class="value">گروه کیش</span>
+              </div>
+              <div class="meta-item">
+                <span class="label">ارزش</span>
+                <span class="value gold">۵۵ میلیارد</span>
+              </div>
+              <div class="meta-item">
+                <span class="label">توکن</span>
+                <span class="value green">۸,۰۰۰</span>
+              </div>
+            </div>
+            <div class="project-progress">
+              <div class="project-progress-header">
+                <span class="label">پیشرفت پروژه</span>
+                <span class="value">۱۰۰٪</span>
+              </div>
+              <div class="progress-bar-lg"><div class="fill" style="width: 100%;"></div></div>
+            </div>
+            <div class="project-card-footer">
+              <button class="btn btn-outline btn-sm" onclick="openProject(6)">👁️ مشاهده</button>
+              <button class="btn btn-primary btn-sm">✏️ ویرایش</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination">
+        <button disabled>‹</button>
+        <button class="active">۱</button>
+        <button>۲</button>
+        <button>۳</button>
+        <button>›</button>
+      </div>
+
+    </div>
+
+    <!-- ==================== PAGE: TOKENS ==================== -->
+    <div class="page" id="page-tokens">
+
+      <div class="page-header">
+        <div class="page-title">
+          <h1>مدیریت توکن‌ها 🪙</h1>
+          <p>مدیریت، تخصیص و پایش توکن‌های پروژه‌های مختلف</p>
+        </div>
+        <div class="page-actions">
+          <button class="btn btn-outline">📥 خروجی</button>
+          <button class="btn btn-gold">🪙 ایجاد توکن جدید</button>
+        </div>
+      </div>
+
+      <!-- Token Stats -->
+      <div class="token-stats-grid">
+        <div class="token-stat">
+          <div class="token-stat-icon">🪙</div>
+          <div class="token-stat-body">
+            <div class="value">۲۸,۵۰۰</div>
+            <div class="label">کل توکن‌های صادرشده</div>
+          </div>
+        </div>
+        <div class="token-stat gold">
+          <div class="token-stat-icon">💰</div>
+          <div class="token-stat-body">
+            <div class="value">۱۲,۴۵۰</div>
+            <div class="label">توکن‌های در گردش</div>
+          </div>
+        </div>
+        <div class="token-stat green">
+          <div class="token-stat-icon">✅</div>
+          <div class="token-stat-body">
+            <div class="value">۸</div>
+            <div class="label">مدل توکن فعال</div>
+          </div>
+        </div>
+        <div class="token-stat purple">
+          <div class="token-stat-icon">👥</div>
+          <div class="token-stat-body">
+            <div class="value">۱,۲۴۸</div>
+            <div class="label">دارندگان توکن</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar">
+        <div class="search-input-wrap">
+          <span class="s-icon">🔍</span>
+          <input type="text" placeholder="جستجو در نام توکن، نماد، پروژه...">
+        </div>
+        <div class="filter-group" style="flex: 0 0 180px;">
+          <select>
+            <option>همه انواع</option>
+            <option>دارایی‌محور</option>
+            <option>درآمدی</option>
+            <option>مشارکتی</option>
+            <option>حق‌محور</option>
+            <option>خدمت‌محور</option>
+            <option>عضویت</option>
+            <option>ترکیبی</option>
+          </select>
+        </div>
+        <div class="filter-group" style="flex: 0 0 160px;">
+          <select>
+            <option>همه وضعیت‌ها</option>
+            <option>فعال</option>
+            <option>در انتظار</option>
+            <option>غیرفعال</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Tokens Grid -->
+      <div class="tokens-grid">
+
+        <!-- Token 1 -->
+        <div class="token-card">
+          <div class="token-card-header">
+            <div class="token-coin gold">🐄</div>
+            <div class="token-card-title">
+              <h4>توکن دامداری نمونه</h4>
+              <span class="symbol">$DAM · IRT-1403-001</span>
+            </div>
+          </div>
+          <div class="token-card-badges">
+            <span class="mini-badge gold">ظرفیت تولید</span>
+            <span class="mini-badge green">فعال</span>
+            <span class="mini-badge blue">قابل انتقال</span>
+          </div>
+          <div class="token-card-stats">
+            <div class="token-stat-item">
+              <span class="label">کل عرضه</span>
+              <span class="value">۳,۰۰۰</span>
+            </div>
+            <div class="token-stat-item">
+              <span class="label">در گردش</span>
+              <span class="value gold">۲,۴۵۰</span>
+            </div>
+            <div class="token-stat-item">
+              <span class="label">ارزش هر واحد</span>
+              <span class="value green">۴.۲M تومان</span>
+            </div>
+            <div class="token-stat-item">
+              <span class="label">دارندگان</span>
+              <span class="value blue">۱۸۲</span>
+            </div>
+          </div>
+          <div class="token-allocation">
+            <div class="token-allocation-title">
+              <span>تخصیص</span>
+              <span>۸۲٪</span>
+            </div>
+            <div class="token-allocation-bar">
+              <div class="seg" style="width: 82%; background: var(--gradient-gold);"></div>
+              <div class="seg" style="width: 18%; background: var(--border);"></div>
+            </div>
+          </div>
+          <div class="token-card-footer">
+            <button class="btn btn-outline btn-sm">👁️ جزئیات</button>
+            <button class="btn btn-gold btn-sm">💰 تخصیص</button>
+          </div>
+        </div>
+
+        <!-- Token 2 -->
+        <div class="token-card">
+          <div class="token-card-header">
+            <div class="token-coin green">🌾</div>
+            <div class="token-card-title">
+              <h4>توکن کشاورزی پایدار</h4>
+              <span class="symbol">$AGR · IRT-1403-002</span>
+            </div>
+          </div>
+          <div class="token-card-badges">
+            <span class="mini-badge blue">درآمدی</span>
+            <span class="mini-badge green">فعال</span>
+            <span class="mini-badge">غیرقابل انتقال</span>
+          </div>
+          <div class="token-card-stats">
+            <div class="token-stat-item">
+              <span class="label">کل عرضه</span>
+              <span class="value">۲,۵۰۰</span>
+            </div>
+            <div class="token-stat-item">
+              <span class="label">در گردش</span>
+              <span class="value gold">۱,۲۰۰</span>
+            </div>
+            <div class="token-stat-item">
+              <span class="label">ارزش هر واحد</span>
+              <span class="value green">۳.۳M تومان</span>
+            </div>
+            <div class="token-stat-item">
+              <span class="label">دارندگان</span>
+              <span class="value blue">۹۴</span>
+            </div>
+          </div>
+          <div class="token-allocation">
+            <div class="token-allocation-title">
+              <span>تخصیص</span>
+              <span>۴۸٪</span>
+            </div>
+            <div class="token-allocation-bar">
+              <div class="seg" style="width: 48%; background: linear-gradient(90deg, #10b981, #34d399);"></div>
+              <div class="seg" style="width: 52%; background: var(--border);"></div>
+            </div>
+          </div>
+          <div class="token-card-footer">
+            <button class="btn btn-outline btn-sm">👁️ جزئیات</button>
+            <button class="btn btn-gold btn-sm">💰 تخصیص</button>
+          </div>
+        </div>
+
+        <!-- Token 3 -->
+        <div class="token-card">
+          <div class="token-card-header">
+            <div class="token-coin blue">🏗️</div>
+            <div class="token-card-title">
+              <h4>توکن برج تجاری آرین</h4>
+              <span class="symbol">$ARN · IRT-1403-003</span>
+            </div>
+          </div>
+          <div class="token-card-badges">
+            <span class="mini-badge blue">دارایی‌محور</span>
+            <span class="mini-badge gold">در انتظار</span>
+            <span class="mini-badge">قابل انتقال</span>
+          </div>
+          <div class="token-card-stats">
+            <div class="token-stat-item">
+              <span class="label">کل عرضه</span>
+              <span class="value">۵,۰۰۰</span>
+            </div>
+            <div class="token-stat-item">
+              <span class="label">در گردش</span>
+              <span class="value gold">۵۰۰</span>
+            </div>
+            <div class="token-stat-item">
+              <span class="label">ارزش هر واحد</span>
+              <span class="value green">۹M تومان</span>
+            </div>
+            <div class="token-stat-item">
+              <span class="label">دارندگان</span>
+              <span class="value blue">۲۸</span>
+            </div>
+          </div>
+          <div class="token-allocation">
+            <div class="token-allocation-title">
+              <span>تخصیص</span>
+              <span>۱۰٪</span>
+            </div>
+            <div class="token-allocation-bar">
+              <div class="seg" style="width: 10%; background: var(--gradient);"></div>
+              <div class="seg" style="width: 90%; background: var(--border);"></div>
+            </div>
+          </div>
+          <div class="token-card-footer">
+            <button class="btn btn-outline btn-sm">👁️ جزئیات</button>
+            <button class="btn btn-gold btn-sm">💰 تخصیص</button>
+          </div>
+        </div>
+
+        <!-- Token 4 -->
+        <div class="token-card">
+          <div class="token-card-header">
+            <div class="token-coin purple">⚡</div>
+            <div class="token-card-title">
+              <h4>توکن نیروگاه خورشیدی</h4>
+              <span class="symbol">$SOL · IRT-1403-004</span>
+            </div>
+          </div>
+          <div class="token-card-badges">
+            <span class="mini-badge purple">ترکیبی</span>
+            <span class="mini-badge green">فعال</span>
+            <span class="mini-badge blue">قابل معامله</span>
+          </div>
+          <div class="token-card-stats">
+            <div class="token-stat-item">
+              <span class="label">کل عرضه</span>
+              <span class="value">۵,۰۰۰</span>
+            </div>
+            <div class="token-stat-item">
+              <span class="label">در گردش</span>
+              <span class="value gold">۴,۲۰۰</span>
+            </div>
+            <div class="token-stat-item">
+              <span class="label">ارزش هر واحد</span>
+              <span class="value green">۶.۴M تومان</span>
+            </div>
+            <div class="token-stat-item">
+              <span class="label">دارندگان</span>
+              <span class="value blue">۴۱۲</span>
+            </div>
+          </div>
+          <div class="token-allocation">
+            <div class="token-allocation-title">
+              <span>تخصیص</span>
+              <span>۸۴٪</span>
+            </div>
+            <div class="token-allocation-bar">
+              <div class="seg" style="width: 84%; background: linear-gradient(90deg, #8b5cf6, #a78bfa);"></div>
+              <div class="seg" style="width: 16%; background: var(--border);"></div>
+            </div>
+          </div>
+          <div class="token-card-footer">
+            <button class="btn btn-outline btn-sm">👁️ جزئیات</button>
+            <button class="btn btn-gold btn-sm">💰 تخصیص</button>
+          </div>
+        </div>
+
+        <!-- Token 5 -->
+        <div class="token-card">
+          <div class="token-card-header">
+            <div class="token-coin gold">🏭</div>
+            <div class="token-card-title">
+              <h4>توکن کارخانه فولاد</h4>
+              <span class="symbol">$STL · IRT-1403-005</span>
+            </div>
+          </div>
+          <div class="token-card-badges">
+            <span class="mini-badge blue">دارایی‌محور</span>
+            <span class="mini-badge gold">غیرفعال</span>
+            <span class="mini-badge">قابل انتقال</span>
+          </div>
+          <div class="token-card-stats">
+            <div class="token-stat-item">
+              <span class="label">کل عرضه</span>
+              <span class="value">۱۰,۰۰۰</span>
+            </div>
+            <div class="token-stat-item">
+              <span class="label">در گردش</span>
+              <span class="value gold">۱,۵۰۰</span>
+            </div>
+            <div class="token-stat-item">
+              <span class="label">ارزش هر واحد</span>
+              <span class="value green">۸.۵M تومان</span>
+            </div>
+            <div class="token-stat-item">
+              <span class="label">دارندگان</span>
+              <span class="value blue">۷۶</span>
+            </div>
+          </div>
+          <div class="token-allocation">
+            <div class="token-allocation-title">
+              <span>تخصیص</span>
+              <span>۱۵٪</span>
+            </div>
+            <div class="token-allocation-bar">
+              <div class="seg" style="width: 15%; background: var(--gradient-gold);"></div>
+              <div class="seg" style="width: 85%; background: var(--border);"></div>
+            </div>
+          </div>
+          <div class="token-card-footer">
+            <button class="btn btn-outline btn-sm">👁️ جزئیات</button>
+            <button class="btn btn-gold btn-sm">💰 تخصیص</button>
+          </div>
+        </div>
+
+        <!-- Token 6 -->
+        <div class="token-card">
+          <div class="token-card-header">
+            <div class="token-coin green">🏨</div>
+            <div class="token-card-title">
+              <h4>توکن هتل کیش</h4>
+              <span class="symbol">$HTL · IRT-1403-006</span>
+            </div>
+          </div>
+          <div class="token-card-badges">
+            <span class="mini-badge blue">درآمدی</span>
+            <span class="mini-badge green">فعال</span>
+            <span class="mini-badge blue">قابل معامله</span>
+          </div>
+          <div class="token-card-stats">
+            <div class="token-stat-item">
+              <span class="label">کل عرضه</span>
+              <span class="value">۸,۰۰۰</span>
+            </div>
+            <div class="token-stat-item">
+              <span class="label">در گردش</span>
+              <span class="value gold">۶,۸۰۰</span>
+            </div>
+            <div class="token-stat-item">
+              <span class="label">ارزش هر واحد</span>
+              <span class="value green">۶.۹M تومان</span>
+            </div>
+            <div class="token-stat-item">
+              <span class="label">دارندگان</span>
+              <span class="value blue">۴۵۶</span>
+            </div>
+          </div>
+          <div class="token-allocation">
+            <div class="token-allocation-title">
+              <span>تخصیص</span>
+              <span>۸۵٪</span>
+            </div>
+            <div class="token-allocation-bar">
+              <div class="seg" style="width: 85%; background: linear-gradient(90deg, #10b981, #34d399);"></div>
+              <div class="seg" style="width: 15%; background: var(--border);"></div>
+            </div>
+          </div>
+          <div class="token-card-footer">
+            <button class="btn btn-outline btn-sm">👁️ جزئیات</button>
+            <button class="btn btn-gold btn-sm">💰 تخصیص</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination">
+        <button disabled>‹</button>
+        <button class="active">۱</button>
+        <button>۲</button>
+        <button>›</button>
+      </div>
+
+    </div>
+
+  </main>
+</div>
+
+<!-- ==================== DRAWER (Project Detail) ==================== -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<aside class="drawer" id="projectDrawer">
+  <div class="drawer-header">
+    <div>
+      <h3 id="drawerTitle">دامداری نمونه</h3>
+      <small id="drawerSubtitle">IRT-1403-001 · پروژه دامپروری</small>
+    </div>
+    <button class="drawer-close" onclick="closeDrawer()">✕</button>
+  </div>
+
+  <div class="drawer-body">
+    <div class="drawer-hero">
+      <h2>🐄 دامداری نمونه</h2>
+      <p>پروژه دامپروری با ظرفیت ۵۰۰ راس دام مولد و تولید شیر و گوشت در استان اصفهان</p>
+      <div class="drawer-hero-stats">
+        <div class="drawer-hero-stat">
+          <div class="v">۷۲٪</div>
+          <div class="l">پیشرفت</div>
+        </div>
+        <div class="drawer-hero-stat">
+          <div class="v">۱۲.۵B</div>
+          <div class="l">ارزش (تومان)</div>
+        </div>
+        <div class="drawer-hero-stat">
+          <div class="v">۳,۰۰۰</div>
+          <div class="l">توکن</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="drawer-section">
+      <div class="drawer-section-title">اطلاعات پایه</div>
+      <div class="info-grid">
+        <div class="info-item">
+          <span class="label">مالک / مجری</span>
+          <span class="value">شرکت دام‌آوران پارس</span>
+        </div>
+        <div class="info-item">
+          <span class="label">حوزه فعالیت</span>
+          <span class="value">دامپروری</span>
+        </div>
+        <div class="info-item">
+          <span class="label">محل اجرا</span>
+          <span class="value">اصفهان، نجف‌آباد</span>
+        </div>
+        <div class="info-item">
+          <span class="label">وضعیت</span>
+          <span class="value" style="color: var(--success);">فعال</span>
+        </div>
+        <div class="info-item">
+          <span class="label">ظرفیت</span>
+          <span class="value">۵۰۰ راس دام مولد</span>
+        </div>
+        <div class="info-item">
+          <span class="label">مدل توکن</span>
+          <span class="value">ظرفیت تولید</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="drawer-section">
+      <div class="drawer-section-title">اسناد و مدارک</div>
+      <div class="doc-list">
+        <div class="doc-item">
+          <div class="doc-icon">📜</div>
+          <div class="doc-body">
+            <strong>سند مالکیت زمین</strong>
+            <small>PDF · ۲.۴ MB · ۱۴۰۳/۰۵/۱۲</small>
+          </div>
+          <span class="doc-status verified">تأیید شده</span>
+        </div>
+        <div class="doc-item">
+          <div class="doc-icon">📋</div>
+          <div class="doc-body">
+            <strong>مجوز بهره‌برداری</strong>
+            <small>PDF · ۱.۱ MB · ۱۴۰۳/۰۵/۱۰</small>
+          </div>
+          <span class="doc-status verified">تأیید شده</span>
+        </div>
+        <div class="doc-item">
+          <div class="doc-icon">📊</div>
+          <div class="doc-body">
+            <strong>گزارش ارزیابی دارایی</strong>
+            <small>PDF · ۳.۸ MB · ۱۴۰۳/۰۴/۲۸</small>
+          </div>
+          <span class="doc-status pending">در انتظار</span>
+        </div>
+        <div class="doc-item">
+          <div class="doc-icon">📄</div>
+          <div class="doc-body">
+            <strong>قرارداد مشارکت</strong>
+            <small>PDF · ۲.۱ MB · ۱۴۰۳/۰۴/۱۵</small>
+          </div>
+          <span class="doc-status verified">تأیید شده</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="drawer-section">
+      <div class="drawer-section-title">تاریخچه پروژه</div>
+      <div class="timeline">
+        <div class="tl-item done">
+          <h5>ثبت پروژه</h5>
+          <small>۱۴۰۳/۰۴/۱۰</small>
+          <p>پروژه با کد IRT-1403-001 در سیستم ثبت شد.</p>
+        </div>
+        <div class="tl-item done">
+          <h5>ارزیابی اولیه</h5>
+          <small>۱۴۰۳/۰۴/۱۸</small>
+          <p>موضوع، مالکیت و ظرفیت پروژه بررسی و تأیید شد.</p>
+        </div>
+        <div class="tl-item done">
+          <h5>طراحی مدل حقوقی و اقتصادی</h5>
+          <small>۱۴۰۳/۰۵/۰۲</small>
+          <p>مدل اقتصادی و حقوقی پروژه طراحی و تصویب شد.</p>
+        </div>
+        <div class="tl-item done">
+          <h5>ایجاد ساختار دیجیتال</h5>
+          <small>۱۴۰۳/۰۵/۱۵</small>
+          <p>۳,۰۰۰ توکن برای پروژه ایجاد و ثبت شد.</p>
+        </div>
+        <div class="tl-item pending">
+          <h5>اعتبارسنجی نهایی</h5>
+          <small>در انتظار</small>
+          <p>در انتظار تأیید نهایی اسناد و ارزیابی دارایی.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="drawer-footer">
+    <button class="btn btn-outline">📄 دانلود گزارش</button>
+    <button class="btn btn-primary">✏️ ویرایش پروژه</button>
+  </div>
+</aside>
+
+<script>
+/* ==================== SIDEBAR ==================== */
+const sidebar = document.getElementById('sidebar');
+const main = document.getElementById('main');
+const toggleBtn = document.getElementById('toggleBtn');
+const overlay = document.getElementById('overlay');
+const breadcrumb = document.getElementById('breadcrumb');
+
+toggleBtn.addEventListener('click', () => {
+  if (window.innerWidth <= 900) {
+    sidebar.classList.toggle('mobile-open');
+    overlay.classList.toggle('active');
+  } else {
+    sidebar.classList.toggle('collapsed');
+    main.classList.toggle('expanded');
+  }
+});
+
+overlay.addEventListener('click', () => {
+  sidebar.classList.remove('mobile-open');
+  overlay.classList.remove('active');
+});
+
+/* ==================== PAGE NAVIGATION ==================== */
+document.querySelectorAll('.nav-item').forEach(item => {
+  item.addEventListener('click', () => {
+    const page = item.dataset.page;
+    document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+    item.classList.add('active');
+
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+
+    if (page === 'projects' || page === 'tokens') {
+      document.getElementById('page-' + page).classList.add('active');
+      const titles = { projects: 'پروژه‌ها', tokens: 'توکن‌ها' };
+      breadcrumb.innerHTML = `<span>خانه</span><span>›</span><span class="current">${titles[page]}</span>`;
+    } else {
+      // For other pages, show a "coming soon" - just show projects
+      document.getElementById('page-projects').classList.add('active');
+      breadcrumb.innerHTML = `<span>خانه</span><span>›</span><span class="current">${page}</span>`;
+    }
+
+    if (window.innerWidth <= 900) {
+      sidebar.classList.remove('mobile-open');
+      overlay.classList.remove('active');
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+
+/* ==================== VIEW TOGGLE ==================== */
+document.querySelectorAll('.view-toggle button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.view-toggle button').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const grid = document.getElementById('projectsGrid');
+    if (btn.dataset.view === 'list') {
+      grid.classList.add('list-view');
+    } else {
+      grid.classList.remove('list-view');
+    }
+  });
+});
+
+/* ==================== DRAWER ==================== */
+const projectDrawer = document.getElementById('projectDrawer');
+const drawerOverlay = document.getElementById('drawerOverlay');
+
+const projectData = {
+  1: { title: 'دامداری نمونه', subtitle: 'IRT-1403-001 · پروژه دامپروری' },
+  2: { title: 'کشاورزی پایدار', subtitle: 'IRT-1403-002 · پروژه کشاورزی' },
+  3: { title: 'برج تجاری آرین', subtitle: 'IRT-1403-003 · پروژه ساختمانی' },
+  4: { title: 'نیروگاه خورشیدی', subtitle: 'IRT-1403-004 · پروژه انرژی' },
+  5: { title: 'کارخانه فولاد', subtitle: 'IRT-1403-005 · پروژه صنعتی' },
+  6: { title: 'هتل گردشگری کیش', subtitle: 'IRT-1403-006 · پروژه گردشگری' },
+};
+
+function openProject(id) {
+  const data = projectData[id];
+  if (data) {
+    document.getElementById('drawerTitle').textContent = data.title;
+    document.getElementById('drawerSubtitle').textContent = data.subtitle;
+  }
+  projectDrawer.classList.add('open');
+  drawerOverlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeDrawer() {
+  projectDrawer.classList.remove('open');
+  drawerOverlay.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+drawerOverlay.addEventListener('click', closeDrawer);
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeDrawer();
+});
+
+// Attach click to project cards
+document.querySelectorAll('.project-card').forEach(card => {
+  card.addEventListener('click', (e) => {
+    if (e.target.closest('button')) return;
+    const id = card.dataset.project;
+    if (id) openProject(id);
+  });
+});
+
+/* ==================== PROGRESS BARS ANIMATION ==================== */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const fills = entry.target.querySelectorAll('.progress-bar-lg .fill, .token-allocation-bar .seg');
+      fills.forEach(fill => {
+        const width = fill.style.width;
+        fill.style.width = '0';
+        setTimeout(() => { fill.style.width = width; }, 100);
+      });
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.project-card, .token-card').forEach(el => observer.observe(el));
+
+/* ==================== RIPPLE EFFECT ==================== */
+const rippleStyle = document.createElement('style');
+rippleStyle.textContent = `
+  @keyframes ripple {
+    to { transform: scale(4); opacity: 0; }
+  }
+`;
+document.head.appendChild(rippleStyle);
+
+document.querySelectorAll('.btn').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    const rect = this.getBoundingClientRect();
+    const ripple = document.createElement('span');
+    const size = Math.max(rect.width, rect.height);
+    ripple.style.cssText = `
+      position: absolute;
+      width: ${size}px;
+      height: ${size}px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.4);
+      transform: scale(0);
+      animation: ripple 0.6s linear;
+      pointer-events: none;
+      left: ${e.clientX - rect.left - size/2}px;
+      top: ${e.clientY - rect.top - size/2}px;
+    `;
+    this.style.position = 'relative';
+    this.style.overflow = 'hidden';
+    this.appendChild(ripple);
+    setTimeout(() => ripple.remove(), 600);
+  });
+});
+</script>
+
+</body>
+</html>

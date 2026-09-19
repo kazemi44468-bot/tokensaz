@@ -1,0 +1,1746 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ورود / ثبت‌نام | ایرانیان توکن</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #1a5fb4;
+  --primary-dark: #0d3b7a;
+  --primary-light: #3584e4;
+  --accent: #f5c211;
+  --accent-dark: #c79a00;
+  --dark: #0f1729;
+  --dark-2: #1a2332;
+  --dark-3: #232f42;
+  --gray: #64748b;
+  --gray-light: #94a3b8;
+  --bg: #f1f5f9;
+  --bg-alt: #ffffff;
+  --border: #e2e8f0;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --info: #3b82f6;
+  --gradient: linear-gradient(135deg, #1a5fb4 0%, #3584e4 100%);
+  --gradient-gold: linear-gradient(135deg, #f5c211 0%, #ffd94a 100%);
+  --gradient-dark: linear-gradient(135deg, #0f1729 0%, #1a2332 100%);
+  --shadow-sm: 0 1px 2px rgba(15,23,41,0.05);
+  --shadow: 0 4px 12px rgba(15,23,41,0.06);
+  --shadow-lg: 0 12px 32px rgba(15,23,41,0.1);
+  --shadow-xl: 0 24px 60px rgba(15,23,41,0.15);
+  --radius: 14px;
+  --radius-lg: 20px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Vazirmatn', system-ui, sans-serif;
+  background: var(--dark);
+  color: var(--dark);
+  line-height: 1.7;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* ==================== LAYOUT ==================== */
+.auth-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+
+/* ==================== BRAND PANEL (Right) ==================== */
+.brand-panel {
+  position: relative;
+  background: var(--gradient-dark);
+  color: #fff;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.brand-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(53,132,228,0.25) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(245,194,17,0.12) 0%, transparent 50%),
+    radial-gradient(circle at 60% 30%, rgba(26,95,180,0.2) 0%, transparent 40%);
+}
+
+.brand-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+}
+
+.brand-content {
+  position: relative;
+  z-index: 2;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 60px;
+}
+
+.brand-logo-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: var(--gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  box-shadow: 0 12px 32px rgba(26,95,180,0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.brand-logo-icon::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent 40%, rgba(255,255,255,0.3) 50%, transparent 60%);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.brand-logo-text strong {
+  display: block;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: -0.3px;
+}
+
+.brand-logo-text small {
+  font-size: 12px;
+  color: var(--gray-light);
+  font-weight: 500;
+}
+
+.brand-hero h1 {
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 900;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.brand-hero h1 .gold {
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.brand-hero p {
+  font-size: 16px;
+  color: var(--gray-light);
+  max-width: 480px;
+  line-height: 1.9;
+  margin-bottom: 40px;
+}
+
+/* Feature List */
+.brand-features {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 40px;
+}
+
+.brand-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.brand-feature-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  background: rgba(53,132,228,0.15);
+  border: 1px solid rgba(53,132,228,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.brand-feature-body strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.brand-feature-body span {
+  font-size: 12px;
+  color: var(--gray-light);
+}
+
+/* Stats Row */
+.brand-stats {
+  display: flex;
+  gap: 32px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.brand-stat .value {
+  font-size: 26px;
+  font-weight: 900;
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+}
+
+.brand-stat .label {
+  font-size: 11px;
+  color: var(--gray-light);
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+/* Floating Token */
+.floating-token {
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--gradient-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+  box-shadow: 0 20px 60px rgba(245,194,17,0.4);
+  animation: floatToken 6s ease-in-out infinite;
+  z-index: 3;
+}
+
+.floating-token::after {
+  content: '';
+  position: absolute;
+  inset: 10px;
+  border-radius: 50%;
+  border: 2px dashed rgba(15,23,41,0.3);
+  animation: spin 15s linear infinite;
+}
+
+@keyframes floatToken {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ==================== FORM PANEL (Left) ==================== */
+.form-panel {
+  background: var(--bg-alt);
+  padding: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  position: relative;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 440px;
+}
+
+/* ==================== TABS ==================== */
+.auth-tabs {
+  display: flex;
+  background: var(--bg);
+  padding: 6px;
+  border-radius: 14px;
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.auth-tab {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--gray);
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s;
+  position: relative;
+  z-index: 2;
+}
+
+.auth-tab.active { color: #fff; }
+
+.tab-indicator {
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  width: calc(50% - 6px);
+  background: var(--gradient);
+  border-radius: 10px;
+  transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 6px 16px rgba(26,95,180,0.3);
+  z-index: 1;
+}
+
+.tab-indicator.right { right: 6px; }
+.tab-indicator.left { right: calc(50% + 0px); }
+
+/* ==================== FORM HEADER ==================== */
+.form-header {
+  margin-bottom: 28px;
+}
+
+.form-header h2 {
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--dark);
+  margin-bottom: 8px;
+  letter-spacing: -0.3px;
+}
+
+.form-header p {
+  font-size: 14px;
+  color: var(--gray);
+  line-height: 1.8;
+}
+
+/* ==================== FORM ==================== */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+
+.form-label .required {
+  color: var(--danger);
+  margin-right: 3px;
+}
+
+.input-wrap {
+  position: relative;
+}
+
+.input-wrap .input-icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gray);
+  font-size: 16px;
+  pointer-events: none;
+  transition: color 0.2s;
+}
+
+.input-wrap input,
+.input-wrap select {
+  width: 100%;
+  padding: 14px 46px 14px 16px;
+  border-radius: 12px;
+  border: 1.5px solid var(--border);
+  background: var(--bg);
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--dark);
+  transition: all 0.2s;
+}
+
+.input-wrap input:focus,
+.input-wrap select:focus {
+  outline: none;
+  border-color: var(--primary-light);
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(53,132,228,0.1);
+}
+
+.input-wrap input:focus ~ .input-icon {
+  color: var(--primary);
+}
+
+.input-wrap input::placeholder { color: var(--gray-light); }
+
+.input-wrap.has-error input {
+  border-color: var(--danger);
+  background: rgba(239,68,68,0.03);
+}
+
+.input-wrap.has-error input:focus {
+  box-shadow: 0 0 0 4px rgba(239,68,68,0.1);
+}
+
+.input-wrap.has-success input {
+  border-color: var(--success);
+}
+
+.password-toggle {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  color: var(--gray);
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.password-toggle:hover { background: var(--border); color: var(--primary); }
+
+.error-text {
+  display: none;
+  font-size: 12px;
+  color: var(--danger);
+  margin-top: 6px;
+  font-weight: 600;
+  align-items: center;
+  gap: 5px;
+}
+
+.error-text.show { display: flex; }
+
+.success-text {
+  display: none;
+  font-size: 12px;
+  color: var(--success);
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+.success-text.show { display: block; }
+
+/* ==================== PASSWORD STRENGTH ==================== */
+.password-strength {
+  margin-top: 10px;
+  display: none;
+}
+
+.password-strength.show { display: block; }
+
+.strength-bars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.strength-bar {
+  flex: 1;
+  height: 4px;
+  border-radius: 50px;
+  background: var(--border);
+  transition: background 0.3s;
+}
+
+.strength-bar.weak { background: var(--danger); }
+.strength-bar.medium { background: var(--warning); }
+.strength-bar.strong { background: var(--success); }
+
+.strength-text {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--gray);
+}
+
+.strength-text.weak { color: var(--danger); }
+.strength-text.medium { color: var(--warning); }
+.strength-text.strong { color: var(--success); }
+
+/* ==================== FORM ROW ==================== */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+/* ==================== CHECKBOX ==================== */
+.checkbox-wrap {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 18px;
+}
+
+.checkbox-wrap input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.checkbox-box {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 2px solid var(--border);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s;
+  margin-top: 2px;
+}
+
+.checkbox-box::after {
+  content: '✓';
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.2s;
+}
+
+.checkbox-wrap input:checked ~ .checkbox-box {
+  background: var(--gradient);
+  border-color: transparent;
+}
+
+.checkbox-wrap input:checked ~ .checkbox-box::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.checkbox-label {
+  font-size: 13px;
+  color: var(--gray);
+  line-height: 1.7;
+}
+
+.checkbox-label a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.checkbox-label a:hover { text-decoration: underline; }
+
+/* ==================== FORGOT PASSWORD ==================== */
+.form-actions-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.forgot-link {
+  font-size: 13px;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.2s;
+}
+
+.forgot-link:hover { color: var(--primary-dark); text-decoration: underline; }
+
+/* ==================== SUBMIT BUTTON ==================== */
+.btn-submit {
+  width: 100%;
+  padding: 15px;
+  border-radius: 12px;
+  border: none;
+  background: var(--gradient);
+  color: #fff;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 10px 28px rgba(26,95,180,0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(26,95,180,0.45);
+}
+
+.btn-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn-submit .spinner {
+  width: 18px;
+  height: 18px;
+  border: 2.5px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  display: none;
+}
+
+.btn-submit.loading .spinner { display: block; }
+.btn-submit.loading .btn-text { display: none; }
+
+/* ==================== DIVIDER ==================== */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 24px 0;
+  color: var(--gray-light);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ==================== SOCIAL BUTTONS ==================== */
+.social-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.social-btn {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1.5px solid var(--border);
+  background: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.social-btn:hover {
+  border-color: var(--primary-light);
+  background: var(--bg);
+  transform: translateY(-1px);
+}
+
+.social-btn .s-icon {
+  font-size: 16px;
+}
+
+/* ==================== FOOTER LINK ==================== */
+.form-footer {
+  text-align: center;
+  font-size: 13px;
+  color: var(--gray);
+}
+
+.form-footer a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.form-footer a:hover { text-decoration: underline; }
+
+/* ==================== OTP INPUT ==================== */
+.otp-section {
+  display: none;
+}
+
+.otp-section.show { display: block; animation: fadeIn 0.4s; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.otp-inputs {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  direction: ltr;
+  margin-bottom: 20px;
+}
+
+.otp-input {
+  width: 52px;
+  height: 60px;
+  border-radius: 12px;
+  border: 1.5px solid var(--border);
+  background: var(--bg);
+  font-family: inherit;
+  font-size: 24px;
+  font-weight: 800;
+  text-align: center;
+  color: var(--dark);
+  transition: all 0.2s;
+}
+
+.otp-input:focus {
+  outline: none;
+  border-color: var(--primary-light);
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(53,132,228,0.1);
+  transform: scale(1.05);
+}
+
+.otp-input.filled {
+  border-color: var(--primary);
+  background: rgba(26,95,180,0.05);
+}
+
+.otp-timer {
+  text-align: center;
+  font-size: 13px;
+  color: var(--gray);
+  margin-bottom: 20px;
+}
+
+.otp-timer strong {
+  color: var(--primary);
+  font-weight: 800;
+  font-family: monospace;
+}
+
+.resend-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 13px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.resend-link:disabled {
+  color: var(--gray-light);
+  cursor: not-allowed;
+}
+
+/* ==================== FORM PAGE SWITCHING ==================== */
+.form-page {
+  display: none;
+  animation: fadeIn 0.4s;
+}
+
+.form-page.active { display: block; }
+
+/* ==================== PASSWORD STRENGTH MESSAGES ==================== */
+.strength-requirements {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px;
+  background: var(--bg);
+  border-radius: 10px;
+}
+
+.req-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--gray);
+  transition: color 0.2s;
+}
+
+.req-item .check {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: #fff;
+  transition: all 0.2s;
+}
+
+.req-item.met {
+  color: var(--success);
+}
+
+.req-item.met .check {
+  background: var(--success);
+}
+
+/* ==================== STEP INDICATOR ==================== */
+.step-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.step-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--gray);
+  transition: all 0.3s;
+}
+
+.step-dot.active {
+  background: var(--gradient);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(26,95,180,0.3);
+}
+
+.step-dot.done {
+  background: var(--success);
+  border-color: transparent;
+  color: #fff;
+}
+
+.step-line {
+  width: 40px;
+  height: 2px;
+  background: var(--border);
+  border-radius: 2px;
+  transition: background 0.3s;
+}
+
+.step-line.done { background: var(--success); }
+
+/* ==================== TOAST ==================== */
+.toast-container {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.toast {
+  background: #fff;
+  border-radius: 12px;
+  padding: 14px 18px;
+  box-shadow: var(--shadow-xl);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 280px;
+  max-width: 380px;
+  border-right: 4px solid var(--success);
+  animation: slideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.toast.error { border-right-color: var(--danger); }
+.toast.warning { border-right-color: var(--warning); }
+.toast.info { border-right-color: var(--info); }
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.toast-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+  background: rgba(16,185,129,0.12);
+  color: var(--success);
+}
+
+.toast.error .toast-icon { background: rgba(239,68,68,0.12); color: var(--danger); }
+.toast.warning .toast-icon { background: rgba(245,158,11,0.14); color: var(--warning); }
+.toast.info .toast-icon { background: rgba(59,130,246,0.12); color: var(--info); }
+
+.toast-body strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 2px;
+}
+
+.toast-body span {
+  font-size: 12px;
+  color: var(--gray);
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 1024px) {
+  .auth-wrapper { grid-template-columns: 1fr; }
+  .brand-panel {
+    padding: 40px 32px;
+    min-height: auto;
+  }
+  .brand-hero h1 { font-size: 26px; }
+  .brand-features { display: none; }
+  .brand-stats { display: none; }
+  .floating-token { display: none; }
+  .brand-content { margin-bottom: 0; }
+  .brand-logo { margin-bottom: 24px; }
+  .brand-hero p { margin-bottom: 0; }
+  .form-panel { padding: 40px 24px; }
+}
+
+@media (max-width: 640px) {
+  .brand-panel { padding: 28px 20px; }
+  .brand-logo-icon { width: 46px; height: 46px; font-size: 22px; }
+  .brand-logo-text strong { font-size: 17px; }
+  .brand-hero h1 { font-size: 22px; }
+  .brand-hero p { font-size: 13px; }
+  .form-panel { padding: 28px 20px; }
+  .form-header h2 { font-size: 22px; }
+  .form-row { grid-template-columns: 1fr; }
+  .social-buttons { grid-template-columns: 1fr; }
+  .otp-input { width: 44px; height: 52px; font-size: 20px; }
+  .toast-container { top: 12px; left: 12px; right: 12px; }
+  .toast { min-width: auto; max-width: 100%; }
+}
+
+/* ==================== SCROLLBAR ==================== */
+.form-panel::-webkit-scrollbar { width: 6px; }
+.form-panel::-webkit-scrollbar-thumb { background: var(--border); border-radius: 6px; }
+</style>
+</head>
+<body>
+
+<!-- Toast Container -->
+<div class="toast-container" id="toastContainer"></div>
+
+<div class="auth-wrapper">
+
+  <!-- ==================== BRAND PANEL ==================== -->
+  <div class="brand-panel">
+    <div class="brand-bg"></div>
+    <div class="brand-grid"></div>
+
+    <div class="brand-content">
+      <div class="brand-logo">
+        <div class="brand-logo-icon">🇮🇷</div>
+        <div class="brand-logo-text">
+          <strong>ایرانیان توکن</strong>
+          <small>زیرساخت توکنیزه‌سازی پروژه‌ها</small>
+        </div>
+      </div>
+
+      <div class="brand-hero">
+        <h1>
+          پروژه‌های خود را به<br>
+          <span class="gold">دارایی‌های دیجیتال</span> تبدیل کنید
+        </h1>
+        <p>
+          زیرساخت جامع برای شناسایی، طراحی، مدل‌سازی، توکنیزه‌سازی، مستندسازی، مدیریت و پایش پروژه‌ها و دارایی‌های قابل تعریف.
+        </p>
+      </div>
+
+      <div class="brand-features">
+        <div class="brand-feature">
+          <div class="brand-feature-icon">🔗</div>
+          <div class="brand-feature-body">
+            <strong>توکنیزه‌سازی واقعی</strong>
+            <span>بر پایه دارایی، حق یا منفعت واقعی پروژه</span>
+          </div>
+        </div>
+        <div class="brand-feature">
+          <div class="brand-feature-icon">📄</div>
+          <div class="brand-feature-body">
+            <strong>مستندسازی کامل</strong>
+            <span>اسناد، قراردادها و گزارش‌های قابل ردیابی</span>
+          </div>
+        </div>
+        <div class="brand-feature">
+          <div class="brand-feature-icon">✅</div>
+          <div class="brand-feature-body">
+            <strong>اعتبارسنجی چندلایه</strong>
+            <span>تأیید کارشناسی و ایجاد اعتماد</span>
+          </div>
+        </div>
+        <div class="brand-feature">
+          <div class="brand-feature-icon">📊</div>
+          <div class="brand-feature-body">
+            <strong>مدیریت و پایش مستمر</strong>
+            <span>داشبورد، گزارش و Audit Trail</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="brand-stats">
+        <div class="brand-stat">
+          <div class="value">۱۲+</div>
+          <div class="label">پروژه فعال</div>
+        </div>
+        <div class="brand-stat">
+          <div class="value">۲۸.۵K</div>
+          <div class="label">توکن صادرشده</div>
+        </div>
+        <div class="brand-stat">
+          <div class="value">۱,۲۴۸</div>
+          <div class="label">کاربر فعال</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="floating-token">🪙</div>
+  </div>
+
+  <!-- ==================== FORM PANEL ==================== -->
+  <div class="form-panel">
+    <div class="form-container">
+
+      <!-- Tabs -->
+      <div class="auth-tabs">
+        <button class="auth-tab active" id="tabLogin" onclick="switchTab('login')">ورود</button>
+        <button class="auth-tab" id="tabRegister" onclick="switchTab('register')">ثبت‌نام</button>
+        <div class="tab-indicator right" id="tabIndicator"></div>
+      </div>
+
+      <!-- ==================== LOGIN FORM ==================== -->
+      <div class="form-page active" id="pageLogin">
+        <div class="form-header">
+          <h2>خوش آمدید 👋</h2>
+          <p>برای ورود به پنل مدیریت، اطلاعات حساب خود را وارد کنید.</p>
+        </div>
+
+        <form id="loginForm" onsubmit="handleLogin(event)">
+          <div class="form-group">
+            <label class="form-label">ایمیل یا شماره موبایل <span class="required">*</span></label>
+            <div class="input-wrap">
+              <input type="text" id="loginIdentifier" placeholder="example@email.com" autocomplete="username" required>
+              <span class="input-icon">📧</span>
+            </div>
+            <div class="error-text" id="loginIdentifierError">⚠️ ایمیل یا شماره موبایل را وارد کنید.</div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">رمز عبور <span class="required">*</span></label>
+            <div class="input-wrap">
+              <input type="password" id="loginPassword" placeholder="••••••••" autocomplete="current-password" required>
+              <span class="input-icon">🔒</span>
+              <button type="button" class="password-toggle" onclick="togglePassword('loginPassword', this)">👁️</button>
+            </div>
+            <div class="error-text" id="loginPasswordError">⚠️ رمز عبور را وارد کنید.</div>
+          </div>
+
+          <div class="form-actions-row">
+            <label class="checkbox-wrap" style="margin: 0;">
+              <input type="checkbox" id="rememberMe" checked>
+              <span class="checkbox-box"></span>
+              <span class="checkbox-label">مرا به خاطر بسپار</span>
+            </label>
+            <a href="#" class="forgot-link" onclick="showForgot(event)">فراموشی رمز عبور؟</a>
+          </div>
+
+          <button type="submit" class="btn-submit" id="loginBtn">
+            <span class="spinner"></span>
+            <span class="btn-text">ورود به پنل مدیریت</span>
+            <span>←</span>
+          </button>
+        </form>
+
+        <div class="divider">یا ورود با</div>
+
+        <div class="social-buttons">
+          <button class="social-btn" onclick="socialLogin('Google')">
+            <span class="s-icon">🔵</span>
+            Google
+          </button>
+          <button class="social-btn" onclick="socialLogin('LinkedIn')">
+            <span class="s-icon">💼</span>
+            LinkedIn
+          </button>
+        </div>
+
+        <div class="form-footer">
+          حساب کاربری ندارید؟ <a href="#" onclick="switchTab('register')">ثبت‌نام کنید</a>
+        </div>
+      </div>
+
+      <!-- ==================== REGISTER FORM ==================== -->
+      <div class="form-page" id="pageRegister">
+
+        <!-- Step Indicator -->
+        <div class="step-indicator">
+          <div class="step-dot active" id="step1Dot">۱</div>
+          <div class="step-line" id="step1Line"></div>
+          <div class="step-dot" id="step2Dot">۲</div>
+        </div>
+
+        <!-- Step 1: Basic Info -->
+        <div class="register-step" id="registerStep1">
+          <div class="form-header">
+            <h2>ایجاد حساب کاربری</h2>
+            <p>اطلاعات پایه خود را وارد کنید. سپس کد تأیید ارسال می‌شود.</p>
+          </div>
+
+          <form id="registerForm" onsubmit="handleRegister(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">نام <span class="required">*</span></label>
+                <div class="input-wrap">
+                  <input type="text" id="regFirstName" placeholder="محمد" required>
+                  <span class="input-icon">👤</span>
+                </div>
+                <div class="error-text" id="regFirstNameError">⚠️ نام را وارد کنید.</div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">نام خانوادگی <span class="required">*</span></label>
+                <div class="input-wrap">
+                  <input type="text" id="regLastName" placeholder="احمدی" required>
+                  <span class="input-icon">👤</span>
+                </div>
+                <div class="error-text" id="regLastNameError">⚠️ نام خانوادگی را وارد کنید.</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">ایمیل <span class="required">*</span></label>
+              <div class="input-wrap">
+                <input type="email" id="regEmail" placeholder="example@email.com" autocomplete="email" required>
+                <span class="input-icon">📧</span>
+              </div>
+              <div class="error-text" id="regEmailError">⚠️ ایمیل معتبر وارد کنید.</div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">شماره موبایل <span class="required">*</span></label>
+              <div class="input-wrap">
+                <input type="tel" id="regPhone" placeholder="۰۹۱۲۳۴۵۶۷۸۹" maxlength="11" required>
+                <span class="input-icon">📱</span>
+              </div>
+              <div class="error-text" id="regPhoneError">⚠️ شماره موبایل معتبر وارد کنید (۱۱ رقم).</div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">رمز عبور <span class="required">*</span></label>
+              <div class="input-wrap">
+                <input type="password" id="regPassword" placeholder="حداقل ۸ کاراکتر" autocomplete="new-password" required oninput="checkPasswordStrength(this.value)">
+                <span class="input-icon">🔒</span>
+                <button type="button" class="password-toggle" onclick="togglePassword('regPassword', this)">👁️</button>
+              </div>
+              <div class="error-text" id="regPasswordError">⚠️ رمز عبور باید حداقل ۸ کاراکتر باشد.</div>
+
+              <!-- Password Strength -->
+              <div class="password-strength" id="passwordStrength">
+                <div class="strength-bars">
+                  <div class="strength-bar" id="bar1"></div>
+                  <div class="strength-bar" id="bar2"></div>
+                  <div class="strength-bar" id="bar3"></div>
+                  <div class="strength-bar" id="bar4"></div>
+                </div>
+                <div class="strength-text" id="strengthText">قدرت رمز: ضعیف</div>
+
+                <div class="strength-requirements">
+                  <div class="req-item" id="reqLength"><span class="check">✓</span> حداقل ۸ کاراکتر</div>
+                  <div class="req-item" id="reqUpper"><span class="check">✓</span> شامل حرف بزرگ</div>
+                  <div class="req-item" id="reqNumber"><span class="check">✓</span> شامل عدد</div>
+                  <div class="req-item" id="reqSpecial"><span class="check">✓</span> شامل کاراکتر خاص</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">نقش در سیستم <span class="required">*</span></label>
+              <div class="input-wrap">
+                <select id="regRole" required>
+                  <option value="">انتخاب کنید...</option>
+                  <option value="owner">مالک پروژه</option>
+                  <option value="executor">مجری / مشارکت‌کننده</option>
+                  <option value="expert">کارشناس / ارزیاب</option>
+                  <option value="investor">سرمایه‌گذار</option>
+                  <option value="observer">مشاهده‌کننده</option>
+                </select>
+                <span class="input-icon">🎯</span>
+              </div>
+            </div>
+
+            <label class="checkbox-wrap">
+              <input type="checkbox" id="regTerms" required>
+              <span class="checkbox-box"></span>
+              <span class="checkbox-label">
+                <a href="#">قوانین و مقررات</a> و <a href="#">سیاست حفظ حریم خصوصی</a> را می‌پذیرم.
+              </span>
+            </label>
+
+            <button type="submit" class="btn-submit" id="registerBtn">
+              <span class="spinner"></span>
+              <span class="btn-text">ادامه و دریافت کد تأیید</span>
+              <span>←</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Step 2: OTP Verification -->
+        <div class="register-step otp-section" id="registerStep2">
+          <div class="form-header">
+            <h2>تأیید شماره موبایل 📱</h2>
+            <p>کد ۶ رقمی به شماره <strong id="otpPhoneDisplay">۰۹۱۲۳۴۵۶۷۸۹</strong> ارسال شد.</p>
+          </div>
+
+          <div class="otp-inputs">
+            <input type="text" class="otp-input" maxlength="1" inputmode="numeric" data-index="0">
+            <input type="text" class="otp-input" maxlength="1" inputmode="numeric" data-index="1">
+            <input type="text" class="otp-input" maxlength="1" inputmode="numeric" data-index="2">
+            <input type="text" class="otp-input" maxlength="1" inputmode="numeric" data-index="3">
+            <input type="text" class="otp-input" maxlength="1" inputmode="numeric" data-index="4">
+            <input type="text" class="otp-input" maxlength="1" inputmode="numeric" data-index="5">
+          </div>
+
+          <div class="otp-timer">
+            زمان باقی‌مانده: <strong id="otpTimer">۰۲:۰۰</strong>
+          </div>
+
+          <button type="button" class="btn-submit" id="otpBtn" onclick="verifyOTP()">
+            <span class="spinner"></span>
+            <span class="btn-text">تأیید و ایجاد حساب</span>
+            <span>✓</span>
+          </button>
+
+          <div style="text-align: center; margin-top: 18px;">
+            <span style="font-size: 13px; color: var(--gray);">کد را دریافت نکردید؟ </span>
+            <button class="resend-link" id="resendBtn" onclick="resendOTP()" disabled>ارسال مجدد</button>
+          </div>
+
+          <div style="text-align: center; margin-top: 12px;">
+            <button class="resend-link" onclick="backToStep1()">← بازگشت و ویرایش اطلاعات</button>
+          </div>
+        </div>
+
+        <div class="form-footer" id="registerFooter">
+          حساب کاربری دارید؟ <a href="#" onclick="switchTab('login')">وارد شوید</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script>
+/* ==================== TAB SWITCHING ==================== */
+function switchTab(tab) {
+  const tabLogin = document.getElementById('tabLogin');
+  const tabRegister = document.getElementById('tabRegister');
+  const pageLogin = document.getElementById('pageLogin');
+  const pageRegister = document.getElementById('pageRegister');
+  const indicator = document.getElementById('tabIndicator');
+
+  if (tab === 'login') {
+    tabLogin.classList.add('active');
+    tabRegister.classList.remove('active');
+    pageLogin.classList.add('active');
+    pageRegister.classList.remove('active');
+    indicator.classList.add('right');
+    indicator.classList.remove('left');
+  } else {
+    tabRegister.classList.add('active');
+    tabLogin.classList.remove('active');
+    pageRegister.classList.add('active');
+    pageLogin.classList.remove('active');
+    indicator.classList.remove('right');
+    indicator.classList.add('left');
+    backToStep1();
+  }
+}
+
+/* ==================== PASSWORD TOGGLE ==================== */
+function togglePassword(inputId, btn) {
+  const input = document.getElementById(inputId);
+  if (input.type === 'password') {
+    input.type = 'text';
+    btn.textContent = '🙈';
+  } else {
+    input.type = 'password';
+    btn.textContent = '👁️';
+  }
+}
+
+/* ==================== TOAST ==================== */
+function showToast(type, title, message) {
+  const container = document.getElementById('toastContainer');
+  const icons = { success: '✅', error: '❌', warning: '⚠️', info: 'ℹ️' };
+
+  const toast = document.createElement('div');
+  toast.className = `toast ${type}`;
+  toast.innerHTML = `
+    <div class="toast-icon">${icons[type]}</div>
+    <div class="toast-body">
+      <strong>${title}</strong>
+      <span>${message}</span>
+    </div>
+  `;
+  container.appendChild(toast);
+
+  setTimeout(() => {
+    toast.style.opacity = '0';
+    toast.style.transform = 'translateX(-100%)';
+    toast.style.transition = 'all 0.3s';
+    setTimeout(() => toast.remove(), 300);
+  }, 4000);
+}
+
+/* ==================== VALIDATION HELPERS ==================== */
+function setError(inputId, errorId, message) {
+  const input = document.getElementById(inputId);
+  const error = document.getElementById(errorId);
+  if (input) input.parentElement.classList.add('has-error');
+  if (input) input.parentElement.classList.remove('has-success');
+  if (error) {
+    if (message) error.textContent = message;
+    error.classList.add('show');
+  }
+}
+
+function clearError(inputId, errorId) {
+  const input = document.getElementById(inputId);
+  const error = document.getElementById(errorId);
+  if (input) input.parentElement.classList.remove('has-error');
+  if (error) error.classList.remove('show');
+}
+
+function setSuccess(inputId) {
+  const input = document.getElementById(inputId);
+  if (input) {
+    input.parentElement.classList.remove('has-error');
+    input.parentElement.classList.add('has-success');
+  }
+}
+
+/* ==================== LOGIN ==================== */
+function handleLogin(e) {
+  e.preventDefault();
+  const identifier = document.getElementById('loginIdentifier').value.trim();
+  const password = document.getElementById('loginPassword').value;
+  let valid = true;
+
+  clearError('loginIdentifier', 'loginIdentifierError');
+  clearError('loginPassword', 'loginPasswordError');
+
+  if (!identifier) {
+    setError('loginIdentifier', 'loginIdentifierError');
+    valid = false;
+  } else {
+    setSuccess('loginIdentifier');
+  }
+
+  if (!password || password.length < 6) {
+    setError('loginPassword', 'loginPasswordError', 'رمز عبور باید حداقل ۶ کاراکتر باشد.');
+    valid = false;
+  } else {
+    setSuccess('loginPassword');
+  }
+
+  if (!valid) return;
+
+  const btn = document.getElementById('loginBtn');
+  btn.classList.add('loading');
+  btn.disabled = true;
+
+  setTimeout(() => {
+    btn.classList.remove('loading');
+    btn.disabled = false;
+    showToast('success', 'ورود موفق', 'در حال انتقال به پنل مدیریت...');
+    setTimeout(() => {
+      window.location.href = 'dashboard.html';
+    }, 1200);
+  }, 1500);
+}
+
+/* ==================== REGISTER ==================== */
+function handleRegister(e) {
+  e.preventDefault();
+  let valid = true;
+
+  // First Name
+  const firstName = document.getElementById('regFirstName').value.trim();
+  if (!firstName) {
+    setError('regFirstName', 'regFirstNameError');
+    valid = false;
+  } else {
+    setSuccess('regFirstName');
+  }
+
+  // Last Name
+  const lastName = document.getElementById('regLastName').value.trim();
+  if (!lastName) {
+    setError('regLastName', 'regLastNameError');
+    valid = false;
+  } else {
+    setSuccess('regLastName');
+  }
+
+  // Email
+  const email = document.getElementById('regEmail').value.trim();
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!email || !emailRegex.test(email)) {
+    setError('regEmail', 'regEmailError');
+    valid = false;
+  } else {
+    setSuccess('regEmail');
+  }
+
+  // Phone
+  const phone = document.getElementById('regPhone').value.trim();
+  const phoneRegex = /^09\d{9}$/;
+  if (!phone || !phoneRegex.test(phone)) {
+    setError('regPhone', 'regPhoneError');
+    valid = false;
+  } else {
+    setSuccess('regPhone');
+  }
+
+  // Password
+  const password = document.getElementById('regPassword').value;
+  if (!password || password.length < 8) {
+    setError('regPassword', 'regPasswordError');
+    valid = false;
+  } else {
+    setSuccess('regPassword');
+  }
+
+  // Role
+  const role = document.getElementById('regRole').value;
+  if (!role) {
+    document.getElementById('regRole').parentElement.classList.add('has-error');
+    valid = false;
+  } else {
+    document.getElementById('regRole').parentElement.classList.remove('has-error');
+  }
+
+  // Terms
+  const terms = document.getElementById('regTerms').checked;
+  if (!terms) {
+    showToast('warning', 'توجه', 'برای ادامه باید قوانین را بپذیرید.');
+    valid = false;
+  }
+
+  if (!valid) {
+    showToast('error', 'خطا در فرم', 'لطفاً خطاهای مشخص‌شده را برطرف کنید.');
+    return;
+  }
+
+  const btn = document.getElementById('registerBtn');
+  btn.classList.add('loading');
+  btn.disabled = true;
+
+  setTimeout(() => {
+    btn.classList.remove('loading');
+    btn.disabled = false;
+
+    // Show phone in OTP step
+    document.getElementById('otpPhoneDisplay').textContent = phone;
+
+    // Switch to step 2
+    document.getElementById('registerStep1').style.display = 'none';
+    document.getElementById('registerStep2').classList.add('show');
+    document.getElementById('registerFooter').style.display = 'none';
+
+    // Update step indicator
+    document.getElementById('step1Dot').classList.remove('active');
+    document.getElementById('step1Dot').classList.add('done');
+    document.getElementById('step1Dot').textContent = '✓';
+    document.getElementById('step1Line').classList.add('done');
+    document.getElementById('step2Dot').classList.add('active');
+
+    // Start OTP timer
+    startOTPTimer();
+
+    // Focus first OTP input
+    document.querySelector('.otp-input').focus();
+
+    showToast('success', 'کد ارسال شد', `کد ۶ رقمی به شماره ${phone} پیامک شد.`);
+  }, 1800);
+}
+
+/* ==================== PASSWORD STRENGTH ==================== */
+function checkPasswordStrength(password) {
+  const strengthContainer = document.getElementById('passwordStrength');
+  if (!password) {
+    strengthContainer.classList.remove('show');
+    return;
+  }
+  strengthContainer.classList.add('show');
+
+  const requirements = {
+    length: password.length >= 8,
+    upper: /[A-Z]/.test(password),
+    number: /[0-9]/.test(password),
+    special: /[!@#$%^&*(),.?":{}|<>]/.test(password),
+  };
+
+  // Update requirement items
+  Object.keys(requirements).forEach(key => {
+    const el = document.getElementById('req' + key.charAt(0).toUpperCase() + key.slice(1));
+    if (requirements[key]) {
+      el.classList.add('met');
+    } else {
+      el.classList.remove('met');
+    }
+  });
+
+  const score = Object.values(requirements).filter(Boolean).length;
+
+  // Reset bars
+  for (let i = 1; i <= 4; i++) {
+    const bar = document.getElementById('bar' + i);
+    bar.className = 'strength-bar';
+  }
+
+  const strengthText = document.getElementById('strengthText');
+
+  if (score <= 1) {
+    document.getElementById('bar1').classList.add('weak');
+    strengthText.textContent = 'قدرت رمز: ضعیف';
+    strengthText.className = 'strength-text weak';
+  } else if (score === 2) {
+    document.getElementById('bar1').classList.add('medium');
+    document.getElementById('bar2').classList.add('medium');
+    strengthText.textContent = 'قدرت رمز: متوسط';
+    strengthText.className = 'strength-text medium';
+  } else if (score === 3) {
+    document.getElementById('bar1').classList.add('strong');
+    document.getElementById('bar2').classList.add('strong');
+    document.getElementById('bar3').classList.add('strong');
+    strengthText.textContent = 'قدرت رمز: خوب';
+    strengthText.className = 'strength-text strong';
+  } else {
+    for (let i = 1; i <= 4; i++) {
+      document.getElementById('bar' + i).classList.add('strong');
+    }
+    strengthText.textContent = 'قدرت رمز: عالی';
+    strengthText.className = 'strength-text strong';
+  }
+}
+
+/* ==================== OTP INPUTS ==================== */
+const otpInputs = document.querySelectorAll('.otp-input');
+otpInputs.forEach((input, index) => {
+  input.addEventListener('input', (e) => {
+    const value = e.target.value;
+    if (value && !/^\d$/.test(value)) {
+      e.target.value = '';
+      return;
+    }
+    if (value) {
+      e.target.classList.add('filled');
+      if (index < otpInputs.length - 1) {
+        otpInputs[index + 1].focus();
+      }
+    } else {
+      e.target.classList.remove('filled');
+    }
+  });
+
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Backspace' && !e.target.value && index > 0) {
+      otpInputs[index - 1].focus();
+    }
+  });
+
+  input.addEventListener('paste', (e) => {
+    e.preventDefault();
+    const pastedData = e.clipboardData.getData('text').replace(/\D/g, '').slice(0, 6);
+    pastedData.split('').forEach((char, i) => {
+      if (otpInputs[i]) {
+        otpInputs[i].value = char;
+        otpInputs[i].classList.add('filled');
+      }
+    });
+    if (pastedData.length === 6) {
+      otpInputs[5].focus();
+    }
+  });
+});
+
+/* ==================== OTP TIMER ==================== */
+let otpTimerInterval;
+function startOTPTimer() {
+  let seconds = 120;
+  const timerEl = document.getElementById('otpTimer');
+  const resendBtn = document.getElementById('resendBtn');
+
+  clearInterval(otpTimerInterval);
+  resendBtn.disabled = true;
+
+  otpTimerInterval = setInterval(() => {
+    const min = Math.floor(seconds / 60);
+    const sec = seconds % 60;
+    timerEl.textContent = `${String(min).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
+    seconds--;
+
+    if (seconds < 0) {
+      clearInterval(otpTimerInterval);
+      timerEl.textContent = '۰۰:۰۰';
+      resendBtn.disabled = false;
+    }
+  }, 1000);
+}
+
+function resendOTP() {
+  startOTPTimer();
+  showToast('info', 'ارسال مجدد', 'کد جدید به شماره شما پیامک شد.');
+}
+
+/* ==================== VERIFY OTP ==================== */
+function verifyOTP() {
+  const code = Array.from(otpInputs).map(i => i.value).join('');
+  if (code.length !== 6) {
+    showToast('warning', 'کد ناقص', 'لطفاً کد ۶ رقمی را کامل وارد کنید.');
+    return;
+  }
+
+  const btn = document.getElementById('otpBtn');
+  btn.classList.add('loading');
+  btn.disabled = true;
+
+  setTimeout(() => {
+    btn.classList.remove('loading');
+    btn.disabled = false;
+    showToast('success', 'ثبت‌نام موفق', 'حساب شما با موفقیت ایجاد شد. در حال انتقال...');
+    setTimeout(() => {
+      window.location.href = 'dashboard.html';
+    }, 1400);
+  }, 1600);
+}
+
+/* ==================== BACK TO STEP 1 ==================== */
+function backToStep1() {
+  document.getElementById('registerStep1').style.display = 'block';
+  document.getElementById('registerStep2').classList.remove('show');
+  document.getElementById('registerFooter').style.display = 'block';
+
+  // Reset step indicator
+  document.getElementById('step1Dot').classList.add('active');
+  document.getElementById('step1Dot').classList.remove('done');
+  document.getElementById('step1Dot').textContent = '۱';
+  document.getElementById('step1Line').classList.remove('done');
+  document.getElementById('step2Dot').classList.remove('active');
+
+  clearInterval(otpTimerInterval);
+  otpInputs.forEach(i => { i.value = ''; i.classList.remove('filled'); });
+}
+
+/* ==================== SOCIAL LOGIN ==================== */
+function socialLogin(provider) {
+  showToast('info', `ورود با ${provider}`, `در حال اتصال به ${provider}...`);
+  setTimeout(() => {
+    showToast('success', 'موفق', `ورود با ${provider} با موفقیت انجام شد.`);
+    setTimeout(() => {
+      window.location.href = 'dashboard.html';
+    }, 1000);
+  }, 1500);
+}
+
+/* ==================== FORGOT PASSWORD ==================== */
+function showForgot(e) {
+  e.preventDefault();
+  showToast('info', 'بازیابی رمز عبور', 'لینک بازیابی به ایمیل شما ارسال خواهد شد.');
+}
+
+/* ==================== REAL-TIME VALIDATION ==================== */
+document.getElementById('regPhone')?.addEventListener('input', (e) => {
+  e.target.value = e.target.value.replace(/\D/g, '');
+  if (e.target.value.length === 11) {
+    if (/^09\d{9}$/.test(e.target.value)) {
+      clearError('regPhone', 'regPhoneError');
+      setSuccess('regPhone');
+    } else {
+      setError('regPhone', 'regPhoneError', '⚠️ شماره باید با ۰۹ شروع شود.');
+    }
+  }
+});
+
+document.getElementById('regEmail')?.addEventListener('blur', (e) => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (e.target.value && !emailRegex.test(e.target.value)) {
+    setError('regEmail', 'regEmailError');
+  } else if (e.target.value) {
+    clearError('regEmail', 'regEmailError');
+    setSuccess('regEmail');
+  }
+});
+
+/* ==================== KEYBOARD SHORTCUTS ==================== */
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    // Clear any focused state
+    document.activeElement?.blur();
+  }
+});
+
+/* ==================== AUTO-FOCUS ON LOAD ==================== */
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.getElementById('loginIdentifier')?.focus();
+  }, 300);
+});
+</script>
+
+</body>
+</html>
