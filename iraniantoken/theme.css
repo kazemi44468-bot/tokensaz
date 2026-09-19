@@ -126,3 +126,6 @@ body{background:radial-gradient(circle at 7% 0%,rgba(66,165,245,.09),transparent
 /* --- IranianToken page background asset --- */
 html,body{background-color:transparent!important;background-image:url("./assets/images/bg (10).jpg")!important;background-repeat:repeat!important;background-position:center top!important;background-size:auto!important}
 .section,.section-alt{background-color:transparent!important;background-image:none!important}
+
+/* --- IranianToken header background asset --- */
+.header{background-color:rgba(255,255,255,.9)!important;background-image:url("./assets/images/b2.jpg")!important;background-repeat:repeat!important;background-position:center top!important;background-size:auto!important}
