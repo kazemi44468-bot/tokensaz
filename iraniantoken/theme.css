@@ -263,3 +263,29 @@ html,body{background-color:transparent!important;background-image:url("./assets/
 
 /* BODY BACKGROUND TEST — body.gif */
 html,body{background-color:transparent!important;background-image:url("./assets/images/body.gif")!important;background-repeat:repeat!important;background-position:center top!important;background-size:auto!important}
+
+/* SINGLE-LAYER CONTENT SYSTEM — preserve body.gif visibility */
+:root{--it-glass:rgba(255,255,255,.68);--it-glass-soft:rgba(255,255,255,.52);--it-glass-line:rgba(16,40,61,.11);--it-glass-shadow:0 12px 32px rgba(12,48,76,.055)}
+.section,.section-alt{background:transparent!important}
+.feature-card,.process-step,.model-card,.arch-layer,.eco-card,.principle,.card,.example-box,.it-architecture>div,
+.filter-bar,.project-card,.stat-card,.settings-nav,.quick-actions{
+  background:var(--it-glass)!important;
+  border:1px solid var(--it-glass-line)!important;
+  box-shadow:var(--it-glass-shadow)!important;
+  backdrop-filter:blur(5px)!important;
+  -webkit-backdrop-filter:blur(5px)!important;
+}
+.feature-card:after,.model-card:after,.eco-card:after,.quick-action:before{background:linear-gradient(135deg,rgba(255,255,255,.16),transparent 55%,rgba(23,105,194,.025))!important}
+.process-step,.arch-layer,.principle,.it-architecture>div{background:rgba(255,255,255,.58)!important}
+.section-header p,.it-architecture p{color:#5f778b!important}
+.section-tag{background:rgba(255,255,255,.58)!important;backdrop-filter:blur(4px)!important}
+.quick-action{background:rgba(255,255,255,.48)!important;border-color:rgba(16,40,61,.1)!important;box-shadow:none!important;backdrop-filter:blur(4px)!important}
+.quick-action:hover{background:rgba(255,255,255,.68)!important}
+.form-input,.form-select,.form-textarea{background:rgba(255,255,255,.72)!important;backdrop-filter:blur(4px)!important}
+.card-header{background:rgba(255,255,255,.32)!important}
+.topbar{background:rgba(255,255,255,.66)!important;backdrop-filter:blur(10px)!important}
+.header{background-color:rgba(255,255,255,.72)!important;backdrop-filter:blur(10px)!important}
+.footer{background:#fff url("./assets/images/Bg.png.gif") repeat center center!important;background-size:auto!important}
+@media(max-width:900px){
+  .feature-card,.process-step,.model-card,.arch-layer,.eco-card,.principle,.card,.example-box,.it-architecture>div,.filter-bar,.project-card,.stat-card,.settings-nav{backdrop-filter:blur(4px)!important;-webkit-backdrop-filter:blur(4px)!important}
+}
