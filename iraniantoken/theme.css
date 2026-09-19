@@ -418,3 +418,241 @@ body{background-image:url("./assets/images/body.gif")!important;background-repea
   .it-page-shell .hero{border-radius:22px 9px 22px 9px}
   .it-page-shell .cta-section{border-radius:22px 10px 22px 10px}
 }
+
+/* =========================================================
+   IRANIAN TOKEN — NEW CONTENT SYSTEM
+   Rebuilt cards, sections and information architecture visuals
+   ========================================================= */
+:root{
+  --it-ink:#10283d;
+  --it-muted:#60788b;
+  --it-blue:#1769c2;
+  --it-cyan:#39b8c7;
+  --it-gold:#c9a34a;
+  --it-line:rgba(117,151,174,.24);
+  --it-surface:rgba(255,255,255,.57);
+  --it-surface-strong:rgba(255,255,255,.76);
+  --it-shadow:0 18px 44px rgba(18,55,80,.075);
+}
+
+/* section rhythm */
+.it-page-shell>.section{
+  padding:76px 14px!important;
+  position:relative!important;
+}
+.it-page-shell>.section+ .section{border-top:1px solid rgba(76,116,142,.07)}
+.it-page-shell>.section>.container{max-width:1120px!important}
+.section-header{margin-bottom:42px!important}
+.section-header h2{font-size:30px!important;line-height:1.55!important;letter-spacing:-.25px!important}
+.section-header p{max-width:760px!important;font-size:14px!important;line-height:2.05!important}
+
+/* section label becomes a small system marker */
+.section-tag{
+  position:relative!important;
+  padding:7px 16px!important;
+  border-radius:999px!important;
+  font-size:11px!important;
+  letter-spacing:.2px!important;
+  border:1px solid rgba(23,105,194,.13)!important;
+  box-shadow:0 6px 18px rgba(23,105,194,.045)!important;
+}
+.section-tag:before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--it-gold);margin-left:7px;vertical-align:1px;box-shadow:0 0 10px rgba(201,163,74,.35)}
+
+/* common card language: architectural panels rather than generic cards */
+.feature-card,.process-step,.model-card,.arch-layer,.eco-card,.principle,.it-architecture>div,.example-box{
+  position:relative!important;
+  overflow:hidden!important;
+  border:1px solid var(--it-line)!important;
+  border-radius:26px 10px 26px 10px!important;
+  background:
+    linear-gradient(145deg,rgba(255,255,255,.78),rgba(255,255,255,.43))!important;
+  box-shadow:var(--it-shadow),inset 0 1px 0 rgba(255,255,255,.76)!important;
+  backdrop-filter:blur(8px)!important;
+  -webkit-backdrop-filter:blur(8px)!important;
+}
+.feature-card:before,.process-step:before,.model-card:before,.arch-layer:before,.eco-card:before,.principle:before,.it-architecture>div:before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(120deg,rgba(57,184,199,.055),transparent 34%,transparent 70%,rgba(201,163,74,.045));
+}
+.feature-card:after,.model-card:after,.eco-card:after{
+  content:"";position:absolute;right:0;top:0;width:42%;height:2px;
+  background:linear-gradient(90deg,transparent,var(--it-cyan),var(--it-gold));
+  opacity:.55;
+}
+.feature-card:hover,.model-card:hover,.eco-card:hover,.principle:hover,.process-step:hover{
+  transform:translateY(-5px)!important;
+  border-color:rgba(23,105,194,.25)!important;
+  box-shadow:0 24px 48px rgba(18,55,80,.11),inset 0 1px 0 rgba(255,255,255,.85)!important;
+}
+
+/* FEATURES — 2 x 3 strategic modules */
+.features-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:18px!important}
+.feature-card{padding:28px!important;min-height:215px!important;text-align:right!important}
+.feature-card .feature-icon{
+  width:48px!important;height:48px!important;border-radius:15px!important;
+  margin:0 0 22px!important;
+  background:linear-gradient(145deg,rgba(23,105,194,.12),rgba(57,184,199,.07))!important;
+  color:var(--it-blue)!important;
+  border:1px solid rgba(23,105,194,.12)!important;
+  font-size:21px!important;
+  box-shadow:none!important;
+}
+.feature-card:hover .feature-icon{background:linear-gradient(145deg,#1769c2,#39b8c7)!important;color:#fff!important;transform:none!important}
+.feature-card h3{font-size:16px!important;margin-bottom:9px!important;position:relative;z-index:2}
+.feature-card p{font-size:12.5px!important;line-height:2!important;position:relative;z-index:2}
+
+/* PROCESS — numbered sequence */
+.process-timeline{grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:12px!important}
+.process-step{padding:24px 18px!important;min-height:190px!important;text-align:right!important}
+.process-step:after{
+  content:"";position:absolute;top:24px;left:16px;width:28px;height:28px;
+  border-left:1px solid rgba(23,105,194,.12);border-bottom:1px solid rgba(23,105,194,.12);
+  border-radius:0 0 0 10px;opacity:.55;
+}
+.step-number{
+  width:40px!important;height:40px!important;border-radius:13px!important;
+  margin:0 0 20px!important;background:linear-gradient(145deg,#1769c2,#39b8c7)!important;
+  box-shadow:0 10px 20px rgba(23,105,194,.16)!important;font-size:14px!important;
+}
+.process-step h4{font-size:14px!important;margin-bottom:8px!important;position:relative;z-index:2}
+.process-step p{font-size:11.5px!important;line-height:1.95!important;position:relative;z-index:2}
+
+/* MODELS — more like product/model tiles */
+.models-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:16px!important}
+.model-card{padding:22px!important;min-height:168px!important;text-align:right!important}
+.model-card h4{font-size:14px!important;margin-bottom:10px!important;position:relative;z-index:2}
+.model-card h4 .dot-gold{width:7px!important;height:7px!important;background:var(--it-gold)!important;box-shadow:0 0 10px rgba(201,163,74,.35)!important}
+.model-card p{font-size:11.5px!important;line-height:1.95!important;position:relative;z-index:2}
+.model-card:before{background:linear-gradient(145deg,rgba(23,105,194,.07),transparent 42%,rgba(201,163,74,.055))}
+
+/* ARCHITECTURE — vertical stack with a clear hierarchy */
+.arch-layers{max-width:900px!important;gap:9px!important;position:relative!important}
+.arch-layers:before{
+  content:"";position:absolute;right:22px;top:26px;bottom:26px;width:1px!important;
+  background:linear-gradient(var(--it-blue),rgba(57,184,199,.38),rgba(201,163,74,.2),transparent)!important;
+  z-index:0!important;
+}
+.arch-layer{
+  min-height:112px!important;padding:20px 26px 20px 24px!important;
+  display:grid!important;grid-template-columns:52px 1fr!important;gap:18px!important;
+  text-align:right!important;z-index:1!important;
+}
+.arch-layer-num{
+  width:44px!important;height:44px!important;border-radius:14px!important;
+  background:rgba(23,105,194,.09)!important;color:var(--it-blue)!important;
+  border:1px solid rgba(23,105,194,.13)!important;
+  box-shadow:0 6px 16px rgba(23,105,194,.06)!important;
+  position:relative!important;
+}
+.arch-layer-num:after{content:"";position:absolute;right:-7px;top:50%;width:7px;height:1px;background:rgba(23,105,194,.25)}
+.arch-layer-content h4{font-size:15px!important;margin-bottom:5px!important}
+.arch-layer-content p{font-size:12px!important;line-height:1.9!important}
+
+/* IT ARCHITECTURE 4-layer explanatory grid */
+.it-architecture{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important}
+.it-architecture>div{padding:24px!important;min-height:150px!important;text-align:right!important}
+.it-architecture>div b{font-size:15px!important;display:flex!important;align-items:center!important;gap:10px!important}
+.it-architecture>div b:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--it-cyan);box-shadow:0 0 0 5px rgba(57,184,199,.08)}
+.it-architecture p{font-size:12px!important;line-height:2!important}
+
+/* EXAMPLE — make the real-world-to-token flow the visual centerpiece */
+.example-box{
+  padding:38px!important;
+  background:linear-gradient(145deg,#0a2238,#0d466b)!important;
+  border-color:rgba(255,255,255,.12)!important;
+  box-shadow:0 24px 55px rgba(8,30,50,.16)!important;
+  text-align:right!important;
+}
+.example-box:after{
+  content:"";position:absolute;width:320px;height:320px;left:-130px;bottom:-180px;
+  border:1px solid rgba(201,163,74,.16);border-radius:50%;
+  box-shadow:0 0 0 50px rgba(57,184,199,.025),0 0 0 100px rgba(57,184,199,.018);
+}
+.example-box h3{font-size:20px!important;margin-bottom:25px!important}
+.example-flow{gap:8px!important;margin-bottom:24px!important;justify-content:flex-start!important}
+.example-flow span{
+  padding:9px 14px!important;border-radius:12px!important;
+  background:rgba(255,255,255,.065)!important;border-color:rgba(255,255,255,.11)!important;
+  font-size:11px!important;
+}
+.example-flow .arrow{color:#e2c46b!important}
+.example-box p{font-size:12px!important;line-height:2!important;max-width:850px}
+
+/* ECOSYSTEM — network nodes */
+.eco-grid{grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:14px!important}
+.eco-card{padding:24px 14px!important;min-height:150px!important}
+.eco-icon{
+  width:48px!important;height:48px!important;margin:0 auto 15px!important;
+  display:grid!important;place-items:center!important;border-radius:15px!important;
+  background:rgba(23,105,194,.075)!important;border:1px solid rgba(23,105,194,.1)!important;
+  font-size:22px!important;
+}
+.eco-card h4{font-size:12px!important;position:relative;z-index:2}
+
+/* PRINCIPLES — clean split panels */
+.principles{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important}
+.principle{padding:22px!important;min-height:132px!important;align-items:flex-start!important;text-align:right!important;justify-content:flex-start!important}
+.principle-num{
+  width:40px!important;height:40px!important;border-radius:13px!important;flex:0 0 40px!important;
+  background:rgba(201,163,74,.10)!important;color:#9a7824!important;
+  border:1px solid rgba(201,163,74,.18)!important;
+}
+.principle h4{font-size:14px!important;margin-bottom:6px!important}
+.principle p{font-size:11.5px!important;line-height:1.9!important}
+
+/* FLOW, when present */
+.flow-container{gap:9px!important;padding:25px 0!important}
+.flow-item{padding:10px 16px!important;border-radius:14px!important;font-size:11px!important;background:rgba(255,255,255,.58)!important;border:1px solid var(--it-line)!important}
+.flow-item.highlight{background:linear-gradient(135deg,#1769c2,#39b8c7)!important;border-color:transparent!important;color:#fff!important}
+.flow-arrow{font-size:15px!important;color:var(--it-gold)!important}
+
+/* CTA becomes a closing panel, not another full-width block */
+.it-page-shell .cta-section{
+  margin:10px 0 8px!important;
+  padding:64px 24px!important;
+  border-radius:28px 12px 28px 12px!important;
+  background:linear-gradient(135deg,#081d31,#0d466b)!important;
+}
+.cta-content{max-width:650px!important}
+.cta-content h2{font-size:30px!important;line-height:1.5!important}
+.cta-content p{font-size:13px!important;line-height:2!important}
+.btn-white{border-radius:999px!important;padding:12px 24px!important}
+
+/* remove the old flat section rhythm */
+.it-page-shell>.section:nth-of-type(even){background:transparent!important}
+
+/* responsive redesign */
+@media(max-width:1050px){
+  .features-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .process-timeline{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+  .models-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .eco-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+}
+@media(max-width:700px){
+  .it-page-shell>.section{padding:56px 8px!important}
+  .section-header{margin-bottom:30px!important}
+  .section-header h2{font-size:26px!important}
+  .section-header p{font-size:12.5px!important}
+  .features-grid,.models-grid,.principles,.it-architecture{grid-template-columns:1fr!important}
+  .process-timeline{grid-template-columns:1fr!important;gap:10px!important}
+  .process-step{min-height:0!important;padding:21px 18px!important}
+  .step-number{margin-bottom:14px!important}
+  .models-grid{gap:11px!important}
+  .model-card{min-height:0!important}
+  .eco-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+  .eco-card{min-height:125px!important;padding:18px 10px!important}
+  .arch-layers:before{right:20px!important}
+  .arch-layer{grid-template-columns:44px 1fr!important;padding:18px!important;gap:14px!important;min-height:0!important}
+  .arch-layer-num{width:38px!important;height:38px!important}
+  .example-box{padding:26px 20px!important}
+  .example-box h3{font-size:18px!important}
+  .example-flow{justify-content:center!important}
+  .example-flow span{padding:8px 11px!important}
+  .it-page-shell .cta-section{padding:48px 18px!important}
+  .cta-content h2{font-size:25px!important}
+}
+@media(max-width:420px){
+  .features-grid,.models-grid,.principles,.it-architecture,.eco-grid{grid-template-columns:1fr!important}
+  .eco-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .feature-card{min-height:0!important}
+}
