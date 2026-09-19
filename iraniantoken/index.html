@@ -1113,10 +1113,74 @@ body *{font-family:inherit}
 @media(max-width:1024px){.hero-visual{display:flex!important}.hero-content{grid-template-columns:1fr 1fr!important}.it-visual{height:420px}.it-core{width:160px!important;height:160px!important}.it-core img{width:130px;height:130px}.token-card{width:240px!important}}
 @media(max-width:768px){.hero-content{grid-template-columns:1fr!important}.hero-visual{min-height:390px!important;margin-top:10px}.it-visual{height:390px;border-radius:28px!important}.it-core{width:135px!important;height:135px!important;border-radius:34px!important}.it-core img{width:110px;height:110px}.token-card{right:12px!important;bottom:12px!important;width:225px!important}.it-node{font-size:10px!important}.logo-icon,.logo-icon img{width:42px!important;height:42px!important}}
 
+
+/* ===== IranianToken identity / local visual assets ===== */
+html,body{font-family:"Vazirmatn","Vazir","BYekan","B Yekan",Tahoma,sans-serif!important}
+body{background-color:var(--bg);background-image:linear-gradient(rgba(248,250,252,.91),rgba(248,250,252,.91)),url("assets/images/bg (10).jpg");background-repeat:repeat;background-size:auto}
+.header{background-color:rgba(255,255,255,.9);background-image:linear-gradient(rgba(255,255,255,.88),rgba(255,255,255,.88)),url("assets/images/box3.png");background-size:64px 64px;border-bottom-color:rgba(13,59,122,.14)}
+.logo-icon{background:transparent!important;border-radius:0!important;box-shadow:none!important}
+.logo-icon img{width:48px;height:48px;object-fit:contain;display:block;position:relative;z-index:2}
+.logo-text{color:var(--dark)}
+.nav-links a,.nav-cta,.btn{border-radius:999px!important}
+.nav-links a:not(.nav-cta){background-image:linear-gradient(rgba(255,255,255,.72),rgba(255,255,255,.72)),url("assets/images/b1.png");background-size:32px 32px}
+.hero{background-color:var(--dark);background-image:linear-gradient(120deg,rgba(6,26,49,.96),rgba(13,59,122,.9)),url("assets/images/back.png");background-size:cover;background-position:center;isolation:isolate}
+.hero:after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background-image:url("assets/images/024-pattern.png");background-size:420px 420px;opacity:.16;mix-blend-mode:screen}
+.hero-content{z-index:2}
+.hero-visual{min-height:480px}
+.token-card{border-radius:28px 12px 28px 12px!important;background:rgba(10,30,52,.72);border:1px solid rgba(255,255,255,.14);box-shadow:0 24px 70px rgba(0,0,0,.3)}
+.token-card .token-icon{background:transparent!important;width:54px;height:54px}
+.token-card .token-icon img{width:54px;height:54px;object-fit:contain}
+.it-visual{position:relative;width:min(100%,520px);height:480px;border-radius:34px 12px 34px 12px;background:linear-gradient(145deg,rgba(6,26,49,.94),rgba(12,65,107,.84)),url("assets/images/bac_main (2).png");background-size:cover;background-position:center;overflow:hidden;border:1px solid rgba(255,255,255,.14);box-shadow:0 30px 90px rgba(0,0,0,.28)}
+.it-visual:before{content:"";position:absolute;inset:12%;border:1px solid rgba(77,216,232,.2);border-radius:50%;box-shadow:0 0 0 44px rgba(77,216,232,.035),0 0 0 92px rgba(216,173,56,.025);animation:itOrbit 18s linear infinite}
+.it-visual:after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:42px 42px;mask-image:radial-gradient(circle at center,#000 20%,transparent 78%);opacity:.7}
+.it-core{width:142px!important;height:142px!important;border-radius:36px!important;background:rgba(255,255,255,.035)!important;border:0!important;box-shadow:0 0 0 16px rgba(66,165,245,.06),0 25px 70px rgba(0,0,0,.34)!important}
+.it-core:before{inset:-52px!important;border-color:rgba(77,216,232,.28)!important}
+.it-core img{width:112px!important;height:112px!important;object-fit:contain;position:relative;z-index:2}
+.it-node{background:rgba(255,255,255,.08)!important;border-radius:999px!important;backdrop-filter:blur(14px);box-shadow:0 10px 28px rgba(0,0,0,.12)}
+.section,.feature-card,.process-step,.model-card,.arch-layer,.eco-card,.principle{border-radius:28px 12px 28px 12px!important}
+.feature-card,.process-step,.model-card,.arch-layer,.eco-card,.principle{box-shadow:0 14px 34px rgba(8,45,67,.07)}
+.section-alt{background:rgba(255,255,255,.76)}
+.cta-section{background-image:linear-gradient(135deg,rgba(26,95,180,.94),rgba(13,59,122,.96)),url("assets/images/fback.png");background-size:cover}
+.footer{background-color:#061b2c;background-image:linear-gradient(rgba(6,27,44,.92),rgba(6,27,44,.92)),url("assets/images/box3.png");background-size:72px 72px}
+.footer .logo-icon{width:72px;height:72px}.footer .logo-icon img{width:72px;height:72px}
+@keyframes itOrbit{to{transform:rotate(360deg)}}
+@media(max-width:768px){
+ .hero{padding-top:130px}
+ .hero-visual{min-height:390px}
+ .it-visual{height:390px;border-radius:28px 10px 28px 10px}
+ .it-core{width:118px!important;height:118px!important}
+ .it-core img{width:92px!important;height:92px!important}
+ .token-card{max-width:360px}
+}
+
+/* ===== Match TokenSaz background asset scale ===== */
+body{
+  background-color:#f3f7fa!important;
+  background-image:url("assets/images/bg (10).jpg")!important;
+  background-repeat:repeat!important;
+  background-position:center top!important;
+  background-size:auto!important;
+}
+.header{
+  background-color:rgba(255,255,255,.93)!important;
+  background-image:url("assets/images/box3.png")!important;
+  background-repeat:repeat!important;
+  background-position:center center!important;
+  background-size:auto!important;
+}
+.header:before,.header:after{background-image:none!important}
+.footer{
+  background-color:#061b2c!important;
+  background-image:url("assets/images/box3.png")!important;
+  background-repeat:repeat!important;
+  background-position:center center!important;
+  background-size:auto!important;
+}
+.footer:before,.footer:after{background-image:none!important}
 </style>
-<link rel="icon" href="../assets/images/logo.png?v=4" type="image/png">
-<link rel="shortcut icon" href="../assets/images/logo.png?v=4" type="image/png">
-<link rel="apple-touch-icon" href="../assets/images/logo.png?v=4">
+<link rel="icon" href="assets/images/logo.png?v=5" type="image/png">
+<link rel="shortcut icon" href="assets/images/logo.png?v=5" type="image/png">
+<link rel="apple-touch-icon" href="assets/images/logo.png?v=5">
 <link rel="stylesheet" href="theme.css">
 </head>
 <body>
@@ -1125,7 +1189,7 @@ body *{font-family:inherit}
 <header class="header" id="header">
   <nav class="nav">
     <a href="index.html" class="logo">
-      <div class="logo-icon"><img src="../assets/images/logo.png?v=4" alt="لوگوی توکن‌ساز"></div>
+      <div class="logo-icon"><img src="assets/images/logo.png?v=5" alt="لوگوی ایرانیان توکن"></div>
       <div class="logo-text">
         ایرانیان توکن
         <small>زیرساخت توکنیزه‌سازی پروژه‌ها</small>
@@ -1171,7 +1235,7 @@ body *{font-family:inherit}
         </a>
       </div>
     </div>
-    <div class="hero-visual"><div class="it-visual"><div class="it-core"><img src="../assets/images/logo.png?v=4" alt="لوگوی توکن‌ساز"></div><div class="it-node">پروژه</div><div class="it-node">دارایی</div><div class="it-node">مشارکت</div><div class="it-node">ارزش</div></div>
+    <div class="hero-visual"><div class="it-visual"><div class="it-core"><img src="assets/images/logo.png?v=5" alt="لوگوی ایرانیان توکن"></div><div class="it-node">پروژه</div><div class="it-node">دارایی</div><div class="it-node">مشارکت</div><div class="it-node">ارزش</div></div>
       <div class="token-card">
         <div class="token-card-header">
           <div class="token-card-title">
@@ -1625,7 +1689,7 @@ body *{font-family:inherit}
   <div class="footer-grid">
     <div class="footer-brand">
       <a href="#" class="logo">
-        <div class="logo-icon"><img src="../assets/images/logo.png?v=4" alt="لوگوی توکن‌ساز"></div>
+        <div class="logo-icon"><img src="assets/images/logo.png?v=5" alt="لوگوی ایرانیان توکن"></div>
         <div class="logo-text">
           ایرانیان توکن
           <small style="color: var(--gray);">زیرساخت توکنیزه‌سازی پروژه‌ها</small>
