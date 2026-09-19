@@ -922,3 +922,81 @@ body{background-blend-mode:normal!important}
   .definition{padding:22px 0 0!important}
   .page-hero p{padding-inline:0!important}
 }
+
+
+/* FINAL INNER GUTTER CORRECTION — content must never sit against the section/frame edge */
+.section.wrap,
+.hero>.wrap,
+.page-hero>.wrap,
+.site-footer>.wrap{
+  padding-inline:32px!important;
+}
+.section>.wrap{
+  padding-inline:32px!important;
+}
+.section.wrap>.section-head,
+.section>.wrap>.section-head{
+  padding-inline:0!important;
+}
+.solution-grid,.detail-grid,.architecture,.photo-strip,.story-grid,.vision-grid,.work-grid,.purpose-panel,.platform-stack,.price-grid,.pricing-grid,.contact-grid,.contact-faq,.estimate-grid,.capability-grid{
+  width:100%!important;
+}
+.flow-board{
+  padding-inline:10px!important;
+  gap:18px!important;
+}
+.flow-board>div{
+  padding:26px 24px!important;
+}
+.proof-grid{
+  padding-inline:18px!important;
+}
+.proof-grid>div{
+  padding-inline:26px!important;
+}
+.timeline{
+  margin-inline:8px!important;
+}
+.clarity-box,
+.feature-band,
+.contact-form,
+.contact-info,
+.price-note,
+.contact-faq{
+  margin-inline:8px!important;
+}
+.story-panel>div,
+.platform-stack>div,
+.vision-grid article,
+.estimate-grid>div,
+.purpose-panel>div,
+.work-grid>div,
+.capability-grid article,
+.road-step,
+.vision-band>div{
+  padding-inline:26px!important;
+}
+@media(max-width:1000px){
+  .section.wrap,
+  .hero>.wrap,
+  .page-hero>.wrap,
+  .site-footer>.wrap,
+  .section>.wrap{padding-inline:24px!important}
+  .flow-board{padding-inline:6px!important;gap:14px!important}
+  .proof-grid{padding-inline:10px!important}
+  .clarity-box,.feature-band,.contact-form,.contact-info,.price-note,.contact-faq{margin-inline:4px!important}
+}
+@media(max-width:700px){
+  .section.wrap,
+  .hero>.wrap,
+  .page-hero>.wrap,
+  .site-footer>.wrap,
+  .section>.wrap{padding-inline:18px!important}
+  .flow-board{padding-inline:0!important;gap:10px!important}
+  .flow-board>div{padding:20px 18px!important}
+  .proof-grid{padding-inline:0!important}
+  .proof-grid>div{padding-inline:18px!important}
+  .timeline{margin-inline:0!important}
+  .clarity-box,.feature-band,.contact-form,.contact-info,.price-note,.contact-faq{margin-inline:0!important}
+  .story-panel>div,.platform-stack>div,.vision-grid article,.estimate-grid>div,.purpose-panel>div,.work-grid>div,.capability-grid article,.road-step,.vision-band>div{padding-inline:20px!important}
+}
