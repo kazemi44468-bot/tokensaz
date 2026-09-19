@@ -976,7 +976,7 @@ body {
 <!-- Toast Container -->
 <div class="toast-container" id="toastContainer"></div>
 
-<div class="auth-wrapper">
+<div class="auth-wrapper"><a class="it-auth-home" href="index.html">بازگشت به ایرانیان توکن</a>
 
   <!-- ==================== BRAND PANEL ==================== -->
   <div class="brand-panel">
@@ -985,7 +985,7 @@ body {
 
     <div class="brand-content">
       <div class="brand-logo">
-        <div class="brand-logo-icon">🇮🇷</div>
+        <div class="brand-logo-icon">IT</div>
         <div class="brand-logo-text">
           <strong>ایرانیان توکن</strong>
           <small>زیرساخت توکنیزه‌سازی پروژه‌ها</small>
@@ -1011,21 +1011,21 @@ body {
           </div>
         </div>
         <div class="brand-feature">
-          <div class="brand-feature-icon">📄</div>
+          <div class="brand-feature-icon">□</div>
           <div class="brand-feature-body">
             <strong>مستندسازی کامل</strong>
             <span>اسناد، قراردادها و گزارش‌های قابل ردیابی</span>
           </div>
         </div>
         <div class="brand-feature">
-          <div class="brand-feature-icon">✅</div>
+          <div class="brand-feature-icon">✓</div>
           <div class="brand-feature-body">
             <strong>اعتبارسنجی چندلایه</strong>
             <span>تأیید کارشناسی و ایجاد اعتماد</span>
           </div>
         </div>
         <div class="brand-feature">
-          <div class="brand-feature-icon">📊</div>
+          <div class="brand-feature-icon">◫</div>
           <div class="brand-feature-body">
             <strong>مدیریت و پایش مستمر</strong>
             <span>داشبورد، گزارش و Audit Trail</span>
@@ -1049,7 +1049,7 @@ body {
       </div>
     </div>
 
-    <div class="floating-token">🪙</div>
+    <div class="floating-token">◈</div>
   </div>
 
   <!-- ==================== FORM PANEL ==================== -->
@@ -1077,7 +1077,7 @@ body {
               <input type="text" id="loginIdentifier" placeholder="example@email.com" autocomplete="username" required>
               <span class="input-icon">📧</span>
             </div>
-            <div class="error-text" id="loginIdentifierError">⚠️ ایمیل یا شماره موبایل را وارد کنید.</div>
+            <div class="error-text" id="loginIdentifierError">! ایمیل یا شماره موبایل را وارد کنید.</div>
           </div>
 
           <div class="form-group">
@@ -1085,9 +1085,9 @@ body {
             <div class="input-wrap">
               <input type="password" id="loginPassword" placeholder="••••••••" autocomplete="current-password" required>
               <span class="input-icon">🔒</span>
-              <button type="button" class="password-toggle" onclick="togglePassword('loginPassword', this)">👁️</button>
+              <button type="button" class="password-toggle" onclick="togglePassword('loginPassword', this)">◉</button>
             </div>
-            <div class="error-text" id="loginPasswordError">⚠️ رمز عبور را وارد کنید.</div>
+            <div class="error-text" id="loginPasswordError">! رمز عبور را وارد کنید.</div>
           </div>
 
           <div class="form-actions-row">
@@ -1147,17 +1147,17 @@ body {
                 <label class="form-label">نام <span class="required">*</span></label>
                 <div class="input-wrap">
                   <input type="text" id="regFirstName" placeholder="محمد" required>
-                  <span class="input-icon">👤</span>
+                  <span class="input-icon">○</span>
                 </div>
-                <div class="error-text" id="regFirstNameError">⚠️ نام را وارد کنید.</div>
+                <div class="error-text" id="regFirstNameError">! نام را وارد کنید.</div>
               </div>
               <div class="form-group">
                 <label class="form-label">نام خانوادگی <span class="required">*</span></label>
                 <div class="input-wrap">
                   <input type="text" id="regLastName" placeholder="احمدی" required>
-                  <span class="input-icon">👤</span>
+                  <span class="input-icon">○</span>
                 </div>
-                <div class="error-text" id="regLastNameError">⚠️ نام خانوادگی را وارد کنید.</div>
+                <div class="error-text" id="regLastNameError">! نام خانوادگی را وارد کنید.</div>
               </div>
             </div>
 
@@ -1167,7 +1167,7 @@ body {
                 <input type="email" id="regEmail" placeholder="example@email.com" autocomplete="email" required>
                 <span class="input-icon">📧</span>
               </div>
-              <div class="error-text" id="regEmailError">⚠️ ایمیل معتبر وارد کنید.</div>
+              <div class="error-text" id="regEmailError">! ایمیل معتبر وارد کنید.</div>
             </div>
 
             <div class="form-group">
@@ -1176,7 +1176,7 @@ body {
                 <input type="tel" id="regPhone" placeholder="۰۹۱۲۳۴۵۶۷۸۹" maxlength="11" required>
                 <span class="input-icon">📱</span>
               </div>
-              <div class="error-text" id="regPhoneError">⚠️ شماره موبایل معتبر وارد کنید (۱۱ رقم).</div>
+              <div class="error-text" id="regPhoneError">! شماره موبایل معتبر وارد کنید (۱۱ رقم).</div>
             </div>
 
             <div class="form-group">
@@ -1184,9 +1184,9 @@ body {
               <div class="input-wrap">
                 <input type="password" id="regPassword" placeholder="حداقل ۸ کاراکتر" autocomplete="new-password" required oninput="checkPasswordStrength(this.value)">
                 <span class="input-icon">🔒</span>
-                <button type="button" class="password-toggle" onclick="togglePassword('regPassword', this)">👁️</button>
+                <button type="button" class="password-toggle" onclick="togglePassword('regPassword', this)">◉</button>
               </div>
-              <div class="error-text" id="regPasswordError">⚠️ رمز عبور باید حداقل ۸ کاراکتر باشد.</div>
+              <div class="error-text" id="regPasswordError">! رمز عبور باید حداقل ۸ کاراکتر باشد.</div>
 
               <!-- Password Strength -->
               <div class="password-strength" id="passwordStrength">
@@ -1319,14 +1319,14 @@ function togglePassword(inputId, btn) {
     btn.textContent = '🙈';
   } else {
     input.type = 'password';
-    btn.textContent = '👁️';
+    btn.textContent = '◉';
   }
 }
 
 /* ==================== TOAST ==================== */
 function showToast(type, title, message) {
   const container = document.getElementById('toastContainer');
-  const icons = { success: '✅', error: '❌', warning: '⚠️', info: 'ℹ️' };
+  const icons = { success: '✓', error: '❌', warning: '!', info: 'ℹ️' };
 
   const toast = document.createElement('div');
   toast.className = `toast ${type}`;
@@ -1713,7 +1713,7 @@ document.getElementById('regPhone')?.addEventListener('input', (e) => {
       clearError('regPhone', 'regPhoneError');
       setSuccess('regPhone');
     } else {
-      setError('regPhone', 'regPhoneError', '⚠️ شماره باید با ۰۹ شروع شود.');
+      setError('regPhone', 'regPhoneError', '! شماره باید با ۰۹ شروع شود.');
     }
   }
 });
@@ -1747,3 +1747,9 @@ window.addEventListener('load', () => {
 <script src="theme.js"></script>
 </body>
 </html>
+<style>
+.it-auth-home{position:fixed;top:22px;right:24px;z-index:20;color:#d9e9f7;background:rgba(6,26,48,.5);border:1px solid rgba(255,255,255,.14);padding:9px 16px;border-radius:999px;font-size:12px;font-weight:700;backdrop-filter:blur(12px)}
+.brand-logo-icon{font-size:12px!important;font-weight:900!important;letter-spacing:1px}
+.brand-logo-icon:before{content:"";position:absolute;inset:9px;border:1px solid rgba(255,255,255,.42);border-radius:10px;transform:rotate(45deg)}
+@media(max-width:800px){.it-auth-home{top:12px;right:12px;font-size:11px}}
+</style>
