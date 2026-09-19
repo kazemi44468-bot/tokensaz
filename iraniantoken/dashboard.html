@@ -951,7 +951,7 @@ tbody tr:last-child td { border-bottom: none; }
 <!-- ==================== SIDEBAR ==================== -->
 <aside class="sidebar" id="sidebar">
   <div class="sidebar-brand">
-    <div class="sidebar-logo">🇮🇷</div>
+    <div class="sidebar-logo">IT</div>
     <div class="sidebar-brand-text">
       <strong>ایرانیان توکن</strong>
       <small>پنل مدیریت پروژه</small>
@@ -960,52 +960,54 @@ tbody tr:last-child td { border-bottom: none; }
 
   <nav class="sidebar-nav">
     <div class="nav-section-title">منوی اصلی</div>
-    <a class="nav-item active" data-page="dashboard">
-      <span class="icon">📊</span>
+    <a class="nav-item active" href="dashboard.html">
+      <span class="icon">◫</span>
       <span class="label">داشبورد</span>
     </a>
-    <a class="nav-item" data-page="projects">
-      <span class="icon">📁</span>
+    <a class="nav-item" href="projects.html">
+      <span class="icon">▦</span>
       <span class="label">پروژه‌ها</span>
       <span class="badge">۱۲</span>
     </a>
-    <a class="nav-item" data-page="tokens">
-      <span class="icon">🪙</span>
+    <a class="nav-item" href="#token-distribution">
+      <span class="icon">◈</span>
       <span class="label">توکن‌ها</span>
     </a>
-    <a class="nav-item" data-page="documents">
-      <span class="icon">📄</span>
+    <a class="nav-item" href="#recent-projects">
+      <span class="icon">□</span>
       <span class="label">اسناد</span>
     </a>
 
     <div class="nav-section-title">مدیریت</div>
-    <a class="nav-item" data-page="users">
-      <span class="icon">👥</span>
+    <a class="nav-item" href="#recent-projects">
+      <span class="icon">◎</span>
       <span class="label">کاربران و نقش‌ها</span>
     </a>
-    <a class="nav-item" data-page="validation">
-      <span class="icon">✅</span>
+    <a class="nav-item" href="#activity">
+      <span class="icon">✓</span>
       <span class="label">اعتبارسنجی</span>
       <span class="badge">۳</span>
     </a>
-    <a class="nav-item" data-page="reports">
-      <span class="icon">📈</span>
+    <a class="nav-item" href="#trend">
+      <span class="icon">⌁</span>
       <span class="label">گزارش‌ها</span>
     </a>
-    <a class="nav-item" data-page="audit">
-      <span class="icon">🕐</span>
+    <a class="nav-item" href="#activity">
+      <span class="icon">◷</span>
       <span class="label">Audit Trail</span>
     </a>
 
     <div class="nav-section-title">سیستم</div>
-    <a class="nav-item" data-page="settings">
-      <span class="icon">⚙️</span>
+    <a class="nav-item" href="settings.html">
+      <span class="icon">⚙︎</span>
       <span class="label">تنظیمات</span>
     </a>
-    <a class="nav-item" data-page="support">
-      <span class="icon">💬</span>
+    <a class="nav-item" href="auth.html">
+      <span class="icon">◌</span>
       <span class="label">پشتیبانی</span>
     </a>
+    <div class="nav-section-title">دسترسی سریع</div>
+    <a class="nav-item" href="index.html"><span class="icon">⌂</span><span class="label">صفحه اصلی</span></a>
   </nav>
 
   <div class="sidebar-footer">
@@ -1032,17 +1034,17 @@ tbody tr:last-child td { border-bottom: none; }
     </div>
 
     <div class="topbar-search">
-      <span class="search-icon">🔍</span>
+      <span class="search-icon">⌕</span>
       <input type="text" placeholder="جستجوی پروژه، توکن، سند...">
     </div>
 
     <div class="topbar-actions">
       <button class="icon-btn" id="notifBtn" style="position: relative;">
-        🔔
+        ◉
         <span class="dot"></span>
       </button>
-      <button class="icon-btn">💬</button>
-      <button class="icon-btn">⚙️</button>
+      <button class="icon-btn">◌</button>
+      <button class="icon-btn">⚙︎</button>
     </div>
   </header>
 
@@ -1052,7 +1054,7 @@ tbody tr:last-child td { border-bottom: none; }
     <!-- PAGE HEADER -->
     <div class="page-header">
       <div class="page-title">
-        <h1>داشبورد مدیریت 👋</h1>
+        <h1>داشبورد مدیریت</h1>
         <p>خلاصه وضعیت پروژه‌ها، توکن‌ها و فعالیت‌های سیستم</p>
       </div>
       <div style="display: flex; gap: 10px; flex-wrap: wrap;">
@@ -1069,7 +1071,7 @@ tbody tr:last-child td { border-bottom: none; }
     <div class="stats-grid">
       <div class="stat-card">
         <div class="stat-header">
-          <div class="stat-icon">📁</div>
+          <div class="stat-icon">▦</div>
           <div class="stat-trend up">+۱۲٪</div>
         </div>
         <div class="stat-value">۱۲</div>
@@ -1078,7 +1080,7 @@ tbody tr:last-child td { border-bottom: none; }
 
       <div class="stat-card gold">
         <div class="stat-header">
-          <div class="stat-icon">🪙</div>
+          <div class="stat-icon">◈</div>
           <div class="stat-trend up">+۸٪</div>
         </div>
         <div class="stat-value">۸</div>
@@ -1087,7 +1089,7 @@ tbody tr:last-child td { border-bottom: none; }
 
       <div class="stat-card green">
         <div class="stat-header">
-          <div class="stat-icon">✅</div>
+          <div class="stat-icon">✓</div>
           <div class="stat-trend up">+۲۳٪</div>
         </div>
         <div class="stat-value">۴۷</div>
@@ -1096,7 +1098,7 @@ tbody tr:last-child td { border-bottom: none; }
 
       <div class="stat-card red">
         <div class="stat-header">
-          <div class="stat-icon">⏳</div>
+          <div class="stat-icon">◷</div>
           <div class="stat-trend down">-۵٪</div>
         </div>
         <div class="stat-value">۳</div>
@@ -1105,7 +1107,7 @@ tbody tr:last-child td { border-bottom: none; }
     </div>
 
     <!-- CHARTS -->
-    <div class="charts-grid">
+    <div class="charts-grid" id="trend">
       <div class="card">
         <div class="card-header">
           <div>
@@ -1164,7 +1166,7 @@ tbody tr:last-child td { border-bottom: none; }
               <tr>
                 <td>
                   <div class="project-cell">
-                    <div class="project-thumb">🐄</div>
+                    <div class="project-thumb">◆</div>
                     <div>
                       <strong>دامداری نمونه</strong>
                       <small>IRT-1403-001</small>
@@ -1179,15 +1181,15 @@ tbody tr:last-child td { border-bottom: none; }
                 </td>
                 <td>
                   <div class="action-btns">
-                    <button class="action-btn">👁️</button>
-                    <button class="action-btn">✏️</button>
+                    <button class="action-btn">◉</button>
+                    <button class="action-btn">✎</button>
                   </div>
                 </td>
               </tr>
               <tr>
                 <td>
                   <div class="project-cell">
-                    <div class="project-thumb" style="background: linear-gradient(135deg, #10b981, #34d399);">🌾</div>
+                    <div class="project-thumb" style="background: linear-gradient(135deg, #10b981, #34d399);">◆</div>
                     <div>
                       <strong>کشاورزی پایدار</strong>
                       <small>IRT-1403-002</small>
@@ -1202,15 +1204,15 @@ tbody tr:last-child td { border-bottom: none; }
                 </td>
                 <td>
                   <div class="action-btns">
-                    <button class="action-btn">👁️</button>
-                    <button class="action-btn">✏️</button>
+                    <button class="action-btn">◉</button>
+                    <button class="action-btn">✎</button>
                   </div>
                 </td>
               </tr>
               <tr>
                 <td>
                   <div class="project-cell">
-                    <div class="project-thumb" style="background: linear-gradient(135deg, #f59e0b, #fbbf24);">🏗️</div>
+                    <div class="project-thumb" style="background: linear-gradient(135deg, #f59e0b, #fbbf24);">◆</div>
                     <div>
                       <strong>برج تجاری آرین</strong>
                       <small>IRT-1403-003</small>
@@ -1225,15 +1227,15 @@ tbody tr:last-child td { border-bottom: none; }
                 </td>
                 <td>
                   <div class="action-btns">
-                    <button class="action-btn">👁️</button>
-                    <button class="action-btn">✏️</button>
+                    <button class="action-btn">◉</button>
+                    <button class="action-btn">✎</button>
                   </div>
                 </td>
               </tr>
               <tr>
                 <td>
                   <div class="project-cell">
-                    <div class="project-thumb" style="background: linear-gradient(135deg, #8b5cf6, #a78bfa);">⚡</div>
+                    <div class="project-thumb" style="background: linear-gradient(135deg, #8b5cf6, #a78bfa);">◆</div>
                     <div>
                       <strong>نیروگاه خورشیدی</strong>
                       <small>IRT-1403-004</small>
@@ -1248,8 +1250,8 @@ tbody tr:last-child td { border-bottom: none; }
                 </td>
                 <td>
                   <div class="action-btns">
-                    <button class="action-btn">👁️</button>
-                    <button class="action-btn">✏️</button>
+                    <button class="action-btn">◉</button>
+                    <button class="action-btn">✎</button>
                   </div>
                 </td>
               </tr>
@@ -1268,35 +1270,35 @@ tbody tr:last-child td { border-bottom: none; }
         <div class="card-body">
           <div class="activity-list">
             <div class="activity-item">
-              <div class="activity-icon green">✅</div>
+              <div class="activity-icon green">✓</div>
               <div class="activity-body">
                 <p><strong>سند مالکیت</strong> پروژه دامداری تأیید شد</p>
                 <small>۱۰ دقیقه پیش</small>
               </div>
             </div>
             <div class="activity-item">
-              <div class="activity-icon blue">🪙</div>
+              <div class="activity-icon blue">◈</div>
               <div class="activity-body">
                 <p><strong>۲۰۰ توکن</strong> جدید ایجاد شد</p>
                 <small>۱ ساعت پیش</small>
               </div>
             </div>
             <div class="activity-item">
-              <div class="activity-icon gold">📄</div>
+              <div class="activity-icon gold">□</div>
               <div class="activity-body">
                 <p>سند جدید برای <strong>برج آرین</strong> بارگذاری شد</p>
                 <small>۳ ساعت پیش</small>
               </div>
             </div>
             <div class="activity-item">
-              <div class="activity-icon red">⚠️</div>
+              <div class="activity-icon red">!</div>
               <div class="activity-body">
                 <p>درخواست <strong>اعتبارسنجی</strong> رد شد</p>
                 <small>۵ ساعت پیش</small>
               </div>
             </div>
             <div class="activity-item">
-              <div class="activity-icon blue">👤</div>
+              <div class="activity-icon blue">○</div>
               <div class="activity-body">
                 <p>کاربر جدید <strong>سارا رضایی</strong> اضافه شد</p>
                 <small>دیروز</small>
@@ -1308,7 +1310,9 @@ tbody tr:last-child td { border-bottom: none; }
     </div>
 
     <!-- TOKEN DISTRIBUTION -->
-    <div class="card" style="margin-top: 20px;">
+    <div class="card quick-actions" id="quick-actions" style="margin-top:20px;"><div class="card-header"><div><h3>دسترسی سریع</h3><p>مسیرهای اصلی مدیریت و عملیات</p></div></div><div class="quick-action-grid"><a href="projects.html" class="quick-action"><span>▦</span><b>پروژه‌ها و دارایی‌ها</b><small>مشاهده، فیلتر و مدیریت پروژه‌ها</small></a><a href="#token-distribution" class="quick-action"><span>◈</span><b>مدل‌های توکن</b><small>تخصیص و وضعیت توکن‌های پروژه‌ها</small></a><a href="#activity" class="quick-action"><span>◷</span><b>رویدادهای سیستم</b><small>پیگیری آخرین تغییرات و هشدارها</small></a><a href="settings.html" class="quick-action"><span>⚙︎</span><b>تنظیمات پنل</b><small>حساب، امنیت و دسترسی‌های سیستم</small></a></div></div>
+
+    <div class="card" id="token-distribution" style="margin-top:20px;">
       <div class="card-header">
         <div>
           <h3>توزیع توکن‌ها بر اساس پروژه</h3>
@@ -1319,7 +1323,7 @@ tbody tr:last-child td { border-bottom: none; }
       <div class="card-body">
         <div class="token-list">
           <div class="token-item">
-            <div class="token-item-icon">🐄</div>
+            <div class="token-item-icon">◆</div>
             <div class="token-item-body">
               <div class="token-item-header">
                 <strong>دامداری نمونه</strong>
@@ -1329,7 +1333,7 @@ tbody tr:last-child td { border-bottom: none; }
             </div>
           </div>
           <div class="token-item">
-            <div class="token-item-icon" style="background: linear-gradient(135deg, #10b981, #34d399);">🌾</div>
+            <div class="token-item-icon" style="background: linear-gradient(135deg, #10b981, #34d399);">◆</div>
             <div class="token-item-body">
               <div class="token-item-header">
                 <strong>کشاورزی پایدار</strong>
@@ -1339,7 +1343,7 @@ tbody tr:last-child td { border-bottom: none; }
             </div>
           </div>
           <div class="token-item">
-            <div class="token-item-icon" style="background: linear-gradient(135deg, #f59e0b, #fbbf24);">🏗️</div>
+            <div class="token-item-icon" style="background: linear-gradient(135deg, #f59e0b, #fbbf24);">◆</div>
             <div class="token-item-body">
               <div class="token-item-header">
                 <strong>برج تجاری آرین</strong>
@@ -1349,7 +1353,7 @@ tbody tr:last-child td { border-bottom: none; }
             </div>
           </div>
           <div class="token-item">
-            <div class="token-item-icon" style="background: linear-gradient(135deg, #8b5cf6, #a78bfa);">⚡</div>
+            <div class="token-item-icon" style="background: linear-gradient(135deg, #8b5cf6, #a78bfa);">◆</div>
             <div class="token-item-body">
               <div class="token-item-header">
                 <strong>نیروگاه خورشیدی</strong>
@@ -1406,21 +1410,21 @@ const dropdown = document.createElement('div');
 dropdown.className = 'dropdown';
 dropdown.innerHTML = `
   <div class="dropdown-item">
-    <div class="dropdown-item-icon" style="background: rgba(16,185,129,0.12); color: #10b981;">✅</div>
+    <div class="dropdown-item-icon" style="background: rgba(16,185,129,0.12); color: #10b981;">✓</div>
     <div class="dropdown-item-body">
       <strong>سند مالکیت تأیید شد</strong>
       <small>۱۰ دقیقه پیش</small>
     </div>
   </div>
   <div class="dropdown-item">
-    <div class="dropdown-item-icon" style="background: rgba(59,130,246,0.12); color: #3b82f6;">🪙</div>
+    <div class="dropdown-item-icon" style="background: rgba(59,130,246,0.12); color: #3b82f6;">◈</div>
     <div class="dropdown-item-body">
       <strong>۲۰۰ توکن جدید ایجاد شد</strong>
       <small>۱ ساعت پیش</small>
     </div>
   </div>
   <div class="dropdown-item">
-    <div class="dropdown-item-icon" style="background: rgba(245,194,17,0.15); color: #c79a00;">📄</div>
+    <div class="dropdown-item-icon" style="background: rgba(245,194,17,0.15); color: #c79a00;">□</div>
     <div class="dropdown-item-body">
       <strong>سند جدید بارگذاری شد</strong>
       <small>۳ ساعت پیش</small>
