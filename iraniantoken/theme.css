@@ -260,3 +260,6 @@ body{color:var(--it-text)!important;background-color:#f6f9fc!important}
 
 /* BODY BACKGROUND ASSET — 024-pattern */
 html,body{background-color:transparent!important;background-image:url("./assets/images/024-pattern.png")!important;background-repeat:repeat!important;background-position:center top!important;background-size:auto!important}
+
+/* BODY BACKGROUND TEST — body.gif */
+html,body{background-color:transparent!important;background-image:url("./assets/images/body.gif")!important;background-repeat:repeat!important;background-position:center top!important;background-size:auto!important}
