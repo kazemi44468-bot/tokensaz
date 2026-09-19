@@ -526,3 +526,79 @@ button,input,textarea,select,optgroup{
   .site-footer .footer-brand{grid-column:1/-1!important}
   .site-footer .footer-bottom{display:flex!important;flex-direction:column!important;align-items:center!important;text-align:center!important;gap:3px!important}
 }
+
+
+/* FINAL VISUAL SYSTEM — IMAGE TEXTURES + ARCHITECTURAL COMPONENTS */
+html,body{
+  background-color:#f7fafc!important;
+}
+body{
+  background-image:url("../images/bg (10).jpg")!important;
+  background-repeat:repeat!important;
+  background-position:top right!important;
+  background-size:auto!important;
+  background-attachment:scroll!important;
+}
+/* Header uses the supplied box texture as a repeating architectural field. */
+.top{
+  background-color:rgba(6,27,44,.96)!important;
+  background-image:url("../images/box3.png")!important;
+  background-repeat:repeat!important;
+  background-position:top right!important;
+  background-size:auto!important;
+}
+/* Remove the secondary footer sentence completely; keep only the compact copyright. */
+.footer-bottom{
+  justify-content:flex-start!important;
+  text-align:right!important;
+  min-height:0!important;
+  padding:10px 0 12px!important;
+}
+.footer-bottom span:nth-child(2){display:none!important}
+/* Replace the previous repetitive line/grid treatment with a cleaner architectural frame. */
+.hero:before,.hero:after,.page-hero:before,.page-hero:after,.section:after,.method:after{display:none!important}
+body{background-blend-mode:normal!important}
+/* Boxes: layered edge, clipped corner and restrained depth. */
+.solution-card,.detail-card,.price-card,.contact-form,.clarity-box,.feature-band,.timeline,.platform-stack>div,.vision-grid article,.estimate-grid>div,.purpose-panel>div,.work-grid>div{
+  border:1px solid rgba(12,58,83,.12)!important;
+  border-radius:18px!important;
+  background:rgba(255,255,255,.91)!important;
+  box-shadow:0 12px 30px rgba(8,38,57,.08)!important;
+  position:relative!important;
+  transform:translateZ(0);
+  transition:transform .24s ease,box-shadow .24s ease,border-color .24s ease!important;
+}
+.solution-card:hover,.detail-card:hover,.price-card:hover,.vision-grid article:hover,.estimate-grid>div:hover,.purpose-panel>div:hover,.work-grid>div:hover{
+  transform:translateY(-5px)!important;
+  box-shadow:0 18px 38px rgba(8,38,57,.13)!important;
+  border-color:rgba(22,139,210,.3)!important;
+}
+.solution-card:before,.detail-card:before,.price-card:before,.vision-grid article:before,.estimate-grid>div:before,.purpose-panel>div:before,.work-grid>div:before{
+  width:92px!important;height:92px!important;
+  background-image:url("../images/box3.png")!important;
+  background-repeat:repeat!important;
+  background-size:46px 46px!important;
+  opacity:.13!important;
+  clip-path:polygon(35% 0,100% 0,100% 65%,65% 100%,0 100%,0 35%)!important;
+}
+.solution-card:after,.detail-card:after,.price-card:after,.contact-form:after,.clarity-box:after,.feature-band:after,.timeline:after,.platform-stack>div:after,.vision-grid article:after,.estimate-grid>div:after,.purpose-panel>div:after,.work-grid>div:after{
+  width:52px!important;height:4px!important;
+  top:auto!important;right:auto!important;left:18px!important;bottom:0!important;
+  background:linear-gradient(90deg,#168bd2,#2eb8c8)!important;
+  clip-path:polygon(0 0,100% 0,84% 100%,0 100%)!important;
+}
+/* Buttons: solid architectural surfaces instead of stripe overlays. */
+.primary,.secondary,.outline-btn,.navbtn,.drawer-cta,.circlebtn{
+  border-radius:11px!important;
+  clip-path:polygon(0 0,calc(100% - 9px) 0,100% 9px,100% 100%,9px 100%,0 calc(100% - 9px))!important;
+  box-shadow:0 9px 20px rgba(7,45,67,.12)!important;
+  transition:transform .2s ease,box-shadow .2s ease,background .2s ease!important;
+}
+.primary:hover,.secondary:hover,.outline-btn:hover,.navbtn:hover,.drawer-cta:hover,.circlebtn:hover{
+  transform:translateY(-2px)!important;
+  box-shadow:0 13px 26px rgba(7,45,67,.18)!important;
+}
+.primary:after,.secondary:after,.outline-btn:after,.navbtn:after,.footer-cta:after,.drawer-cta:after{display:none!important}
+/* Section surfaces remain readable over the supplied texture. */
+.section-tint,.method,.proof,.cta{background:rgba(247,250,252,.78)!important}
+.site-footer{background-color:#061b2c!important;background-image:url("../images/box3.png")!important;background-repeat:repeat!important;background-size:auto!important}
