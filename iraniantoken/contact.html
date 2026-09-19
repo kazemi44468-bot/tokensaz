@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تماس | ایرانیان توکن</title>
+<meta name="description" content="راه‌های ارتباط با ایرانیان توکن">
+<link rel="icon" href="assets/images/logo.png" type="image/png">
+<link rel="stylesheet" href="theme.css">
+<style>
+.contact-page{min-height:100vh;padding:128px 20px 70px}
+.contact-wrap{width:min(1040px,100%);margin:auto}
+.contact-head{text-align:center;max-width:720px;margin:0 auto 42px}
+.contact-head .tag{display:inline-flex;align-items:center;gap:8px;padding:7px 16px;border-radius:999px;background:rgba(23,105,194,.07);border:1px solid rgba(23,105,194,.13);color:#1769c2;font-size:12px;font-weight:800}
+.contact-head h1{margin:18px 0 12px;color:#10283d;font-size:34px;line-height:1.5}
+.contact-head p{margin:0;color:#60788b;font-size:14px;line-height:2}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.contact-card{position:relative;overflow:hidden;padding:28px;border:1px solid rgba(117,151,174,.24);border-radius:28px 12px 28px 12px;background:linear-gradient(145deg,rgba(255,255,255,.78),rgba(255,255,255,.46));box-shadow:0 18px 44px rgba(18,55,80,.075),inset 0 1px 0 rgba(255,255,255,.76);backdrop-filter:blur(8px)}
+.contact-card:before{content:"";position:absolute;top:0;right:0;width:70px;height:3px;background:linear-gradient(90deg,#1769c2,#39b8c7,#c9a34a)}
+.contact-card h2{margin:0 0 9px;font-size:17px;color:#10283d}
+.contact-card p{margin:0;color:#60788b;font-size:13px;line-height:2}
+.contact-card a{display:inline-block;margin-top:12px;color:#1769c2;text-decoration:none;font-weight:800;font-size:13px}
+.contact-form{margin-top:20px;padding:30px;border:1px solid rgba(117,151,174,.24);border-radius:28px 12px 28px 12px;background:rgba(255,255,255,.62);box-shadow:0 18px 44px rgba(18,55,80,.07)}
+.contact-form h2{margin:0 0 22px;color:#10283d;font-size:21px}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}
+.field label{font-size:12px;font-weight:800;color:#405a70}
+.field input,.field textarea{font:inherit;border:1px solid rgba(117,151,174,.25);border-radius:16px;background:rgba(255,255,255,.72);padding:12px 14px;color:#10283d;outline:none}
+.field textarea{min-height:130px;resize:vertical}
+.submit{margin-top:16px;border:0;border-radius:999px;padding:12px 24px;background:linear-gradient(135deg,#1769c2,#2b9fc4);color:#fff;font:inherit;font-weight:800;cursor:pointer}
+@media(max-width:760px){.contact-grid{grid-template-columns:1fr}.fields{grid-template-columns:1fr}.field.full{grid-column:auto}.contact-page{padding-top:105px}.contact-head h1{font-size:28px}}
+</style>
+</head>
+<body>
+<header class="header" id="header">
+<nav class="nav">
+<a href="index.html" class="logo"><div class="logo-icon"><img src="assets/images/logo.png" alt="لوگوی ایرانیان توکن"></div><div class="logo-text">ایرانیان توکن<small>زیرساخت توکنیزه‌سازی پروژه‌ها</small></div></a>
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html">معرفی</a></li>
+<li><a href="projects.html">پروژه‌ها</a></li>
+<li><a href="dashboard.html">داشبورد</a></li>
+<li><a href="contact.html" class="active">تماس</a></li>
+<li><a href="auth.html" class="nav-cta">ثبت نام / ورود</a></li>
+</ul>
+<button class="mobile-toggle" id="mobileToggle" aria-label="باز کردن منو">☰</button>
+</nav>
+</header>
+<main class="contact-page">
+<div class="contact-wrap">
+<div class="contact-head">
+<span class="tag">ارتباط با ایرانیان توکن</span>
+<h1>برای شروع یک پروژه با ما در ارتباط باشید</h1>
+<p>برای دریافت اطلاعات، بررسی یک پروژه یا گفتگو درباره مدل توکنیزه‌سازی، درخواست خود را برای ما ارسال کنید.</p>
+</div>
+<div class="contact-grid">
+<article class="contact-card"><h2>درخواست مشاوره</h2><p>برای بررسی اولیه پروژه، دارایی یا مدل پیشنهادی خود با تیم ایرانیان توکن در ارتباط باشید.</p><a href="auth.html">ورود به سامانه ←</a></article>
+<article class="contact-card"><h2>پروژه‌ها</h2><p>نمونه پروژه‌ها و ساختارهای تعریف‌شده را مشاهده کنید و با مدل‌های مختلف آشنا شوید.</p><a href="projects.html">مشاهده پروژه‌ها ←</a></article>
+<article class="contact-card"><h2>سامانه</h2><p>برای ثبت درخواست، پیگیری اطلاعات و استفاده از امکانات سامانه وارد حساب کاربری خود شوید.</p><a href="auth.html">ثبت نام / ورود ←</a></article>
+</div>
+<form class="contact-form" onsubmit="event.preventDefault();alert('درخواست شما ثبت شد.');">
+<h2>ارسال درخواست</h2>
+<div class="fields">
+<div class="field"><label for="name">نام و نام خانوادگی</label><input id="name" required></div>
+<div class="field"><label for="phone">شماره تماس</label><input id="phone" inputmode="tel" required></div>
+<div class="field full"><label for="subject">موضوع</label><input id="subject" required></div>
+<div class="field full"><label for="message">توضیحات</label><textarea id="message" required></textarea></div>
+</div>
+<button class="submit" type="submit">ارسال درخواست</button>
+</form>
+</div>
+</main>
+<script>
+const header=document.getElementById('header');window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>40),{passive:true});
+const toggle=document.getElementById('mobileToggle'),links=document.getElementById('navLinks');toggle.addEventListener('click',()=>links.classList.toggle('active'));links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('active')));
+</script>
+</body>
+</html>
