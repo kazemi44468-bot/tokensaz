@@ -973,14 +973,14 @@ tbody tr:last-child td { border-bottom: none; }
       <span class="icon">◈</span>
       <span class="label">توکن‌ها</span>
     </a>
-    <a class="nav-item" href="#recent-projects">
-      <span class="icon">□</span>
+    <a class="nav-item" href="#documents">
+      <span class="icon">▤</span>
       <span class="label">اسناد</span>
     </a>
 
-    <div class="nav-section-title">مدیریت</div>
-    <a class="nav-item" href="#recent-projects">
-      <span class="icon">◎</span>
+    <div class="nav-section-title">عملیات و کنترل</div>
+    <a class="nav-item" href="#access">
+      <span class="icon">◌</span>
       <span class="label">کاربران و نقش‌ها</span>
     </a>
     <a class="nav-item" href="#activity">
@@ -992,9 +992,9 @@ tbody tr:last-child td { border-bottom: none; }
       <span class="icon">⌁</span>
       <span class="label">گزارش‌ها</span>
     </a>
-    <a class="nav-item" href="#activity">
+    <a class="nav-item" href="#audit">
       <span class="icon">◷</span>
-      <span class="label">Audit Trail</span>
+      <span class="label">ثبت رویدادها</span>
     </a>
 
     <div class="nav-section-title">سیستم</div>
@@ -1003,8 +1003,8 @@ tbody tr:last-child td { border-bottom: none; }
       <span class="label">تنظیمات</span>
     </a>
     <a class="nav-item" href="auth.html">
-      <span class="icon">◌</span>
-      <span class="label">پشتیبانی</span>
+      <span class="icon">?</span>
+      <span class="label">ورود و پشتیبانی</span>
     </a>
     <div class="nav-section-title">دسترسی سریع</div>
     <a class="nav-item" href="index.html"><span class="icon">⌂</span><span class="label">صفحه اصلی</span></a>
@@ -1039,12 +1039,12 @@ tbody tr:last-child td { border-bottom: none; }
     </div>
 
     <div class="topbar-actions">
-      <button class="icon-btn" id="notifBtn" style="position: relative;">
-        ◉
+      <button class="icon-btn" id="notifBtn" aria-label="اعلان‌ها" style="position: relative;">
+        ●
         <span class="dot"></span>
       </button>
-      <button class="icon-btn">◌</button>
-      <button class="icon-btn">⚙︎</button>
+      <button class="icon-btn" aria-label="پیام‌ها">●</button>
+      <a class="icon-btn" aria-label="تنظیمات" href="settings.html">⚙</a>
     </div>
   </header>
 
@@ -1059,10 +1059,10 @@ tbody tr:last-child td { border-bottom: none; }
       </div>
       <div style="display: flex; gap: 10px; flex-wrap: wrap;">
         <button class="btn btn-outline">
-          📥 خروجی گزارش
+          خروجی گزارش
         </button>
         <button class="btn btn-primary">
-          ➕ پروژه جدید
+          پروژه جدید
         </button>
       </div>
     </div>
@@ -1142,7 +1142,7 @@ tbody tr:last-child td { border-bottom: none; }
     </div>
 
     <!-- PROJECTS TABLE + ACTIVITY -->
-    <div class="charts-grid" style="grid-template-columns: 2fr 1fr;">
+    <div class="charts-grid" id="access" style="grid-template-columns: 2fr 1fr;">
       <div class="card">
         <div class="card-header">
           <div>
@@ -1181,8 +1181,7 @@ tbody tr:last-child td { border-bottom: none; }
                 </td>
                 <td>
                   <div class="action-btns">
-                    <button class="action-btn">◉</button>
-                    <button class="action-btn">✎</button>
+                    <button class="action-btn" aria-label="مشاهده">مشاهده</button><button class="action-btn" aria-label="ویرایش">ویرایش</button>
                   </div>
                 </td>
               </tr>
@@ -1204,8 +1203,7 @@ tbody tr:last-child td { border-bottom: none; }
                 </td>
                 <td>
                   <div class="action-btns">
-                    <button class="action-btn">◉</button>
-                    <button class="action-btn">✎</button>
+                    <button class="action-btn" aria-label="مشاهده">مشاهده</button><button class="action-btn" aria-label="ویرایش">ویرایش</button>
                   </div>
                 </td>
               </tr>
@@ -1227,8 +1225,7 @@ tbody tr:last-child td { border-bottom: none; }
                 </td>
                 <td>
                   <div class="action-btns">
-                    <button class="action-btn">◉</button>
-                    <button class="action-btn">✎</button>
+                    <button class="action-btn" aria-label="مشاهده">مشاهده</button><button class="action-btn" aria-label="ویرایش">ویرایش</button>
                   </div>
                 </td>
               </tr>
@@ -1250,8 +1247,7 @@ tbody tr:last-child td { border-bottom: none; }
                 </td>
                 <td>
                   <div class="action-btns">
-                    <button class="action-btn">◉</button>
-                    <button class="action-btn">✎</button>
+                    <button class="action-btn" aria-label="مشاهده">مشاهده</button><button class="action-btn" aria-label="ویرایش">ویرایش</button>
                   </div>
                 </td>
               </tr>
@@ -1260,7 +1256,7 @@ tbody tr:last-child td { border-bottom: none; }
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" id="activity">
         <div class="card-header">
           <div>
             <h3>فعالیت‌های اخیر</h3>
@@ -1311,6 +1307,9 @@ tbody tr:last-child td { border-bottom: none; }
 
     <!-- TOKEN DISTRIBUTION -->
     <div class="card quick-actions" id="quick-actions" style="margin-top:20px;"><div class="card-header"><div><h3>دسترسی سریع</h3><p>مسیرهای اصلی مدیریت و عملیات</p></div></div><div class="quick-action-grid"><a href="projects.html" class="quick-action"><span>▦</span><b>پروژه‌ها و دارایی‌ها</b><small>مشاهده، فیلتر و مدیریت پروژه‌ها</small></a><a href="#token-distribution" class="quick-action"><span>◈</span><b>مدل‌های توکن</b><small>تخصیص و وضعیت توکن‌های پروژه‌ها</small></a><a href="#activity" class="quick-action"><span>◷</span><b>رویدادهای سیستم</b><small>پیگیری آخرین تغییرات و هشدارها</small></a><a href="settings.html" class="quick-action"><span>⚙︎</span><b>تنظیمات پنل</b><small>حساب، امنیت و دسترسی‌های سیستم</small></a></div></div>
+
+    <div class="card" id="documents" style="margin-top:20px;">
+      <div class="card-header"><div><h3>مرکز اسناد و کنترل</h3><p>اسناد، اعتبارسنجی و دسترسی‌های مرتبط با پروژه‌ها</p></div><a class="btn btn-outline btn-sm" href="projects.html">مدیریت پروژه‌ها</a></div><div class="card-body"><div class="quick-action-grid" style="padding:0"><a class="quick-action" href="#activity"><span>✓</span><b>اعتبارسنجی اسناد</b><small>بررسی و پیگیری موارد در انتظار تأیید</small></a><a class="quick-action" href="#token-distribution"><span>◈</span><b>مدل‌های توکن</b><small>مشاهده ساختار و تخصیص توکن‌ها</small></a><a class="quick-action" href="#access"><span>◌</span><b>کاربران و نقش‌ها</b><small>مدیریت سطح دسترسی و مسئولیت‌ها</small></a><a class="quick-action" href="#audit"><span>◷</span><b>ثبت رویدادها</b><small>ردگیری تغییرات و عملیات سامانه</small></a></div></div></div>
 
     <div class="card" id="token-distribution" style="margin-top:20px;">
       <div class="card-header">
@@ -1366,7 +1365,9 @@ tbody tr:last-child td { border-bottom: none; }
       </div>
     </div>
 
-  </main>
+  <div class="card audit-panel" id="audit" style="margin-top:20px"><div class="card-header"><div><h3>ثبت رویدادهای سامانه</h3><p>ردگیری تغییرات مهم و عملیات مدیریتی</p></div><span class="status-pill">فعال</span></div><div class="audit-row"><span>آخرین ورود مدیریتی</span><strong>امروز، ۱۸:۴۲</strong></div><div class="audit-row"><span>آخرین اعتبارسنجی</span><strong>امروز، ۱۸:۲۸</strong></div><div class="audit-row"><span>آخرین تغییر تنظیمات</span><strong>امروز، ۱۷:۵۵</strong></div></div>
+
+</main>
 </div>
 
 <script>
