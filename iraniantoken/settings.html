@@ -1265,7 +1265,7 @@ body {
 <!-- ==================== SIDEBAR ==================== -->
 <aside class="sidebar" id="sidebar">
   <div class="sidebar-brand">
-    <div class="sidebar-logo">🇮🇷</div>
+    <div class="sidebar-logo">IT</div>
     <div class="sidebar-brand-text">
       <strong>ایرانیان توکن</strong>
       <small>پنل مدیریت پروژه</small>
@@ -1274,52 +1274,54 @@ body {
 
   <nav class="sidebar-nav">
     <div class="nav-section-title">منوی اصلی</div>
-    <a class="nav-item" data-page="dashboard">
-      <span class="icon">📊</span>
+    <a class="nav-item" href="dashboard.html">
+      <span class="icon">◫</span>
       <span class="label">داشبورد</span>
     </a>
-    <a class="nav-item" data-page="projects">
-      <span class="icon">📁</span>
+    <a class="nav-item" href="projects.html">
+      <span class="icon">▦</span>
       <span class="label">پروژه‌ها</span>
       <span class="badge">۱۲</span>
     </a>
-    <a class="nav-item" data-page="tokens">
-      <span class="icon">🪙</span>
+    <a class="nav-item" href="dashboard.html#token-distribution">
+      <span class="icon">◈</span>
       <span class="label">توکن‌ها</span>
     </a>
-    <a class="nav-item" data-page="documents">
-      <span class="icon">📄</span>
+    <a class="nav-item" href="dashboard.html#recent-projects">
+      <span class="icon">□</span>
       <span class="label">اسناد</span>
     </a>
 
     <div class="nav-section-title">مدیریت</div>
-    <a class="nav-item" data-page="users">
-      <span class="icon">👥</span>
+    <a class="nav-item" href="dashboard.html#recent-projects">
+      <span class="icon">◎</span>
       <span class="label">کاربران و نقش‌ها</span>
     </a>
-    <a class="nav-item" data-page="validation">
-      <span class="icon">✅</span>
+    <a class="nav-item" href="dashboard.html#activity">
+      <span class="icon">✓</span>
       <span class="label">اعتبارسنجی</span>
       <span class="badge">۳</span>
     </a>
-    <a class="nav-item" data-page="reports">
-      <span class="icon">📈</span>
+    <a class="nav-item" href="dashboard.html#trend">
+      <span class="icon">⌁</span>
       <span class="label">گزارش‌ها</span>
     </a>
-    <a class="nav-item" data-page="audit">
-      <span class="icon">🕐</span>
+    <a class="nav-item" href="dashboard.html#activity">
+      <span class="icon">◷</span>
       <span class="label">Audit Trail</span>
     </a>
 
     <div class="nav-section-title">سیستم</div>
-    <a class="nav-item active" data-page="settings">
-      <span class="icon">⚙️</span>
+    <a class="nav-item active" href="settings.html">
+      <span class="icon">⚙︎</span>
       <span class="label">تنظیمات</span>
     </a>
-    <a class="nav-item" data-page="support">
-      <span class="icon">💬</span>
+    <a class="nav-item" href="auth.html">
+      <span class="icon">◌</span>
       <span class="label">پشتیبانی</span>
     </a>
+    <div class="nav-section-title">دسترسی سریع</div>
+    <a class="nav-item" href="index.html"><span class="icon">⌂</span><span class="label">صفحه اصلی</span></a>
   </nav>
 
   <div class="sidebar-footer">
@@ -1346,14 +1348,14 @@ body {
     </div>
 
     <div class="topbar-search">
-      <span class="search-icon">🔍</span>
+      <span class="search-icon">⌕</span>
       <input type="text" placeholder="جستجو در تنظیمات...">
     </div>
 
     <div class="topbar-actions">
-      <button class="icon-btn">🔔<span class="dot"></span></button>
-      <button class="icon-btn">💬</button>
-      <button class="icon-btn">⚙️</button>
+      <button class="icon-btn">◉<span class="dot"></span></button>
+      <button class="icon-btn">◌</button>
+      <button class="icon-btn">⚙︎</button>
     </div>
   </header>
 
@@ -1362,12 +1364,12 @@ body {
 
     <div class="page-header">
       <div class="page-title">
-        <h1>تنظیمات ⚙️</h1>
+        <h1>تنظیمات ⚙︎</h1>
         <p>مدیریت حساب کاربری، امنیت، اعلان‌ها و تنظیمات سیستم</p>
       </div>
       <div class="page-actions">
         <button class="btn btn-outline" onclick="resetSettings()">↺ بازنشانی</button>
-        <button class="btn btn-primary" onclick="saveAllSettings()">💾 ذخیره تغییرات</button>
+        <button class="btn btn-primary" onclick="saveAllSettings()">⇩ ذخیره تغییرات</button>
       </div>
     </div>
 
@@ -1378,17 +1380,17 @@ body {
         <div class="settings-nav-title">دسته‌بندی‌ها</div>
 
         <a class="settings-nav-item active" data-panel="profile">
-          <span class="icon">👤</span>
+          <span class="icon">○</span>
           <span>پروفایل کاربری</span>
           <span class="chevron">‹</span>
         </a>
         <a class="settings-nav-item" data-panel="account">
-          <span class="icon">🔐</span>
+          <span class="icon">◇</span>
           <span>حساب کاربری</span>
           <span class="chevron">‹</span>
         </a>
         <a class="settings-nav-item" data-panel="security">
-          <span class="icon">🛡️</span>
+          <span class="icon">⬡</span>
           <span>امنیت</span>
           <span class="chevron">‹</span>
         </a>
@@ -1396,17 +1398,17 @@ body {
         <div class="settings-nav-divider"></div>
 
         <a class="settings-nav-item" data-panel="notifications">
-          <span class="icon">🔔</span>
+          <span class="icon">◉</span>
           <span>اعلان‌ها</span>
           <span class="chevron">‹</span>
         </a>
         <a class="settings-nav-item" data-panel="appearance">
-          <span class="icon">🎨</span>
+          <span class="icon">✦</span>
           <span>ظاهر و نمایش</span>
           <span class="chevron">‹</span>
         </a>
         <a class="settings-nav-item" data-panel="language">
-          <span class="icon">🌐</span>
+          <span class="icon">⊕</span>
           <span>زبان و منطقه</span>
           <span class="chevron">‹</span>
         </a>
@@ -1414,12 +1416,12 @@ body {
         <div class="settings-nav-divider"></div>
 
         <a class="settings-nav-item" data-panel="system">
-          <span class="icon">⚙️</span>
+          <span class="icon">⚙︎</span>
           <span>تنظیمات سیستم</span>
           <span class="chevron">‹</span>
         </a>
         <a class="settings-nav-item" data-panel="api">
-          <span class="icon">🔌</span>
+          <span class="icon">⌘</span>
           <span>API و یکپارچه‌سازی</span>
           <span class="chevron">‹</span>
         </a>
@@ -1427,7 +1429,7 @@ body {
         <div class="settings-nav-divider"></div>
 
         <a class="settings-nav-item" data-panel="danger" style="color: var(--danger);">
-          <span class="icon">⚠️</span>
+          <span class="icon">!</span>
           <span>منطقه خطر</span>
           <span class="chevron">‹</span>
         </a>
@@ -1441,7 +1443,7 @@ body {
           <div class="card">
             <div class="card-header">
               <div class="card-header-left">
-                <h3>👤 پروفایل کاربری</h3>
+                <h3>○ پروفایل کاربری</h3>
                 <p>اطلاعات شخصی و تصویر پروفایل خود را مدیریت کنید</p>
               </div>
             </div>
@@ -1500,7 +1502,7 @@ body {
           <div class="card">
             <div class="card-header">
               <div class="card-header-left">
-                <h3>🔐 حساب کاربری</h3>
+                <h3>◇ حساب کاربری</h3>
                 <p>تنظیمات مربوط به حساب و اطلاعات ورود</p>
               </div>
             </div>
@@ -1567,14 +1569,14 @@ body {
           <div class="card">
             <div class="card-header">
               <div class="card-header-left">
-                <h3>🛡️ تأیید دو مرحله‌ای (2FA)</h3>
+                <h3>⬡ تأیید دو مرحله‌ای (2FA)</h3>
                 <p>لایه امنیتی اضافی برای محافظت از حساب شما</p>
               </div>
             </div>
             <div class="card-body">
 
               <div class="twofa-box">
-                <div class="twofa-icon">🔐</div>
+                <div class="twofa-icon">◇</div>
                 <div class="twofa-body">
                   <strong>تأیید دو مرحله‌ای فعال نیست</strong>
                   <small>با فعال‌سازی، علاوه بر رمز عبور، کد تأیید نیز از شما خواسته می‌شود.</small>
@@ -1643,7 +1645,7 @@ body {
           <div class="card">
             <div class="card-header">
               <div class="card-header-left">
-                <h3>🔔 اعلان‌های ایمیلی</h3>
+                <h3>◉ اعلان‌های ایمیلی</h3>
                 <p>انتخاب کنید چه اعلان‌هایی به ایمیل شما ارسال شود</p>
               </div>
             </div>
@@ -1743,7 +1745,7 @@ body {
           <div class="card">
             <div class="card-header">
               <div class="card-header-left">
-                <h3>🎨 حالت نمایش</h3>
+                <h3>✦ حالت نمایش</h3>
                 <p>حالت رنگی مورد علاقه خود را انتخاب کنید</p>
               </div>
             </div>
@@ -1832,7 +1834,7 @@ body {
           <div class="card">
             <div class="card-header">
               <div class="card-header-left">
-                <h3>🌐 زبان و منطقه</h3>
+                <h3>⊕ زبان و منطقه</h3>
                 <p>تنظیمات زبان و قالب‌بندی تاریخ و اعداد</p>
               </div>
             </div>
@@ -1884,7 +1886,7 @@ body {
           <div class="card">
             <div class="card-header">
               <div class="card-header-left">
-                <h3>⚙️ تنظیمات عمومی سیستم</h3>
+                <h3>⚙︎ تنظیمات عمومی سیستم</h3>
                 <p>پیکربندی رفتار سیستم و پروژه‌ها</p>
               </div>
             </div>
@@ -1943,7 +1945,7 @@ body {
           <div class="card">
             <div class="card-header">
               <div class="card-header-left">
-                <h3>🔌 کلیدهای API</h3>
+                <h3>⌘ کلیدهای API</h3>
                 <p>مدیریت کلیدهای دسترسی به API سیستم</p>
               </div>
               <button class="btn btn-primary btn-sm" onclick="createApiKey()">➕ کلید جدید</button>
@@ -1957,8 +1959,8 @@ body {
                   <span class="api-key-value">irt_live_sk_••••••••••••••••4a2f</span>
                 </div>
                 <div class="api-key-actions">
-                  <button class="api-key-btn" title="کپی" onclick="copyApiKey('irt_live_sk_xxxxxxxx4a2f')">📋</button>
-                  <button class="api-key-btn" title="نمایش" onclick="showToast('info','نمایش کلید','کلید کامل در لاگ سیستم ثبت شد.')">👁️</button>
+                  <button class="api-key-btn" title="کپی" onclick="copyApiKey('irt_live_sk_xxxxxxxx4a2f')">▤</button>
+                  <button class="api-key-btn" title="نمایش" onclick="showToast('info','نمایش کلید','کلید کامل در لاگ سیستم ثبت شد.')">◉</button>
                   <button class="api-key-btn danger" title="حذف" onclick="confirmDeleteKey('کلید اصلی')">🗑️</button>
                 </div>
               </div>
@@ -1970,8 +1972,8 @@ body {
                   <span class="api-key-value">irt_test_sk_••••••••••••••••8b1c</span>
                 </div>
                 <div class="api-key-actions">
-                  <button class="api-key-btn" title="کپی" onclick="copyApiKey('irt_test_sk_xxxxxxxx8b1c')">📋</button>
-                  <button class="api-key-btn" title="نمایش" onclick="showToast('info','نمایش کلید','کلید کامل در لاگ سیستم ثبت شد.')">👁️</button>
+                  <button class="api-key-btn" title="کپی" onclick="copyApiKey('irt_test_sk_xxxxxxxx8b1c')">▤</button>
+                  <button class="api-key-btn" title="نمایش" onclick="showToast('info','نمایش کلید','کلید کامل در لاگ سیستم ثبت شد.')">◉</button>
                   <button class="api-key-btn danger" title="حذف" onclick="confirmDeleteKey('کلید تست')">🗑️</button>
                 </div>
               </div>
@@ -1983,7 +1985,7 @@ body {
                   <span class="api-key-value">irt_wh_••••••••••••••••9d3e</span>
                 </div>
                 <div class="api-key-actions">
-                  <button class="api-key-btn" title="کپی" onclick="copyApiKey('irt_wh_xxxxxxxx9d3e')">📋</button>
+                  <button class="api-key-btn" title="کپی" onclick="copyApiKey('irt_wh_xxxxxxxx9d3e')">▤</button>
                   <button class="api-key-btn danger" title="حذف" onclick="confirmDeleteKey('کلید وب‌هوک')">🗑️</button>
                 </div>
               </div>
@@ -2027,7 +2029,7 @@ body {
           <div class="card danger-zone">
             <div class="card-header">
               <div class="card-header-left">
-                <h3>⚠️ منطقه خطر</h3>
+                <h3>! منطقه خطر</h3>
                 <p>عملیات حساس و غیرقابل بازگشت</p>
               </div>
             </div>
@@ -2079,7 +2081,7 @@ body {
 <!-- ==================== SAVE BAR ==================== -->
 <div class="save-bar" id="saveBar">
   <div class="save-bar-info">
-    <div class="save-bar-icon">💾</div>
+    <div class="save-bar-icon">⇩</div>
     <div>
       <strong>تغییرات ذخیره نشده</strong>
       <small>تنظیمات جدید شما آماده ذخیره است</small>
@@ -2087,7 +2089,7 @@ body {
   </div>
   <div class="save-bar-actions">
     <button class="btn btn-light btn-sm" onclick="discardChanges()">لغو</button>
-    <button class="btn btn-save btn-sm" onclick="saveAllSettings()">💾 ذخیره تغییرات</button>
+    <button class="btn btn-save btn-sm" onclick="saveAllSettings()">⇩ ذخیره تغییرات</button>
   </div>
 </div>
 
@@ -2095,7 +2097,7 @@ body {
 <div class="modal-overlay" id="deleteModal">
   <div class="modal">
     <div class="modal-header">
-      <div class="modal-icon">⚠️</div>
+      <div class="modal-icon">!</div>
       <div>
         <h3>حذف دائمی حساب کاربری</h3>
         <p>این عملیات غیرقابل بازگشت است</p>
@@ -2142,7 +2144,7 @@ overlay.addEventListener('click', () => {
 /* ==================== TOAST ==================== */
 function showToast(type, title, message) {
   const container = document.getElementById('toastContainer');
-  const icons = { success: '✅', error: '❌', warning: '⚠️', info: 'ℹ️' };
+  const icons = { success: '✓', error: '❌', warning: '!', info: 'ℹ️' };
 
   const toast = document.createElement('div');
   toast.className = `toast ${type}`;
