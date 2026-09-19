@@ -714,3 +714,20 @@ body{background-blend-mode:normal!important}
   position:relative!important;
   z-index:2!important;
 }
+
+/* FINAL TEXTURE CORRECTION — no dark header layer */
+.top{
+  background-color:#ffffffed!important;
+  background-image:none!important;
+}
+.top:before{
+  display:block!important;
+  background-image:url("../images/box3.png")!important;
+  background-repeat:repeat!important;
+  background-position:top right!important;
+  background-size:auto!important;
+  opacity:.15!important;
+}
+.site-footer:before{
+  opacity:.45!important;
+}
