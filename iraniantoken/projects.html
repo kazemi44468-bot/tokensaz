@@ -2490,6 +2490,22 @@ document.querySelectorAll('.btn').forEach(btn => {
 document.querySelectorAll('.nav-expand').forEach(btn=>{btn.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();const g=btn.closest('.nav-group');g.classList.toggle('open');});});
 document.querySelectorAll('.nav-sub a').forEach(a=>a.addEventListener('click',()=>{if(window.innerWidth<=900){document.getElementById('sidebar')?.classList.remove('mobile-open');document.getElementById('overlay')?.classList.remove('active');}}));
 </script>
+<script>
+/* ==================== HASH-BASED PROJECT NAVIGATION ==================== */
+function syncProjectHash(){
+  const hash=location.hash.replace('#','');
+  if(hash==='page-tokens'){
+    document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+    document.getElementById('page-tokens')?.classList.add('active');
+    const b=document.getElementById('breadcrumb'); if(b)b.innerHTML='<span>خانه</span><span>›</span><span class="current">مدیریت توکن‌ها</span>';
+  }else if(hash==='page-projects'){
+    document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+    document.getElementById('page-projects')?.classList.add('active');
+    const b=document.getElementById('breadcrumb'); if(b)b.innerHTML='<span>خانه</span><span>›</span><span class="current">پروژه‌ها و دارایی‌ها</span>';
+  }
+}
+window.addEventListener('hashchange',syncProjectHash); syncProjectHash();
+</script>
 <script src="theme.js"></script>
 </body>
 </html>
