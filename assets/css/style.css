@@ -602,3 +602,38 @@ body{background-blend-mode:normal!important}
 /* Section surfaces remain readable over the supplied texture. */
 .section-tint,.method,.proof,.cta{background:rgba(247,250,252,.78)!important}
 .site-footer{background-color:#061b2c!important;background-image:url("../images/box3.png")!important;background-repeat:repeat!important;background-size:auto!important}
+
+
+/* FINAL CONTRAST TUNING — softer header/footer texture + readable content */
+.top{
+  background-image:linear-gradient(rgba(6,27,44,.985),rgba(6,27,44,.985)),url("../images/box3.png")!important;
+  background-blend-mode:normal!important;
+}
+.site-footer{
+  background-image:linear-gradient(rgba(6,27,44,.985),rgba(6,27,44,.985)),url("../images/box3.png")!important;
+  background-blend-mode:normal!important;
+}
+/* Content cards: strong surface contrast, restrained borders and readable text. */
+.solution-card,.detail-card,.price-card,.contact-form,.clarity-box,.feature-band,.timeline,.platform-stack>div,.vision-grid article,.estimate-grid>div,.purpose-panel>div,.work-grid>div{
+  background:rgba(255,255,255,.965)!important;
+  color:#173042!important;
+  border-color:rgba(12,58,83,.15)!important;
+}
+.solution-card h3,.detail-card h3,.price-card h3,.timeline h3,.platform-stack>div b,.vision-grid article h3,.estimate-grid h3,.purpose-panel h3,.work-grid h3,.clarity-box h2,.feature-band h2{
+  color:#08263a!important;
+}
+.solution-card p,.detail-card p,.price-card p,.timeline p,.platform-stack>div p,.vision-grid article p,.estimate-grid p,.purpose-panel p,.work-grid p,.clarity-box p,.feature-band p,.contact-form label{
+  color:#405766!important;
+}
+.solution-card small,.price-card small,.eyebrow,.definition span,.feature-band .eyebrow{
+  color:#087b9a!important;
+}
+.solution-card .num,.detail-card .number,.timeline>b,.architecture span{
+  color:#168bd2!important;
+}
+.solution-card .card-more,.detail-card a,.price-card a,.contact-form a,.clarity-box a{
+  color:#087c9b!important;
+}
+.solution-card .card-more:hover,.detail-card a:hover,.price-card a:hover,.contact-form a:hover,.clarity-box a:hover{color:#075f78!important}
+/* Preserve dark surfaces only where they are intentional. */
+.visual-card,.proof,.cta,.section-tint .architecture>div{color:#fff}
