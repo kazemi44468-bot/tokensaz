@@ -178,3 +178,13 @@ body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;back
 .footer-col h4{margin-top:0!important;margin-bottom:7px!important}
 .footer-brand .logo-icon{margin-bottom:6px!important}
 .footer-grid>*{min-height:0!important}
+
+/* FOOTER BOX ALIGNMENT */
+.footer-grid{display:grid!important;grid-template-columns:minmax(1.35fr,1.8fr) repeat(3,minmax(0,1fr))!important;align-items:stretch!important;gap:14px!important;padding:4px 12px!important}
+.footer-brand,.footer-col{width:100%!important;box-sizing:border-box!important;display:flex!important;flex-direction:column!important;justify-content:flex-start!important;margin:0!important;min-height:0!important;height:100%!important}
+.footer-brand{grid-column:auto!important}
+.footer-col h4{min-height:24px!important;margin:0 0 7px!important;display:flex!important;align-items:center!important}
+.footer-col ul{margin:0!important;padding:0!important}
+.footer-brand p{margin:5px 0!important}
+@media(max-width:900px){.footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.footer-brand{grid-column:1/-1!important}}
+@media(max-width:600px){.footer-grid{grid-template-columns:1fr!important;gap:10px!important}.footer-brand{grid-column:auto!important}}
