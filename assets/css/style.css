@@ -188,3 +188,22 @@ html{font-size:16px}body{font-size:15px;line-height:1.9}.site-footer,.site-foote
   .site-footer .brand-logo{width:68px!important;height:68px!important;flex-basis:68px!important;border-radius:16px!important}
   .site-footer .brand-word b{font-size:18px!important}
 }
+
+/* BRAND SCALE + RELIABLE FAVICON */
+.site-footer .footer-brand .brand-logo{width:92px!important;height:92px!important;flex-basis:92px!important;border-radius:22px!important}
+.site-footer .footer-brand .brand-word b{font-size:21px!important}
+.site-footer .footer-brand .brand-word small{font-size:10px!important}
+.logo-core img{width:110px!important;height:110px!important;padding:7px!important;border-radius:18px!important}
+.about-hero-card .about-core.logo-core{width:220px!important;height:220px!important}
+.about-hero-card .about-core.logo-core img{width:138px!important;height:138px!important;padding:8px!important;border-radius:22px!important}
+.about-hero-card .about-core.logo-core b{font-size:18px!important}
+.about-hero-card .about-core.logo-core small{font-size:8px!important}
+@media(max-width:700px){
+  .site-footer .footer-brand .brand-logo{width:88px!important;height:88px!important;flex-basis:88px!important}
+  .site-footer .footer-brand .brand-word b{font-size:20px!important}
+  .about-hero-card{height:330px!important}
+  .about-hero-card .about-core.logo-core{width:190px!important;height:190px!important}
+  .about-hero-card .about-core.logo-core img{width:116px!important;height:116px!important}
+  .logo-core img{width:92px!important;height:92px!important}
+}
+/* Use the actual raster logo as the primary favicon source. */
