@@ -1002,21 +1002,18 @@ body{background-blend-mode:normal!important}
 }
 
 
-/* BUTTON TEXTURE — b1.png — tiled softly on light buttons */
-.primary,.navbtn,.drawer-cta,.circlebtn{
-  background-image:none!important;
-}
+/* BUTTON TEXTURE — b1.png — small, subtle repeating tile on light buttons */
 .secondary,.outline-btn{
   background-color:#fff!important;
-  background-image:linear-gradient(rgba(255,255,255,.55),rgba(255,255,255,.55)),url("../images/b1.png")!important;
+  background-image:linear-gradient(rgba(255,255,255,.68),rgba(255,255,255,.68)),url("../images/b1.png")!important;
   background-repeat:repeat!important;
   background-position:center center!important;
-  background-size:auto!important;
+  background-size:32px 32px!important;
   background-blend-mode:normal!important;
 }
 .secondary:hover,.outline-btn:hover{
-  background-image:linear-gradient(rgba(255,255,255,.42),rgba(255,255,255,.42)),url("../images/b1.png")!important;
+  background-image:linear-gradient(rgba(255,255,255,.58),rgba(255,255,255,.58)),url("../images/b1.png")!important;
   background-repeat:repeat!important;
   background-position:center center!important;
-  background-size:auto!important;
+  background-size:32px 32px!important;
 }
