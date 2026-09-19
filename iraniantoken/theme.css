@@ -209,3 +209,10 @@ body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;back
 .footer-links{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding-top:20px}.footer-links>div{padding:14px 16px;border:1px solid rgba(255,255,255,.11);border-radius:18px 8px 18px 8px;background:rgba(255,255,255,.045);backdrop-filter:blur(7px);min-height:96px}.footer-links b{display:block;color:#fff;font-size:13px;margin-bottom:8px}.footer-links a{display:block;color:#b9ccda!important;text-decoration:none!important;font-size:11px;line-height:1.9;padding:1px 0}.footer-links a:hover{color:#fff!important}
 @media(max-width:800px){.footer-top{grid-template-columns:1fr;gap:16px}.footer-links{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:520px){.footer-shell{padding:22px 16px 16px}.footer-links{grid-template-columns:1fr}.footer-links>div{min-height:0}.footer-logo{width:54px;height:54px}.footer-logo img{width:44px;height:44px}}
+
+/* IRANIAN TOKEN SIMPLE FOOTER */
+.footer{padding:0!important;background-image:url("./assets/images/Bg.png.gif")!important;background-repeat:repeat!important;background-position:center!important;background-size:auto!important}
+.footer:before{background:linear-gradient(120deg,rgba(4,20,38,.84),rgba(6,39,65,.68),rgba(4,20,38,.82))!important}
+.footer-shell{max-width:980px!important;margin:auto!important;padding:22px 24px!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:28px!important}
+.footer-logo-link{flex:0 0 auto!important}.footer-logo{width:58px!important;height:58px!important}.footer-logo img{width:46px!important;height:46px!important}.footer-branding strong{font-size:19px!important}.footer-branding span{font-size:10px!important}.footer-intro{margin:0!important;max-width:620px!important;font-size:12px!important;line-height:2!important;color:#c6d5df!important}
+@media(max-width:650px){.footer-shell{flex-direction:column!important;text-align:center!important;gap:12px!important;padding:18px 16px!important}.footer-logo-link{justify-content:center!important}.footer-intro{max-width:560px!important}}
