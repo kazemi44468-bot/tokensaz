@@ -1017,3 +1017,57 @@ body{background-blend-mode:normal!important}
   background-position:center center!important;
   background-size:32px 32px!important;
 }
+
+
+/* SOLUTION SECTION — controlled heading size and equal card geometry */
+.section .section-head h2{
+  font-size:30px!important;
+  line-height:1.55!important;
+}
+.solution-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  grid-auto-rows:minmax(250px,1fr)!important;
+  align-items:stretch!important;
+  gap:18px!important;
+}
+.solution-card{
+  min-height:250px!important;
+  height:100%!important;
+  display:flex!important;
+  flex-direction:column!important;
+  padding:28px!important;
+}
+.solution-card.featured{
+  grid-row:auto!important;
+  background:rgba(255,255,255,.94)!important;
+}
+.solution-card h3{
+  font-size:20px!important;
+  line-height:1.6!important;
+  margin:9px 0 8px!important;
+}
+.solution-card p{
+  margin:0!important;
+  line-height:2!important;
+  max-width:100%!important;
+}
+.solution-card .card-more{
+  margin-top:auto!important;
+  padding-top:18px!important;
+}
+@media(max-width:700px){
+  .section .section-head h2{
+    font-size:28px!important;
+  }
+  .solution-grid{
+    grid-template-columns:1fr!important;
+    grid-auto-rows:auto!important;
+    gap:14px!important;
+  }
+  .solution-card,
+  .solution-card.featured{
+    min-height:0!important;
+    height:auto!important;
+    padding:22px 20px!important;
+  }
+}
