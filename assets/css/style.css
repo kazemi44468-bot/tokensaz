@@ -266,3 +266,25 @@ html{font-size:16px}body{font-size:15px;line-height:1.9}.site-footer,.site-foote
     height:150px!important;
   }
 }
+
+
+/* FINAL TYPOGRAPHY STANDARD — Persian-first, no Arial */
+html,body,button,input,textarea,select,optgroup{
+  font-family:"Vazirmatn","Vazir","BYekan","B Yekan",Tahoma,sans-serif!important;
+}
+.hero h1,.page-hero h1{
+  font-size:min(40px,5vw)!important;
+  line-height:1.35!important;
+}
+.hero h1 strong,.page-hero h1 strong{
+  font-size:inherit!important;
+}
+.hero .lead,.page-hero p{
+  font-family:"Vazirmatn","Vazir","BYekan","B Yekan",Tahoma,sans-serif!important;
+}
+@media(max-width:700px){
+  .hero h1,.page-hero h1{
+    font-size:32px!important;
+    line-height:1.45!important;
+  }
+}
