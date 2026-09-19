@@ -1397,7 +1397,7 @@ body {
 <!-- ==================== SIDEBAR ==================== -->
 <aside class="sidebar" id="sidebar">
   <div class="sidebar-brand">
-    <div class="sidebar-logo">🇮🇷</div>
+    <div class="sidebar-logo">IT</div>
     <div class="sidebar-brand-text">
       <strong>ایرانیان توکن</strong>
       <small>پنل مدیریت پروژه</small>
@@ -1406,52 +1406,54 @@ body {
 
   <nav class="sidebar-nav">
     <div class="nav-section-title">منوی اصلی</div>
-    <a class="nav-item" data-page="dashboard">
-      <span class="icon">📊</span>
+    <a class="nav-item" href="dashboard.html">
+      <span class="icon">◫</span>
       <span class="label">داشبورد</span>
     </a>
-    <a class="nav-item active" data-page="projects">
-      <span class="icon">📁</span>
+    <a class="nav-item active" href="projects.html">
+      <span class="icon">▦</span>
       <span class="label">پروژه‌ها</span>
       <span class="badge">۱۲</span>
     </a>
-    <a class="nav-item" data-page="tokens">
-      <span class="icon">🪙</span>
+    <a class="nav-item" href="dashboard.html#token-distribution">
+      <span class="icon">◈</span>
       <span class="label">توکن‌ها</span>
     </a>
-    <a class="nav-item" data-page="documents">
-      <span class="icon">📄</span>
+    <a class="nav-item" href="dashboard.html#recent-projects">
+      <span class="icon">□</span>
       <span class="label">اسناد</span>
     </a>
 
     <div class="nav-section-title">مدیریت</div>
-    <a class="nav-item" data-page="users">
-      <span class="icon">👥</span>
+    <a class="nav-item" href="dashboard.html#recent-projects">
+      <span class="icon">◎</span>
       <span class="label">کاربران و نقش‌ها</span>
     </a>
-    <a class="nav-item" data-page="validation">
-      <span class="icon">✅</span>
+    <a class="nav-item" href="dashboard.html#activity">
+      <span class="icon">✓</span>
       <span class="label">اعتبارسنجی</span>
       <span class="badge">۳</span>
     </a>
-    <a class="nav-item" data-page="reports">
-      <span class="icon">📈</span>
+    <a class="nav-item" href="dashboard.html#trend">
+      <span class="icon">⌁</span>
       <span class="label">گزارش‌ها</span>
     </a>
-    <a class="nav-item" data-page="audit">
-      <span class="icon">🕐</span>
+    <a class="nav-item" href="dashboard.html#activity">
+      <span class="icon">◷</span>
       <span class="label">Audit Trail</span>
     </a>
 
     <div class="nav-section-title">سیستم</div>
-    <a class="nav-item" data-page="settings">
-      <span class="icon">⚙️</span>
+    <a class="nav-item" href="settings.html">
+      <span class="icon">⚙︎</span>
       <span class="label">تنظیمات</span>
     </a>
-    <a class="nav-item" data-page="support">
-      <span class="icon">💬</span>
+    <a class="nav-item" href="auth.html">
+      <span class="icon">◌</span>
       <span class="label">پشتیبانی</span>
     </a>
+    <div class="nav-section-title">دسترسی سریع</div>
+    <a class="nav-item" href="index.html"><span class="icon">⌂</span><span class="label">صفحه اصلی</span></a>
   </nav>
 
   <div class="sidebar-footer">
@@ -1478,14 +1480,14 @@ body {
     </div>
 
     <div class="topbar-search">
-      <span class="search-icon">🔍</span>
+      <span class="search-icon">⌕</span>
       <input type="text" placeholder="جستجوی سریع...">
     </div>
 
     <div class="topbar-actions">
-      <button class="icon-btn">🔔<span class="dot"></span></button>
-      <button class="icon-btn">💬</button>
-      <button class="icon-btn">⚙️</button>
+      <button class="icon-btn">◉<span class="dot"></span></button>
+      <button class="icon-btn">◌</button>
+      <button class="icon-btn">⚙︎</button>
     </div>
   </header>
 
@@ -1497,7 +1499,7 @@ body {
 
       <div class="page-header">
         <div class="page-title">
-          <h1>مدیریت پروژه‌ها 📁</h1>
+          <h1>مدیریت پروژه‌ها ▦</h1>
           <p>مدیریت، فیلتر و مشاهده جزئیات تمام پروژه‌های ثبت‌شده</p>
         </div>
         <div class="page-actions">
@@ -1509,7 +1511,7 @@ body {
       <!-- Filter Bar -->
       <div class="filter-bar">
         <div class="search-input-wrap">
-          <span class="s-icon">🔍</span>
+          <span class="s-icon">⌕</span>
           <input type="text" placeholder="جستجو در نام، کد، مالک...">
         </div>
         <div class="filter-group" style="flex: 0 0 160px;">
@@ -1541,7 +1543,7 @@ body {
 
         <div class="project-card" data-project="1">
           <div class="project-card-cover">
-            🐄
+            ◆
             <span class="project-card-status active">فعال</span>
             <span class="project-card-code">IRT-1403-001</span>
           </div>
@@ -1573,15 +1575,15 @@ body {
               <div class="progress-bar-lg"><div class="fill" style="width: 72%;"></div></div>
             </div>
             <div class="project-card-footer">
-              <button class="btn btn-outline btn-sm" onclick="openProject(1)">👁️ مشاهده</button>
-              <button class="btn btn-primary btn-sm">✏️ ویرایش</button>
+              <button class="btn btn-outline btn-sm" onclick="openProject(1)">◉ مشاهده</button>
+              <button class="btn btn-primary btn-sm">✎ ویرایش</button>
             </div>
           </div>
         </div>
 
         <div class="project-card" data-project="2">
           <div class="project-card-cover green">
-            🌾
+            ◆
             <span class="project-card-status active">فعال</span>
             <span class="project-card-code">IRT-1403-002</span>
           </div>
@@ -1613,15 +1615,15 @@ body {
               <div class="progress-bar-lg"><div class="fill" style="width: 45%;"></div></div>
             </div>
             <div class="project-card-footer">
-              <button class="btn btn-outline btn-sm" onclick="openProject(2)">👁️ مشاهده</button>
-              <button class="btn btn-primary btn-sm">✏️ ویرایش</button>
+              <button class="btn btn-outline btn-sm" onclick="openProject(2)">◉ مشاهده</button>
+              <button class="btn btn-primary btn-sm">✎ ویرایش</button>
             </div>
           </div>
         </div>
 
         <div class="project-card" data-project="3">
           <div class="project-card-cover gold">
-            🏗️
+            ◆
             <span class="project-card-status pending">در انتظار</span>
             <span class="project-card-code">IRT-1403-003</span>
           </div>
@@ -1653,15 +1655,15 @@ body {
               <div class="progress-bar-lg"><div class="fill" style="width: 30%;"></div></div>
             </div>
             <div class="project-card-footer">
-              <button class="btn btn-outline btn-sm" onclick="openProject(3)">👁️ مشاهده</button>
-              <button class="btn btn-primary btn-sm">✏️ ویرایش</button>
+              <button class="btn btn-outline btn-sm" onclick="openProject(3)">◉ مشاهده</button>
+              <button class="btn btn-primary btn-sm">✎ ویرایش</button>
             </div>
           </div>
         </div>
 
         <div class="project-card" data-project="4">
           <div class="project-card-cover purple">
-            ⚡
+            ◆
             <span class="project-card-status active">فعال</span>
             <span class="project-card-code">IRT-1403-004</span>
           </div>
@@ -1693,8 +1695,8 @@ body {
               <div class="progress-bar-lg"><div class="fill" style="width: 88%;"></div></div>
             </div>
             <div class="project-card-footer">
-              <button class="btn btn-outline btn-sm" onclick="openProject(4)">👁️ مشاهده</button>
-              <button class="btn btn-primary btn-sm">✏️ ویرایش</button>
+              <button class="btn btn-outline btn-sm" onclick="openProject(4)">◉ مشاهده</button>
+              <button class="btn btn-primary btn-sm">✎ ویرایش</button>
             </div>
           </div>
         </div>
@@ -1733,8 +1735,8 @@ body {
               <div class="progress-bar-lg"><div class="fill" style="width: 15%;"></div></div>
             </div>
             <div class="project-card-footer">
-              <button class="btn btn-outline btn-sm" onclick="openProject(5)">👁️ مشاهده</button>
-              <button class="btn btn-primary btn-sm">✏️ ویرایش</button>
+              <button class="btn btn-outline btn-sm" onclick="openProject(5)">◉ مشاهده</button>
+              <button class="btn btn-primary btn-sm">✎ ویرایش</button>
             </div>
           </div>
         </div>
@@ -1773,8 +1775,8 @@ body {
               <div class="progress-bar-lg"><div class="fill" style="width: 100%;"></div></div>
             </div>
             <div class="project-card-footer">
-              <button class="btn btn-outline btn-sm" onclick="openProject(6)">👁️ مشاهده</button>
-              <button class="btn btn-primary btn-sm">✏️ ویرایش</button>
+              <button class="btn btn-outline btn-sm" onclick="openProject(6)">◉ مشاهده</button>
+              <button class="btn btn-primary btn-sm">✎ ویرایش</button>
             </div>
           </div>
         </div>
@@ -1797,40 +1799,40 @@ body {
 
       <div class="page-header">
         <div class="page-title">
-          <h1>مدیریت توکن‌ها 🪙</h1>
+          <h1>مدیریت توکن‌ها ◈</h1>
           <p>مدیریت، تخصیص و پایش توکن‌های پروژه‌های مختلف</p>
         </div>
         <div class="page-actions">
           <button class="btn btn-outline">📥 خروجی</button>
-          <button class="btn btn-gold">🪙 ایجاد توکن جدید</button>
+          <button class="btn btn-gold">◈ ایجاد توکن جدید</button>
         </div>
       </div>
 
       <!-- Token Stats -->
       <div class="token-stats-grid">
         <div class="token-stat">
-          <div class="token-stat-icon">🪙</div>
+          <div class="token-stat-icon">◈</div>
           <div class="token-stat-body">
             <div class="value">۲۸,۵۰۰</div>
             <div class="label">کل توکن‌های صادرشده</div>
           </div>
         </div>
         <div class="token-stat gold">
-          <div class="token-stat-icon">💰</div>
+          <div class="token-stat-icon">◇</div>
           <div class="token-stat-body">
             <div class="value">۱۲,۴۵۰</div>
             <div class="label">توکن‌های در گردش</div>
           </div>
         </div>
         <div class="token-stat green">
-          <div class="token-stat-icon">✅</div>
+          <div class="token-stat-icon">✓</div>
           <div class="token-stat-body">
             <div class="value">۸</div>
             <div class="label">مدل توکن فعال</div>
           </div>
         </div>
         <div class="token-stat purple">
-          <div class="token-stat-icon">👥</div>
+          <div class="token-stat-icon">◎</div>
           <div class="token-stat-body">
             <div class="value">۱,۲۴۸</div>
             <div class="label">دارندگان توکن</div>
@@ -1841,7 +1843,7 @@ body {
       <!-- Filter Bar -->
       <div class="filter-bar">
         <div class="search-input-wrap">
-          <span class="s-icon">🔍</span>
+          <span class="s-icon">⌕</span>
           <input type="text" placeholder="جستجو در نام توکن، نماد، پروژه...">
         </div>
         <div class="filter-group" style="flex: 0 0 180px;">
@@ -1872,7 +1874,7 @@ body {
         <!-- Token 1 -->
         <div class="token-card">
           <div class="token-card-header">
-            <div class="token-coin gold">🐄</div>
+            <div class="token-coin gold">◆</div>
             <div class="token-card-title">
               <h4>توکن دامداری نمونه</h4>
               <span class="symbol">$DAM · IRT-1403-001</span>
@@ -1912,15 +1914,15 @@ body {
             </div>
           </div>
           <div class="token-card-footer">
-            <button class="btn btn-outline btn-sm">👁️ جزئیات</button>
-            <button class="btn btn-gold btn-sm">💰 تخصیص</button>
+            <button class="btn btn-outline btn-sm">◉ جزئیات</button>
+            <button class="btn btn-gold btn-sm">◇ تخصیص</button>
           </div>
         </div>
 
         <!-- Token 2 -->
         <div class="token-card">
           <div class="token-card-header">
-            <div class="token-coin green">🌾</div>
+            <div class="token-coin green">◆</div>
             <div class="token-card-title">
               <h4>توکن کشاورزی پایدار</h4>
               <span class="symbol">$AGR · IRT-1403-002</span>
@@ -1960,15 +1962,15 @@ body {
             </div>
           </div>
           <div class="token-card-footer">
-            <button class="btn btn-outline btn-sm">👁️ جزئیات</button>
-            <button class="btn btn-gold btn-sm">💰 تخصیص</button>
+            <button class="btn btn-outline btn-sm">◉ جزئیات</button>
+            <button class="btn btn-gold btn-sm">◇ تخصیص</button>
           </div>
         </div>
 
         <!-- Token 3 -->
         <div class="token-card">
           <div class="token-card-header">
-            <div class="token-coin blue">🏗️</div>
+            <div class="token-coin blue">◆</div>
             <div class="token-card-title">
               <h4>توکن برج تجاری آرین</h4>
               <span class="symbol">$ARN · IRT-1403-003</span>
@@ -2008,15 +2010,15 @@ body {
             </div>
           </div>
           <div class="token-card-footer">
-            <button class="btn btn-outline btn-sm">👁️ جزئیات</button>
-            <button class="btn btn-gold btn-sm">💰 تخصیص</button>
+            <button class="btn btn-outline btn-sm">◉ جزئیات</button>
+            <button class="btn btn-gold btn-sm">◇ تخصیص</button>
           </div>
         </div>
 
         <!-- Token 4 -->
         <div class="token-card">
           <div class="token-card-header">
-            <div class="token-coin purple">⚡</div>
+            <div class="token-coin purple">◆</div>
             <div class="token-card-title">
               <h4>توکن نیروگاه خورشیدی</h4>
               <span class="symbol">$SOL · IRT-1403-004</span>
@@ -2056,8 +2058,8 @@ body {
             </div>
           </div>
           <div class="token-card-footer">
-            <button class="btn btn-outline btn-sm">👁️ جزئیات</button>
-            <button class="btn btn-gold btn-sm">💰 تخصیص</button>
+            <button class="btn btn-outline btn-sm">◉ جزئیات</button>
+            <button class="btn btn-gold btn-sm">◇ تخصیص</button>
           </div>
         </div>
 
@@ -2104,8 +2106,8 @@ body {
             </div>
           </div>
           <div class="token-card-footer">
-            <button class="btn btn-outline btn-sm">👁️ جزئیات</button>
-            <button class="btn btn-gold btn-sm">💰 تخصیص</button>
+            <button class="btn btn-outline btn-sm">◉ جزئیات</button>
+            <button class="btn btn-gold btn-sm">◇ تخصیص</button>
           </div>
         </div>
 
@@ -2152,8 +2154,8 @@ body {
             </div>
           </div>
           <div class="token-card-footer">
-            <button class="btn btn-outline btn-sm">👁️ جزئیات</button>
-            <button class="btn btn-gold btn-sm">💰 تخصیص</button>
+            <button class="btn btn-outline btn-sm">◉ جزئیات</button>
+            <button class="btn btn-gold btn-sm">◇ تخصیص</button>
           </div>
         </div>
 
@@ -2185,7 +2187,7 @@ body {
 
   <div class="drawer-body">
     <div class="drawer-hero">
-      <h2>🐄 دامداری نمونه</h2>
+      <h2>◆ دامداری نمونه</h2>
       <p>پروژه دامپروری با ظرفیت ۵۰۰ راس دام مولد و تولید شیر و گوشت در استان اصفهان</p>
       <div class="drawer-hero-stats">
         <div class="drawer-hero-stat">
@@ -2237,7 +2239,7 @@ body {
       <div class="drawer-section-title">اسناد و مدارک</div>
       <div class="doc-list">
         <div class="doc-item">
-          <div class="doc-icon">📜</div>
+          <div class="doc-icon">□</div>
           <div class="doc-body">
             <strong>سند مالکیت زمین</strong>
             <small>PDF · ۲.۴ MB · ۱۴۰۳/۰۵/۱۲</small>
@@ -2245,7 +2247,7 @@ body {
           <span class="doc-status verified">تأیید شده</span>
         </div>
         <div class="doc-item">
-          <div class="doc-icon">📋</div>
+          <div class="doc-icon">▤</div>
           <div class="doc-body">
             <strong>مجوز بهره‌برداری</strong>
             <small>PDF · ۱.۱ MB · ۱۴۰۳/۰۵/۱۰</small>
@@ -2253,7 +2255,7 @@ body {
           <span class="doc-status verified">تأیید شده</span>
         </div>
         <div class="doc-item">
-          <div class="doc-icon">📊</div>
+          <div class="doc-icon">◫</div>
           <div class="doc-body">
             <strong>گزارش ارزیابی دارایی</strong>
             <small>PDF · ۳.۸ MB · ۱۴۰۳/۰۴/۲۸</small>
@@ -2261,7 +2263,7 @@ body {
           <span class="doc-status pending">در انتظار</span>
         </div>
         <div class="doc-item">
-          <div class="doc-icon">📄</div>
+          <div class="doc-icon">□</div>
           <div class="doc-body">
             <strong>قرارداد مشارکت</strong>
             <small>PDF · ۲.۱ MB · ۱۴۰۳/۰۴/۱۵</small>
@@ -2304,8 +2306,8 @@ body {
   </div>
 
   <div class="drawer-footer">
-    <button class="btn btn-outline">📄 دانلود گزارش</button>
-    <button class="btn btn-primary">✏️ ویرایش پروژه</button>
+    <button class="btn btn-outline">□ دانلود گزارش</button>
+    <button class="btn btn-primary">✎ ویرایش پروژه</button>
   </div>
 </aside>
 
