@@ -207,3 +207,62 @@ html{font-size:16px}body{font-size:15px;line-height:1.9}.site-footer,.site-foote
   .logo-core img{width:92px!important;height:92px!important}
 }
 /* Use the actual raster logo as the primary favicon source. */
+
+
+/* FINAL BRAND + FAVICON FIX */
+.hero-visual .visual-core.logo-core{
+  width:200px!important;
+  height:200px!important;
+  padding:0!important;
+  border:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  border-radius:0!important;
+  backdrop-filter:none!important;
+  -webkit-backdrop-filter:none!important;
+}
+.hero-visual .visual-core.logo-core img{
+  width:200px!important;
+  height:200px!important;
+  padding:0!important;
+  margin:0!important;
+  object-fit:contain!important;
+  border:0!important;
+  background:transparent!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+.about-hero-card .about-core.logo-core{
+  width:200px!important;
+  height:200px!important;
+  padding:0!important;
+  border:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  border-radius:0!important;
+  backdrop-filter:none!important;
+  -webkit-backdrop-filter:none!important;
+}
+.about-hero-card .about-core.logo-core img{
+  width:200px!important;
+  height:200px!important;
+  padding:0!important;
+  margin:0!important;
+  object-fit:contain!important;
+  border:0!important;
+  background:transparent!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+@media(max-width:700px){
+  .hero-visual .visual-core.logo-core,
+  .about-hero-card .about-core.logo-core{
+    width:150px!important;
+    height:150px!important;
+  }
+  .hero-visual .visual-core.logo-core img,
+  .about-hero-card .about-core.logo-core img{
+    width:150px!important;
+    height:150px!important;
+  }
+}
