@@ -129,3 +129,11 @@ html,body{background-color:transparent!important;background-image:url("./assets/
 
 /* --- IranianToken header background asset --- */
 .header{background-color:rgba(255,255,255,.9)!important;background-image:url("./assets/images/b2.jpg")!important;background-repeat:repeat!important;background-position:center top!important;background-size:auto!important}
+
+/* --- IranianToken patterned footer --- */
+.footer{position:relative!important;overflow:hidden!important;background-color:#041426!important;background-image:url("./assets/images/b2.jpg")!important;background-repeat:repeat!important;background-position:center bottom!important;background-size:auto!important}
+.footer:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(135deg,rgba(4,20,38,.92),rgba(6,39,65,.82)),repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 1px,transparent 1px 18px),repeating-linear-gradient(45deg,rgba(66,199,223,.045) 0 1px,transparent 1px 28px);opacity:.96}
+.footer:after{content:"";position:absolute;width:520px;height:520px;border:1px solid rgba(216,173,56,.18);border-radius:50%;left:-210px;bottom:-360px;box-shadow:0 0 0 35px rgba(66,199,223,.025),0 0 0 75px rgba(216,173,56,.018);pointer-events:none}
+.footer-grid,.footer-bottom{position:relative!important;z-index:2!important}
+.footer .logo-icon{background:rgba(255,255,255,.08)!important;border:1px solid rgba(255,255,255,.14)!important}
+.footer a{position:relative;z-index:2}
