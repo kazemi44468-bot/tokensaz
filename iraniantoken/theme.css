@@ -833,3 +833,110 @@ body{background-image:url("./assets/images/body.gif")!important;background-repea
   .it-page-shell>.hero .it-core img{width:78px!important;height:78px!important}
   .it-page-shell>.hero .token-card{bottom:-12px!important;padding:14px!important}
 }
+
+/* ==================== IRANIAN TOKEN WORKSPACE UNIFIED UI ==================== */
+body:has(.sidebar){
+  background:
+    radial-gradient(circle at 6% 0%,rgba(23,103,200,.055),transparent 25%),
+    radial-gradient(circle at 94% 4%,rgba(201,163,74,.045),transparent 22%),
+    #f4f8fb!important;
+}
+body:has(.sidebar) .sidebar{
+  background-color:#09253d!important;
+  background-image:url("./assets/images/Bg.png.gif")!important;
+  background-repeat:repeat!important;
+  background-position:center top!important;
+  background-size:auto!important;
+  background-blend-mode:normal!important;
+  border-left:1px solid rgba(255,255,255,.10)!important;
+  box-shadow:-12px 0 40px rgba(6,26,49,.10)!important;
+}
+body:has(.sidebar) .sidebar:after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(4,20,36,.04),rgba(4,20,36,.18))!important;
+}
+body:has(.sidebar) .sidebar>*{position:relative;z-index:1}
+body:has(.sidebar) .sidebar-brand{
+  background:rgba(5,24,42,.10)!important;
+  border-bottom-color:rgba(255,255,255,.13)!important;
+}
+body:has(.sidebar) .sidebar-brand-text small{color:rgba(255,255,255,.68)!important}
+body:has(.sidebar) .nav-section-title{color:rgba(255,255,255,.48)!important}
+body:has(.sidebar) .nav-item{color:rgba(255,255,255,.72)!important}
+body:has(.sidebar) .nav-item:hover{background:rgba(255,255,255,.10)!important;color:#fff!important}
+body:has(.sidebar) .nav-item.active{
+  background:linear-gradient(135deg,rgba(23,105,194,.78),rgba(53,132,228,.48))!important;
+  color:#fff!important;
+  box-shadow:0 8px 22px rgba(7,37,65,.20)!important;
+}
+body:has(.sidebar) .nav-item .badge{background:#d8ad38!important;color:#10253c!important}
+body:has(.sidebar) .topbar{
+  background:rgba(255,255,255,.82)!important;
+  border-bottom:1px solid rgba(219,231,241,.85)!important;
+  box-shadow:0 8px 28px rgba(8,43,73,.045)!important;
+}
+body:has(.sidebar) .toggle-btn,
+body:has(.sidebar) .icon-btn{
+  border-color:rgba(185,207,224,.72)!important;
+  background:rgba(255,255,255,.62)!important;
+  border-radius:14px!important;
+}
+body:has(.sidebar) .toggle-btn:hover,
+body:has(.sidebar) .icon-btn:hover{background:#fff!important;color:var(--it-blue)!important}
+body:has(.sidebar) .content{
+  background:
+    linear-gradient(rgba(23,103,200,.018) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(23,103,200,.018) 1px,transparent 1px)!important;
+  background-size:38px 38px!important;
+}
+body:has(.sidebar) .page-title h1{color:#10283d!important}
+body:has(.sidebar) .page-title p{color:#60788b!important}
+body:has(.sidebar) .card,
+body:has(.sidebar) .stat-card,
+body:has(.sidebar) .project-card,
+body:has(.sidebar) .token-card,
+body:has(.sidebar) .filter-bar,
+body:has(.sidebar) .settings-nav,
+body:has(.sidebar) .settings-panel .card{
+  border:1px solid rgba(185,207,224,.68)!important;
+  border-radius:26px 11px 26px 11px!important;
+  background:
+    linear-gradient(145deg,rgba(255,255,255,.82),rgba(255,255,255,.57)),
+    repeating-linear-gradient(135deg,rgba(23,105,194,.018) 0 1px,transparent 1px 19px)!important;
+  box-shadow:0 16px 42px rgba(8,45,67,.065),inset 0 1px 0 rgba(255,255,255,.76)!important;
+}
+body:has(.sidebar) .stat-card:hover,
+body:has(.sidebar) .project-card:hover,
+body:has(.sidebar) .card:hover{box-shadow:0 22px 52px rgba(8,45,67,.095)!important}
+body:has(.sidebar) .btn-primary{
+  background:linear-gradient(135deg,#1769c2,#42a5f5)!important;
+  border-radius:999px!important;
+}
+body:has(.sidebar) .btn-outline{
+  border-radius:999px!important;
+  border-color:rgba(23,105,194,.20)!important;
+  background:rgba(255,255,255,.62)!important;
+}
+body:has(.sidebar) .form-input,
+body:has(.sidebar) .form-select,
+body:has(.sidebar) .form-textarea{
+  border-radius:15px!important;
+  border-color:#d5e2ec!important;
+  background:rgba(255,255,255,.76)!important;
+}
+body:has(.sidebar) .settings-nav-item{border-radius:14px!important}
+body:has(.sidebar) .settings-nav-item.active{
+  background:linear-gradient(135deg,#1769c2,#42a5f5)!important;
+  box-shadow:0 10px 24px rgba(23,105,194,.20)!important;
+}
+body:has(.sidebar) .nav-sub a.active{
+  background:rgba(23,105,194,.26)!important;
+  color:#fff!important;
+}
+body:has(.sidebar) .nav-sub a:hover{background:rgba(255,255,255,.09)!important;color:#fff!important}
+body:has(.sidebar) .nav-sub-inner{border-right-color:rgba(255,255,255,.16)!important}
+@media(max-width:900px){
+  body:has(.sidebar) .content{padding:20px 15px 92px!important}
+  body:has(.sidebar) .topbar{padding:11px 15px!important}
+  body:has(.sidebar) .page-header{margin-bottom:20px!important}
+}
