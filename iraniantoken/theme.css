@@ -395,3 +395,26 @@ body{background-image:url("./assets/images/body.gif")!important;background-repea
 .social-btn:hover,.input-wrap input:focus,.input-wrap select:focus,.otp-input:focus{background:rgba(255,255,255,.72)!important}
 @media(max-width:900px){.form-container{padding:22px!important}}
 @media(max-width:520px){.form-container{padding:16px!important;border-radius:22px 10px 22px 10px!important}}
+
+
+/* INTRO PAGE — unified transparent content shell */
+.it-page-shell{
+  width:min(1220px,calc(100% - 36px));
+  margin:22px auto 28px;
+  padding:0 22px 24px;
+  background:linear-gradient(145deg,rgba(255,255,255,.25),rgba(255,255,255,.12));
+  border:1px solid rgba(255,255,255,.48);
+  border-radius:34px 14px 34px 14px;
+  box-shadow:0 18px 50px rgba(8,45,67,.055),inset 0 1px 0 rgba(255,255,255,.6);
+  backdrop-filter:blur(4px);
+  -webkit-backdrop-filter:blur(4px);
+}
+.it-page-shell .hero{border-radius:26px 10px 26px 10px;overflow:hidden}
+.it-page-shell .section{background:transparent!important}
+.it-page-shell .section-alt{background:rgba(255,255,255,.08)!important}
+.it-page-shell .cta-section{border-radius:28px 12px 28px 12px;overflow:hidden;margin-top:24px}
+@media(max-width:700px){
+  .it-page-shell{width:calc(100% - 18px);margin:12px auto 18px;padding:0 9px 14px;border-radius:24px 10px 24px 10px}
+  .it-page-shell .hero{border-radius:22px 9px 22px 9px}
+  .it-page-shell .cta-section{border-radius:22px 10px 22px 10px}
+}
