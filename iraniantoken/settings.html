@@ -2361,6 +2361,18 @@ window.addEventListener('beforeunload', (e) => {
 document.querySelectorAll('.nav-expand').forEach(btn=>{btn.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();const g=btn.closest('.nav-group');g.classList.toggle('open');});});
 document.querySelectorAll('.nav-sub a').forEach(a=>a.addEventListener('click',()=>{if(window.innerWidth<=900){document.getElementById('sidebar')?.classList.remove('mobile-open');document.getElementById('overlay')?.classList.remove('active');}}));
 </script>
+<script>
+/* ==================== HASH-BASED SETTINGS NAVIGATION ==================== */
+function syncSettingsHash(){
+  const hash=location.hash.replace('#','');
+  const map={profile:'profile',account:'account',security:'security',notifications:'notifications',appearance:'appearance',language:'language',system:'system',api:'api',danger:'danger'};
+  const key=hash.replace('panel-','');
+  if(!map[key]) return;
+  const item=document.querySelector('.settings-nav-item[data-panel="'+map[key]+'"]');
+  if(item) item.click();
+}
+window.addEventListener('hashchange',syncSettingsHash); syncSettingsHash();
+</script>
 <script src="theme.js"></script>
 </body>
 </html>
