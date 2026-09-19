@@ -866,3 +866,59 @@ body{background-blend-mode:normal!important}
   .flow-board>div{padding:18px 16px!important}
   .feature-band{padding:22px 20px!important}
 }
+
+/* FINAL ALL-PAGE SPACING AUDIT — keep every box, text block and decorative layer inside a deliberate inner frame */
+*,*::before,*::after{box-sizing:border-box!important}
+.solution-card,.detail-card,.price-card,.contact-form,.contact-info,.clarity-box,.feature-band,.timeline,.platform-stack>div,.vision-grid article,.estimate-grid>div,.purpose-panel>div,.work-grid>div,.architecture>div,.story-panel>div,.road-step,.vision-band,.photo,.proof-grid>div,.price-note,.contact-faq article,.about-hero-card{
+  position:relative!important;
+}
+.solution-card>*,.detail-card>*,.price-card>*,.contact-form>*,.contact-info>*,.clarity-box>*,.feature-band>*,.timeline>div>*,.platform-stack>div>*,.vision-grid article>*,.estimate-grid>div>*,.purpose-panel>div>*,.work-grid>div>*,.architecture>div>*,.story-panel>div>*,.road-step>*,.vision-band>div>*,.photo>*,.proof-grid>div>*,.price-note>*,.contact-faq article>*{
+  position:relative!important;z-index:1!important;min-width:0!important;
+}
+.solution-card:before,.solution-card:after,.detail-card:before,.detail-card:after,.price-card:before,.price-card:after,.contact-form:after,.clarity-box:after,.feature-band:after,.timeline:after,.platform-stack>div:after,.vision-grid article:after,.estimate-grid>div:after,.purpose-panel>div:after,.work-grid>div:after{z-index:0!important;pointer-events:none!important}
+.solution-grid,.detail-grid,.architecture,.photo-strip,.story-grid,.vision-grid,.work-grid,.purpose-panel,.platform-stack,.price-grid,.pricing-grid,.contact-grid,.contact-faq,.estimate-grid{gap:18px!important}
+.solution-card,.detail-card,.price-card,.contact-form,.contact-info,.clarity-box,.feature-band,.platform-stack>div,.vision-grid article,.estimate-grid>div,.purpose-panel>div,.work-grid>div,.architecture>div,.story-panel>div,.road-step,.vision-band>div,.price-note,.contact-faq article{padding:28px!important}
+.timeline>div{padding:26px 24px!important}
+.feature-list{gap:14px!important}
+.feature-list>div{padding:20px 18px!important}
+.detail-points{gap:9px!important;margin-top:22px!important}
+.detail-points span{padding:9px 12px!important}
+.proof-grid>div{padding:28px!important}
+.photo span{right:22px!important;bottom:22px!important}
+.hero-contact-points{gap:10px!important}
+.contact-item,.contact-channel{padding:17px 0!important}
+.contact-faq{align-items:stretch!important}
+.vision-band{overflow:hidden!important}
+.vision-band>div{min-width:0!important}
+.roadmap{gap:0!important}
+.road-step{padding:28px 24px!important}
+.story-panel{gap:14px!important}
+.story-panel>div{padding:26px!important}
+.definition{padding-right:38px!important}
+.page-hero p{padding-inline:2px!important}
+.hero-copy,.hero-visual,.about-hero-grid>*{min-width:0!important}
+.visual-card{padding:22px!important}
+.visual-kpis{gap:10px!important}
+
+@media(max-width:1000px){
+  .solution-grid,.detail-grid,.architecture,.photo-strip,.story-grid,.vision-grid,.work-grid,.purpose-panel,.platform-stack,.price-grid,.pricing-grid,.contact-grid,.contact-faq,.estimate-grid{gap:14px!important}
+  .solution-card,.detail-card,.price-card,.contact-form,.contact-info,.clarity-box,.feature-band,.platform-stack>div,.vision-grid article,.estimate-grid>div,.purpose-panel>div,.work-grid>div,.architecture>div,.story-panel>div,.road-step,.vision-band>div,.price-note,.contact-faq article{padding:24px!important}
+  .timeline>div{padding:22px 18px!important}
+  .proof-grid>div{padding:24px!important}
+}
+@media(max-width:700px){
+  .wrap,.section>.wrap,.page-hero>.wrap,.hero>.wrap{width:calc(100% - 36px)!important}
+  .section{padding:58px 0!important}
+  .section-head{padding-inline:0!important;margin-bottom:30px!important}
+  .solution-grid,.detail-grid,.architecture,.photo-strip,.story-grid,.vision-grid,.work-grid,.purpose-panel,.platform-stack,.price-grid,.pricing-grid,.contact-grid,.contact-faq,.estimate-grid{gap:12px!important}
+  .solution-card,.detail-card,.price-card,.contact-form,.contact-info,.clarity-box,.feature-band,.platform-stack>div,.vision-grid article,.estimate-grid>div,.purpose-panel>div,.work-grid>div,.architecture>div,.story-panel>div,.road-step,.vision-band>div,.price-note,.contact-faq article{padding:20px!important}
+  .timeline>div{padding:20px 16px!important}
+  .feature-list>div{padding:16px!important}
+  .detail-points{gap:8px!important}
+  .detail-points span{padding:8px 10px!important}
+  .proof-grid>div{padding:20px 18px!important}
+  .photo span{right:18px!important;bottom:18px!important}
+  .visual-card{right:18px!important;left:18px!important;bottom:18px!important;padding:18px!important}
+  .definition{padding:22px 0 0!important}
+  .page-hero p{padding-inline:0!important}
+}
