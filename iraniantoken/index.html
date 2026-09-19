@@ -5,8 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ایرانیان توکن | اکوسیستم توکنیزه‌سازی و مشارکت دیجیتال</title>
 <meta name="description" content="ایرانیان توکن؛ بستر مدیریت پروژه، دارایی دیجیتال، توکنیزه‌سازی و مشارکت در اکوسیستم ارزش.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root {
   --primary: #1a5fb4;
@@ -1070,7 +1068,55 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* TOKENSAZ VISUAL LANGUAGE */
+:root{--it-navy:#061b2c;--it-blue:#1767c8;--it-cyan:#42c7df;--it-gold:#d8ad38;--it-line:rgba(8,88,120,.14)}
+body{font-family:"Vazirmatn","Vazir","BYekan","B Yekan",Tahoma,sans-serif!important;background:#f5f8fb}
+body *{font-family:inherit}
+.header{background:rgba(255,255,255,.94);border-bottom:1px solid rgba(8,48,72,.12);box-shadow:0 6px 24px rgba(6,27,44,.04)}
+.header:before{content:"";position:absolute;inset:0;background:url("../assets/images/box3.png") center/260px repeat;opacity:.11;pointer-events:none}
+.nav{position:relative;z-index:2}
+.logo{gap:12px}
+.logo-icon{width:48px;height:48px;border-radius:0;background:transparent!important;box-shadow:none!important;overflow:visible}
+.logo-icon img{width:48px;height:48px;object-fit:contain;display:block}
+.logo-icon:after{display:none}
+.hero{background:linear-gradient(145deg,#041827 0%,#082d49 52%,#0a4165 100%);min-height:760px}
+.hero:after{content:"";position:absolute;inset:0;background:url("../assets/images/box3.png") center/280px repeat;opacity:.13;pointer-events:none}
+.hero-bg{background:radial-gradient(circle at 15% 20%,rgba(66,199,223,.22),transparent 34%),radial-gradient(circle at 82% 75%,rgba(216,173,56,.14),transparent 30%),radial-gradient(circle at 60% 30%,rgba(23,103,200,.24),transparent 40%)}
+.hero-grid{background-size:48px 48px;opacity:.7}
+.hero-content{z-index:3}
+.hero-visual{display:flex!important;min-height:470px!important;position:relative!important;align-items:center!important;justify-content:center!important}
+.it-visual{position:relative!important;width:100%!important;max-width:500px!important;height:470px!important;min-height:0!important;border-radius:34px!important;background:linear-gradient(145deg,rgba(3,23,38,.72),rgba(9,63,94,.56))!important;border:1px solid rgba(255,255,255,.12)!important;box-shadow:0 35px 90px rgba(0,0,0,.28)!important;overflow:hidden!important}
+.it-visual:before,.it-visual:after{content:"";position:absolute;border:1px solid rgba(66,199,223,.2);border-radius:50%;pointer-events:none}
+.it-visual:before{width:410px;height:410px;left:50%;top:50%;transform:translate(-50%,-50%);box-shadow:0 0 0 34px rgba(66,199,223,.025),0 0 0 76px rgba(216,173,56,.02)}
+.it-visual:after{width:290px;height:290px;left:50%;top:50%;transform:translate(-50%,-50%);border-color:rgba(216,173,56,.25);animation:itOrbit 20s linear infinite}
+.it-core{position:absolute!important;left:50%!important;top:50%!important;inset:auto!important;transform:translate(-50%,-50%)!important;width:190px!important;height:190px!important;border-radius:48px!important;background:rgba(255,255,255,.04)!important;border:1px solid rgba(255,255,255,.14)!important;display:grid!important;place-items:center!important;box-shadow:0 0 0 18px rgba(66,199,223,.045),0 24px 70px rgba(0,0,0,.35)!important;z-index:5!important}
+.it-core:before{content:"";position:absolute;inset:-30px;border:1px solid rgba(66,199,223,.24);border-radius:50%;animation:itOrbit 14s linear infinite reverse}
+.it-core img{width:155px;height:155px;object-fit:contain;filter:drop-shadow(0 18px 26px rgba(0,0,0,.28));position:relative;z-index:2}
+.it-node{padding:10px 17px!important;border-radius:999px!important;background:rgba(255,255,255,.07)!important;border:1px solid rgba(255,255,255,.14)!important;color:#eef9ff!important;backdrop-filter:blur(12px);box-shadow:0 10px 28px rgba(0,0,0,.15)}
+.it-node:nth-child(2){right:8%!important;top:15%!important}
+.it-node:nth-child(3){left:8%!important;top:29%!important}
+.it-node:nth-child(4){right:8%!important;bottom:18%!important}
+.it-node:nth-child(5){left:10%!important;bottom:25%!important}
+.token-card{position:absolute!important;right:18px!important;bottom:18px!important;width:265px!important;max-width:calc(100% - 36px)!important;padding:18px!important;border-radius:22px!important;background:rgba(6,27,44,.82)!important;border:1px solid rgba(255,255,255,.13)!important;box-shadow:0 20px 45px rgba(0,0,0,.28)!important;backdrop-filter:blur(18px)!important;z-index:8!important;animation:none!important}
+.token-card-header{margin-bottom:12px;padding-bottom:10px}
+.token-icon{width:36px;height:36px;border-radius:11px;background:linear-gradient(145deg,var(--it-blue),var(--it-cyan));font-size:16px}
+@keyframes itOrbit{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.section-header h2{font-weight:900}
+.feature-card,.model-card,.process-step,.arch-layer,.eco-card,.principle{border-radius:28px 12px 28px 12px!important;border-color:var(--it-line)!important;box-shadow:0 14px 34px rgba(8,45,67,.07)}
+.btn,.nav-cta{border-radius:999px!important}
+.footer{position:relative;overflow:hidden;background:#061b2c!important}
+.footer:before{content:"";position:absolute;inset:0;background:url("../assets/images/box3.png") center/280px repeat;opacity:.42;pointer-events:none}
+.footer>*{position:relative;z-index:2}
+.footer .logo-icon{width:72px;height:72px}
+.footer .logo-icon img{width:72px;height:72px}
+@media(max-width:1024px){.hero-visual{display:flex!important}.hero-content{grid-template-columns:1fr 1fr!important}.it-visual{height:420px}.it-core{width:160px!important;height:160px!important}.it-core img{width:130px;height:130px}.token-card{width:240px!important}}
+@media(max-width:768px){.hero-content{grid-template-columns:1fr!important}.hero-visual{min-height:390px!important;margin-top:10px}.it-visual{height:390px;border-radius:28px!important}.it-core{width:135px!important;height:135px!important;border-radius:34px!important}.it-core img{width:110px;height:110px}.token-card{right:12px!important;bottom:12px!important;width:225px!important}.it-node{font-size:10px!important}.logo-icon,.logo-icon img{width:42px!important;height:42px!important}}
+
 </style>
+<link rel="icon" href="../assets/images/logo.png?v=4" type="image/png">
+<link rel="shortcut icon" href="../assets/images/logo.png?v=4" type="image/png">
+<link rel="apple-touch-icon" href="../assets/images/logo.png?v=4">
 <link rel="stylesheet" href="theme.css">
 </head>
 <body>
@@ -1079,7 +1125,7 @@ body {
 <header class="header" id="header">
   <nav class="nav">
     <a href="index.html" class="logo">
-      <div class="logo-icon">IT</div>
+      <div class="logo-icon"><img src="../assets/images/logo.png?v=4" alt="لوگوی توکن‌ساز"></div>
       <div class="logo-text">
         ایرانیان توکن
         <small>زیرساخت توکنیزه‌سازی پروژه‌ها</small>
@@ -1125,7 +1171,7 @@ body {
         </a>
       </div>
     </div>
-    <div class="hero-visual"><div class="it-visual"><div class="it-core">IT</div><div class="it-node">پروژه</div><div class="it-node">دارایی</div><div class="it-node">مشارکت</div><div class="it-node">ارزش</div></div>
+    <div class="hero-visual"><div class="it-visual"><div class="it-core"><img src="../assets/images/logo.png?v=4" alt="لوگوی توکن‌ساز"></div><div class="it-node">پروژه</div><div class="it-node">دارایی</div><div class="it-node">مشارکت</div><div class="it-node">ارزش</div></div>
       <div class="token-card">
         <div class="token-card-header">
           <div class="token-card-title">
@@ -1579,7 +1625,7 @@ body {
   <div class="footer-grid">
     <div class="footer-brand">
       <a href="#" class="logo">
-        <div class="logo-icon">IT</div>
+        <div class="logo-icon"><img src="../assets/images/logo.png?v=4" alt="لوگوی توکن‌ساز"></div>
         <div class="logo-text">
           ایرانیان توکن
           <small style="color: var(--gray);">زیرساخت توکنیزه‌سازی پروژه‌ها</small>
