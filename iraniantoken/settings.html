@@ -1251,6 +1251,29 @@ body {
 /* ==================== SCROLLBAR ==================== */
 .settings-nav::-webkit-scrollbar { height: 4px; }
 .settings-nav::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+/* ==================== UNIFIED WORKSPACE SIDEBAR ==================== */
+.sidebar{background-color:#09253d!important;background-image:url("./assets/images/Bg.png.gif")!important;background-repeat:repeat!important;background-position:center top!important;background-size:auto!important;background-blend-mode:normal!important}
+.sidebar::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,24,42,.08),rgba(5,24,42,.18));pointer-events:none;z-index:0}
+.sidebar>*{position:relative;z-index:1}
+.sidebar-brand{background:rgba(5,24,42,.10)!important}
+.nav-group{margin:0}
+.nav-parent-row{display:flex;align-items:center;gap:4px}
+.nav-parent-row .nav-item{flex:1}
+.nav-expand{width:34px;height:42px;border:0;border-radius:10px;background:transparent;color:rgba(255,255,255,.58);font:inherit;cursor:pointer;transition:.2s;flex:0 0 34px}
+.nav-expand:hover{background:rgba(255,255,255,.08);color:#fff}
+.nav-group.open .nav-expand{transform:rotate(180deg);color:#fff}
+.nav-sub{display:grid;grid-template-rows:0fr;transition:grid-template-rows .24s ease;margin-right:13px;overflow:hidden}
+.nav-group.open .nav-sub{grid-template-rows:1fr}
+.nav-sub-inner{min-height:0;overflow:hidden;border-right:1px solid rgba(255,255,255,.13);padding-right:7px}
+.nav-sub a{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:8px;color:rgba(255,255,255,.62);text-decoration:none;font-size:12px;font-weight:500;white-space:nowrap;transition:.2s}
+.nav-sub a::before{content:"";width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.28);flex:0 0 5px}
+.nav-sub a:hover{background:rgba(255,255,255,.08);color:#fff}
+.nav-sub a.active{background:rgba(53,132,228,.25);color:#fff}
+.nav-sub a.active::before{background:#f5c211;box-shadow:0 0 8px rgba(245,194,17,.65)}
+.sidebar.collapsed .nav-expand,.sidebar.collapsed .nav-sub{display:none}
+@media(max-width:900px){.nav-sub{margin-right:11px}.nav-sub a{padding:8px 9px;font-size:12px}}
+
 </style>
 <link rel="stylesheet" href="theme.css">
 </head>
@@ -1270,19 +1293,56 @@ body {
       <div class="sidebar-brand-text"><strong>ایرانیان توکن</strong><small>مرکز مدیریت و پایش</small></div>
     </a>
   </div>
-  <nav class="sidebar-nav" aria-label="منوی داشبورد">
-    <div class="nav-section-title">مرکز مدیریت</div>
-    <a class="nav-item" href="dashboard.html"><span class="icon">◫</span><span class="label">داشبورد</span></a>
-    <a class="nav-item" href="projects.html"><span class="icon">▦</span><span class="label">پروژه‌ها و دارایی‌ها</span><span class="badge">۱۲</span></a>
-    <a class="nav-item" href="dashboard.html#token-distribution"><span class="icon">◈</span><span class="label">مدل‌های توکن</span></a>
-    <a class="nav-item" href="dashboard.html#documents"><span class="icon">▤</span><span class="label">مرکز اسناد</span></a>
+  <nav class="sidebar-nav" aria-label="ناوبری یکپارچه سامانه">
+    <div class="nav-section-title">مرکز کار</div>
+    <a class="nav-item " href="dashboard.html"><span class="icon">◫</span><span class="label">داشبورد</span></a>
+
+    <div class="nav-group " data-group="projects">
+      <div class="nav-parent-row"><a class="nav-item " href="projects.html"><span class="icon">▦</span><span class="label">پروژه‌ها و دارایی‌ها</span><span class="badge">۱۲</span></a><button class="nav-expand" type="button" aria-label="نمایش زیرمنوی پروژه‌ها">⌄</button></div>
+      <div class="nav-sub"><div class="nav-sub-inner">
+        <a class="" href="projects.html#page-projects">فهرست پروژه‌ها</a>
+        <a href="projects.html#page-tokens">مدیریت توکن‌ها</a>
+      </div></div>
+    </div>
+
+    <div class="nav-group" data-group="models">
+      <div class="nav-parent-row"><a class="nav-item" href="dashboard.html#token-models"><span class="icon">◈</span><span class="label">مدل‌های توکن</span></a><button class="nav-expand" type="button" aria-label="نمایش زیرمنوی مدل‌ها">⌄</button></div>
+      <div class="nav-sub"><div class="nav-sub-inner">
+        <a href="dashboard.html#token-models">مدل‌های فعال</a>
+        <a href="dashboard.html#token-distribution">توزیع و تخصیص</a>
+      </div></div>
+    </div>
+
+    <div class="nav-group" data-group="documents">
+      <div class="nav-parent-row"><a class="nav-item" href="dashboard.html#documents"><span class="icon">▤</span><span class="label">اسناد و اعتبارسنجی</span><span class="badge">۳</span></a><button class="nav-expand" type="button" aria-label="نمایش زیرمنوی اسناد">⌄</button></div>
+      <div class="nav-sub"><div class="nav-sub-inner">
+        <a href="dashboard.html#documents">مرکز اسناد</a>
+        <a href="dashboard.html#validation">صف اعتبارسنجی</a>
+      </div></div>
+    </div>
+
     <div class="nav-section-title">کنترل و گزارش</div>
-    <a class="nav-item" href="dashboard.html#access"><span class="icon">◌</span><span class="label">کاربران و نقش‌ها</span></a>
-    <a class="nav-item" href="dashboard.html#activity"><span class="icon">✓</span><span class="label">اعتبارسنجی</span><span class="badge">۳</span></a>
-    <a class="nav-item" href="dashboard.html#trend"><span class="icon">⌁</span><span class="label">گزارش‌ها</span></a>
+    <div class="nav-group" data-group="control">
+      <div class="nav-parent-row"><a class="nav-item" href="dashboard.html#users-roles"><span class="icon">◌</span><span class="label">کاربران و نقش‌ها</span></a><button class="nav-expand" type="button" aria-label="نمایش زیرمنوی کاربران">⌄</button></div>
+      <div class="nav-sub"><div class="nav-sub-inner">
+        <a href="dashboard.html#users-roles">کاربران</a>
+        <a href="dashboard.html#users-roles">نقش‌ها و دسترسی‌ها</a>
+      </div></div>
+    </div>
+    <a class="nav-item" href="dashboard.html#reports"><span class="icon">⌁</span><span class="label">گزارش‌های مدیریتی</span></a>
     <a class="nav-item" href="dashboard.html#audit"><span class="icon">◷</span><span class="label">ثبت رویدادها</span></a>
+
     <div class="nav-section-title">حساب و سامانه</div>
-    <a class="nav-item active" href="settings.html"><span class="icon">⚙</span><span class="label">تنظیمات</span></a>
+    <div class="nav-group open" data-group="settings">
+      <div class="nav-parent-row"><a class="nav-item active" href="settings.html"><span class="icon">⚙</span><span class="label">تنظیمات</span></a><button class="nav-expand" type="button" aria-label="نمایش زیرمنوی تنظیمات">⌄</button></div>
+      <div class="nav-sub"><div class="nav-sub-inner">
+        <a href="settings.html#panel-profile">پروفایل و حساب</a>
+        <a href="settings.html#panel-security">امنیت و نشست‌ها</a>
+        <a href="settings.html#panel-notifications">اعلان‌ها</a>
+        <a href="settings.html#panel-system">تنظیمات سامانه</a>
+        <a href="settings.html#panel-api">API و وب‌هوک</a>
+      </div></div>
+    </div>
     <a class="nav-item" href="auth.html"><span class="icon">↪</span><span class="label">ورود و پشتیبانی</span></a>
     <div class="nav-section-title">دسترسی سریع</div>
     <a class="nav-item" href="index.html"><span class="icon">⌂</span><span class="label">صفحه اصلی</span></a>
@@ -2296,6 +2356,11 @@ window.addEventListener('beforeunload', (e) => {
 });
 </script>
 
+<script>
+/* ==================== UNIFIED SIDEBAR GROUPS ==================== */
+document.querySelectorAll('.nav-expand').forEach(btn=>{btn.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();const g=btn.closest('.nav-group');g.classList.toggle('open');});});
+document.querySelectorAll('.nav-sub a').forEach(a=>a.addEventListener('click',()=>{if(window.innerWidth<=900){document.getElementById('sidebar')?.classList.remove('mobile-open');document.getElementById('overlay')?.classList.remove('active');}}));
+</script>
 <script src="theme.js"></script>
 </body>
 </html>
