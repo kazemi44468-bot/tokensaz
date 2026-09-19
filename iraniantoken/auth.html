@@ -1086,7 +1086,40 @@ body{font-family:"Vazirmatn","Vazir",Tahoma,sans-serif!important;color:var(--dar
   .social-buttons{grid-template-columns:1fr!important}
 }
 </style>
-</head>
+
+<style>
+/* AUTH FINAL CARD LANGUAGE — transparent patterned square cards */
+.form-container{
+  padding:28px!important;
+  border:1px solid rgba(185,207,224,.62)!important;
+  border-radius:28px 12px 28px 12px!important;
+  background:
+    linear-gradient(145deg,rgba(255,255,255,.64),rgba(255,255,255,.38)),
+    repeating-linear-gradient(135deg,rgba(23,105,194,.028) 0 1px,transparent 1px 18px),
+    repeating-linear-gradient(45deg,rgba(201,163,74,.02) 0 1px,transparent 1px 26px)!important;
+  box-shadow:0 18px 42px rgba(8,45,67,.075),inset 0 1px 0 rgba(255,255,255,.72)!important;
+  backdrop-filter:blur(9px)!important;-webkit-backdrop-filter:blur(9px)!important;
+}
+.auth-tabs{
+  background:rgba(255,255,255,.42)!important;
+  border:1px solid rgba(185,207,224,.5)!important;
+  border-radius:18px 8px 18px 8px!important;
+}
+.input-wrap input,.input-wrap select,.otp-input,.social-btn{
+  background:rgba(255,255,255,.48)!important;
+  border:1px solid rgba(185,207,224,.72)!important;
+  border-radius:18px 8px 18px 8px!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.7)!important;
+}
+.strength-requirements{
+  background:rgba(255,255,255,.38)!important;
+  border:1px solid rgba(185,207,224,.55)!important;
+  border-radius:18px 8px 18px 8px!important;
+}
+.social-btn:hover,.input-wrap input:focus,.input-wrap select:focus,.otp-input:focus{background:rgba(255,255,255,.72)!important}
+@media(max-width:900px){.form-container{padding:22px!important}}
+@media(max-width:520px){.form-container{padding:16px!important;border-radius:22px 10px 22px 10px!important}}
+</style></head>
 <body>
 
 <!-- Toast Container -->
