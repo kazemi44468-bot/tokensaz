@@ -838,3 +838,31 @@ body{background-blend-mode:normal!important}
 .cta .cta-inner{display:flex!important;justify-content:flex-end!important;align-items:center!important;min-height:0!important}
 .cta .cta-inner>div{display:none!important}
 .cta .circlebtn{display:inline-flex!important;min-width:150px!important;min-height:46px!important;padding:10px 24px!important;align-items:center!important;justify-content:center!important;gap:8px!important}
+
+/* FINAL SPACING & EDGE SAFETY — consistent inner breathing room */
+.wrap{width:min(1180px,calc(100% - 56px))!important}
+.section>.wrap,.page-hero>.wrap,.hero>.wrap{width:min(1180px,calc(100% - 56px))!important}
+.section-head{padding-inline:6px!important}
+.solution-grid,.detail-grid,.architecture,.photo-strip,.capability-grid,.estimate-grid,.story-grid,.work-grid,.vision-grid,.purpose-panel,.platform-stack,.price-grid,.pricing-grid,.contact-grid,.contact-faq{min-width:0!important}
+.solution-card,.detail-card,.price-card,.contact-form,.clarity-box,.feature-band,.timeline,.platform-stack>div,.vision-grid article,.estimate-grid>div,.purpose-panel>div,.work-grid>div,.architecture>div{padding-inline:28px!important}
+.detail-points{padding-inline:0!important}
+.flow-board{width:100%!important;padding:0 8px!important;gap:12px!important}
+.flow-board>div{min-width:0!important;padding:22px 18px!important;margin:0!important}
+.flow-board b,.flow-board small{overflow-wrap:anywhere!important}
+.feature-band{padding:32px!important}
+.story-panel>div,.capability-grid article{padding:24px!important}
+.price-note{margin-inline:0!important}
+.contact-form,.contact-info,.contact-faq article{padding-inline:28px!important}
+@media(max-width:1000px){
+  .wrap,.section>.wrap,.page-hero>.wrap,.hero>.wrap{width:min(100% - 44px,760px)!important}
+  .flow-board{padding:0 4px!important}
+}
+@media(max-width:700px){
+  .wrap,.section>.wrap,.page-hero>.wrap,.hero>.wrap{width:calc(100% - 32px)!important}
+  .section{padding:64px 0!important}
+  .section-head{padding-inline:2px!important;margin-bottom:28px!important}
+  .solution-card,.detail-card,.price-card,.contact-form,.clarity-box,.feature-band,.timeline,.platform-stack>div,.vision-grid article,.estimate-grid>div,.purpose-panel>div,.work-grid>div,.architecture>div{padding:22px 20px!important}
+  .flow-board{padding:0!important;gap:10px!important}
+  .flow-board>div{padding:18px 16px!important}
+  .feature-band{padding:22px 20px!important}
+}
