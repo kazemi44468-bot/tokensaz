@@ -1274,6 +1274,22 @@ body {
 .sidebar.collapsed .nav-expand,.sidebar.collapsed .nav-sub{display:none}
 @media(max-width:900px){.nav-sub{margin-right:11px}.nav-sub a{padding:8px 9px;font-size:12px}}
 
+
+/* FINAL: use the actual Bg.png.gif with no color wash or overlay */
+.sidebar,
+body:has(.sidebar) .sidebar{
+  background-color:transparent!important;
+  background-image:url("./assets/images/Bg.png.gif")!important;
+  background-repeat:repeat!important;
+  background-position:center top!important;
+  background-size:auto!important;
+  background-blend-mode:normal!important;
+}
+.sidebar::before,.sidebar::after,
+body:has(.sidebar) .sidebar::before,
+body:has(.sidebar) .sidebar::after{display:none!important;content:none!important}
+.sidebar-brand{background:transparent!important}
+
 </style>
 <link rel="stylesheet" href="theme.css">
 </head>
@@ -1344,8 +1360,12 @@ body {
       </div></div>
     </div>
     <a class="nav-item" href="auth.html"><span class="icon">↪</span><span class="label">ورود و پشتیبانی</span></a>
+    <div class="nav-section-title">صفحات سامانه</div>
+    <a class="nav-item" href="index.html"><span class="icon">⌂</span><span class="label">معرفی سامانه</span></a>
+    <a class="nav-item" href="contact.html"><span class="icon">◉</span><span class="label">تماس با ما</span></a>
+    <a class="nav-item" href="auth.html"><span class="icon">↪</span><span class="label">ثبت نام / ورود</span></a>
     <div class="nav-section-title">دسترسی سریع</div>
-    <a class="nav-item" href="index.html"><span class="icon">⌂</span><span class="label">صفحه اصلی</span></a>
+    <a class="nav-item" href="index.html"><span class="icon">⌂</span><span class="label">بازگشت به صفحه اصلی</span></a>
   </nav>
 </aside>
 
