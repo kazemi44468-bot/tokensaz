@@ -970,6 +970,23 @@ body {
 .form-panel::-webkit-scrollbar-thumb { background: var(--border); border-radius: 6px; }
 </style>
 <link rel="stylesheet" href="theme.css">
+<style>
+/* AUTH BACKGROUND ALIGNMENT — header texture + body texture */
+body{background:url("./assets/images/body.gif") repeat center top!important;background-size:auto!important}
+.brand-panel{background:#071d32 url("./assets/images/b2.jpg") repeat center top!important;background-size:auto!important}
+.brand-bg{background:linear-gradient(135deg,rgba(4,20,38,.72),rgba(8,55,84,.48))!important}
+.brand-grid{opacity:.28!important}
+.form-panel{background:rgba(255,255,255,.58) url("./assets/images/body.gif") repeat center top!important;background-size:auto!important;backdrop-filter:blur(2px)!important;-webkit-backdrop-filter:blur(2px)!important}
+.auth-tabs{background:rgba(255,255,255,.58)!important;border:1px solid rgba(16,40,61,.09)!important;backdrop-filter:blur(4px)!important}
+.input-wrap input,.input-wrap select{background:rgba(255,255,255,.68)!important}
+.input-wrap input:focus,.input-wrap select:focus{background:rgba(255,255,255,.86)!important}
+.strength-requirements{background:rgba(255,255,255,.5)!important}
+.checkbox-box{background:rgba(255,255,255,.7)!important}
+.social-btn{background:rgba(255,255,255,.62)!important}
+.form-panel:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,.18),transparent 42%,rgba(23,105,194,.025))}
+.form-container{position:relative;z-index:2}
+@media(max-width:1024px){.form-panel{background-color:rgba(255,255,255,.68)!important}}
+</style>
 </head>
 <body>
 
