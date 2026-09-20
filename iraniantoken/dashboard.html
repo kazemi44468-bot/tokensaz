@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>داشبورد | ایرانیان توکن</title>
 <meta name="description" content="ایرانیان توکن؛ بستر مدیریت پروژه، دارایی دیجیتال، توکنیزه‌سازی و مشارکت در اکوسیستم ارزش.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>@font-face{font-family:IRToken;src:url("../assets/fonts/Vazirmatn.woff2") format("woff2");font-weight:100 900;font-display:swap}</style>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
 :root{--primary:#1769c2;--primary-dark:#0a3154;--primary-light:#42a5f5;--accent:#d8ad38;--dark:#10253c;--gray:#71859a;--bg:#eef3f7;--bg-alt:#fff;--border:#dce6ed;--success:#278b70;--warning:#b98518;--danger:#b85a61;--info:#397dbb;--gradient:linear-gradient(135deg,#1769c2,#35b7c8);--shadow:0 12px 32px rgba(12,45,70,.055);--shadow-lg:0 20px 48px rgba(12,45,70,.09);--radius:18px;--sidebar-w:278px;--sidebar-collapsed:86px}
@@ -40,7 +40,27 @@
 @media(max-width:700px){.it-module-cards{grid-template-columns:1fr}.it-token-summary{grid-template-columns:1fr 1fr}.it-overview-side{grid-template-columns:1fr}.page-actions{width:100%}.page-actions .btn{flex:1;justify-content:center}.it-overview{padding:19px}.it-overview h2{font-size:19px}}
 </style><link rel="icon" href="assets/images/logo.png" type="image/png">
 <link rel="shortcut icon" href="assets/images/logo.png" type="image/png">
-</head>
+<style id="member-dashboard-refinement">
+.sidebar{background:#071d32!important;border-left:1px solid rgba(255,255,255,.08);box-shadow:8px 0 30px rgba(3,18,32,.16)}
+.sidebar-nav{padding:12px 10px;gap:3px}
+.nav-section-title{color:#7897a9;border-bottom:1px solid rgba(255,255,255,.07);padding:14px 10px 7px}
+.nav-parent-row{gap:0;margin:2px 0;background:#0b2a45;border:1px solid rgba(255,255,255,.07);border-radius:9px;overflow:hidden}
+.nav-parent-row>.nav-item{border-radius:0!important;border:0!important;background:transparent!important;box-shadow:none!important;flex:1}
+.nav-parent-row>.nav-expand{width:38px;height:43px;border:0;border-right:1px solid rgba(255,255,255,.08);border-radius:0;background:#0a253d;color:#8ba9b9}
+.nav-item{min-height:43px;border-radius:9px;padding:9px 10px;font-size:10px}
+.nav-item:hover{background:#103653;color:#fff}
+.nav-item.active{background:#14527c!important;box-shadow:none!important;border-color:transparent!important}
+.nav-item.active:after{width:3px;background:#55cfdf}
+.nav-item .icon{width:28px;height:28px;border-radius:7px;background:#0d3552;border:1px solid rgba(255,255,255,.06)}
+.nav-sub{margin:2px 0 7px;padding:2px 0;background:#091f34;border:1px solid rgba(255,255,255,.06);border-radius:8px}
+.nav-sub:before{right:auto;left:12px;background:#28536c}
+.nav-sub a{min-height:32px;margin:1px 4px;padding:6px 12px 6px 25px;border-radius:6px;color:#9bb1be;font-size:9px}
+.nav-sub a:before{position:absolute;left:12px;width:5px;height:5px;border-radius:1px}
+.nav-sub a:hover{background:#103653;color:#fff}
+.nav-sub a.active{background:#124263;color:#fff}
+.it-module-head h2{font-size:18px}
+.card,.stat-card,.it-module-card{border-color:#d8e3ea}
+</style></head>
 <body>
 
 <!-- ==================== OVERLAY ==================== -->
@@ -192,7 +212,7 @@
       <div class="card it-control-card">
         <div class="card-header">
           <div><h3>چرخه عملیاتی پروژه</h3><p>وضعیت پروژه‌ها در مسیر تبدیل دارایی و فعالیت اقتصادی به مدل توکن</p></div>
-          <a class="btn btn-outline btn-sm" href="projects.html">مدیریت پروژه‌ها</a>
+          <a class="btn btn-outline btn-sm" href="#dashboard-projects">پروژه‌ها</a>
         </div>
         <div class="card-body">
           <div class="it-pipeline">
@@ -234,7 +254,7 @@
 
     <section class="charts-grid it-work-grid" aria-label="پروژه‌ها و اعتبارسنجی">
       <div class="card" id="access">
-        <div class="card-header"><div><h3>پروژه‌های اخیر</h3><p>آخرین پروژه‌های ثبت‌شده در سامانه</p></div><a class="btn btn-outline btn-sm" href="projects.html">مشاهده همه</a></div>
+        <div class="card-header"><div><h3>پروژه‌های اخیر</h3><p>آخرین پروژه‌های ثبت‌شده در سامانه</p></div><a class="btn btn-outline btn-sm" href="#dashboard-projects">مشاهده همه</a></div>
         <div class="table-wrap">
           <table>
             <thead><tr><th>پروژه</th><th>مدل</th><th>وضعیت</th><th>پیشرفت</th><th>عملیات</th></tr></thead>
@@ -279,7 +299,12 @@
       </div>
     </section>
 
-    <section class="it-module-grid" aria-label="دسترسی به بخش‌های مدیریتی">
+    <section class="card" id="dashboard-projects" style="margin-bottom:22px">
+<div class="card-header"><div><h3>پروژه‌ها و دارایی‌ها</h3><p>فهرست پروژه‌ها در همان فضای اعضا؛ بدون خروج از داشبورد</p></div><a class="btn btn-primary btn-sm" href="new-project.html">ثبت پروژه جدید</a></div>
+<div style="padding:16px;border-bottom:1px solid var(--border);display:grid;grid-template-columns:1fr auto;gap:8px">
+<input id="memberProjectSearch" placeholder="جست‌وجوی پروژه، حوزه یا نماد" style="border:1px solid var(--border);border-radius:9px;padding:9px 12px;font-family:inherit">
+<select id="memberProjectStatus" style="border:1px solid var(--border);border-radius:9px;padding:9px 12px;font-family:inherit"><option value="">همه وضعیت‌ها</option><option value="active">فعال</option><option value="pending">در حال بررسی</option><option value="paused">متوقف</option><option value="done">خاتمه‌یافته</option></select></div>
+<div class="table-wrap"><table><thead><tr><th>پروژه</th><th>دارایی پایه</th><th>مدل توکن</th><th>وضعیت</th><th>پیشرفت</th><th></th></tr></thead><tbody id="memberProjectRows"></tbody></table></div></section><section class="it-module-grid" aria-label="دسترسی به بخش‌های مدیریتی">
       <div class="it-module-head"><div><span class="it-eyebrow">MANAGEMENT MODULES</span><h2>دسترسی به ماژول‌های سامانه</h2><p>هر ماژول در صفحه تخصصی خودش مدیریت می‌شود؛ داشبورد فقط نمای کنترل و پایش را ارائه می‌کند.</p></div></div>
       <div class="it-module-cards">
         <a class="it-module-card" href="projects.html"><span class="it-module-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></span></span><div><b>پروژه‌ها و دارایی‌ها</b><small>فهرست، ثبت و مدیریت پروژه‌های توکن‌محور</small></div><strong>←</strong></a>
@@ -299,7 +324,7 @@
     <footer class="it-footer it-footer-compact">
       <div class="it-footer-inner">
         <div><div class="it-footer-brand"><div><h4>ایرانیان توکن</h4><small>VALUE & TOKEN INFRASTRUCTURE</small></div></div><p>فضای مدیریت پروژه، مدل توکن، داده، اسناد و جریان ارزش در اکوسیستم ایرانیان توکن.</p></div>
-        <div><h5>سامانه</h5><a href="dashboard.html">داشبورد</a><a href="projects.html">پروژه‌ها</a><a href="settings.html">تنظیمات</a></div>
+        <div><h5>سامانه</h5><a href="dashboard.html">داشبورد</a><a href="#dashboard-projects">پروژه‌ها</a><a href="settings.html">تنظیمات</a></div>
         <div><h5>کنترل</h5><a href="validation.html">اعتبارسنجی</a><a href="reports.html">گزارش‌ها</a><a href="#audit">رویدادها</a></div>
         <div><h5>پروژه</h5><a href="new-project.html">ثبت پروژه</a><a href="project-detail.html">جزئیات پروژه</a><a href="help.html">راهنما</a></div>
       </div>
@@ -573,6 +598,6 @@ document.head.appendChild(style);
 document.querySelectorAll('.nav-expand').forEach(btn=>{btn.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();const g=btn.closest('.nav-group');g.classList.toggle('open');});});
 document.querySelectorAll('.nav-sub a').forEach(a=>a.addEventListener('click',()=>{if(window.innerWidth<=900){document.getElementById('sidebar')?.classList.remove('mobile-open');document.getElementById('overlay')?.classList.remove('active');}}));
 </script>
-<script src="theme.js"></script>
+<script src="data.js"></script><script>\n(()=>{const role=sessionStorage.getItem("itMemberRole")||"member";document.documentElement.dataset.role=role;const restricted=["users.html","reports.html","validation.html","settings.html"];document.querySelectorAll(".sidebar-nav a").forEach(a=>{if(restricted.includes(a.getAttribute("href"))&&role==="member"){a.closest(".nav-group")?.remove();a.remove()}});const rows=document.getElementById("memberProjectRows"),search=document.getElementById("memberProjectSearch"),status=document.getElementById("memberProjectStatus"),data=window.ITData?.projects||[];const fa=n=>String(n??"").replace(/\\d/g,d=>"۰۱۲۳۴۵۶۷۸۹"[d]);const labels={active:"فعال",pending:"در حال بررسی",paused:"متوقف",done:"خاتمه‌یافته"};function render(){const q=(search.value||"").trim().toLowerCase(),s=status.value;const list=data.filter(p=>(!q||[p.name,p.domain,p.code,p.token?.symbol,p.asset?.type].join(" ").toLowerCase().includes(q))&&(!s||p.status===s));rows.innerHTML=list.map(p=>`<tr><td><div class="project-cell"><div class="project-thumb">${(p.token?.symbol||"TK").slice(0,2)}</div><div><strong>${p.name}</strong><small>${p.code||""}</small></div></div></td><td>${p.asset?.type||"—"}</td><td><span class="badge info">${p.model||p.token?.model||"—"}</span></td><td><span class="badge ${p.status==="active"?"success":p.status==="pending"?"warning":"gray"}">${labels[p.status]||p.status}</span></td><td><div class="progress-mini"><div class="fill" style="width:${p.progress||0}%"></div></div><small>${fa(p.progress)}٪</small></td><td><a class="action-btn" href="project-detail.html?id=${p.id}">پرونده</a></td></tr>`).join("")||`<tr><td colspan="6" style="text-align:center">پروژه‌ای پیدا نشد.</td></tr>`}search.addEventListener("input",render);status.addEventListener("change",render);render()})();\n</script><script src="theme.js"></script>
 </body>
 </html>
