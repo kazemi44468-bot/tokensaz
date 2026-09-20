@@ -216,7 +216,7 @@
   </header>
 
   <!-- CONTENT -->
-  <main class="content"><section id="memberWorkspaceShell" class="member-workspace-shell dashboard-primary" hidden>
+  <main class="content"><section id="memberWorkspaceShell" class="member-workspace-shell" hidden>
   <div class="member-workspace-head">
     <div>
       <span class="it-eyebrow">MEMBER WORKSPACE</span>
@@ -727,7 +727,7 @@ document.head.appendChild(style);
     if(!src) return;
     shell.hidden=false;
     frame.hidden=false;
-    document.querySelectorAll('.dashboard-primary').forEach(x=>x.hidden=true);
+    Array.from(shell.parentElement.children).forEach(x=>{if(x!==shell)x.hidden=true;});
     title.textContent=pageName(src);
     frame.src=src;
     shell.scrollIntoView({behavior:'smooth',block:'start'});
@@ -751,7 +751,7 @@ document.head.appendChild(style);
   back.addEventListener('click',()=>{
     frame.hidden=true;
     shell.hidden=true;
-    document.querySelectorAll('.dashboard-primary').forEach(x=>x.hidden=false);
+    Array.from(shell.parentElement.children).forEach(x=>x.hidden=false);
     document.querySelectorAll('.sidebar-nav a').forEach(a=>a.classList.remove('active'));
     window.scrollTo({top:0,behavior:'smooth'});
   });
