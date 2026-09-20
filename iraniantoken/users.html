@@ -1429,7 +1429,7 @@ tbody tr:last-child td { border-bottom: none; }
 
   <!-- TOPBAR -->
   <header class="topbar">
-    <button class="toggle-btn" id="toggleBtn">☰</button>
+    <button class="toggle-btn" id="toggleBtn"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></button>
     <div class="breadcrumb">
       <a href="dashboard.html">داشبورد</a>
       <span>›</span>
@@ -1437,7 +1437,7 @@ tbody tr:last-child td { border-bottom: none; }
     </div>
     <div class="topbar-actions">
       <button class="icon-btn" onclick="showToast('info','خروجی','در حال آماده‌سازی فایل کاربران...')" title="خروجی">⇩</button>
-      <button class="icon-btn" onclick="showToast('info','دعوت','پنل دعوت کاربر باز شد.')" title="دعوت کاربر">➕</button>
+      <button class="icon-btn" onclick="showToast('info','دعوت','پنل دعوت کاربر باز شد.')" title="دعوت کاربر"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></button>
       <button class="icon-btn" id="notifBtn">◉<span class="dot"></span></button>
     </div>
   </header>
@@ -1456,7 +1456,7 @@ tbody tr:last-child td { border-bottom: none; }
           ⇩ خروجی Excel
         </button>
         <button class="btn btn-primary" onclick="showToast('success','دعوت','پنل دعوت کاربر جدید باز شد.')">
-          ➕ دعوت کاربر
+          <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> دعوت کاربر
         </button>
       </div>
     </div>
@@ -1481,7 +1481,7 @@ tbody tr:last-child td { border-bottom: none; }
       </div>
       <div class="kpi-card gold">
         <div class="kpi-header">
-          <div class="kpi-icon">🎭</div>
+          <div class="kpi-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
           <div class="kpi-trend neutral">—</div>
         </div>
         <div class="kpi-value">۱۳</div>
@@ -1489,7 +1489,7 @@ tbody tr:last-child td { border-bottom: none; }
       </div>
       <div class="kpi-card purple">
         <div class="kpi-header">
-          <div class="kpi-icon">🆕</div>
+          <div class="kpi-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
           <div class="kpi-trend up">↑ ۲۳٪</div>
         </div>
         <div class="kpi-value">۴۲ <span>نفر</span></div>
@@ -1503,10 +1503,10 @@ tbody tr:last-child td { border-bottom: none; }
         <span>◌</span> لیست کاربران <span class="tab-count">۱,۲۴۸</span>
       </button>
       <button class="tab-btn" data-tab="roles">
-        <span>🎭</span> نقش‌ها <span class="tab-count">۱۳</span>
+        <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></span> نقش‌ها <span class="tab-count">۱۳</span>
       </button>
       <button class="tab-btn" data-tab="permissions">
-        <span>🔐</span> ماتریس مجوزها
+        <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></span> ماتریس مجوزها
       </button>
       <button class="tab-btn" data-tab="activity">
         <span>⌁</span> فعالیت‌ها
@@ -1544,7 +1544,7 @@ tbody tr:last-child td { border-bottom: none; }
         </div>
         <div class="view-toggle">
           <button class="active" data-view="grid">▦</button>
-          <button data-view="list">☰</button>
+          <button data-view="list"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></button>
         </div>
       </div>
 
@@ -1562,7 +1562,7 @@ tbody tr:last-child td { border-bottom: none; }
               <span class="email">m.ahmadi@iranianToken.ir</span>
             </div>
           </div>
-          <span class="user-card-role owner">👑 مدیر کل سیستم</span>
+          <span class="user-card-role owner"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> مدیر کل سیستم</span>
           <div class="user-card-stats">
             <div class="user-stat">
               <div class="value blue">۲۴۸</div>
@@ -1579,7 +1579,7 @@ tbody tr:last-child td { border-bottom: none; }
           </div>
           <div class="user-card-footer">
             <button class="btn btn-outline btn-sm" onclick="event.stopPropagation(); openUser(1)">◉ پروفایل</button>
-            <button class="btn btn-outline btn-sm" onclick="event.stopPropagation(); showToast('info','پیام','پنل ارسال پیام باز شد.')">✉ پیام</button>
+            <button class="btn btn-outline btn-sm" onclick="event.stopPropagation(); showToast('info','پیام','پنل ارسال پیام باز شد.')"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> پیام</button>
           </div>
         </div>
 
@@ -1594,7 +1594,7 @@ tbody tr:last-child td { border-bottom: none; }
               <span class="email">s.rezaei@example.com</span>
             </div>
           </div>
-          <span class="user-card-role executor">⚡ مجری فنی</span>
+          <span class="user-card-role executor"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> مجری فنی</span>
           <div class="user-card-stats">
             <div class="user-stat">
               <div class="value blue">۱۸۶</div>
@@ -1611,7 +1611,7 @@ tbody tr:last-child td { border-bottom: none; }
           </div>
           <div class="user-card-footer">
             <button class="btn btn-outline btn-sm">◉ پروفایل</button>
-            <button class="btn btn-outline btn-sm">✉ پیام</button>
+            <button class="btn btn-outline btn-sm"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> پیام</button>
           </div>
         </div>
 
@@ -1626,7 +1626,7 @@ tbody tr:last-child td { border-bottom: none; }
               <span class="email">a.karimi@example.com</span>
             </div>
           </div>
-          <span class="user-card-role expert">🎯 کارشناس ارزیاب</span>
+          <span class="user-card-role expert"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> کارشناس ارزیاب</span>
           <div class="user-card-stats">
             <div class="user-stat">
               <div class="value blue">۱۵۲</div>
@@ -1643,7 +1643,7 @@ tbody tr:last-child td { border-bottom: none; }
           </div>
           <div class="user-card-footer">
             <button class="btn btn-outline btn-sm">◉ پروفایل</button>
-            <button class="btn btn-outline btn-sm">✉ پیام</button>
+            <button class="btn btn-outline btn-sm"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> پیام</button>
           </div>
         </div>
 
@@ -1658,7 +1658,7 @@ tbody tr:last-child td { border-bottom: none; }
               <span class="email">r.mohammadi@example.com</span>
             </div>
           </div>
-          <span class="user-card-role legal">⚖ مشاور حقوقی</span>
+          <span class="user-card-role legal"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> مشاور حقوقی</span>
           <div class="user-card-stats">
             <div class="user-stat">
               <div class="value blue">۹۸</div>
@@ -1675,7 +1675,7 @@ tbody tr:last-child td { border-bottom: none; }
           </div>
           <div class="user-card-footer">
             <button class="btn btn-outline btn-sm">◉ پروفایل</button>
-            <button class="btn btn-outline btn-sm">✉ پیام</button>
+            <button class="btn btn-outline btn-sm"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> پیام</button>
           </div>
         </div>
 
@@ -1690,7 +1690,7 @@ tbody tr:last-child td { border-bottom: none; }
               <span class="email">f.hosseini@example.com</span>
             </div>
           </div>
-          <span class="user-card-role financial">💰 حسابرس</span>
+          <span class="user-card-role financial"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> حسابرس</span>
           <div class="user-card-stats">
             <div class="user-stat">
               <div class="value blue">۷۶</div>
@@ -1707,7 +1707,7 @@ tbody tr:last-child td { border-bottom: none; }
           </div>
           <div class="user-card-footer">
             <button class="btn btn-outline btn-sm">◉ پروفایل</button>
-            <button class="btn btn-outline btn-sm">✉ پیام</button>
+            <button class="btn btn-outline btn-sm"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> پیام</button>
           </div>
         </div>
 
@@ -1722,7 +1722,7 @@ tbody tr:last-child td { border-bottom: none; }
               <span class="email">h.sadeghi@example.com</span>
             </div>
           </div>
-          <span class="user-card-role investor">💎 سرمایه‌گذار</span>
+          <span class="user-card-role investor"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> سرمایه‌گذار</span>
           <div class="user-card-stats">
             <div class="user-stat">
               <div class="value blue">۶۴</div>
@@ -1739,7 +1739,7 @@ tbody tr:last-child td { border-bottom: none; }
           </div>
           <div class="user-card-footer">
             <button class="btn btn-outline btn-sm">◉ پروفایل</button>
-            <button class="btn btn-outline btn-sm">✉ پیام</button>
+            <button class="btn btn-outline btn-sm"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> پیام</button>
           </div>
         </div>
 
@@ -1754,7 +1754,7 @@ tbody tr:last-child td { border-bottom: none; }
               <span class="email">n.taheri@example.com</span>
             </div>
           </div>
-          <span class="user-card-role expert">🔍 ناظر</span>
+          <span class="user-card-role expert"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> ناظر</span>
           <div class="user-card-stats">
             <div class="user-stat">
               <div class="value blue">۵۸</div>
@@ -1771,7 +1771,7 @@ tbody tr:last-child td { border-bottom: none; }
           </div>
           <div class="user-card-footer">
             <button class="btn btn-outline btn-sm">◉ پروفایل</button>
-            <button class="btn btn-outline btn-sm">✉ پیام</button>
+            <button class="btn btn-outline btn-sm"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> پیام</button>
           </div>
         </div>
 
@@ -1786,7 +1786,7 @@ tbody tr:last-child td { border-bottom: none; }
               <span class="email">k.bahrami@example.com</span>
             </div>
           </div>
-          <span class="user-card-role owner">🤝 مشارکت‌کننده</span>
+          <span class="user-card-role owner"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> مشارکت‌کننده</span>
           <div class="user-card-stats">
             <div class="user-stat">
               <div class="value blue">۴۲</div>
@@ -1803,7 +1803,7 @@ tbody tr:last-child td { border-bottom: none; }
           </div>
           <div class="user-card-footer">
             <button class="btn btn-outline btn-sm">◉ پروفایل</button>
-            <button class="btn btn-outline btn-sm">✉ پیام</button>
+            <button class="btn btn-outline btn-sm"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> پیام</button>
           </div>
         </div>
 
@@ -1818,7 +1818,7 @@ tbody tr:last-child td { border-bottom: none; }
               <span class="email">m.nouri@example.com</span>
             </div>
           </div>
-          <span class="user-card-role observer">👁 مشاهده‌کننده</span>
+          <span class="user-card-role observer"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> مشاهده‌کننده</span>
           <div class="user-card-stats">
             <div class="user-stat">
               <div class="value blue">۳۲</div>
@@ -1835,7 +1835,7 @@ tbody tr:last-child td { border-bottom: none; }
           </div>
           <div class="user-card-footer">
             <button class="btn btn-outline btn-sm">◉ پروفایل</button>
-            <button class="btn btn-outline btn-sm">✉ پیام</button>
+            <button class="btn btn-outline btn-sm"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> پیام</button>
           </div>
         </div>
 
@@ -1858,11 +1858,11 @@ tbody tr:last-child td { border-bottom: none; }
       <div class="card" style="margin-bottom: 24px;">
         <div class="card-header">
           <div class="card-header-left">
-            <h3><span class="icon">🎭</span> نقش‌های تعریف‌شده در سیستم</h3>
+            <h3><span class="icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></span> نقش‌های تعریف‌شده در سیستم</h3>
             <p>۱۳ نقش اصلی بر اساس ساختار ایرانیان توکن</p>
           </div>
           <button class="btn btn-primary btn-sm" onclick="showToast('info','نقش جدید','فرم ایجاد نقش جدید باز شد.')">
-            ➕ نقش جدید
+            <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> نقش جدید
           </button>
         </div>
       </div>
@@ -1870,7 +1870,7 @@ tbody tr:last-child td { border-bottom: none; }
       <div class="roles-grid">
 
         <div class="role-card purple">
-          <div class="role-icon">👑</div>
+          <div class="role-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
           <h4>مدیر کل سیستم</h4>
           <p>دسترسی کامل به تمام بخش‌های سیستم و تمام عملیات.</p>
           <div class="role-card-footer">
@@ -1880,7 +1880,7 @@ tbody tr:last-child td { border-bottom: none; }
         </div>
 
         <div class="role-card">
-          <div class="role-icon">📊</div>
+          <div class="role-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
           <h4>مدیر پروژه</h4>
           <p>مدیریت پروژه‌ها، کاربران مرتبط و گزارش‌های تحلیلی.</p>
           <div class="role-card-footer">
@@ -1890,7 +1890,7 @@ tbody tr:last-child td { border-bottom: none; }
         </div>
 
         <div class="role-card gold">
-          <div class="role-icon">💎</div>
+          <div class="role-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
           <h4>مالک پروژه</h4>
           <p>مالکیت پروژه و دسترسی به تمام اطلاعات پروژه‌های خود.</p>
           <div class="role-card-footer">
@@ -1900,7 +1900,7 @@ tbody tr:last-child td { border-bottom: none; }
         </div>
 
         <div class="role-card green">
-          <div class="role-icon">⚡</div>
+          <div class="role-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
           <h4>مجری</h4>
           <p>اجرای پروژه و به‌روزرسانی وضعیت و اطلاعات فنی.</p>
           <div class="role-card-footer">
@@ -1910,7 +1910,7 @@ tbody tr:last-child td { border-bottom: none; }
         </div>
 
         <div class="role-card info">
-          <div class="role-icon">🎯</div>
+          <div class="role-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
           <h4>کارشناس</h4>
           <p>بررسی و ارزیابی پروژه‌ها، اسناد و مستندات فنی.</p>
           <div class="role-card-footer">
@@ -1920,7 +1920,7 @@ tbody tr:last-child td { border-bottom: none; }
         </div>
 
         <div class="role-card pink">
-          <div class="role-icon">📋</div>
+          <div class="role-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
           <h4>ارزیاب</h4>
           <p>ارزیابی دارایی‌ها و ارزش‌گذاری پروژه‌ها.</p>
           <div class="role-card-footer">
@@ -1930,7 +1930,7 @@ tbody tr:last-child td { border-bottom: none; }
         </div>
 
         <div class="role-card info">
-          <div class="role-icon">🔍</div>
+          <div class="role-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
           <h4>ناظر</h4>
           <p>نظارت بر اجرا و عملکرد پروژه‌ها و ثبت گزارش‌ها.</p>
           <div class="role-card-footer">
@@ -1940,7 +1940,7 @@ tbody tr:last-child td { border-bottom: none; }
         </div>
 
         <div class="role-card financial">
-          <div class="role-icon">💰</div>
+          <div class="role-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
           <h4>حسابرس</h4>
           <p>بررسی مالی، صورت‌های حسابداری و صحت اطلاعات مالی.</p>
           <div class="role-card-footer">
@@ -1950,7 +1950,7 @@ tbody tr:last-child td { border-bottom: none; }
         </div>
 
         <div class="role-card red">
-          <div class="role-icon">⚖</div>
+          <div class="role-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
           <h4>مشاور حقوقی</h4>
           <p>بررسی اسناد حقوقی، قراردادها و امور قانونی پروژه‌ها.</p>
           <div class="role-card-footer">
@@ -1960,7 +1960,7 @@ tbody tr:last-child td { border-bottom: none; }
         </div>
 
         <div class="role-card financial">
-          <div class="role-icon">📈</div>
+          <div class="role-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
           <h4>مشاور مالی</h4>
           <p>تحلیل مالی و ارائه مشاوره در مورد ساختار اقتصادی.</p>
           <div class="role-card-footer">
@@ -1970,7 +1970,7 @@ tbody tr:last-child td { border-bottom: none; }
         </div>
 
         <div class="role-card gold">
-          <div class="role-icon">🤝</div>
+          <div class="role-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
           <h4>مشارکت‌کننده</h4>
           <p>مشارکت در پروژه‌ها و دسترسی به اطلاعات پروژه‌های مرتبط.</p>
           <div class="role-card-footer">
@@ -1990,7 +1990,7 @@ tbody tr:last-child td { border-bottom: none; }
         </div>
 
         <div class="role-card gray">
-          <div class="role-icon">👁</div>
+          <div class="role-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
           <h4>مشاهده‌کننده</h4>
           <p>فقط مشاهده اطلاعات عمومی پروژه‌ها بدون امکان ویرایش.</p>
           <div class="role-card-footer">
@@ -2007,7 +2007,7 @@ tbody tr:last-child td { border-bottom: none; }
       <div class="card">
         <div class="card-header">
           <div class="card-header-left">
-            <h3><span class="icon">🔐</span> ماتریس دسترسی و مجوزها</h3>
+            <h3><span class="icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></span> ماتریس دسترسی و مجوزها</h3>
             <p>سطح دسترسی هر نقش به عملیات مختلف سیستم</p>
           </div>
           <div style="display: flex; gap: 8px; align-items: center;">
@@ -2262,7 +2262,7 @@ tbody tr:last-child td { border-bottom: none; }
             </div>
 
             <div class="activity-item">
-              <div class="activity-icon blue">✎</div>
+              <div class="activity-icon blue"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
               <div class="activity-body">
                 <p><strong>سارا رضایی</strong> اطلاعات پایه پروژه نیروگاه را ویرایش کرد</p>
                 <small>۲۵ دقیقه پیش · Audit ID: #A-2450</small>
@@ -2289,7 +2289,7 @@ tbody tr:last-child td { border-bottom: none; }
             </div>
 
             <div class="activity-item">
-              <div class="activity-icon blue">👤</div>
+              <div class="activity-icon blue"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
               <div class="activity-body">
                 <p>کاربر جدید <strong>مریم نوری</strong> در سیستم ثبت‌نام کرد</p>
                 <small>۳ ساعت پیش · Audit ID: #A-2447</small>
@@ -2316,7 +2316,7 @@ tbody tr:last-child td { border-bottom: none; }
             </div>
 
             <div class="activity-item">
-              <div class="activity-icon gold">👑</div>
+              <div class="activity-icon gold"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
               <div class="activity-body">
                 <p><strong>محمد احمدی</strong> نقش کاربر «کاوه بهرامی» را به مشارکت‌کننده تغییر داد</p>
                 <small>دیروز · Audit ID: #A-2444</small>
@@ -2325,7 +2325,7 @@ tbody tr:last-child td { border-bottom: none; }
             </div>
 
             <div class="activity-item">
-              <div class="activity-icon purple">🔐</div>
+              <div class="activity-icon purple"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
               <div class="activity-body">
                 <p>مجوز <strong>«اعتبارسنجی اسناد»</strong> به نقش کارشناس اضافه شد</p>
                 <small>۲ روز پیش · Audit ID: #A-2443</small>
@@ -2334,7 +2334,7 @@ tbody tr:last-child td { border-bottom: none; }
             </div>
 
             <div class="activity-item">
-              <div class="activity-icon red">⏸</div>
+              <div class="activity-icon red"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
               <div class="activity-body">
                 <p>حساب کاربری <strong>«مهدی کریمی»</strong> توسط مدیر موقتاً غیرفعال شد</p>
                 <small>۳ روز پیش · Audit ID: #A-2442</small>
@@ -2369,7 +2369,7 @@ tbody tr:last-child td { border-bottom: none; }
         <h2 id="drawerName">محمد احمدی</h2>
         <p id="drawerEmail">m.ahmadi@iranianToken.ir</p>
         <div class="badges">
-          <span id="drawerRole">👑 مدیر کل سیستم</span>
+          <span id="drawerRole"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> مدیر کل سیستم</span>
           <span style="background: rgba(16,185,129,0.3);">✓ فعال</span>
         </div>
       </div>
@@ -2432,7 +2432,7 @@ tbody tr:last-child td { border-bottom: none; }
       <div class="drawer-section-title">پروژه‌های مشارکتی</div>
       <div class="mini-project-list">
         <div class="mini-project-item">
-          <div class="mini-project-icon">🐄</div>
+          <div class="mini-project-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
           <div class="mini-project-body">
             <strong>دامداری نمونه</strong>
             <small>IRT-1403-001</small>
@@ -2440,7 +2440,7 @@ tbody tr:last-child td { border-bottom: none; }
           <span class="mini-project-role">مالک</span>
         </div>
         <div class="mini-project-item">
-          <div class="mini-project-icon" style="background: linear-gradient(135deg, #8b5cf6, #a78bfa);">⚡</div>
+          <div class="mini-project-icon" style="background: linear-gradient(135deg, #8b5cf6, #a78bfa);"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
           <div class="mini-project-body">
             <strong>نیروگاه خورشیدی</strong>
             <small>IRT-1403-004</small>
@@ -2448,7 +2448,7 @@ tbody tr:last-child td { border-bottom: none; }
           <span class="mini-project-role">مدیر</span>
         </div>
         <div class="mini-project-item">
-          <div class="mini-project-icon" style="background: linear-gradient(135deg, #10b981, #34d399);">🌾</div>
+          <div class="mini-project-icon" style="background: linear-gradient(135deg, #10b981, #34d399);"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
           <div class="mini-project-body">
             <strong>کشاورزی پایدار</strong>
             <small>IRT-1403-002</small>
@@ -2477,8 +2477,8 @@ tbody tr:last-child td { border-bottom: none; }
   </div>
 
   <div class="drawer-footer">
-    <button class="btn btn-outline" onclick="showToast('info','پیام','پنل ارسال پیام باز شد.')">✉ ارسال پیام</button>
-    <button class="btn btn-primary" onclick="showToast('info','ویرایش','پنل ویرایش کاربر باز شد.')">✎ ویرایش کاربر</button>
+    <button class="btn btn-outline" onclick="showToast('info','پیام','پنل ارسال پیام باز شد.')"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> ارسال پیام</button>
+    <button class="btn btn-primary" onclick="showToast('info','ویرایش','پنل ویرایش کاربر باز شد.')"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> ویرایش کاربر</button>
   </div>
 </aside>
 
@@ -2506,7 +2506,7 @@ overlay.addEventListener('click', () => {
 /* ==================== TOAST ==================== */
 function showToast(type, title, message) {
   const container = document.getElementById('toastContainer');
-  const icons = { success: '✓', error: '✗', warning: '!', info: 'ℹ' };
+  const icons = { success: '✓', error: '✗', warning: '!', info: '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span>' };
   const toast = document.createElement('div');
   toast.className = `toast ${type}`;
   toast.innerHTML = `
@@ -2556,12 +2556,12 @@ const userDrawer = document.getElementById('userDrawer');
 const drawerOverlay = document.getElementById('drawerOverlay');
 
 const usersData = {
-  1: { name: 'محمد احمدی', email: 'm.ahmadi@iranianToken.ir', role: '👑 مدیر کل سیستم', avatar: 'م.ا' },
-  2: { name: 'سارا رضایی', email: 's.rezaei@example.com', role: '⚡ مجری فنی', avatar: 'س.ر' },
-  3: { name: 'علی کریمی', email: 'a.karimi@example.com', role: '🎯 کارشناس ارزیاب', avatar: 'ع.ک' },
-  4: { name: 'رضا محمدی', email: 'r.mohammadi@example.com', role: '⚖ مشاور حقوقی', avatar: 'ر.م' },
-  5: { name: 'فاطمه حسینی', email: 'f.hosseini@example.com', role: '💰 حسابرس', avatar: 'ف.ح' },
-  6: { name: 'حسین صادقی', email: 'h.sadeghi@example.com', role: '💎 سرمایه‌گذار', avatar: 'ح.ص' },
+  1: { name: 'محمد احمدی', email: 'm.ahmadi@iranianToken.ir', role: '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> مدیر کل سیستم', avatar: 'م.ا' },
+  2: { name: 'سارا رضایی', email: 's.rezaei@example.com', role: '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> مجری فنی', avatar: 'س.ر' },
+  3: { name: 'علی کریمی', email: 'a.karimi@example.com', role: '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> کارشناس ارزیاب', avatar: 'ع.ک' },
+  4: { name: 'رضا محمدی', email: 'r.mohammadi@example.com', role: '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> مشاور حقوقی', avatar: 'ر.م' },
+  5: { name: 'فاطمه حسینی', email: 'f.hosseini@example.com', role: '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> حسابرس', avatar: 'ف.ح' },
+  6: { name: 'حسین صادقی', email: 'h.sadeghi@example.com', role: '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> سرمایه‌گذار', avatar: 'ح.ص' },
 };
 
 function openUser(id) {
