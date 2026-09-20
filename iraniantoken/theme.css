@@ -1628,3 +1628,7 @@ body:has(.sidebar) .it-eyebrow{color:#6d8396!important;letter-spacing:1.1px!impo
   body:has(.sidebar) .main{margin-right:0!important}
   body:has(.sidebar) .content{padding:18px 14px 28px!important}
 }
+
+/* crisp navigation icons */
+body:has(.sidebar) .nav-item .icon svg{width:17px!important;height:17px!important;fill:none!important;stroke:currentColor!important;stroke-width:1.7!important;stroke-linecap:round!important;stroke-linejoin:round!important;display:block!important}
+body:has(.sidebar) .nav-item .icon svg path,body:has(.sidebar) .nav-item .icon svg rect,body:has(.sidebar) .nav-item .icon svg circle{vector-effect:non-scaling-stroke}
