@@ -1244,16 +1244,16 @@ body {
 
   <!-- TOPBAR -->
   <header class="topbar">
-    <button class="toggle-btn" id="toggleBtn">☰</button>
+    <button class="toggle-btn" id="toggleBtn"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span></button>
     <div class="breadcrumb">
       <a href="dashboard.html">داشبورد</a>
       <span>›</span>
       <span class="current">پروفایل من</span>
     </div>
     <div class="topbar-actions">
-      <button class="icon-btn" onclick="showToast('info','اشتراک‌گذاری','لینک پروفایل کپی شد.')" title="اشتراک‌گذاری">⚯</button>
+      <button class="icon-btn" onclick="showToast('info','اشتراک‌گذاری','لینک پروفایل کپی شد.')" title="اشتراک‌گذاری"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 13a4 4 0 0 0 6 0l2-2a4 4 0 0 0-6-6l-1 1M14 11a4 4 0 0 0-6 0l-2 2a4 4 0 0 0 6 6l1-1"/></svg></span></button>
       <button class="icon-btn" onclick="window.print()" title="چاپ">⎙</button>
-      <button class="icon-btn" id="notifBtn">🔔<span class="dot"></span></button>
+      <button class="icon-btn" id="notifBtn"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M18 9a6 6 0 0 0-12 0c0 6-2 6-2 8h16c0-2-2-2-2-8"/><path d="M10 21h4"/></svg></span><span class="dot"></span></button>
     </div>
   </header>
 
@@ -1264,7 +1264,7 @@ body {
     <section class="profile-hero">
       <div class="profile-hero-cover">
         <button class="profile-hero-edit-cover" onclick="showToast('info','ویرایش','پنل ویرایش کاور باز شد.')">
-          📷 تغییر کاور
+          <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 7h3l1-2h6l1 2h3v12H5z"/><circle cx="12" cy="13" r="3"/></svg></span> تغییر کاور
         </button>
       </div>
 
@@ -1281,23 +1281,23 @@ body {
               <h1>محمد احمدی</h1>
               <span class="profile-verified-badge">✓ تأیید شده</span>
             </div>
-            <div class="profile-role-badge owner">👑 مدیر کل سیستم</div>
+            <div class="profile-role-badge owner"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 7 3 3 5-6 5 6 3-3-2 10H6z"/><path d="M7 20h10"/></svg></span> مدیر کل سیستم</div>
             <p class="profile-bio">
               مدیر ارشد زیرساخت توکنیزه‌سازی پروژه‌ها در ایرانیان توکن. متخصص در طراحی و پیاده‌سازی مدل‌های اقتصادی و حقوقی برای پروژه‌های توکنیزه‌شده. با بیش از ۱۰ سال تجربه در حوزه فناوری‌های مالی و بلاکچین.
             </p>
             <div class="profile-meta-row">
-              <span>📍 <strong>تهران، ایران</strong></span>
-              <span>📅 <strong>عضویت از فروردین ۱۴۰۲</strong></span>
+              <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 10c0 5-7 10-7 10S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2"/></svg></span> <strong>تهران، ایران</strong></span>
+              <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 9h16"/></svg></span> <strong>عضویت از فروردین ۱۴۰۲</strong></span>
               <span>💼 <strong>۸ پروژه فعال</strong></span>
             </div>
           </div>
 
           <div class="profile-actions">
             <button class="btn btn-gold" onclick="window.location.href='settings.html'">
-              ✎ ویرایش پروفایل
+              <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 20 4-1 10-10a2.8 2.8 0 0 0-4-4L4 15z"/></svg></span> ویرایش پروفایل
             </button>
             <button class="btn btn-outline" onclick="showToast('info','اشتراک‌گذاری','لینک پروفایل کپی شد.')" style="background: rgba(255,255,255,0.15); color: #fff; border-color: rgba(255,255,255,0.3);">
-              ⚯ اشتراک‌گذاری
+              <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 13a4 4 0 0 0 6 0l2-2a4 4 0 0 0-6-6l-1 1M14 11a4 4 0 0 0-6 0l-2 2a4 4 0 0 0 6 6l1-1"/></svg></span> اشتراک‌گذاری
             </button>
           </div>
         </div>
@@ -1363,7 +1363,7 @@ body {
           <div class="card">
             <div class="card-header">
               <div class="card-header-left">
-                <h3><span class="icon">📊</span> آمار عملکرد</h3>
+                <h3><span class="icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 19V9M10 19V5M15 19v-7M20 19V3"/></svg></span></span> آمار عملکرد</h3>
                 <p>خلاصه فعالیت‌های شما در ایرانیان توکن</p>
               </div>
             </div>
@@ -1393,7 +1393,7 @@ body {
           <div class="card">
             <div class="card-header">
               <div class="card-header-left">
-                <h3><span class="icon">📈</span> روند فعالیت</h3>
+                <h3><span class="icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 16 5-5 4 3 7-8"/><path d="M15 6h5v5"/></svg></span></span> روند فعالیت</h3>
                 <p>فعالیت‌های شما در ۶ ماه اخیر</p>
               </div>
             </div>
@@ -1479,7 +1479,7 @@ body {
                   </div>
                 </div>
                 <div class="activity-item">
-                  <div class="activity-icon blue">✎</div>
+                  <div class="activity-icon blue"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 20 4-1 10-10a2.8 2.8 0 0 0-4-4L4 15z"/></svg></span></div>
                   <div class="activity-body">
                     <p>اطلاعات پروژه <strong>برج تجاری آرین</strong> را ویرایش کرد</p>
                     <small>۲ ساعت پیش</small>
@@ -1493,7 +1493,7 @@ body {
                   </div>
                 </div>
                 <div class="activity-item">
-                  <div class="activity-icon gold">💰</div>
+                  <div class="activity-icon gold"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="12" rx="2"/><circle cx="12" cy="12" r="3"/></svg></span></div>
                   <div class="activity-body">
                     <p>مبلغ <strong>۱۸ میلیون تومان</strong> از سود برداشت کرد</p>
                     <small>دیروز</small>
@@ -1520,7 +1520,7 @@ body {
 
             <div class="mini-project-card" onclick="window.location.href='project-detail.html'">
               <div class="mini-project-header">
-                <div class="mini-project-icon">🐄</div>
+                <div class="mini-project-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M8 9 6 6M16 9l2-3M9 14h.01M15 14h.01"/></svg></span></div>
                 <div class="mini-project-info">
                   <strong>دامداری نمونه</strong>
                   <small>IRT-1403-001</small>
@@ -1545,7 +1545,7 @@ body {
 
             <div class="mini-project-card" onclick="window.location.href='project-detail.html'">
               <div class="mini-project-header">
-                <div class="mini-project-icon green">🌾</div>
+                <div class="mini-project-icon green"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 20c2-5 4-9 6-14M6 15c3 0 5-2 6-4M8 12c-2 0-3-2-3-4M10 9c2 0 4-2 4-4"/></svg></span></div>
                 <div class="mini-project-info">
                   <strong>کشاورزی پایدار</strong>
                   <small>IRT-1403-002</small>
@@ -1595,7 +1595,7 @@ body {
 
             <div class="mini-project-card" onclick="window.location.href='solar-token.html'">
               <div class="mini-project-header">
-                <div class="mini-project-icon purple">⚡</div>
+                <div class="mini-project-icon purple"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13 2-8 12h6l-1 8 8-12h-6z"/></svg></span></div>
                 <div class="mini-project-info">
                   <strong>نیروگاه خورشیدی</strong>
                   <small>IRT-1403-004</small>
@@ -1620,7 +1620,7 @@ body {
 
             <div class="mini-project-card" onclick="window.location.href='project-detail.html'">
               <div class="mini-project-header">
-                <div class="mini-project-icon pink">🏭</div>
+                <div class="mini-project-icon pink"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V8l6 4V8l6 4V5h4v15z"/></svg></span></div>
                 <div class="mini-project-info">
                   <strong>کارخانه فولاد</strong>
                   <small>IRT-1403-005</small>
@@ -1645,7 +1645,7 @@ body {
 
             <div class="mini-project-card" onclick="window.location.href='honey-token.html'">
               <div class="mini-project-header">
-                <div class="mini-project-icon gold">🍯</div>
+                <div class="mini-project-icon gold"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 7 4v10l-7 4-7-4V7z"/><path d="m8 9 4-2 4 2v6l-4 2-4-2z"/></svg></span></div>
                 <div class="mini-project-info">
                   <strong>کندوی عسل آویشن</strong>
                   <small>IRT-1403-007</small>
@@ -1695,7 +1695,7 @@ body {
 
             <div class="mini-project-card" onclick="window.location.href='project-detail.html'">
               <div class="mini-project-header">
-                <div class="mini-project-icon green">🏨</div>
+                <div class="mini-project-icon green"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 20V4h14v16M8 8h2M14 8h2M8 12h2M14 12h2"/></svg></span></div>
                 <div class="mini-project-info">
                   <strong>هتل گردشگری کیش</strong>
                   <small>IRT-1403-006</small>
@@ -1753,31 +1753,31 @@ body {
             </div>
 
             <div class="achievement-card">
-              <div class="achievement-icon purple">🎯</div>
+              <div class="achievement-icon purple"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg></span></div>
               <h4>مدیر پروژه</h4>
               <p>مدیریت ۵+ پروژه همزمان</p>
             </div>
 
             <div class="achievement-card">
-              <div class="achievement-icon pink">💎</div>
+              <div class="achievement-icon pink"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 7 7-7 11L5 10z"/></svg></span></div>
               <h4>سرمایه‌گذار</h4>
               <p>سرمایه‌گذاری در ۳+ پروژه</p>
             </div>
 
             <div class="achievement-card">
-              <div class="achievement-icon">🥇</div>
+              <div class="achievement-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 4h8v5a4 4 0 0 1-8 0z"/><path d="M12 13v4M8 20h8M10 17h4"/></svg></span></div>
               <h4>برترین کاربر ماه</h4>
               <p>بیشترین فعالیت ماهانه</p>
             </div>
 
             <div class="achievement-card">
-              <div class="achievement-icon blue">📄</div>
+              <div class="achievement-icon blue"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h5"/></svg></span></div>
               <h4>مستندساز</h4>
               <p>بارگذاری ۱۰+ سند</p>
             </div>
 
             <div class="achievement-card">
-              <div class="achievement-icon green">🌱</div>
+              <div class="achievement-icon green"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20V9M12 13c-4 0-6-2-6-6 4 0 6 2 6 6M12 15c4 0 6-2 6-6-4 0-6 2-6 6"/></svg></span></div>
               <h4>حامی انرژی پاک</h4>
               <p>سرمایه‌گذاری در انرژی تجدیدپذیر</p>
             </div>
@@ -1789,13 +1789,13 @@ body {
             </div>
 
             <div class="achievement-card">
-              <div class="achievement-icon pink">💬</div>
+              <div class="achievement-icon pink"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 6h14v10H9l-4 3z"/></svg></span></div>
               <h4>مشاور فعال</h4>
               <p>۵۰+ نظر ثبت‌شده</p>
             </div>
 
             <div class="achievement-card locked">
-              <div class="achievement-icon">👑</div>
+              <div class="achievement-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 7 3 3 5-6 5 6 3-3-2 10H6z"/><path d="M7 20h10"/></svg></span></div>
               <h4>افسانه سیستم</h4>
               <p>تکمیل تمام دستاوردها</p>
             </div>
@@ -1838,7 +1838,7 @@ body {
                   </div>
                 </div>
                 <div class="activity-item">
-                  <div class="activity-icon blue">✎</div>
+                  <div class="activity-icon blue"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 20 4-1 10-10a2.8 2.8 0 0 0-4-4L4 15z"/></svg></span></div>
                   <div class="activity-body">
                     <p>اطلاعات پروژه <strong>برج تجاری آرین</strong> را ویرایش کرد</p>
                     <small>۲ ساعت پیش · Audit ID: #A-2449</small>
@@ -1852,7 +1852,7 @@ body {
                   </div>
                 </div>
                 <div class="activity-item">
-                  <div class="activity-icon gold">💰</div>
+                  <div class="activity-icon gold"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="12" rx="2"/><circle cx="12" cy="12" r="3"/></svg></span></div>
                   <div class="activity-body">
                     <p>مبلغ <strong>۱۸ میلیون تومان</strong> از سود برداشت کرد</p>
                     <small>دیروز · Audit ID: #A-2447</small>
@@ -1887,7 +1887,7 @@ body {
                   </div>
                 </div>
                 <div class="activity-item">
-                  <div class="activity-icon green">🌱</div>
+                  <div class="activity-icon green"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20V9M12 13c-4 0-6-2-6-6 4 0 6 2 6 6M12 15c4 0 6-2 6-6-4 0-6 2-6 6"/></svg></span></div>
                   <div class="activity-body">
                     <p>پروژه <strong>نیروگاه خورشیدی</strong> را ثبت کرد</p>
                     <small>۲ هفته پیش · Audit ID: #A-2442</small>
@@ -1975,7 +1975,7 @@ body {
             </div>
 
             <div class="contact-item" onclick="showToast('info','موبایل','۰۹۱۲۳۴۵۶۷۸۹ کپی شد.')">
-              <div class="contact-icon green">📱</div>
+              <div class="contact-icon green"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M10 18h4"/></svg></span></div>
               <div class="contact-body">
                 <strong>موبایل</strong>
                 <span class="mono">۰۹۱۲۳۴۵۶۷۸۹</span>
@@ -1983,7 +1983,7 @@ body {
             </div>
 
             <div class="contact-item" onclick="showToast('info','موقعیت','تهران، ایران')">
-              <div class="contact-icon gold">📍</div>
+              <div class="contact-icon gold"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 10c0 5-7 10-7 10S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2"/></svg></span></div>
               <div class="contact-body">
                 <strong>موقعیت</strong>
                 <span>تهران، ایران</span>
@@ -1991,7 +1991,7 @@ body {
             </div>
 
             <div class="contact-item" onclick="showToast('info','وب‌سایت','iranianToken.ir باز شد.')">
-              <div class="contact-icon purple">🌐</div>
+              <div class="contact-icon purple"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M4 12h16"/></svg></span></div>
               <div class="contact-body">
                 <strong>وب‌سایت</strong>
                 <span class="mono">iranianToken.ir</span>
@@ -2044,7 +2044,7 @@ body {
             </div>
 
             <div class="membership-item">
-              <div class="membership-icon purple">🌱</div>
+              <div class="membership-icon purple"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20V9M12 13c-4 0-6-2-6-6 4 0 6 2 6 6M12 15c4 0 6-2 6-6-4 0-6 2-6 6"/></svg></span></div>
               <div class="membership-body">
                 <strong>حامیان انرژی پاک</strong>
                 <small>عضو موسس · از ۱۴۰۳</small>
@@ -2066,7 +2066,7 @@ body {
             </div>
           </div>
           <p style="font-size: 11px; color: var(--gray); margin-top: 12px; line-height: 1.8;">
-            🎯 ۲ دستاورد دیگر برای تکمیل تمام نشان‌ها
+            <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg></span> ۲ دستاورد دیگر برای تکمیل تمام نشان‌ها
           </p>
         </div>
 
@@ -2078,10 +2078,10 @@ body {
               ⇩ دانلود رزومه PDF
             </button>
             <button class="btn btn-outline btn-sm" onclick="showToast('success','اشتراک‌گذاری','لینک پروفایل کپی شد.')" style="justify-content: flex-start;">
-              ⚯ اشتراک‌گذاری پروفایل
+              <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 13a4 4 0 0 0 6 0l2-2a4 4 0 0 0-6-6l-1 1M14 11a4 4 0 0 0-6 0l-2 2a4 4 0 0 0 6 6l1-1"/></svg></span> اشتراک‌گذاری پروفایل
             </button>
             <button class="btn btn-outline btn-sm" onclick="window.location.href='settings.html'" style="justify-content: flex-start;">
-              ✎ ویرایش اطلاعات
+              <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 20 4-1 10-10a2.8 2.8 0 0 0-4-4L4 15z"/></svg></span> ویرایش اطلاعات
             </button>
           </div>
         </div>
@@ -2117,7 +2117,7 @@ overlay.addEventListener('click', () => {
 /* ==================== TOAST ==================== */
 function showToast(type, title, message) {
   const container = document.getElementById('toastContainer');
-  const icons = { success: '✓', error: '✗', warning: '!', info: 'ℹ' };
+  const icons = { success: '✓', error: '✗', warning: '!', info: '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 11v5M12 8h.01"/></svg></span>' };
   const toast = document.createElement('div');
   toast.className = `toast ${type}`;
   toast.innerHTML = `
