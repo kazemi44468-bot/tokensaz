@@ -1418,7 +1418,7 @@ body {
 
   <!-- TOPBAR -->
   <header class="topbar">
-    <button class="toggle-btn" id="toggleBtn">☰</button>
+    <button class="toggle-btn" id="toggleBtn"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></button>
     <div class="breadcrumb">
       <a href="dashboard.html">داشبورد</a>
       <span>›</span>
@@ -1449,7 +1449,7 @@ body {
           ⇩ خروجی Excel
         </button>
         <button class="btn btn-primary" onclick="showToast('success','تنظیمات','تنظیمات اعتبارسنجی باز شد.')">
-          ⚙ تنظیمات اعتبارسنجی
+          <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> تنظیمات اعتبارسنجی
         </button>
       </div>
     </div>
@@ -1467,7 +1467,7 @@ body {
 
       <div class="kpi-card">
         <div class="kpi-header">
-          <div class="kpi-icon">🔍</div>
+          <div class="kpi-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
           <div class="kpi-trend neutral">—</div>
         </div>
         <div class="kpi-value">۴ <span>مورد</span></div>
@@ -1494,7 +1494,7 @@ body {
 
       <div class="kpi-card purple">
         <div class="kpi-header">
-          <div class="kpi-icon">⚡</div>
+          <div class="kpi-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
           <div class="kpi-trend up">+۸٪</div>
         </div>
         <div class="kpi-value">۳.۲ <span>روز</span></div>
@@ -1508,7 +1508,7 @@ body {
         <span>◷</span> در انتظار بررسی <span class="tab-count">۵</span>
       </button>
       <button class="tab-btn" data-tab="review">
-        <span>🔍</span> در حال بررسی <span class="tab-count">۴</span>
+        <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></span> در حال بررسی <span class="tab-count">۴</span>
       </button>
       <button class="tab-btn" data-tab="approved">
         <span>✓</span> تأیید شده <span class="tab-count">۴۷</span>
@@ -1517,7 +1517,7 @@ body {
         <span>✗</span> رد شده <span class="tab-count">۵</span>
       </button>
       <button class="tab-btn" data-tab="reports">
-        <span>📊</span> گزارش‌ها
+        <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></span> گزارش‌ها
       </button>
     </nav>
 
@@ -1569,7 +1569,7 @@ body {
         <!-- Item 1 -->
         <div class="validation-item pending" onclick="openValidation(1)">
           <div class="validation-header">
-            <div class="validation-icon">📄</div>
+            <div class="validation-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
             <div class="validation-info">
               <div class="validation-title">
                 سند مالکیت زمین دامداری
@@ -1583,9 +1583,9 @@ body {
                 <span>بارگذاری: سارا رضایی</span>
               </div>
               <div class="validation-meta">
-                <span>📅 ۱۴۰۳/۰۹/۲۸</span>
-                <span>📎 PDF · ۲.۴ MB</span>
-                <span>⏱ ۲ روز پیش</span>
+                <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> ۱۴۰۳/۰۹/۲۸</span>
+                <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> PDF · ۲.۴ MB</span>
+                <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> ۲ روز پیش</span>
               </div>
             </div>
             <span class="validation-status-badge pending">در انتظار</span>
@@ -1618,7 +1618,7 @@ body {
               <span>کارشناس: <strong style="color: var(--dark);">علی کریمی</strong></span>
             </div>
             <div class="validation-actions">
-              <button class="btn btn-outline btn-sm" onclick="event.stopPropagation(); showToast('info','مشاهده','پیش‌نمایش سند باز شد.')">👁 مشاهده</button>
+              <button class="btn btn-outline btn-sm" onclick="event.stopPropagation(); showToast('info','مشاهده','پیش‌نمایش سند باز شد.')"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> مشاهده</button>
               <button class="btn btn-success btn-sm" onclick="event.stopPropagation(); openApproveModal(1)">✓ تأیید</button>
               <button class="btn btn-danger btn-sm" onclick="event.stopPropagation(); openRejectModal(1)">✗ رد</button>
             </div>
@@ -1628,7 +1628,7 @@ body {
         <!-- Item 2 -->
         <div class="validation-item pending" onclick="openValidation(2)">
           <div class="validation-header">
-            <div class="validation-icon">📋</div>
+            <div class="validation-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
             <div class="validation-info">
               <div class="validation-title">
                 مجوز بهره‌برداری نیروگاه خورشیدی
@@ -1642,9 +1642,9 @@ body {
                 <span>بارگذاری: محمد احمدی</span>
               </div>
               <div class="validation-meta">
-                <span>📅 ۱۴۰۳/۰۹/۲۷</span>
-                <span>📎 PDF · ۱.۱ MB</span>
-                <span>⏱ ۳ روز پیش</span>
+                <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> ۱۴۰۳/۰۹/۲۷</span>
+                <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> PDF · ۱.۱ MB</span>
+                <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> ۳ روز پیش</span>
               </div>
             </div>
             <span class="validation-status-badge pending">در انتظار</span>
@@ -1677,7 +1677,7 @@ body {
               <span>کارشناس: <strong style="color: var(--dark);">سارا رضایی</strong></span>
             </div>
             <div class="validation-actions">
-              <button class="btn btn-outline btn-sm">👁 مشاهده</button>
+              <button class="btn btn-outline btn-sm"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> مشاهده</button>
               <button class="btn btn-success btn-sm">✓ تأیید</button>
               <button class="btn btn-danger btn-sm">✗ رد</button>
             </div>
@@ -1687,7 +1687,7 @@ body {
         <!-- Item 3 -->
         <div class="validation-item pending" onclick="openValidation(3)">
           <div class="validation-header">
-            <div class="validation-icon">📊</div>
+            <div class="validation-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
             <div class="validation-info">
               <div class="validation-title">
                 گزارش ارزیابی دارایی برج آرین
@@ -1701,9 +1701,9 @@ body {
                 <span>بارگذاری: علی کریمی</span>
               </div>
               <div class="validation-meta">
-                <span>📅 ۱۴۰۳/۰۹/۲۵</span>
-                <span>📎 XLSX · ۳.۸ MB</span>
-                <span>⏱ ۵ روز پیش</span>
+                <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> ۱۴۰۳/۰۹/۲۵</span>
+                <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> XLSX · ۳.۸ MB</span>
+                <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> ۵ روز پیش</span>
               </div>
             </div>
             <span class="validation-status-badge pending">در انتظار</span>
@@ -1736,7 +1736,7 @@ body {
               <span>کارشناس: <strong style="color: var(--dark);">فاطمه حسینی</strong></span>
             </div>
             <div class="validation-actions">
-              <button class="btn btn-outline btn-sm">👁 مشاهده</button>
+              <button class="btn btn-outline btn-sm"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> مشاهده</button>
               <button class="btn btn-success btn-sm">✓ تأیید</button>
               <button class="btn btn-danger btn-sm">✗ رد</button>
             </div>
@@ -1746,7 +1746,7 @@ body {
         <!-- Item 4 -->
         <div class="validation-item pending" onclick="openValidation(4)">
           <div class="validation-header">
-            <div class="validation-icon">📝</div>
+            <div class="validation-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
             <div class="validation-info">
               <div class="validation-title">
                 قرارداد مشارکت هتل کیش
@@ -1760,9 +1760,9 @@ body {
                 <span>بارگذاری: رضا محمدی</span>
               </div>
               <div class="validation-meta">
-                <span>📅 ۱۴۰۳/۰۹/۲۴</span>
-                <span>📎 DOCX · ۲.۱ MB</span>
-                <span>⏱ ۶ روز پیش</span>
+                <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> ۱۴۰۳/۰۹/۲۴</span>
+                <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> DOCX · ۲.۱ MB</span>
+                <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> ۶ روز پیش</span>
               </div>
             </div>
             <span class="validation-status-badge pending">در انتظار</span>
@@ -1795,7 +1795,7 @@ body {
               <span>کارشناس: <strong style="color: var(--dark);">محمد احمدی</strong></span>
             </div>
             <div class="validation-actions">
-              <button class="btn btn-outline btn-sm">👁 مشاهده</button>
+              <button class="btn btn-outline btn-sm"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> مشاهده</button>
               <button class="btn btn-success btn-sm">✓ تأیید</button>
               <button class="btn btn-danger btn-sm">✗ رد</button>
             </div>
@@ -1805,7 +1805,7 @@ body {
         <!-- Item 5 -->
         <div class="validation-item pending" onclick="openValidation(5)">
           <div class="validation-header">
-            <div class="validation-icon">🔬</div>
+            <div class="validation-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
             <div class="validation-info">
               <div class="validation-title">
                 گزارش فنی دام‌های مولد
@@ -1819,9 +1819,9 @@ body {
                 <span>بارگذاری: دامپزشک رسمی</span>
               </div>
               <div class="validation-meta">
-                <span>📅 ۱۴۰۳/۰۹/۲۳</span>
-                <span>📎 PDF · ۳.۲ MB</span>
-                <span>⏱ ۷ روز پیش</span>
+                <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> ۱۴۰۳/۰۹/۲۳</span>
+                <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> PDF · ۳.۲ MB</span>
+                <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> ۷ روز پیش</span>
               </div>
             </div>
             <span class="validation-status-badge pending">در انتظار</span>
@@ -1854,7 +1854,7 @@ body {
               <span>کارشناس: <strong style="color: var(--dark);">علی کریمی</strong></span>
             </div>
             <div class="validation-actions">
-              <button class="btn btn-outline btn-sm">👁 مشاهده</button>
+              <button class="btn btn-outline btn-sm"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> مشاهده</button>
               <button class="btn btn-success btn-sm">✓ تأیید</button>
               <button class="btn btn-danger btn-sm">✗ رد</button>
             </div>
@@ -1869,7 +1869,7 @@ body {
       <div class="validation-list">
         <div class="validation-item review" onclick="openValidation(6)">
           <div class="validation-header">
-            <div class="validation-icon review">🔍</div>
+            <div class="validation-icon review"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
             <div class="validation-info">
               <div class="validation-title">
                 سند مالکیت نیروگاه اصفهان
@@ -1883,8 +1883,8 @@ body {
                 <span>در حال بررسی توسط: علی کریمی</span>
               </div>
               <div class="validation-meta">
-                <span>📅 ۱۴۰۳/۰۹/۲۰</span>
-                <span>📎 PDF · ۳.۱ MB</span>
+                <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> ۱۴۰۳/۰۹/۲۰</span>
+                <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> PDF · ۳.۱ MB</span>
               </div>
             </div>
             <span class="validation-status-badge review">در حال بررسی</span>
@@ -1893,7 +1893,7 @@ body {
 
         <div class="validation-item review" onclick="openValidation(7)">
           <div class="validation-header">
-            <div class="validation-icon review">🔍</div>
+            <div class="validation-icon review"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
             <div class="validation-info">
               <div class="validation-title">
                 مجوز احداث کندوستان اردبیل
@@ -1907,8 +1907,8 @@ body {
                 <span>در حال بررسی توسط: سارا رضایی</span>
               </div>
               <div class="validation-meta">
-                <span>📅 ۱۴۰۳/۰۹/۱۹</span>
-                <span>📎 PDF · ۸۵۰ KB</span>
+                <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> ۱۴۰۳/۰۹/۱۹</span>
+                <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> PDF · ۸۵۰ KB</span>
               </div>
             </div>
             <span class="validation-status-badge review">در حال بررسی</span>
@@ -1936,8 +1936,8 @@ body {
                 <span>تأیید توسط: علی کریمی</span>
               </div>
               <div class="validation-meta">
-                <span>📅 ۱۴۰۳/۰۹/۱۵</span>
-                <span>⏱ تأیید در ۳ روز</span>
+                <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> ۱۴۰۳/۰۹/۱۵</span>
+                <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> تأیید در ۳ روز</span>
               </div>
             </div>
             <span class="validation-status-badge approved">تأیید شده</span>
@@ -1960,8 +1960,8 @@ body {
                 <span>تأیید توسط: رضا محمدی</span>
               </div>
               <div class="validation-meta">
-                <span>📅 ۱۴۰۳/۰۹/۱۲</span>
-                <span>⏱ تأیید در ۲ روز</span>
+                <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> ۱۴۰۳/۰۹/۱۲</span>
+                <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> تأیید در ۲ روز</span>
               </div>
             </div>
             <span class="validation-status-badge approved">تأیید شده</span>
@@ -1984,8 +1984,8 @@ body {
                 <span>تأیید توسط: سارا رضایی</span>
               </div>
               <div class="validation-meta">
-                <span>📅 ۱۴۰۳/۰۹/۱۰</span>
-                <span>⏱ تأیید در ۴ روز</span>
+                <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> ۱۴۰۳/۰۹/۱۰</span>
+                <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> تأیید در ۴ روز</span>
               </div>
             </div>
             <span class="validation-status-badge approved">تأیید شده</span>
@@ -2013,7 +2013,7 @@ body {
                 <span>رد توسط: نازنین طاهری</span>
               </div>
               <div class="validation-meta">
-                <span>📅 ۱۴۰۳/۰۹/۱۸</span>
+                <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> ۱۴۰۳/۰۹/۱۸</span>
                 <span style="color: var(--danger); font-weight: 700;">دلیل: مدارک ناقص</span>
               </div>
             </div>
@@ -2037,7 +2037,7 @@ body {
                 <span>رد توسط: رضا محمدی</span>
               </div>
               <div class="validation-meta">
-                <span>📅 ۱۴۰۳/۰۹/۱۴</span>
+                <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> ۱۴۰۳/۰۹/۱۴</span>
                 <span style="color: var(--danger); font-weight: 700;">دلیل: تاریخ انقضا گذشته</span>
               </div>
             </div>
@@ -2054,7 +2054,7 @@ body {
         <div class="card">
           <div class="card-header">
             <div class="card-header-left">
-              <h3><span class="icon">📊</span> وضعیت کلی اسناد</h3>
+              <h3><span class="icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></span> وضعیت کلی اسناد</h3>
               <p>توزیع بر اساس وضعیت اعتبارسنجی</p>
             </div>
           </div>
@@ -2084,7 +2084,7 @@ body {
         <div class="card">
           <div class="card-header">
             <div class="card-header-left">
-              <h3><span class="icon">👥</span> عملکرد کارشناسان</h3>
+              <h3><span class="icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></span> عملکرد کارشناسان</h3>
               <p>تعداد بررسی‌های انجام‌شده</p>
             </div>
           </div>
@@ -2113,7 +2113,7 @@ body {
         <div class="card">
           <div class="card-header">
             <div class="card-header-left">
-              <h3><span class="icon">⚡</span> آمار کلیدی</h3>
+              <h3><span class="icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></span> آمار کلیدی</h3>
               <p>شاخص‌های عملکرد سیستم</p>
             </div>
           </div>
@@ -2446,7 +2446,7 @@ overlay.addEventListener('click', () => {
 /* ==================== TOAST ==================== */
 function showToast(type, title, message) {
   const container = document.getElementById('toastContainer');
-  const icons = { success: '✓', error: '✗', warning: '!', info: 'ℹ' };
+  const icons = { success: '✓', error: '✗', warning: '!', info: '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span>' };
   const toast = document.createElement('div');
   toast.className = `toast ${type}`;
   toast.innerHTML = `
@@ -2496,7 +2496,7 @@ function openValidation(id) {
   if (data) {
     document.getElementById('drawerTitle').textContent = data.title;
     document.getElementById('drawerSubtitle').textContent = data.subtitle;
-    document.querySelector('.drawer-hero h2').textContent = '📄 ' + data.title;
+    document.querySelector('.drawer-hero h2').textContent = '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> ' + data.title;
   }
   drawer.classList.add('open');
   drawerOverlay.classList.add('active');
