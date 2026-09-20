@@ -5,15 +5,15 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ورود و ثبت‌نام | ایرانیان توکن</title>
 <link rel="icon" href="assets/images/logo.png" type="image/png">
-<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="theme.css"><link rel="stylesheet" href="public.css">
 </head>
 <body class="public-site">
-<header class="header" id="header"><nav class="nav">
-<a href="index.html" class="logo"><div class="logo-icon"><img src="assets/images/logo.png" alt="لوگوی ایرانیان توکن"></div><div class="logo-text">ایرانیان توکن<small>زیرساخت توکنیزه‌سازی پروژه‌ها</small></div></a>
-<ul class="nav-links" id="navLinks"><li><a href="index.html">معرفی</a></li><li><a href="projects.html">پروژه‌ها</a></li><li><a href="dashboard.html">داشبورد</a></li><li><a href="contact.html">ارتباط</a></li><li><a href="auth.html" class="active">ورود / ثبت‌نام</a></li></ul>
-<button class="mobile-toggle" id="mobileToggle" aria-label="باز کردن منو"><span class="it-symbol"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span></button>
+<header class="public-header" id="header"><nav class="public-nav">
+<a href="index.html" class="public-logo"><div class="public-logo-mark"><img src="assets/images/logo.png" alt="لوگوی ایرانیان توکن"></div><div class="public-logo-text">ایرانیان توکن<small>زیرساخت توکنیزه‌سازی پروژه‌ها</small></div></a>
+<ul class="public-links" id="navLinks"><li><a href="index.html">معرفی</a></li><li><a href="projects.html">پروژه‌ها</a></li><li><a href="dashboard.html">داشبورد</a></li><li><a href="contact.html">ارتباط</a></li><li><a href="auth.html" class="active">ورود / ثبت‌نام</a></li></ul>
+<button class="public-menu" id="mobileToggle" aria-label="باز کردن منو"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
 </nav></header>
-<main class="public-page auth-page">
+<main class="public-main auth-page">
 <section class="public-hero"><div class="public-kicker">فضای کاربری</div><h1>ورود به فضای مدیریت ایرانیان توکن</h1><p>برای پیگیری پروژه‌ها، اطلاعات توکن، اسناد و وضعیت بررسی از فضای کاربری استفاده کنید.</p></section>
 <section class="auth-layout">
 <div class="auth-intro"><div class="auth-mark"><img src="assets/images/logo.png" alt="لوگوی ایرانیان توکن"></div><div class="public-kicker">فضای مدیریت</div><h2>پروژه و توکن را یکپارچه مدیریت کنید.</h2><p>در نسخه کامل سامانه، حساب کاربری نقطه دسترسی به پروژه‌ها، اسناد، اعتبارسنجی، گزارش‌ها و عملیات مرتبط خواهد بود.</p><div class="auth-links"><a href="projects.html">مشاهده پروژه‌ها</a><a href="contact.html">ارتباط با ما</a></div></div>
@@ -25,9 +25,5 @@
 </section>
 </section>
 </main>
-<footer class="footer"><div class="footer-shell"><a href="index.html" class="footer-logo-link"><div class="footer-logo"><img src="assets/images/logo.png" alt="لوگوی ایرانیان توکن"></div><div class="footer-branding"><strong>ایرانیان توکن</strong><span>زیرساخت توکنیزه‌سازی پروژه‌ها</span></div></a><p class="footer-intro">زیرساختی برای تبدیل پروژه‌ها، دارایی‌ها و ارزش‌های واقعی به ساختارهای دیجیتال قابل تعریف و مدیریت.</p></div></footer>
-<script>
-const header=document.getElementById('header'),toggle=document.getElementById('mobileToggle'),links=document.getElementById('navLinks');
-addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>30),{passive:true});toggle.addEventListener('click',()=>links.classList.toggle('active'));links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('active')));
-document.querySelectorAll('.auth-tabs button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.auth-tabs button').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.auth-pane').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById(b.dataset.pane).classList.add('active')}));
-</script><script src="theme.js"></script></body></html>
+<footer class="public-footer"><div class="public-footer-inner"><a href="index.html" class="public-footer-brand"><div class="public-footer-brand-mark"><img src="assets/images/logo.png" alt="لوگوی ایرانیان توکن"></div><div class="public-footer-brand-text"><strong>ایرانیان توکن</strong><span>زیرساخت توکنیزه‌سازی پروژه‌ها</span></div></a><p class="public-footer-intro">زیرساختی برای تبدیل پروژه‌ها، دارایی‌ها و ارزش‌های واقعی به ساختارهای دیجیتال قابل تعریف و مدیریت.</p></div></footer>
+<script>const toggle=document.getElementById("mobileToggle"),links=document.getElementById("navLinks");toggle?.addEventListener("click",()=>links?.classList.toggle("open"));links?.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>links.classList.remove("open")));<script src="theme.js"></script></body></html>
