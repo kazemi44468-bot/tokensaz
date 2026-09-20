@@ -1188,7 +1188,7 @@ body{font-family:"Vazirmatn","Vazir",Tahoma,sans-serif!important;color:var(--dar
 
       <div class="brand-features">
         <div class="brand-feature">
-          <div class="brand-feature-icon">🔗</div>
+          <div class="brand-feature-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 13a4 4 0 0 0 6 0l2-2a4 4 0 0 0-6-6l-1 1M14 11a4 4 0 0 0-6 0l-2 2a4 4 0 0 0 6 6l1-1"/></svg></span></div>
           <div class="brand-feature-body">
             <strong>توکنیزه‌سازی واقعی</strong>
             <span>بر پایه دارایی، حق یا منفعت واقعی پروژه</span>
@@ -1268,7 +1268,7 @@ body{font-family:"Vazirmatn","Vazir",Tahoma,sans-serif!important;color:var(--dar
             <label class="form-label">رمز عبور <span class="required">*</span></label>
             <div class="input-wrap">
               <input type="password" id="loginPassword" placeholder="••••••••" autocomplete="current-password" required>
-              <span class="input-icon">🔒</span>
+              <span class="input-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span></span>
               <button type="button" class="password-toggle" onclick="togglePassword('loginPassword', this)">◉</button>
             </div>
             <div class="error-text" id="loginPasswordError">! رمز عبور را وارد کنید.</div>
@@ -1294,7 +1294,7 @@ body{font-family:"Vazirmatn","Vazir",Tahoma,sans-serif!important;color:var(--dar
 
         <div class="social-buttons">
           <button class="social-btn" onclick="socialLogin('Google')">
-            <span class="s-icon">🔵</span>
+            <span class="s-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/></svg></span></span>
             Google
           </button>
           <button class="social-btn" onclick="socialLogin('LinkedIn')">
@@ -1358,7 +1358,7 @@ body{font-family:"Vazirmatn","Vazir",Tahoma,sans-serif!important;color:var(--dar
               <label class="form-label">شماره موبایل <span class="required">*</span></label>
               <div class="input-wrap">
                 <input type="tel" id="regPhone" placeholder="۰۹۱۲۳۴۵۶۷۸۹" maxlength="11" required>
-                <span class="input-icon">📱</span>
+                <span class="input-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M10 18h4"/></svg></span></span>
               </div>
               <div class="error-text" id="regPhoneError">! شماره موبایل معتبر وارد کنید (۱۱ رقم).</div>
             </div>
@@ -1367,7 +1367,7 @@ body{font-family:"Vazirmatn","Vazir",Tahoma,sans-serif!important;color:var(--dar
               <label class="form-label">رمز عبور <span class="required">*</span></label>
               <div class="input-wrap">
                 <input type="password" id="regPassword" placeholder="حداقل ۸ کاراکتر" autocomplete="new-password" required oninput="checkPasswordStrength(this.value)">
-                <span class="input-icon">🔒</span>
+                <span class="input-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span></span>
                 <button type="button" class="password-toggle" onclick="togglePassword('regPassword', this)">◉</button>
               </div>
               <div class="error-text" id="regPasswordError">! رمز عبور باید حداقل ۸ کاراکتر باشد.</div>
@@ -1402,7 +1402,7 @@ body{font-family:"Vazirmatn","Vazir",Tahoma,sans-serif!important;color:var(--dar
                   <option value="investor">سرمایه‌گذار</option>
                   <option value="observer">مشاهده‌کننده</option>
                 </select>
-                <span class="input-icon">🎯</span>
+                <span class="input-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg></span></span>
               </div>
             </div>
 
@@ -1425,7 +1425,7 @@ body{font-family:"Vazirmatn","Vazir",Tahoma,sans-serif!important;color:var(--dar
         <!-- Step 2: OTP Verification -->
         <div class="register-step otp-section" id="registerStep2">
           <div class="form-header">
-            <h2>تأیید شماره موبایل 📱</h2>
+            <h2>تأیید شماره موبایل <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M10 18h4"/></svg></span></h2>
             <p>کد ۶ رقمی به شماره <strong id="otpPhoneDisplay">۰۹۱۲۳۴۵۶۷۸۹</strong> ارسال شد.</p>
           </div>
 
@@ -1510,7 +1510,7 @@ function togglePassword(inputId, btn) {
 /* ==================== TOAST ==================== */
 function showToast(type, title, message) {
   const container = document.getElementById('toastContainer');
-  const icons = { success: '✓', error: '❌', warning: '!', info: 'ℹ️' };
+  const icons = { success: '✓', error: '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></span>', warning: '!', info: 'ℹ️' };
 
   const toast = document.createElement('div');
   toast.className = `toast ${type}`;
