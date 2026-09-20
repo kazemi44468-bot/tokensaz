@@ -894,7 +894,7 @@ body {
   overflow: hidden;
 }
 .calc-result::before {
-  content: '☀️';
+  content: '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span>';
   position: absolute;
   top: -20px; left: -20px;
   font-size: 120px;
@@ -1327,7 +1327,7 @@ body {
         </p>
         <div class="solar-hero-actions">
           <a href="#plants" class="btn btn-solar btn-lg" onclick="scrollToPlants(event)">
-            ☀️ مشاهده نیروگاه‌ها
+            <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> مشاهده نیروگاه‌ها
           </a>
           <button class="btn btn-outline btn-lg" onclick="showToast('info','راهنما','راهنمای کامل در حال بارگذاری...')" style="background: rgba(255,255,255,0.15); color: #fff; border-color: rgba(255,255,255,0.3);">
             <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v17H6.5A2.5 2.5 0 0 1 4 17.5z"/></svg></span> راهنمای کامل
@@ -1397,7 +1397,7 @@ body {
     <!-- ==================== TABS ==================== -->
     <nav class="tabs-nav">
       <button class="tab-btn active" data-tab="plants">
-        <span>☀️</span> نیروگاه‌های فعال
+        <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></span> نیروگاه‌های فعال
       </button>
       <button class="tab-btn" data-tab="my-panels">
         <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="10" rx="2"/><path d="M20 10h2v4h-2M7 10v4M10 10v4"/></svg></span></span> پنل‌های من
@@ -1451,7 +1451,7 @@ body {
         <!-- Plant 1 -->
         <div class="solar-card" onclick="showToast('solar','جزئیات','صفحه جزئیات نیروگاه باز شد.')">
           <div class="solar-card-cover">
-            ☀️
+            <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span>
             <span class="solar-card-status active">فعال</span>
             <span class="solar-card-badge"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13 2-8 12h6l-1 8 8-12h-6z"/></svg></span> ۱۰ MW</span>
           </div>
@@ -1531,7 +1531,7 @@ body {
         <!-- Plant 3 -->
         <div class="solar-card" onclick="showToast('solar','جزئیات','صفحه جزئیات نیروگاه باز شد.')">
           <div class="solar-card-cover" style="background: linear-gradient(135deg, #0891b2 0%, #06b6d4 50%, #67e8f9 100%);">
-            ☀️
+            <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span>
             <span class="solar-card-status active">فعال</span>
             <span class="solar-card-badge"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13 2-8 12h6l-1 8 8-12h-6z"/></svg></span> ۸ MW</span>
           </div>
@@ -1611,7 +1611,7 @@ body {
         <!-- Plant 5 -->
         <div class="solar-card" onclick="showToast('solar','جزئیات','صفحه جزئیات نیروگاه باز شد.')">
           <div class="solar-card-cover" style="background: linear-gradient(135deg, #dc2626 0%, #f87171 50%, #fca5a5 100%);">
-            ☀️
+            <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span>
             <span class="solar-card-status active">فعال</span>
             <span class="solar-card-badge"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13 2-8 12h6l-1 8 8-12h-6z"/></svg></span> ۳ MW</span>
           </div>
@@ -1735,7 +1735,7 @@ body {
             <p>نمای بصری از پنل‌های تحت مالکیت شما — هر مربع یک پنل</p>
           </div>
           <div style="display: flex; gap: 8px; align-items: center;">
-            <span class="badge solar">☀️ مالکیت‌شده</span>
+            <span class="badge solar"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> مالکیت‌شده</span>
             <span class="badge info">◯ موجود</span>
             <span class="live-indicator">در حال تولید</span>
           </div>
@@ -1948,7 +1948,7 @@ body {
                   </div>
                 </div>
                 <div class="info-row">
-                  <div class="info-row-icon gold">⚠️</div>
+                  <div class="info-row-icon gold"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
                   <div class="info-row-body">
                     <strong>ریسک تعمیر و نگهداری</strong>
                     <p>هزینه‌های نگهداری از درآمد کسر می‌شود.</p>
@@ -1975,25 +1975,25 @@ body {
           <div class="production-timeline">
             <div class="production-season">
               <span class="season-status current">فعلی</span>
-              <div class="season-icon">🌸</div>
+              <div class="season-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
               <div class="season-name">بهار</div>
               <div class="season-yield">+۲۸٪ تولید</div>
             </div>
             <div class="production-season">
               <span class="season-status current">فصل اوج</span>
-              <div class="season-icon">☀️</div>
+              <div class="season-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
               <div class="season-name">تابستان</div>
               <div class="season-yield">+۴۲٪ تولید</div>
             </div>
             <div class="production-season">
               <span class="season-status upcoming">آینده</span>
-              <div class="season-icon">🍂</div>
+              <div class="season-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
               <div class="season-name">پاییز</div>
               <div class="season-yield">+۲۲٪ تولید</div>
             </div>
             <div class="production-season">
               <span class="season-status upcoming">آینده</span>
-              <div class="season-icon">❄️</div>
+              <div class="season-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
               <div class="season-name">زمستان</div>
               <div class="season-yield">+۸٪ تولید</div>
             </div>
@@ -2170,7 +2170,7 @@ body {
           <div class="card">
             <div class="card-header">
               <div class="card-header-left">
-                <h3><span class="icon">⚖️</span> چارچوب حقوقی</h3>
+                <h3><span class="icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></span> چارچوب حقوقی</h3>
               </div>
             </div>
             <div class="card-body">
@@ -2190,7 +2190,7 @@ body {
                   </div>
                 </div>
                 <div class="info-row">
-                  <div class="info-row-icon gold">⚠️</div>
+                  <div class="info-row-icon gold"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
                   <div class="info-row-body">
                     <strong>توکن ≠ مالکیت مستقیم</strong>
                     <p>توکن‌ها نماینده <strong>سهم در SPV</strong> هستند، نه مالکیت مستقیم نیروگاه.</p>
@@ -2228,15 +2228,15 @@ body {
                   <div class="label">انرژی پاک</div>
                 </div>
                 <div class="mini-stat">
-                  <div class="value gold">⚠️</div>
+                  <div class="value gold"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
                   <div class="label">ریسک تعمیر</div>
                 </div>
                 <div class="mini-stat">
-                  <div class="value gold">⚠️</div>
+                  <div class="value gold"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
                   <div class="label">نوسان ارز</div>
                 </div>
                 <div class="mini-stat">
-                  <div class="value gold">⚠️</div>
+                  <div class="value gold"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
                   <div class="label">تغییر قوانین</div>
                 </div>
               </div>
