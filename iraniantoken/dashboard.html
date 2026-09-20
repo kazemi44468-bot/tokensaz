@@ -80,14 +80,6 @@
 }
 </style><style id="member-workspace-style">
 .member-view-card{margin-bottom:22px}.member-view-body{padding:0!important}.member-toolbar{display:grid;grid-template-columns:1fr 180px auto;gap:10px;padding:16px;border-bottom:1px solid var(--border)}.member-toolbar input,.member-toolbar select{border:1px solid var(--border);border-radius:9px;padding:10px 12px;font-family:inherit;background:#fff}.member-token-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:18px}.member-token-card{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;padding:14px;border:1px solid #dbe5ed;border-radius:11px;background:#fff}.token-symbol{width:42px;height:42px;border-radius:9px;display:grid;place-items:center;background:#0a2b46;color:#72d8e4;font-weight:800;font-size:11px}.member-token-card small,.member-token-card span:not(.token-symbol){display:block;color:#71859a;font-size:10px;margin-top:3px}.member-dossier-head{display:flex;justify-content:space-between;gap:20px;padding:22px;border-bottom:1px solid var(--border)}.member-dossier-head h2{margin:6px 0;font-size:25px}.member-dossier-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:18px}.member-dossier-grid>div{border:1px solid #dbe5ed;border-radius:10px;padding:13px;background:#fff}.member-dossier-grid b,.member-dossier-grid span{display:block}.member-dossier-grid b{font-size:10px;color:#71859a;margin-bottom:6px}.member-dossier-grid span{font-size:12px;color:#10253c;font-weight:700}.member-dossier-tabs{display:flex;flex-wrap:wrap;gap:7px;padding:0 18px 18px}.member-dossier-tabs button{border:1px solid #dbe5ed;background:#f7fafc;border-radius:8px;padding:8px 12px;font-family:inherit;font-size:10px;color:#52697c}.member-dossier-tabs button.active{background:#0b3553;color:#fff;border-color:#0b3553}.member-dossier-note,.member-placeholder{margin:0 18px 18px;padding:15px;border:1px solid #dbe5ed;border-radius:10px;background:#f7fafc;color:#52697c;font-size:11px;line-height:2}@media(max-width:760px){.member-toolbar{grid-template-columns:1fr}.member-token-grid,.member-dossier-grid{grid-template-columns:1fr}.member-dossier-head{display:block}.member-dossier-head .badge{display:inline-block;margin-top:10px}}
-</style><style id="member-workspace-frame-css">
-.member-workspace-shell{margin:0 0 28px;padding:0}
-.member-workspace-head{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 20px;margin-bottom:12px;border:1px solid #dbe5ec;border-radius:16px;background:#fff;box-shadow:0 8px 24px rgba(12,45,70,.045)}
-.member-workspace-head h2{margin:4px 0 2px;font-size:19px;color:#183148}
-.member-workspace-head p{font-size:9px;color:#758899}
-.member-workspace-frame{border:1px solid #dbe5ec;border-radius:18px;background:#eef3f7;overflow:hidden;box-shadow:0 12px 30px rgba(12,45,70,.055)}
-#memberWorkspaceFrame{display:block;width:100%;min-height:760px;height:760px;border:0;background:#eef3f7}
-@media(max-width:680px){.member-workspace-head{align-items:stretch;flex-direction:column}.member-workspace-head h2{font-size:17px}.member-workspace-head .btn{width:100%;justify-content:center}#memberWorkspaceFrame{min-height:700px}}
 </style></head>
 <body><script>if(sessionStorage.getItem("itMemberAuth")!=="1"){location.replace("auth.html")}</script>
 
@@ -216,19 +208,7 @@
   </header>
 
   <!-- CONTENT -->
-  <main class="content"><section id="memberWorkspaceShell" class="member-workspace-shell" hidden>
-  <div class="member-workspace-head">
-    <div>
-      <span class="it-eyebrow">MEMBER WORKSPACE</span>
-      <h2 id="memberWorkspaceTitle">فضای کاری</h2>
-      <p>این صفحه در همان فضای اعضا نمایش داده می‌شود و از داشبورد خارج نمی‌شوید.</p>
-    </div>
-    <button id="memberWorkspaceBack" class="btn btn-outline btn-sm" type="button">بازگشت به نمای کلی</button>
-  </div>
-  <div class="member-workspace-frame">
-    <iframe id="memberWorkspaceFrame" title="فضای کاری اعضا" loading="eager" hidden></iframe>
-  </div>
-</section>
+  <main class="content">
     <div class="page-header">
       <div class="page-title">
         <span class="it-eyebrow">IRANIAN TOKEN · CONTROL CENTER</span>
@@ -663,112 +643,7 @@ document.head.appendChild(style);
 </script>
 
 <script>
-/* ==================== MEMBER WORKSPACE ==================== */
-(()=> {
-  const frame = document.getElementById('memberWorkspaceFrame');
-  const shell = document.getElementById('memberWorkspaceShell');
-  const title = document.getElementById('memberWorkspaceTitle');
-  const back = document.getElementById('memberWorkspaceBack');
-  if(!frame || !shell) return;
 
-  const isPage = href => /(?:^|\/)iraniantoken\/(?:[a-z0-9-]+)\.html(?:\?|#|$)/i.test(href) || /^[a-z0-9-]+\.html(?:\?|#|$)/i.test(href);
-  const blocked = ['auth.html','index.html','dashboard.html'];
-  const labelMap = {
-    'projects.html':'همه پروژه‌ها','project-detail.html':'پرونده پروژه','new-project.html':'ثبت پروژه',
-    'car-token.html':'ماژول توکن خودرو','housing-token.html':'ماژول توکن مسکن',
-    'honey-token.html':'ماژول توکن عسل','solar-token.html':'ماژول توکن انرژی خورشیدی',
-    'validation.html':'اعتبارسنجی','reports.html':'گزارش‌ها','users.html':'کاربران',
-    'settings.html':'تنظیمات','profile.html':'پروفایل','notifications.html':'اعلان‌ها',
-    'help.html':'راهنما','contact.html':'ارتباط'
-  };
-  const fa = n => String(n??'').replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
-
-  function pageName(src){
-    try{
-      const u = new URL(src, location.href);
-      const base = u.pathname.split('/').pop();
-      return labelMap[base] || base.replace('.html','') || 'فضای کاری';
-    }catch(e){ return 'فضای کاری'; }
-  }
-
-  function hideChrome(doc){
-    const style=doc.createElement('style');
-    style.id='member-embedded-style';
-    style.textContent=`
-      html,body{min-height:100%;background:#eef3f7!important}
-      .sidebar{display:none!important}
-      .topbar{display:none!important}
-      .main{margin-right:0!important;margin-left:0!important;min-height:auto!important}
-      .content{max-width:none!important;width:100%!important;margin:0!important;padding:24px!important}
-      .it-footer{margin-top:30px!important}
-      @media(max-width:700px){.content{padding:14px!important}}
-    `;
-    doc.head.appendChild(style);
-    doc.documentElement.scrollTop=0;
-    doc.body.scrollTop=0;
-  }
-
-  function bindFrameLinks(doc){
-    doc.querySelectorAll('a[href]').forEach(a=>{
-      if(a.dataset.memberBound) return;
-      a.dataset.memberBound='1';
-      a.addEventListener('click',e=>{
-        const href=a.getAttribute('href')||'';
-        if(!isPage(href)) return;
-        const file=(href.split('?')[0].split('#')[0].split('/').pop()||'').toLowerCase();
-        if(blocked.includes(file)) return;
-        e.preventDefault();
-        load(href);
-      });
-    });
-  }
-
-  function load(src){
-    if(!src) return;
-    shell.hidden=false;
-    frame.hidden=false;
-    Array.from(shell.parentElement.children).forEach(x=>{if(x!==shell)x.hidden=true;});
-    title.textContent=pageName(src);
-    frame.src=src;
-    shell.scrollIntoView({behavior:'smooth',block:'start'});
-    document.querySelectorAll('.sidebar-nav a').forEach(a=>{
-      const h=a.getAttribute('href')||'';
-      a.classList.toggle('active',h.split('?')[0]===src.split('?')[0]);
-    });
-  }
-
-  frame.addEventListener('load',()=>{
-    try{
-      const doc=frame.contentDocument;
-      hideChrome(doc);
-      bindFrameLinks(doc);
-      title.textContent=pageName(frame.src);
-      frame.style.height=Math.max(doc.documentElement.scrollHeight,760)+'px';
-      doc.defaultView.addEventListener('resize',()=>{frame.style.height=Math.max(doc.documentElement.scrollHeight,760)+'px';});
-    }catch(e){}
-  });
-
-  back.addEventListener('click',()=>{
-    frame.hidden=true;
-    shell.hidden=true;
-    Array.from(shell.parentElement.children).forEach(x=>x.hidden=false);
-    document.querySelectorAll('.sidebar-nav a').forEach(a=>a.classList.remove('active'));
-    window.scrollTo({top:0,behavior:'smooth'});
-  });
-
-  document.querySelectorAll('.sidebar-nav a, .it-module-card a, .action-btn[href]').forEach(a=>{
-    const href=a.getAttribute('href')||'';
-    if(!isPage(href)) return;
-    const file=(href.split('?')[0].split('#')[0].split('/').pop()||'').toLowerCase();
-    if(blocked.includes(file)) return;
-    a.addEventListener('click',e=>{
-      e.preventDefault();
-      load(href);
-    });
-  });
-
-  window.ITMemberWorkspace={load};
-})();</script>
 <script src="data.js"></script><script>\n(()=>{const role=sessionStorage.getItem("itMemberRole")||"member";document.documentElement.dataset.role=role;const restricted=["users.html","reports.html","validation.html","settings.html"];document.querySelectorAll(".sidebar-nav a").forEach(a=>{if(restricted.includes(a.getAttribute("href"))&&role==="member"){a.closest(".nav-group")?.remove();a.remove()}});const rows=document.getElementById("memberProjectRows"),search=document.getElementById("memberProjectSearch"),status=document.getElementById("memberProjectStatus"),data=window.ITData?.projects||[];const fa=n=>String(n??"").replace(/\\d/g,d=>"۰۱۲۳۴۵۶۷۸۹"[d]);const labels={active:"فعال",pending:"در حال بررسی",paused:"متوقف",done:"خاتمه‌یافته"};function render(){const q=(search.value||"").trim().toLowerCase(),s=status.value;const list=data.filter(p=>(!q||[p.name,p.domain,p.code,p.token?.symbol,p.asset?.type].join(" ").toLowerCase().includes(q))&&(!s||p.status===s));rows.innerHTML=list.map(p=>`<tr><td><div class="project-cell"><div class="project-thumb">${(p.token?.symbol||"TK").slice(0,2)}</div><div><strong>${p.name}</strong><small>${p.code||""}</small></div></div></td><td>${p.asset?.type||"—"}</td><td><span class="badge info">${p.model||p.token?.model||"—"}</span></td><td><span class="badge ${p.status==="active"?"success":p.status==="pending"?"warning":"gray"}">${labels[p.status]||p.status}</span></td><td><div class="progress-mini"><div class="fill" style="width:${p.progress||0}%"></div></div><small>${fa(p.progress)}٪</small></td><td><a class="action-btn" href="project-detail.html?id=${p.id}">پرونده</a></td></tr>`).join("")||`<tr><td colspan="6" style="text-align:center">پروژه‌ای پیدا نشد.</td></tr>`}search.addEventListener("input",render);status.addEventListener("change",render);render()})();\n</script><script src="theme.js"></script>
 </body>
 </html>
