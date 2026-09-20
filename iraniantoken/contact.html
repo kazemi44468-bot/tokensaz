@@ -6,19 +6,19 @@
 <title>ارتباط با ما | ایرانیان توکن</title>
 <meta name="description" content="ارتباط با ایرانیان توکن برای بررسی پروژه، دارایی پایه و ساختار توکن.">
 <link rel="icon" href="assets/images/logo.png" type="image/png">
-<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="theme.css"><link rel="stylesheet" href="public.css">
 </head>
 <body class="public-site">
-<header class="header" id="header">
-<nav class="nav">
-<a href="index.html" class="logo"><div class="logo-icon"><img src="assets/images/logo.png" alt="لوگوی ایرانیان توکن"></div><div class="logo-text">ایرانیان توکن<small>زیرساخت توکنیزه‌سازی پروژه‌ها</small></div></a>
-<ul class="nav-links" id="navLinks">
+<header class="public-header" id="header">
+<nav class="public-nav">
+<a href="index.html" class="public-logo"><div class="public-logo-mark"><img src="assets/images/logo.png" alt="لوگوی ایرانیان توکن"></div><div class="public-logo-text">ایرانیان توکن<small>زیرساخت توکنیزه‌سازی پروژه‌ها</small></div></a>
+<ul class="public-links" id="navLinks">
 <li><a href="index.html">معرفی</a></li><li><a href="projects.html">پروژه‌ها</a></li><li><a href="dashboard.html">داشبورد</a></li><li><a href="contact.html" class="active">ارتباط</a></li><li><a href="auth.html">ورود / ثبت‌نام</a></li>
 </ul>
-<button class="mobile-toggle" id="mobileToggle" aria-label="باز کردن منو"><span class="it-symbol"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span></button>
+<button class="public-menu" id="mobileToggle" aria-label="باز کردن منو"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
 </nav>
 </header>
-<main class="public-page contact-page">
+<main class="public-main contact-page">
 <section class="public-hero">
 <div class="public-kicker">ارتباط با ایرانیان توکن</div>
 <h1>برای بررسی پروژه و ساختار توکن، از همین‌جا شروع کنید.</h1>
@@ -42,13 +42,8 @@
 </form>
 </section>
 </main>
-<footer class="footer"><div class="footer-shell"><a href="index.html" class="footer-logo-link"><div class="footer-logo"><img src="assets/images/logo.png" alt="لوگوی ایرانیان توکن"></div><div class="footer-branding"><strong>ایرانیان توکن</strong><span>زیرساخت توکنیزه‌سازی پروژه‌ها</span></div></a><p class="footer-intro">زیرساختی برای تبدیل پروژه‌ها، دارایی‌ها و ارزش‌های واقعی به ساختارهای دیجیتال قابل تعریف و مدیریت.</p></div></footer>
-<script>
-const header=document.getElementById('header'),toggle=document.getElementById('mobileToggle'),links=document.getElementById('navLinks');
-addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>30),{passive:true});
-toggle.addEventListener('click',()=>links.classList.toggle('active'));
-links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('active')));
-</script>
+<footer class="public-footer"><div class="public-footer-inner"><a href="index.html" class="public-footer-brand"><div class="public-footer-brand-mark"><img src="assets/images/logo.png" alt="لوگوی ایرانیان توکن"></div><div class="public-footer-brand-text"><strong>ایرانیان توکن</strong><span>زیرساخت توکنیزه‌سازی پروژه‌ها</span></div></a><p class="public-footer-intro">زیرساختی برای تبدیل پروژه‌ها، دارایی‌ها و ارزش‌های واقعی به ساختارهای دیجیتال قابل تعریف و مدیریت.</p></div></footer>
+<script>const toggle=document.getElementById("mobileToggle"),links=document.getElementById("navLinks");toggle?.addEventListener("click",()=>links?.classList.toggle("open"));links?.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>links.classList.remove("open")));
 <script src="theme.js"></script>
 </body>
 </html>
