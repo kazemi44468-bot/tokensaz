@@ -1250,7 +1250,7 @@ body{font-family:"Vazirmatn","Vazir",Tahoma,sans-serif!important;color:var(--dar
       <!-- ==================== LOGIN FORM ==================== -->
       <div class="form-page active" id="pageLogin">
         <div class="form-header">
-          <h2>خوش آمدید 👋</h2>
+          <h2>خوش آمدید <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></h2>
           <p>برای ورود به پنل مدیریت، اطلاعات حساب خود را وارد کنید.</p>
         </div>
 
@@ -1259,7 +1259,7 @@ body{font-family:"Vazirmatn","Vazir",Tahoma,sans-serif!important;color:var(--dar
             <label class="form-label">ایمیل یا شماره موبایل <span class="required">*</span></label>
             <div class="input-wrap">
               <input type="text" id="loginIdentifier" placeholder="example@email.com" autocomplete="username" required>
-              <span class="input-icon">📧</span>
+              <span class="input-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></span>
             </div>
             <div class="error-text" id="loginIdentifierError">! ایمیل یا شماره موبایل را وارد کنید.</div>
           </div>
@@ -1298,7 +1298,7 @@ body{font-family:"Vazirmatn","Vazir",Tahoma,sans-serif!important;color:var(--dar
             Google
           </button>
           <button class="social-btn" onclick="socialLogin('LinkedIn')">
-            <span class="s-icon">💼</span>
+            <span class="s-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></span>
             LinkedIn
           </button>
         </div>
@@ -1349,7 +1349,7 @@ body{font-family:"Vazirmatn","Vazir",Tahoma,sans-serif!important;color:var(--dar
               <label class="form-label">ایمیل <span class="required">*</span></label>
               <div class="input-wrap">
                 <input type="email" id="regEmail" placeholder="example@email.com" autocomplete="email" required>
-                <span class="input-icon">📧</span>
+                <span class="input-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></span>
               </div>
               <div class="error-text" id="regEmailError">! ایمیل معتبر وارد کنید.</div>
             </div>
@@ -1500,7 +1500,7 @@ function togglePassword(inputId, btn) {
   const input = document.getElementById(inputId);
   if (input.type === 'password') {
     input.type = 'text';
-    btn.textContent = '🙈';
+    btn.textContent = '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span>';
   } else {
     input.type = 'password';
     btn.textContent = '◉';
@@ -1510,7 +1510,7 @@ function togglePassword(inputId, btn) {
 /* ==================== TOAST ==================== */
 function showToast(type, title, message) {
   const container = document.getElementById('toastContainer');
-  const icons = { success: '✓', error: '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></span>', warning: '!', info: 'ℹ️' };
+  const icons = { success: '✓', error: '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></span>', warning: '!', info: '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span>' };
 
   const toast = document.createElement('div');
   toast.className = `toast ${type}`;
