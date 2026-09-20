@@ -361,7 +361,7 @@ body {
   margin-bottom: 20px;
   backdrop-filter: blur(10px);
 }
-.solar-badge::before { content: '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13 2-8 12h6l-1 8 8-12h-6z"/></svg></span>'; }
+.solar-badge::before { content:"";width:6px;height:6px;border-radius:50%;background:currentColor; }
 .solar-hero h1 {
   font-size: clamp(26px, 4vw, 42px);
   font-weight: 900;
@@ -894,7 +894,7 @@ body {
   overflow: hidden;
 }
 .calc-result::before {
-  content: '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span>';
+  content:"";width:6px;height:6px;border-radius:50%;background:currentColor;
   position: absolute;
   top: -20px; left: -20px;
   font-size: 120px;
