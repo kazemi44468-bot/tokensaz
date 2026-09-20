@@ -1009,7 +1009,7 @@ body {
 
   <!-- TOPBAR -->
   <header class="topbar">
-    <button class="toggle-btn" id="toggleBtn">☰</button>
+    <button class="toggle-btn" id="toggleBtn"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span></button>
     <div class="breadcrumb">
       <a href="dashboard.html">داشبورد</a>
       <span>›</span>
@@ -1018,7 +1018,7 @@ body {
     <div class="topbar-actions">
       <button class="icon-btn" onclick="markAllRead()" title="علامت‌گذاری همه به‌عنوان خوانده‌شده">✓</button>
       <button class="icon-btn" onclick="window.print()" title="چاپ">⎙</button>
-      <button class="icon-btn" id="notifBtn">🔔<span class="dot"></span></button>
+      <button class="icon-btn" id="notifBtn"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M18 9a6 6 0 0 0-12 0c0 6-2 6-2 8h16c0-2-2-2-2-8"/><path d="M10 21h4"/></svg></span><span class="dot"></span></button>
     </div>
   </header>
 
@@ -1029,7 +1029,7 @@ body {
     <div class="page-header">
       <div class="page-title">
         <h1>
-          مرکز اعلان‌ها 🔔
+          مرکز اعلان‌ها <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M18 9a6 6 0 0 0-12 0c0 6-2 6-2 8h16c0-2-2-2-2-8"/><path d="M10 21h4"/></svg></span>
           <span class="unread-badge" id="unreadBadge">۸ خوانده‌نشده</span>
         </h1>
         <p>پیگیری آخرین رویدادهای سیستم، پروژه‌ها، اسناد و کاربران</p>
@@ -1039,7 +1039,7 @@ body {
           ✓ علامت‌گذاری همه
         </button>
         <button class="btn btn-primary" onclick="showToast('success','تنظیمات','تنظیمات اعلان‌ها باز شد.')">
-          ⚙ تنظیمات اعلان‌ها
+          <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="m19 15 2 1-2 3-2-1a8 8 0 0 1-2 1v2h-4v-2a8 8 0 0 1-2-1l-2 1-2-3 2-1a8 8 0 0 1 0-2l-2-1 2-3 2 1a8 8 0 0 1 2-1V6h4v2a8 8 0 0 1 2 1l2-1 2 3-2 1a8 8 0 0 1 0 2z"/></svg></span> تنظیمات اعلان‌ها
         </button>
       </div>
     </div>
@@ -1048,7 +1048,7 @@ body {
     <div class="kpi-grid">
       <div class="kpi-card">
         <div class="kpi-header">
-          <div class="kpi-icon">🔔</div>
+          <div class="kpi-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M18 9a6 6 0 0 0-12 0c0 6-2 6-2 8h16c0-2-2-2-2-8"/><path d="M10 21h4"/></svg></span></div>
         </div>
         <div class="kpi-value">۸</div>
         <div class="kpi-label">خوانده‌نشده</div>
@@ -1090,7 +1090,7 @@ body {
     <!-- TABS -->
     <nav class="tabs-nav">
       <button class="tab-btn active" data-tab="all">
-        <span>📥</span> همه <span class="tab-count">۵۸</span>
+        <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 4v11M8 11l4 4 4-4M5 20h14"/></svg></span></span> همه <span class="tab-count">۵۸</span>
       </button>
       <button class="tab-btn" data-tab="unread">
         <span>🔴</span> خوانده‌نشده <span class="tab-count">۸</span>
@@ -1108,7 +1108,7 @@ body {
         <span>◌</span> کاربران <span class="tab-count">۵</span>
       </button>
       <button class="tab-btn" data-tab="system">
-        <span>⚙</span> سیستم <span class="tab-count">۴</span>
+        <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="m19 15 2 1-2 3-2-1a8 8 0 0 1-2 1v2h-4v-2a8 8 0 0 1-2-1l-2 1-2-3 2-1a8 8 0 0 1 0-2l-2-1 2-3 2 1a8 8 0 0 1 2-1V6h4v2a8 8 0 0 1 2 1l2-1 2 3-2 1a8 8 0 0 1 0 2z"/></svg></span></span> سیستم <span class="tab-count">۴</span>
       </button>
     </nav>
 
@@ -1148,18 +1148,18 @@ body {
                     <span class="unread-dot"></span>
                     سند مالکیت تأیید شد
                   </div>
-                  <div class="notification-time">📅 ۱۰ دقیقه پیش</div>
+                  <div class="notification-time"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 9h16"/></svg></span> ۱۰ دقیقه پیش</div>
                 </div>
                 <div class="notification-text">
                   سند مالکیت زمین پروژه <strong>«دامداری نمونه»</strong> توسط کارشناس <strong>علی کریمی</strong> تأیید نهایی شد.
                 </div>
                 <div class="notification-meta">
-                  <span class="notification-tag doc">📄 سند</span>
+                  <span class="notification-tag doc"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h5"/></svg></span> سند</span>
                   <span class="notification-tag">IRT-1403-001</span>
                 </div>
                 <div class="notification-actions">
                   <button class="notification-action primary" onclick="event.stopPropagation(); window.location.href='validation.html'">
-                    👁 مشاهده سند
+                    <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 12s3.5-5 9-5 9 5 9 5-3.5 5-9 5-9-5-9-5Z"/><circle cx="12" cy="12" r="2"/></svg></span> مشاهده سند
                   </button>
                   <button class="notification-action" onclick="event.stopPropagation(); showToast('success','علامت‌گذاری','اعلان خوانده شد.')">
                     ✓ خواندم
@@ -1177,7 +1177,7 @@ body {
                     <span class="unread-dot"></span>
                     ۲۰۰ توکن جدید تخصیص یافت
                   </div>
-                  <div class="notification-time">📅 ۳۰ دقیقه پیش</div>
+                  <div class="notification-time"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 9h16"/></svg></span> ۳۰ دقیقه پیش</div>
                 </div>
                 <div class="notification-text">
                   تعداد <strong>۲۰۰ توکن</strong> از توکن‌های پروژه <strong>«نیروگاه خورشیدی یزد»</strong> به سرمایه‌گذار جدید تخصیص یافت.
@@ -1188,7 +1188,7 @@ body {
                 </div>
                 <div class="notification-actions">
                   <button class="notification-action primary" onclick="event.stopPropagation(); showToast('info','جزئیات','صفحه توکن باز شد.')">
-                    👁 مشاهده تخصیص
+                    <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 12s3.5-5 9-5 9 5 9 5-3.5 5-9 5-9-5-9-5Z"/><circle cx="12" cy="12" r="2"/></svg></span> مشاهده تخصیص
                   </button>
                 </div>
               </div>
@@ -1196,14 +1196,14 @@ body {
 
             <!-- Notification 3 - Unread - Info -->
             <div class="notification-item unread type-info" onclick="markAsRead(this)">
-              <div class="notification-icon info">👥</div>
+              <div class="notification-icon info"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0M16 11a3 3 0 0 1 5 2v7"/></svg></span></div>
               <div class="notification-body">
                 <div class="notification-header">
                   <div class="notification-title">
                     <span class="unread-dot"></span>
                     کاربر جدید در سیستم
                   </div>
-                  <div class="notification-time">📅 ۱ ساعت پیش</div>
+                  <div class="notification-time"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 9h16"/></svg></span> ۱ ساعت پیش</div>
                 </div>
                 <div class="notification-text">
                   کاربر <strong>سارا رضایی</strong> با نقش «مجری فنی» به سیستم اضافه شد و نیازمند تأیید دسترسی است.
@@ -1213,7 +1213,7 @@ body {
                 </div>
                 <div class="notification-actions">
                   <button class="notification-action primary" onclick="event.stopPropagation(); window.location.href='users.html'">
-                    👁 مشاهده کاربر
+                    <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 12s3.5-5 9-5 9 5 9 5-3.5 5-9 5-9-5-9-5Z"/><circle cx="12" cy="12" r="2"/></svg></span> مشاهده کاربر
                   </button>
                   <button class="notification-action danger" onclick="event.stopPropagation(); showToast('warning','رد شد','درخواست کاربر رد شد.')">
                     ✗ رد درخواست
@@ -1231,18 +1231,18 @@ body {
                     <span class="unread-dot"></span>
                     سند در انتظار بررسی
                   </div>
-                  <div class="notification-time">📅 ۲ ساعت پیش</div>
+                  <div class="notification-time"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 9h16"/></svg></span> ۲ ساعت پیش</div>
                 </div>
                 <div class="notification-text">
                   سند <strong>«گزارش ارزیابی دارایی»</strong> پروژه <strong>«برج تجاری آرین»</strong> بیش از ۵ روز در انتظار بررسی است.
                 </div>
                 <div class="notification-meta">
-                  <span class="notification-tag doc">📄 سند</span>
+                  <span class="notification-tag doc"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h5"/></svg></span> سند</span>
                   <span class="notification-tag">IRT-1403-003</span>
                 </div>
                 <div class="notification-actions">
                   <button class="notification-action primary" onclick="event.stopPropagation(); window.location.href='validation.html'">
-                    👁 بررسی سند
+                    <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 12s3.5-5 9-5 9 5 9 5-3.5 5-9 5-9-5-9-5Z"/><circle cx="12" cy="12" r="2"/></svg></span> بررسی سند
                   </button>
                 </div>
               </div>
@@ -1256,13 +1256,13 @@ body {
                   <div class="notification-title">
                     به‌روزرسانی رابط کاربری
                   </div>
-                  <div class="notification-time">📅 ۳ ساعت پیش</div>
+                  <div class="notification-time"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 9h16"/></svg></span> ۳ ساعت پیش</div>
                 </div>
                 <div class="notification-text">
                   نسخه جدید پنل مدیریت با قابلیت‌های پیشرفته منتشر شد. <strong>امکانات جدید</strong> را ببینید.
                 </div>
                 <div class="notification-meta">
-                  <span class="notification-tag system">⚙ سیستم</span>
+                  <span class="notification-tag system"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="m19 15 2 1-2 3-2-1a8 8 0 0 1-2 1v2h-4v-2a8 8 0 0 1-2-1l-2 1-2-3 2-1a8 8 0 0 1 0-2l-2-1 2-3 2 1a8 8 0 0 1 2-1V6h4v2a8 8 0 0 1 2 1l2-1 2 3-2 1a8 8 0 0 1 0 2z"/></svg></span> سیستم</span>
                   <span class="notification-tag">نسخه ۲.۴.۱</span>
                 </div>
               </div>
@@ -1270,19 +1270,19 @@ body {
 
             <!-- Notification 6 - Read - Info -->
             <div class="notification-item type-info" onclick="showToast('info','مشاهده','جزئیات اعلان باز شد.')">
-              <div class="notification-icon info">📊</div>
+              <div class="notification-icon info"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 19V9M10 19V5M15 19v-7M20 19V3"/></svg></span></div>
               <div class="notification-body">
                 <div class="notification-header">
                   <div class="notification-title">
                     گزارش ماهانه آماده شد
                   </div>
-                  <div class="notification-time">📅 ۵ ساعت پیش</div>
+                  <div class="notification-time"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 9h16"/></svg></span> ۵ ساعت پیش</div>
                 </div>
                 <div class="notification-text">
                   گزارش ماهانه <strong>شهریور ۱۴۰۳</strong> شامل آمار پروژه‌ها، توکن‌ها و کاربران آماده دانلود است.
                 </div>
                 <div class="notification-meta">
-                  <span class="notification-tag system">⚙ سیستم</span>
+                  <span class="notification-tag system"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="m19 15 2 1-2 3-2-1a8 8 0 0 1-2 1v2h-4v-2a8 8 0 0 1-2-1l-2 1-2-3 2-1a8 8 0 0 1 0-2l-2-1 2-3 2 1a8 8 0 0 1 2-1V6h4v2a8 8 0 0 1 2 1l2-1 2 3-2 1a8 8 0 0 1 0 2z"/></svg></span> سیستم</span>
                   <span class="notification-tag">گزارش</span>
                 </div>
                 <div class="notification-actions">
@@ -1301,7 +1301,7 @@ body {
                   <div class="notification-title">
                     پروژه جدید ثبت شد
                   </div>
-                  <div class="notification-time">📅 دیروز</div>
+                  <div class="notification-time"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 9h16"/></svg></span> دیروز</div>
                 </div>
                 <div class="notification-text">
                   پروژه <strong>«کندوستان ارگانیک اردبیل»</strong> با کد IRT-1403-014 در سیستم ثبت شد و در انتظار اعتبارسنجی است.
@@ -1315,13 +1315,13 @@ body {
 
             <!-- Notification 8 - Read - Info -->
             <div class="notification-item type-info" onclick="showToast('info','مشاهده','جزئیات اعلان باز شد.')">
-              <div class="notification-icon info">💬</div>
+              <div class="notification-icon info"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 6h14v10H9l-4 3z"/></svg></span></div>
               <div class="notification-body">
                 <div class="notification-header">
                   <div class="notification-title">
                     نظر جدید روی پروژه
                   </div>
-                  <div class="notification-time">📅 دیروز</div>
+                  <div class="notification-time"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 9h16"/></svg></span> دیروز</div>
                 </div>
                 <div class="notification-text">
                   <strong>رضا محمدی</strong> نظر جدیدی روی پروژه <strong>«برج تجاری آرین»</strong> ثبت کرد.
@@ -1340,13 +1340,13 @@ body {
                   <div class="notification-title">
                     سند رد شد
                   </div>
-                  <div class="notification-time">📅 ۲ روز پیش</div>
+                  <div class="notification-time"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 9h16"/></svg></span> ۲ روز پیش</div>
                 </div>
                 <div class="notification-text">
                   سند <strong>«گزارش بازدید میدانی»</strong> پروژه <strong>«کارخانه فولاد»</strong> به دلیل <strong>مدارک ناقص</strong> رد شد.
                 </div>
                 <div class="notification-meta">
-                  <span class="notification-tag doc">📄 سند</span>
+                  <span class="notification-tag doc"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h5"/></svg></span> سند</span>
                   <span class="notification-tag">دلیل: مدارک ناقص</span>
                 </div>
               </div>
@@ -1354,13 +1354,13 @@ body {
 
             <!-- Notification 10 - Read - Gold -->
             <div class="notification-item type-gold" onclick="showToast('info','مشاهده','جزئیات اعلان باز شد.')">
-              <div class="notification-icon gold">💰</div>
+              <div class="notification-icon gold"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="12" rx="2"/><circle cx="12" cy="12" r="3"/></svg></span></div>
               <div class="notification-body">
                 <div class="notification-header">
                   <div class="notification-title">
                     درآمد قابل برداشت
                   </div>
-                  <div class="notification-time">📅 ۳ روز پیش</div>
+                  <div class="notification-time"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 9h16"/></svg></span> ۳ روز پیش</div>
                 </div>
                 <div class="notification-text">
                   مبلغ <strong>۱۸ میلیون تومان</strong> از سود پروژه <strong>«توکن کندوی عسل»</strong> قابل برداشت شد.
@@ -1370,7 +1370,7 @@ body {
                 </div>
                 <div class="notification-actions">
                   <button class="notification-action primary" onclick="event.stopPropagation(); showToast('success','برداشت','درخواست برداشت ثبت شد.')">
-                    💰 برداشت
+                    <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="12" rx="2"/><circle cx="12" cy="12" r="3"/></svg></span> برداشت
                   </button>
                 </div>
               </div>
@@ -1394,7 +1394,7 @@ body {
         <div class="tab-panel" id="panel-unread">
           <div class="notifications-list" id="unreadList">
             <div class="empty-state">
-              <div class="icon">🔔</div>
+              <div class="icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M18 9a6 6 0 0 0-12 0c0 6-2 6-2 8h16c0-2-2-2-2-8"/><path d="M10 21h4"/></svg></span></div>
               <h3>هنوز اعلان خوانده‌نشده‌ای وجود دارد</h3>
               <p>۸ اعلان خوانده‌نشده در تب «همه» موجود است</p>
               <button class="btn btn-primary" onclick="document.querySelector('.tab-btn[data-tab=\'all\']').click()">مشاهده همه</button>
@@ -1409,7 +1409,7 @@ body {
               <div class="notification-body">
                 <div class="notification-header">
                   <div class="notification-title">پروژه جدید ثبت شد</div>
-                  <div class="notification-time">📅 دیروز</div>
+                  <div class="notification-time"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 9h16"/></svg></span> دیروز</div>
                 </div>
                 <div class="notification-text">
                   پروژه <strong>«کندوستان ارگانیک اردبیل»</strong> با کد IRT-1403-014 ثبت شد.
@@ -1425,7 +1425,7 @@ body {
               <div class="notification-body">
                 <div class="notification-header">
                   <div class="notification-title">پیشرفت پروژه به‌روزرسانی شد</div>
-                  <div class="notification-time">📅 ۲ روز پیش</div>
+                  <div class="notification-time"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 9h16"/></svg></span> ۲ روز پیش</div>
                 </div>
                 <div class="notification-text">
                   پیشرفت پروژه <strong>«نیروگاه خورشیدی»</strong> از ۸۵٪ به ۸۸٪ افزایش یافت.
@@ -1445,7 +1445,7 @@ body {
               <div class="notification-body">
                 <div class="notification-header">
                   <div class="notification-title">۲۰۰ توکن جدید تخصیص یافت</div>
-                  <div class="notification-time">📅 ۳۰ دقیقه پیش</div>
+                  <div class="notification-time"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 9h16"/></svg></span> ۳۰ دقیقه پیش</div>
                 </div>
                 <div class="notification-text">
                   توکن‌های پروژه <strong>«نیروگاه خورشیدی یزد»</strong> به سرمایه‌گذار جدید تخصیص یافت.
@@ -1457,11 +1457,11 @@ body {
             </div>
 
             <div class="notification-item type-gold">
-              <div class="notification-icon gold">💰</div>
+              <div class="notification-icon gold"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="12" rx="2"/><circle cx="12" cy="12" r="3"/></svg></span></div>
               <div class="notification-body">
                 <div class="notification-header">
                   <div class="notification-title">درآمد قابل برداشت</div>
-                  <div class="notification-time">📅 ۳ روز پیش</div>
+                  <div class="notification-time"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 9h16"/></svg></span> ۳ روز پیش</div>
                 </div>
                 <div class="notification-text">
                   <strong>۱۸ میلیون تومان</strong> از سود پروژه کندوی عسل قابل برداشت است.
@@ -1481,29 +1481,29 @@ body {
               <div class="notification-body">
                 <div class="notification-header">
                   <div class="notification-title">سند مالکیت تأیید شد</div>
-                  <div class="notification-time">📅 ۱۰ دقیقه پیش</div>
+                  <div class="notification-time"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 9h16"/></svg></span> ۱۰ دقیقه پیش</div>
                 </div>
                 <div class="notification-text">
                   سند مالکیت پروژه <strong>«دامداری نمونه»</strong> تأیید نهایی شد.
                 </div>
                 <div class="notification-meta">
-                  <span class="notification-tag doc">📄 سند</span>
+                  <span class="notification-tag doc"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h5"/></svg></span> سند</span>
                 </div>
               </div>
             </div>
 
             <div class="notification-item type-warning">
-              <div class="notification-icon warning">⏳</div>
+              <div class="notification-icon warning"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3h10M7 21h10M8 3c0 4 4 4 4 9s-4 5-4 9M16 3c0 4-4 4-4 9s4 5 4 9"/></svg></span></div>
               <div class="notification-body">
                 <div class="notification-header">
                   <div class="notification-title">سند در انتظار بررسی</div>
-                  <div class="notification-time">📅 ۲ ساعت پیش</div>
+                  <div class="notification-time"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 9h16"/></svg></span> ۲ ساعت پیش</div>
                 </div>
                 <div class="notification-text">
                   سند <strong>«گزارش ارزیابی»</strong> بیش از ۵ روز در انتظار بررسی است.
                 </div>
                 <div class="notification-meta">
-                  <span class="notification-tag doc">📄 سند</span>
+                  <span class="notification-tag doc"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h5"/></svg></span> سند</span>
                 </div>
               </div>
             </div>
@@ -1513,13 +1513,13 @@ body {
               <div class="notification-body">
                 <div class="notification-header">
                   <div class="notification-title">سند رد شد</div>
-                  <div class="notification-time">📅 ۲ روز پیش</div>
+                  <div class="notification-time"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 9h16"/></svg></span> ۲ روز پیش</div>
                 </div>
                 <div class="notification-text">
                   سند <strong>«گزارش بازدید میدانی»</strong> به دلیل <strong>مدارک ناقص</strong> رد شد.
                 </div>
                 <div class="notification-meta">
-                  <span class="notification-tag doc">📄 سند</span>
+                  <span class="notification-tag doc"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h5"/></svg></span> سند</span>
                 </div>
               </div>
             </div>
@@ -1529,11 +1529,11 @@ body {
         <div class="tab-panel" id="panel-users">
           <div class="notifications-list">
             <div class="notification-item type-info">
-              <div class="notification-icon info">👥</div>
+              <div class="notification-icon info"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0M16 11a3 3 0 0 1 5 2v7"/></svg></span></div>
               <div class="notification-body">
                 <div class="notification-header">
                   <div class="notification-title">کاربر جدید در سیستم</div>
-                  <div class="notification-time">📅 ۱ ساعت پیش</div>
+                  <div class="notification-time"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 9h16"/></svg></span> ۱ ساعت پیش</div>
                 </div>
                 <div class="notification-text">
                   کاربر <strong>سارا رضایی</strong> با نقش «مجری فنی» به سیستم اضافه شد.
@@ -1553,29 +1553,29 @@ body {
               <div class="notification-body">
                 <div class="notification-header">
                   <div class="notification-title">به‌روزرسانی رابط کاربری</div>
-                  <div class="notification-time">📅 ۳ ساعت پیش</div>
+                  <div class="notification-time"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 9h16"/></svg></span> ۳ ساعت پیش</div>
                 </div>
                 <div class="notification-text">
                   نسخه جدید پنل مدیریت <strong>۲.۴.۱</strong> منتشر شد.
                 </div>
                 <div class="notification-meta">
-                  <span class="notification-tag system">⚙ سیستم</span>
+                  <span class="notification-tag system"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="m19 15 2 1-2 3-2-1a8 8 0 0 1-2 1v2h-4v-2a8 8 0 0 1-2-1l-2 1-2-3 2-1a8 8 0 0 1 0-2l-2-1 2-3 2 1a8 8 0 0 1 2-1V6h4v2a8 8 0 0 1 2 1l2-1 2 3-2 1a8 8 0 0 1 0 2z"/></svg></span> سیستم</span>
                 </div>
               </div>
             </div>
 
             <div class="notification-item type-info">
-              <div class="notification-icon info">📊</div>
+              <div class="notification-icon info"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 19V9M10 19V5M15 19v-7M20 19V3"/></svg></span></div>
               <div class="notification-body">
                 <div class="notification-header">
                   <div class="notification-title">گزارش ماهانه آماده شد</div>
-                  <div class="notification-time">📅 ۵ ساعت پیش</div>
+                  <div class="notification-time"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 9h16"/></svg></span> ۵ ساعت پیش</div>
                 </div>
                 <div class="notification-text">
                   گزارش ماهانه <strong>شهریور ۱۴۰۳</strong> آماده دانلود است.
                 </div>
                 <div class="notification-meta">
-                  <span class="notification-tag system">⚙ سیستم</span>
+                  <span class="notification-tag system"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="m19 15 2 1-2 3-2-1a8 8 0 0 1-2 1v2h-4v-2a8 8 0 0 1-2-1l-2 1-2-3 2-1a8 8 0 0 1 0-2l-2-1 2-3 2 1a8 8 0 0 1 2-1V6h4v2a8 8 0 0 1 2 1l2-1 2 3-2 1a8 8 0 0 1 0 2z"/></svg></span> سیستم</span>
                 </div>
               </div>
             </div>
@@ -1592,7 +1592,7 @@ body {
           <div class="side-card-title">دسته‌بندی اعلان‌ها</div>
           <div class="filter-list">
             <div class="filter-item active" data-filter="all">
-              <div class="f-icon">📥</div>
+              <div class="f-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 4v11M8 11l4 4 4-4M5 20h14"/></svg></span></div>
               <div class="f-label">همه اعلان‌ها</div>
               <div class="f-count">۵۸</div>
             </div>
@@ -1617,7 +1617,7 @@ body {
               <div class="f-count">۵</div>
             </div>
             <div class="filter-item" data-filter="system">
-              <div class="f-icon">⚙</div>
+              <div class="f-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="m19 15 2 1-2 3-2-1a8 8 0 0 1-2 1v2h-4v-2a8 8 0 0 1-2-1l-2 1-2-3 2-1a8 8 0 0 1 0-2l-2-1 2-3 2 1a8 8 0 0 1 2-1V6h4v2a8 8 0 0 1 2 1l2-1 2 3-2 1a8 8 0 0 1 0 2z"/></svg></span></div>
               <div class="f-label">سیستم</div>
               <div class="f-count">۴</div>
             </div>
@@ -1629,7 +1629,7 @@ body {
           <div class="side-card-title">خلاصه وضعیت</div>
           <div class="summary-list">
             <div class="summary-row">
-              <div class="summary-icon blue">🔔</div>
+              <div class="summary-icon blue"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M18 9a6 6 0 0 0-12 0c0 6-2 6-2 8h16c0-2-2-2-2-8"/><path d="M10 21h4"/></svg></span></div>
               <div class="summary-body">
                 <strong>خوانده‌نشده</strong>
                 <small>نیازمند بررسی</small>
@@ -1726,13 +1726,13 @@ body {
               ✓ علامت‌گذاری همه به‌عنوان خوانده‌شده
             </button>
             <button class="btn btn-outline btn-sm" onclick="showToast('info','پاکسازی','اعلان‌های قدیمی پاکسازی شد.')" style="justify-content: flex-start;">
-              🗑 پاکسازی اعلان‌های قدیمی
+              <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 7h14M9 7V4h6v3M8 10v7M12 10v7M16 10v7M7 7l1 14h8l1-14"/></svg></span> پاکسازی اعلان‌های قدیمی
             </button>
             <button class="btn btn-outline btn-sm" onclick="showToast('success','خروجی','در حال آماده‌سازی خروجی...')" style="justify-content: flex-start;">
               ⇩ خروجی اعلان‌ها
             </button>
             <button class="btn btn-outline btn-sm" onclick="window.location.href='settings.html'" style="justify-content: flex-start;">
-              ⚙ تنظیمات کامل
+              <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="m19 15 2 1-2 3-2-1a8 8 0 0 1-2 1v2h-4v-2a8 8 0 0 1-2-1l-2 1-2-3 2-1a8 8 0 0 1 0-2l-2-1 2-3 2 1a8 8 0 0 1 2-1V6h4v2a8 8 0 0 1 2 1l2-1 2 3-2 1a8 8 0 0 1 0 2z"/></svg></span> تنظیمات کامل
             </button>
           </div>
         </div>
@@ -1768,7 +1768,7 @@ overlay.addEventListener('click', () => {
 /* ==================== TOAST ==================== */
 function showToast(type, title, message) {
   const container = document.getElementById('toastContainer');
-  const icons = { success: '✓', error: '✗', warning: '!', info: 'ℹ' };
+  const icons = { success: '✓', error: '✗', warning: '!', info: '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 11v5M12 8h.01"/></svg></span>' };
   const toast = document.createElement('div');
   toast.className = `toast ${type}`;
   toast.innerHTML = `
