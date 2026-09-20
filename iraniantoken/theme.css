@@ -58,7 +58,7 @@ a{text-decoration:none}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.001ms!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
 /* --- Unified TokenSaz visual system / internal workspace --- */
 :root{--it-radius:28px 12px 28px 12px;--it-radius-sm:18px 8px 18px 8px}
-body{background:radial-gradient(circle at 7% 0%,rgba(66,165,245,.09),transparent 25%),radial-gradient(circle at 93% 12%,rgba(216,173,56,.07),transparent 22%),var(--it-bg)!important}
+body{background:var(--it-bg)!important}
 .sidebar{background:linear-gradient(180deg,#061b2d 0%,#082d4d 58%,#0a4168 100%)!important;border-left:1px solid rgba(255,255,255,.09)!important;box-shadow:-14px 0 45px rgba(4,27,47,.1)!important}
 .sidebar-brand{min-height:86px!important;padding:20px 18px!important;border-bottom-color:rgba(255,255,255,.09)!important}
 .sidebar-logo{width:44px!important;height:44px!important;border-radius:15px!important;background:linear-gradient(145deg,#0a3153,#1767c8)!important;position:relative;font-size:0!important;box-shadow:0 12px 28px rgba(0,0,0,.22)!important}
