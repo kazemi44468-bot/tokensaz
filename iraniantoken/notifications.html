@@ -1016,8 +1016,8 @@ body {
       <span class="current">مرکز اعلان‌ها</span>
     </div>
     <div class="topbar-actions">
-      <button class="icon-btn" onclick="markAllRead()" title="علامت‌گذاری همه به‌عنوان خوانده‌شده">✓</button>
-      <button class="icon-btn" onclick="window.print()" title="چاپ">⎙</button>
+      <button class="icon-btn" onclick="markAllRead()" title="علامت‌گذاری همه به‌عنوان خوانده‌شده"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span></button>
+      <button class="icon-btn" onclick="window.print()" title="چاپ"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 9V4h10v5M7 17H5a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-2"/><path d="M7 14h10v7H7z"/></svg></span></button>
       <button class="icon-btn" id="notifBtn"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M18 9a6 6 0 0 0-12 0c0 6-2 6-2 8h16c0-2-2-2-2-8"/><path d="M10 21h4"/></svg></span><span class="dot"></span></button>
     </div>
   </header>
@@ -1056,7 +1056,7 @@ body {
 
       <div class="kpi-card gold">
         <div class="kpi-header">
-          <div class="kpi-icon">◈</div>
+          <div class="kpi-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 7 9-7 9-7-9z"/><path d="M12 7v10M8 12h8"/></svg></span></div>
         </div>
         <div class="kpi-value">۲۴</div>
         <div class="kpi-label">توکن‌ها</div>
@@ -1064,7 +1064,7 @@ body {
 
       <div class="kpi-card green">
         <div class="kpi-header">
-          <div class="kpi-icon">✓</div>
+          <div class="kpi-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span></div>
         </div>
         <div class="kpi-value">۱۸</div>
         <div class="kpi-label">اعتبارسنجی</div>
@@ -1080,7 +1080,7 @@ body {
 
       <div class="kpi-card purple">
         <div class="kpi-header">
-          <div class="kpi-icon">◌</div>
+          <div class="kpi-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 6h14v10H8l-3 3z"/><path d="M8 10h8M8 13h5"/></svg></span></div>
         </div>
         <div class="kpi-value">۱۲</div>
         <div class="kpi-label">کاربران</div>
@@ -1141,7 +1141,7 @@ body {
 
             <!-- Notification 1 - Unread - Success -->
             <div class="notification-item unread type-success" onclick="markAsRead(this)">
-              <div class="notification-icon success">✓</div>
+              <div class="notification-icon success"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span></div>
               <div class="notification-body">
                 <div class="notification-header">
                   <div class="notification-title">
@@ -1170,7 +1170,7 @@ body {
 
             <!-- Notification 2 - Unread - Gold -->
             <div class="notification-item unread type-gold" onclick="markAsRead(this)">
-              <div class="notification-icon gold">◈</div>
+              <div class="notification-icon gold"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 7 9-7 9-7-9z"/><path d="M12 7v10M8 12h8"/></svg></span></div>
               <div class="notification-body">
                 <div class="notification-header">
                   <div class="notification-title">
@@ -1295,7 +1295,7 @@ body {
 
             <!-- Notification 7 - Read - Success -->
             <div class="notification-item type-success" onclick="showToast('info','مشاهده','جزئیات اعلان باز شد.')">
-              <div class="notification-icon success">✓</div>
+              <div class="notification-icon success"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span></div>
               <div class="notification-body">
                 <div class="notification-header">
                   <div class="notification-title">
@@ -1334,7 +1334,7 @@ body {
 
             <!-- Notification 9 - Read - Danger -->
             <div class="notification-item type-danger" onclick="showToast('info','مشاهده','جزئیات اعلان باز شد.')">
-              <div class="notification-icon danger">✗</div>
+              <div class="notification-icon danger"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m7 7 10 10M17 7 7 17"/></svg></span></div>
               <div class="notification-body">
                 <div class="notification-header">
                   <div class="notification-title">
@@ -1405,7 +1405,7 @@ body {
         <div class="tab-panel" id="panel-projects">
           <div class="notifications-list">
             <div class="notification-item type-info">
-              <div class="notification-icon info">▦</div>
+              <div class="notification-icon info"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></span></div>
               <div class="notification-body">
                 <div class="notification-header">
                   <div class="notification-title">پروژه جدید ثبت شد</div>
@@ -1441,7 +1441,7 @@ body {
         <div class="tab-panel" id="panel-tokens">
           <div class="notifications-list">
             <div class="notification-item type-gold">
-              <div class="notification-icon gold">◈</div>
+              <div class="notification-icon gold"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 7 9-7 9-7-9z"/><path d="M12 7v10M8 12h8"/></svg></span></div>
               <div class="notification-body">
                 <div class="notification-header">
                   <div class="notification-title">۲۰۰ توکن جدید تخصیص یافت</div>
@@ -1477,7 +1477,7 @@ body {
         <div class="tab-panel" id="panel-validation">
           <div class="notifications-list">
             <div class="notification-item type-success">
-              <div class="notification-icon success">✓</div>
+              <div class="notification-icon success"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span></div>
               <div class="notification-body">
                 <div class="notification-header">
                   <div class="notification-title">سند مالکیت تأیید شد</div>
@@ -1509,7 +1509,7 @@ body {
             </div>
 
             <div class="notification-item type-danger">
-              <div class="notification-icon danger">✗</div>
+              <div class="notification-icon danger"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m7 7 10 10M17 7 7 17"/></svg></span></div>
               <div class="notification-body">
                 <div class="notification-header">
                   <div class="notification-title">سند رد شد</div>
@@ -1597,22 +1597,22 @@ body {
               <div class="f-count">۵۸</div>
             </div>
             <div class="filter-item" data-filter="projects">
-              <div class="f-icon">▦</div>
+              <div class="f-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></span></div>
               <div class="f-label">پروژه‌ها</div>
               <div class="f-count">۱۴</div>
             </div>
             <div class="filter-item" data-filter="tokens">
-              <div class="f-icon">◈</div>
+              <div class="f-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 7 9-7 9-7-9z"/><path d="M12 7v10M8 12h8"/></svg></span></div>
               <div class="f-label">توکن‌ها</div>
               <div class="f-count">۱۰</div>
             </div>
             <div class="filter-item" data-filter="validation">
-              <div class="f-icon">✓</div>
+              <div class="f-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span></div>
               <div class="f-label">اعتبارسنجی</div>
               <div class="f-count new">۸</div>
             </div>
             <div class="filter-item" data-filter="users">
-              <div class="f-icon">◌</div>
+              <div class="f-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 6h14v10H8l-3 3z"/><path d="M8 10h8M8 13h5"/></svg></span></div>
               <div class="f-label">کاربران</div>
               <div class="f-count">۵</div>
             </div>
@@ -1637,7 +1637,7 @@ body {
               <div class="summary-value">۸</div>
             </div>
             <div class="summary-row">
-              <div class="summary-icon green">✓</div>
+              <div class="summary-icon green"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span></div>
               <div class="summary-body">
                 <strong>خوانده‌شده</strong>
                 <small>در ۲۴ ساعت اخیر</small>
