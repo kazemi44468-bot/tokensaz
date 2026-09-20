@@ -1681,3 +1681,111 @@ body:has(.sidebar) .nav-sub a:before{background:#aab8c3!important}
 body:has(.sidebar) .nav-sub a.active:before{background:#3a83bc!important}
 body:has(.sidebar) .main{margin-right:272px!important}
 @media(max-width:900px){body:has(.sidebar) .sidebar{width:min(292px,88vw)!important}body:has(.sidebar) .main{margin-right:0!important}}
+
+
+/* === IRANIAN TOKEN — REFINED NAVIGATION & ICON LANGUAGE === */
+body:has(.sidebar) .nav-item,
+body:has(.sidebar) .nav-parent-row,
+body:has(.sidebar) .nav-sub a{font-family:IRToken,"Vazirmatn",Tahoma,sans-serif!important}
+body:has(.sidebar) .nav-item .icon{
+  width:22px!important;min-width:22px!important;height:22px!important;
+  display:grid!important;place-items:center!important;
+}
+body:has(.sidebar) .nav-item .icon svg{
+  width:17px!important;height:17px!important;stroke:currentColor!important;
+  fill:none!important;stroke-width:1.65!important;stroke-linecap:round!important;stroke-linejoin:round!important;
+}
+body:has(.sidebar) .nav-parent-row>.nav-item{padding-left:8px!important}
+body:has(.sidebar) .nav-expand{
+  position:relative!important;font-size:0!important;
+  width:34px!important;min-width:34px!important;height:39px!important;
+  display:grid!important;place-items:center!important;
+  border:1px solid #e3e9ee!important;border-radius:8px!important;
+  background:#fff!important;color:#7c8b98!important;
+}
+body:has(.sidebar) .nav-expand:before{
+  content:""!important;width:7px!important;height:7px!important;
+  border-left:1.6px solid currentColor!important;border-bottom:1.6px solid currentColor!important;
+  transform:rotate(-45deg) translate(-1px,-1px)!important;transition:transform .2s ease!important;
+}
+body:has(.sidebar) .nav-group.open>.nav-parent-row>.nav-expand:before{
+  transform:rotate(135deg) translate(-1px,-1px)!important;
+}
+body:has(.sidebar) .nav-expand:hover,
+body:has(.sidebar) .nav-group.open>.nav-parent-row>.nav-expand{
+  color:#1769a8!important;background:#f3f8fc!important;border-color:#d7e5ef!important;
+}
+body:has(.sidebar) .nav-sub{
+  margin:5px 0 7px!important;padding:2px 7px 2px 0!important;
+}
+body:has(.sidebar) .nav-sub-inner{
+  border-right:1px solid #dbe5ec!important;padding:2px 8px 2px 0!important;
+}
+body:has(.sidebar) .nav-sub a{
+  min-height:34px!important;padding:7px 10px!important;margin:2px 0!important;
+  border:1px solid transparent!important;border-radius:7px!important;
+  color:#748392!important;background:transparent!important;
+  font-size:10.5px!important;line-height:1.7!important;
+}
+body:has(.sidebar) .nav-sub a:before{
+  content:""!important;width:4px!important;height:4px!important;border-radius:50%!important;
+  background:#b7c4ce!important;margin-left:8px!important;flex:none!important;
+}
+body:has(.sidebar) .nav-sub a:hover{
+  background:#f6f9fb!important;border-color:#edf2f5!important;color:#246c9f!important;
+}
+body:has(.sidebar) .nav-sub a.active{
+  background:#eef6fc!important;border-color:#dcebf6!important;color:#1765a3!important;
+}
+body:has(.sidebar) .nav-sub a.active:before{background:#3a83bc!important}
+body:has(.sidebar) .nav-item{
+  border-radius:9px!important;
+  min-height:40px!important;
+}
+body:has(.sidebar) .nav-item.active{
+  background:#edf5fc!important;color:#1765a3!important;
+  border-color:#d9eaf7!important;box-shadow:inset -3px 0 0 #2b78b8!important;
+}
+body:has(.sidebar) .nav-item:hover{background:#f5f8fb!important;color:#1f4e73!important}
+body:has(.sidebar) .nav-section-title{
+  color:#9aa6b2!important;font-size:9px!important;font-weight:800!important;
+  letter-spacing:.35px!important;text-transform:none!important;
+}
+body:has(.sidebar) .content p:not([class]),
+body:has(.sidebar) .content .description,
+body:has(.sidebar) .content .help-text,
+body:has(.sidebar) .content .section-description{
+  color:#647789!important;line-height:2!important;font-size:12px!important;
+}
+body:has(.sidebar) .content h1,
+body:has(.sidebar) .content h2,
+body:has(.sidebar) .content h3,
+body:has(.sidebar) .content h4{
+  color:#1d3042!important;letter-spacing:-.15px!important;
+}
+body:has(.sidebar) .content strong{color:#243a4e}
+body:has(.sidebar) .content .muted,
+body:has(.sidebar) .content small{color:#7b8b99}
+body:has(.sidebar) .content .info-box,
+body:has(.sidebar) .content .notice,
+body:has(.sidebar) .content .alert,
+body:has(.sidebar) .content .empty-state{
+  border:1px solid #e1e8ee!important;border-radius:12px!important;
+  background:#f9fbfc!important;color:#617587!important;line-height:2!important;
+}
+body:has(.sidebar) .content .badge,
+body:has(.sidebar) .content .status,
+body:has(.sidebar) .content .status-badge{
+  font-family:inherit!important;border-radius:999px!important;
+}
+body:has(.sidebar) .it-symbol{
+  width:1.2em!important;height:1.2em!important;display:inline-grid!important;place-items:center!important;
+  vertical-align:-.22em!important;color:currentColor!important;flex:none!important;
+}
+body:has(.sidebar) .it-symbol svg{
+  width:100%!important;height:100%!important;fill:none!important;stroke:currentColor!important;
+  stroke-width:1.7!important;stroke-linecap:round!important;stroke-linejoin:round!important;
+}
+@media(max-width:900px){
+  body:has(.sidebar) .nav-expand{width:36px!important;min-width:36px!important}
+}
