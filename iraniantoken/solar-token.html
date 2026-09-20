@@ -361,7 +361,7 @@ body {
   margin-bottom: 20px;
   backdrop-filter: blur(10px);
 }
-.solar-badge::before { content: '⚡'; }
+.solar-badge::before { content: '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13 2-8 12h6l-1 8 8-12h-6z"/></svg></span>'; }
 .solar-hero h1 {
   font-size: clamp(26px, 4vw, 42px);
   font-weight: 900;
@@ -1293,7 +1293,7 @@ body {
 
   <!-- TOPBAR -->
   <header class="topbar">
-    <button class="toggle-btn" id="toggleBtn">☰</button>
+    <button class="toggle-btn" id="toggleBtn"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span></button>
     <div class="breadcrumb">
       <a href="dashboard.html">داشبورد</a>
       <span>›</span>
@@ -1330,7 +1330,7 @@ body {
             ☀️ مشاهده نیروگاه‌ها
           </a>
           <button class="btn btn-outline btn-lg" onclick="showToast('info','راهنما','راهنمای کامل در حال بارگذاری...')" style="background: rgba(255,255,255,0.15); color: #fff; border-color: rgba(255,255,255,0.3);">
-            📖 راهنمای کامل
+            <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v17H6.5A2.5 2.5 0 0 1 4 17.5z"/></svg></span> راهنمای کامل
           </button>
         </div>
       </div>
@@ -1359,7 +1359,7 @@ body {
     <div class="kpi-grid">
       <div class="kpi-card">
         <div class="kpi-header">
-          <div class="kpi-icon">⚡</div>
+          <div class="kpi-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13 2-8 12h6l-1 8 8-12h-6z"/></svg></span></div>
           <div class="kpi-trend up">↑ ۱۸٪</div>
         </div>
         <div class="kpi-value">۴۸.۵ <span>MW</span></div>
@@ -1368,7 +1368,7 @@ body {
 
       <div class="kpi-card green">
         <div class="kpi-header">
-          <div class="kpi-icon">💡</div>
+          <div class="kpi-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M8 14a6 6 0 1 1 8 0c-1 1-1 2-1 4H9c0-2 0-3-1-4Z"/></svg></span></div>
           <div class="kpi-trend up">↑ ۲۲٪</div>
         </div>
         <div class="kpi-value">۸۷.۲ <span>GWh</span></div>
@@ -1377,7 +1377,7 @@ body {
 
       <div class="kpi-card blue">
         <div class="kpi-header">
-          <div class="kpi-icon">💰</div>
+          <div class="kpi-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="12" rx="2"/><circle cx="12" cy="12" r="3"/></svg></span></div>
           <div class="kpi-trend up">↑ ۳۵٪</div>
         </div>
         <div class="kpi-value">۲۸.۵ <span>میلیارد</span></div>
@@ -1386,7 +1386,7 @@ body {
 
       <div class="kpi-card purple">
         <div class="kpi-header">
-          <div class="kpi-icon">📈</div>
+          <div class="kpi-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 16 5-5 4 3 7-8"/><path d="M15 6h5v5"/></svg></span></div>
           <div class="kpi-trend up">↑ ۲۵٪</div>
         </div>
         <div class="kpi-value">۲۸ <span>درصد</span></div>
@@ -1400,19 +1400,19 @@ body {
         <span>☀️</span> نیروگاه‌های فعال
       </button>
       <button class="tab-btn" data-tab="my-panels">
-        <span>🔋</span> پنل‌های من
+        <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="10" rx="2"/><path d="M20 10h2v4h-2M7 10v4M10 10v4"/></svg></span></span> پنل‌های من
       </button>
       <button class="tab-btn" data-tab="calculator">
-        <span>🧮</span> ماشین‌حساب سود
+        <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 12h2M14 12h2M8 16h2M14 16h2"/></svg></span></span> ماشین‌حساب سود
       </button>
       <button class="tab-btn" data-tab="production">
-        <span>📅</span> تقویم تولید
+        <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 9h16"/></svg></span></span> تقویم تولید
       </button>
       <button class="tab-btn" data-tab="process">
         <span>◫</span> فرآیند توکنیزه‌سازی
       </button>
       <button class="tab-btn" data-tab="faq">
-        <span>❓</span> پرسش‌های متداول
+        <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M9.8 9a2.5 2.5 0 1 1 4.1 1.9c-1 .7-1.6 1.1-1.6 2.4M12 16.5h.01"/></svg></span></span> پرسش‌های متداول
       </button>
     </nav>
 
@@ -1453,7 +1453,7 @@ body {
           <div class="solar-card-cover">
             ☀️
             <span class="solar-card-status active">فعال</span>
-            <span class="solar-card-badge">⚡ ۱۰ MW</span>
+            <span class="solar-card-badge"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13 2-8 12h6l-1 8 8-12h-6z"/></svg></span> ۱۰ MW</span>
           </div>
           <div class="solar-card-body">
             <div class="solar-card-title">
@@ -1461,7 +1461,7 @@ body {
               <span class="type-badge">فوتوولتائیک</span>
             </div>
             <div class="solar-card-location">
-              <span>📍</span> یزد، اردکان
+              <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 10c0 5-7 10-7 10S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2"/></svg></span></span> یزد، اردکان
             </div>
             <div class="solar-card-stats">
               <div class="solar-stat-item">
@@ -1483,7 +1483,7 @@ body {
             </div>
             <div class="solar-card-footer">
               <button class="btn btn-outline btn-sm" onclick="event.stopPropagation(); showToast('solar','جزئیات','اطلاعات نیروگاه نمایش داده شد.')">◉ جزئیات</button>
-              <button class="btn btn-solar btn-sm" onclick="event.stopPropagation(); showToast('solar','خرید','فرم خرید توکن باز شد.')">⚡ خرید توکن</button>
+              <button class="btn btn-solar btn-sm" onclick="event.stopPropagation(); showToast('solar','خرید','فرم خرید توکن باز شد.')"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13 2-8 12h6l-1 8 8-12h-6z"/></svg></span> خرید توکن</button>
             </div>
           </div>
         </div>
@@ -1491,9 +1491,9 @@ body {
         <!-- Plant 2 -->
         <div class="solar-card" onclick="showToast('solar','جزئیات','صفحه جزئیات نیروگاه باز شد.')">
           <div class="solar-card-cover" style="background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);">
-            🔆
+            <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4 12h2M18 12h2"/></svg></span>
             <span class="solar-card-status active">فعال</span>
-            <span class="solar-card-badge">⚡ ۵ MW</span>
+            <span class="solar-card-badge"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13 2-8 12h6l-1 8 8-12h-6z"/></svg></span> ۵ MW</span>
           </div>
           <div class="solar-card-body">
             <div class="solar-card-title">
@@ -1501,7 +1501,7 @@ body {
               <span class="type-badge">فوتوولتائیک</span>
             </div>
             <div class="solar-card-location">
-              <span>📍</span> کرمان، رفسنجان
+              <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 10c0 5-7 10-7 10S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2"/></svg></span></span> کرمان، رفسنجان
             </div>
             <div class="solar-card-stats">
               <div class="solar-stat-item">
@@ -1523,7 +1523,7 @@ body {
             </div>
             <div class="solar-card-footer">
               <button class="btn btn-outline btn-sm">◉ جزئیات</button>
-              <button class="btn btn-solar btn-sm">⚡ خرید توکن</button>
+              <button class="btn btn-solar btn-sm"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13 2-8 12h6l-1 8 8-12h-6z"/></svg></span> خرید توکن</button>
             </div>
           </div>
         </div>
@@ -1533,7 +1533,7 @@ body {
           <div class="solar-card-cover" style="background: linear-gradient(135deg, #0891b2 0%, #06b6d4 50%, #67e8f9 100%);">
             ☀️
             <span class="solar-card-status active">فعال</span>
-            <span class="solar-card-badge">⚡ ۸ MW</span>
+            <span class="solar-card-badge"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13 2-8 12h6l-1 8 8-12h-6z"/></svg></span> ۸ MW</span>
           </div>
           <div class="solar-card-body">
             <div class="solar-card-title">
@@ -1541,7 +1541,7 @@ body {
               <span class="type-badge">فوتوولتائیک</span>
             </div>
             <div class="solar-card-location">
-              <span>📍</span> اصفهان، کاشان
+              <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 10c0 5-7 10-7 10S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2"/></svg></span></span> اصفهان، کاشان
             </div>
             <div class="solar-card-stats">
               <div class="solar-stat-item">
@@ -1563,7 +1563,7 @@ body {
             </div>
             <div class="solar-card-footer">
               <button class="btn btn-outline btn-sm">◉ جزئیات</button>
-              <button class="btn btn-solar btn-sm">⚡ خرید توکن</button>
+              <button class="btn btn-solar btn-sm"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13 2-8 12h6l-1 8 8-12h-6z"/></svg></span> خرید توکن</button>
             </div>
           </div>
         </div>
@@ -1571,9 +1571,9 @@ body {
         <!-- Plant 4 -->
         <div class="solar-card" onclick="showToast('solar','جزئیات','صفحه جزئیات نیروگاه باز شد.')">
           <div class="solar-card-cover" style="background: linear-gradient(135deg, #7c3aed 0%, #8b5cf6 50%, #a78bfa 100%);">
-            🔆
+            <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4 12h2M18 12h2"/></svg></span>
             <span class="solar-card-status construction">در حال ساخت</span>
-            <span class="solar-card-badge">⚡ ۱۵ MW</span>
+            <span class="solar-card-badge"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13 2-8 12h6l-1 8 8-12h-6z"/></svg></span> ۱۵ MW</span>
           </div>
           <div class="solar-card-body">
             <div class="solar-card-title">
@@ -1581,7 +1581,7 @@ body {
               <span class="type-badge">فوتوولتائیک</span>
             </div>
             <div class="solar-card-location">
-              <span>📍</span> خراسان جنوبی، طبس
+              <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 10c0 5-7 10-7 10S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2"/></svg></span></span> خراسان جنوبی، طبس
             </div>
             <div class="solar-card-stats">
               <div class="solar-stat-item">
@@ -1603,7 +1603,7 @@ body {
             </div>
             <div class="solar-card-footer">
               <button class="btn btn-outline btn-sm">◉ جزئیات</button>
-              <button class="btn btn-solar btn-sm">⚡ خرید توکن</button>
+              <button class="btn btn-solar btn-sm"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13 2-8 12h6l-1 8 8-12h-6z"/></svg></span> خرید توکن</button>
             </div>
           </div>
         </div>
@@ -1613,7 +1613,7 @@ body {
           <div class="solar-card-cover" style="background: linear-gradient(135deg, #dc2626 0%, #f87171 50%, #fca5a5 100%);">
             ☀️
             <span class="solar-card-status active">فعال</span>
-            <span class="solar-card-badge">⚡ ۳ MW</span>
+            <span class="solar-card-badge"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13 2-8 12h6l-1 8 8-12h-6z"/></svg></span> ۳ MW</span>
           </div>
           <div class="solar-card-body">
             <div class="solar-card-title">
@@ -1621,7 +1621,7 @@ body {
               <span class="type-badge">فوتوولتائیک</span>
             </div>
             <div class="solar-card-location">
-              <span>📍</span> هرمزگان، بندرعباس
+              <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 10c0 5-7 10-7 10S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2"/></svg></span></span> هرمزگان، بندرعباس
             </div>
             <div class="solar-card-stats">
               <div class="solar-stat-item">
@@ -1643,7 +1643,7 @@ body {
             </div>
             <div class="solar-card-footer">
               <button class="btn btn-outline btn-sm">◉ جزئیات</button>
-              <button class="btn btn-solar btn-sm">⚡ خرید توکن</button>
+              <button class="btn btn-solar btn-sm"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13 2-8 12h6l-1 8 8-12h-6z"/></svg></span> خرید توکن</button>
             </div>
           </div>
         </div>
@@ -1651,9 +1651,9 @@ body {
         <!-- Plant 6 -->
         <div class="solar-card" onclick="showToast('solar','جزئیات','صفحه جزئیات نیروگاه باز شد.')">
           <div class="solar-card-cover" style="background: linear-gradient(135deg, #ea580c 0%, #f59e0b 50%, #fbbf24 100%);">
-            🔆
+            <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4 12h2M18 12h2"/></svg></span>
             <span class="solar-card-status pending">در انتظار اعتبارسنجی</span>
-            <span class="solar-card-badge">⚡ ۷.۵ MW</span>
+            <span class="solar-card-badge"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13 2-8 12h6l-1 8 8-12h-6z"/></svg></span> ۷.۵ MW</span>
           </div>
           <div class="solar-card-body">
             <div class="solar-card-title">
@@ -1661,7 +1661,7 @@ body {
               <span class="type-badge">فوتوولتائیک</span>
             </div>
             <div class="solar-card-location">
-              <span>📍</span> سمنان، گرمسار
+              <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 10c0 5-7 10-7 10S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2"/></svg></span></span> سمنان، گرمسار
             </div>
             <div class="solar-card-stats">
               <div class="solar-stat-item">
@@ -1683,7 +1683,7 @@ body {
             </div>
             <div class="solar-card-footer">
               <button class="btn btn-outline btn-sm">◉ جزئیات</button>
-              <button class="btn btn-solar btn-sm" disabled style="opacity: 0.5; cursor: not-allowed;">⏳ در انتظار</button>
+              <button class="btn btn-solar btn-sm" disabled style="opacity: 0.5; cursor: not-allowed;"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3h10M7 21h10M8 3c0 4 4 4 4 9s-4 5-4 9M16 3c0 4-4 4-4 9s4 5 4 9"/></svg></span> در انتظار</button>
             </div>
           </div>
         </div>
@@ -1696,7 +1696,7 @@ body {
       <div class="kpi-grid">
         <div class="kpi-card">
           <div class="kpi-header">
-            <div class="kpi-icon">🔋</div>
+            <div class="kpi-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="10" rx="2"/><path d="M20 10h2v4h-2M7 10v4M10 10v4"/></svg></span></div>
             <div class="kpi-trend up">+۶</div>
           </div>
           <div class="kpi-value">۱۸ <span>پنل</span></div>
@@ -1704,7 +1704,7 @@ body {
         </div>
         <div class="kpi-card green">
           <div class="kpi-header">
-            <div class="kpi-icon">💰</div>
+            <div class="kpi-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="12" rx="2"/><circle cx="12" cy="12" r="3"/></svg></span></div>
             <div class="kpi-trend up">+۲۵٪</div>
           </div>
           <div class="kpi-value">۸۵ <span>میلیون</span></div>
@@ -1712,7 +1712,7 @@ body {
         </div>
         <div class="kpi-card blue">
           <div class="kpi-header">
-            <div class="kpi-icon">⚡</div>
+            <div class="kpi-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13 2-8 12h6l-1 8 8-12h-6z"/></svg></span></div>
             <div class="kpi-trend up">+۱۸٪</div>
           </div>
           <div class="kpi-value">۴۲۰ <span>kWh</span></div>
@@ -1720,7 +1720,7 @@ body {
         </div>
         <div class="kpi-card purple">
           <div class="kpi-header">
-            <div class="kpi-icon">📈</div>
+            <div class="kpi-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 16 5-5 4 3 7-8"/><path d="M15 6h5v5"/></svg></span></div>
             <div class="kpi-trend up">+۲۲٪</div>
           </div>
           <div class="kpi-value">۴۸ <span>میلیون</span></div>
@@ -1731,7 +1731,7 @@ body {
       <div class="card">
         <div class="card-header">
           <div class="card-header-left">
-            <h3><span class="icon">🔋</span> پنل‌های خورشیدی من</h3>
+            <h3><span class="icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="10" rx="2"/><path d="M20 10h2v4h-2M7 10v4M10 10v4"/></svg></span></span> پنل‌های خورشیدی من</h3>
             <p>نمای بصری از پنل‌های تحت مالکیت شما — هر مربع یک پنل</p>
           </div>
           <div style="display: flex; gap: 8px; align-items: center;">
@@ -1750,7 +1750,7 @@ body {
             </div>
             <div style="display: flex; gap: 8px;">
               <button class="btn btn-outline btn-sm" onclick="showToast('solar','خروجی','گزارش پنل‌ها در حال آماده‌سازی...')">⇩ خروجی</button>
-              <button class="btn btn-solar btn-sm" onclick="showToast('solar','خرید','برای خرید پنل‌های بیشتر به تب «نیروگاه‌های فعال» بروید.')">➕ خرید پنل</button>
+              <button class="btn btn-solar btn-sm" onclick="showToast('solar','خرید','برای خرید پنل‌های بیشتر به تب «نیروگاه‌های فعال» بروید.')"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span> خرید پنل</button>
             </div>
           </div>
         </div>
@@ -1761,7 +1761,7 @@ body {
         <div class="card">
           <div class="card-header">
             <div class="card-header-left">
-              <h3><span class="icon">📊</span> عملکرد پنل‌های من</h3>
+              <h3><span class="icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 19V9M10 19V5M15 19v-7M20 19V3"/></svg></span></span> عملکرد پنل‌های من</h3>
               <p>تولید برق ۶ ماه اخیر (kWh)</p>
             </div>
           </div>
@@ -1775,7 +1775,7 @@ body {
         <div class="card">
           <div class="card-header">
             <div class="card-header-left">
-              <h3><span class="icon">💰</span> درآمد و سود</h3>
+              <h3><span class="icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="12" rx="2"/><circle cx="12" cy="12" r="3"/></svg></span></span> درآمد و سود</h3>
               <p>سهم شما از فروش برق</p>
             </div>
           </div>
@@ -1800,7 +1800,7 @@ body {
             </div>
             <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border);">
               <div class="info-row" style="background: rgba(16,185,129,0.06); border-color: rgba(16,185,129,0.2);">
-                <div class="info-row-icon green">💰</div>
+                <div class="info-row-icon green"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="12" rx="2"/><circle cx="12" cy="12" r="3"/></svg></span></div>
                 <div class="info-row-body">
                   <strong>قابل برداشت: ۱۲ میلیون تومان</strong>
                   <p>درآمد فروش برق فصل گذشته</p>
@@ -1816,7 +1816,7 @@ body {
       <div class="card" style="margin-top: 24px;">
         <div class="card-header">
           <div class="card-header-left">
-            <h3><span class="icon">⚡</span> تولید لحظه‌ای</h3>
+            <h3><span class="icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13 2-8 12h6l-1 8 8-12h-6z"/></svg></span></span> تولید لحظه‌ای</h3>
             <p>وضعیت فعلی پنل‌های شما</p>
           </div>
           <span class="live-indicator">زنده</span>
@@ -1851,7 +1851,7 @@ body {
         <div class="content-col">
           <div class="calculator">
             <div class="calculator-title">
-              🧮 ماشین‌حساب سود سرمایه‌گذاری در نیروگاه خورشیدی
+              <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 12h2M14 12h2M8 16h2M14 16h2"/></svg></span> ماشین‌حساب سود سرمایه‌گذاری در نیروگاه خورشیدی
             </div>
             <div class="calculator-desc">
               با وارد کردن بودجه و انتخاب نیروگاه، تعداد توکن، توان معادل و درآمد سالانه تخمینی را مشاهده کنید.
@@ -1914,7 +1914,7 @@ body {
           <div class="card">
             <div class="card-header">
               <div class="card-header-left">
-                <h3><span class="icon">📈</span> روند بازدهی نیروگاه‌های خورشیدی</h3>
+                <h3><span class="icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 16 5-5 4 3 7-8"/><path d="M15 6h5v5"/></svg></span></span> روند بازدهی نیروگاه‌های خورشیدی</h3>
                 <p>میانگین بازدهی ۶ سال اخیر</p>
               </div>
             </div>
@@ -1928,13 +1928,13 @@ body {
           <div class="card">
             <div class="card-header">
               <div class="card-header-left">
-                <h3><span class="icon">💡</span> نکات مهم</h3>
+                <h3><span class="icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M8 14a6 6 0 1 1 8 0c-1 1-1 2-1 4H9c0-2 0-3-1-4Z"/></svg></span></span> نکات مهم</h3>
               </div>
             </div>
             <div class="card-body">
               <div class="info-list">
                 <div class="info-row">
-                  <div class="info-row-icon solar">⚡</div>
+                  <div class="info-row-icon solar"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13 2-8 12h6l-1 8 8-12h-6z"/></svg></span></div>
                   <div class="info-row-body">
                     <strong>قرارداد ۲۰ ساله با وزارت نیرو</strong>
                     <p>برق تولیدی با نرخ تضمینی خریداری می‌شود.</p>
@@ -1967,7 +1967,7 @@ body {
       <div class="card" style="margin-bottom: 24px;">
         <div class="card-header">
           <div class="card-header-left">
-            <h3><span class="icon">📅</span> تقویم تولید برق</h3>
+            <h3><span class="icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 9h16"/></svg></span></span> تقویم تولید برق</h3>
             <p>میزان تولید نیروگاه‌های خورشیدی در فصل‌های مختلف</p>
           </div>
         </div>
@@ -2005,7 +2005,7 @@ body {
         <div class="card">
           <div class="card-header">
             <div class="card-header-left">
-              <h3><span class="icon">⚡</span> تاریخچه تولید</h3>
+              <h3><span class="icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13 2-8 12h6l-1 8 8-12h-6z"/></svg></span></span> تاریخچه تولید</h3>
               <p>آخرین گزارش‌های تولید</p>
             </div>
           </div>
@@ -2036,7 +2036,7 @@ body {
                 <span class="badge success">تکمیل</span>
               </div>
               <div class="info-row">
-                <div class="info-row-icon solar">⚡</div>
+                <div class="info-row-icon solar"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13 2-8 12h6l-1 8 8-12h-6z"/></svg></span></div>
                 <div class="info-row-body">
                   <strong>مهر ۱۴۰۳</strong>
                   <p>پیش‌بینی: ۷.۸ GWh — در حال تولید</p>
@@ -2050,7 +2050,7 @@ body {
         <div class="card">
           <div class="card-header">
             <div class="card-header-left">
-              <h3><span class="icon">💰</span> سهم من از تولید</h3>
+              <h3><span class="icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="12" rx="2"/><circle cx="12" cy="12" r="3"/></svg></span></span> سهم من از تولید</h3>
               <p>درآمد شما از فروش برق</p>
             </div>
           </div>
@@ -2197,7 +2197,7 @@ body {
                   </div>
                 </div>
                 <div class="info-row">
-                  <div class="info-row-icon blue">💡</div>
+                  <div class="info-row-icon blue"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M8 14a6 6 0 1 1 8 0c-1 1-1 2-1 4H9c0-2 0-3-1-4Z"/></svg></span></div>
                   <div class="info-row-body">
                     <strong>مزیت ارزی</strong>
                     <p>در برخی پروژه‌ها امکان صادرات برق و درآمد ارزی وجود دارد.</p>
@@ -2210,7 +2210,7 @@ body {
           <div class="card">
             <div class="card-header">
               <div class="card-header-left">
-                <h3><span class="icon">📊</span> مزایا و ریسک‌ها</h3>
+                <h3><span class="icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 19V9M10 19V5M15 19v-7M20 19V3"/></svg></span></span> مزایا و ریسک‌ها</h3>
               </div>
             </div>
             <div class="card-body">
@@ -2251,7 +2251,7 @@ body {
       <div class="card">
         <div class="card-header">
           <div class="card-header-left">
-            <h3><span class="icon">❓</span> پرسش‌های متداول درباره توکن انرژی خورشیدی</h3>
+            <h3><span class="icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M9.8 9a2.5 2.5 0 1 1 4.1 1.9c-1 .7-1.6 1.1-1.6 2.4M12 16.5h.01"/></svg></span></span> پرسش‌های متداول درباره توکن انرژی خورشیدی</h3>
             <p>پاسخ به مهم‌ترین سوالات حقوقی، فنی و اقتصادی</p>
           </div>
         </div>
@@ -2390,7 +2390,7 @@ overlay.addEventListener('click', () => {
 /* ==================== TOAST ==================== */
 function showToast(type, title, message) {
   const container = document.getElementById('toastContainer');
-  const icons = { success: '✓', error: '✗', warning: '!', info: 'ℹ', solar: '⚡' };
+  const icons = { success: '✓', error: '✗', warning: '!', info: '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 11v5M12 8h.01"/></svg></span>', solar: '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13 2-8 12h6l-1 8 8-12h-6z"/></svg></span>' };
   const toast = document.createElement('div');
   toast.className = `toast ${type}`;
   toast.innerHTML = `
