@@ -741,7 +741,7 @@ body {
 }
 .tl-item.pending::before { border-color: var(--warning); background: #fff; }
 .tl-item.pending::after {
-  content: '⏱';
+  content: '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg></span>';
   position: absolute;
   top: 6px; right: -30px;
   width: 24px; height: 24px;
@@ -1420,7 +1420,7 @@ body {
 
   <!-- TOPBAR -->
   <header class="topbar">
-    <button class="toggle-btn" id="toggleBtn">☰</button>
+    <button class="toggle-btn" id="toggleBtn"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span></button>
     <div class="breadcrumb">
       <a href="dashboard.html">داشبورد</a>
       <span>›</span>
@@ -1435,7 +1435,7 @@ body {
     </div>
 
     <div class="topbar-actions">
-      <button class="icon-btn" title="اشتراک‌گذاری">⚯</button>
+      <button class="icon-btn" title="اشتراک‌گذاری"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 13a4 4 0 0 0 6 0l2-2a4 4 0 0 0-6-6l-1 1M14 11a4 4 0 0 0-6 0l-2 2a4 4 0 0 0 6 6l1-1"/></svg></span></button>
       <button class="icon-btn" title="چاپ">⎙</button>
       <button class="icon-btn" id="notifBtn" title="اعلان‌ها">◉<span class="dot"></span></button>
     </div>
@@ -1459,7 +1459,7 @@ body {
 
         <div class="hero-main">
           <div class="hero-title-block">
-            <div class="hero-icon">🐄</div>
+            <div class="hero-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M8 9 6 6M16 9l2-3M9 14h.01M15 14h.01"/></svg></span></div>
             <div class="hero-title">
               <h1>دامداری نمونه</h1>
               <p>
@@ -1472,29 +1472,29 @@ body {
               <span>⇩</span> دانلود گزارش
             </button>
             <button class="hero-action-btn" onclick="showToast('info','ویرایش','حالت ویرایش پروژه فعال شد.')">
-              <span>✎</span> ویرایش
+              <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 20 4-1 10-10a2.8 2.8 0 0 0-4-4L4 15z"/></svg></span></span> ویرایش
             </button>
             <button class="hero-action-btn" onclick="showToast('info','اشتراک‌گذاری','لینک پروژه کپی شد.')">
-              <span>⚯</span> اشتراک
+              <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 13a4 4 0 0 0 6 0l2-2a4 4 0 0 0-6-6l-1 1M14 11a4 4 0 0 0-6 0l-2 2a4 4 0 0 0 6 6l1-1"/></svg></span></span> اشتراک
             </button>
           </div>
         </div>
 
         <div class="hero-stats">
           <div class="hero-stat">
-            <div class="hero-stat-label">📊 پیشرفت پروژه</div>
+            <div class="hero-stat-label"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 19V9M10 19V5M15 19v-7M20 19V3"/></svg></span> پیشرفت پروژه</div>
             <div class="hero-stat-value gold">۷۲٪</div>
           </div>
           <div class="hero-stat">
-            <div class="hero-stat-label">💰 ارزش‌گذاری</div>
+            <div class="hero-stat-label"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="12" rx="2"/><circle cx="12" cy="12" r="3"/></svg></span> ارزش‌گذاری</div>
             <div class="hero-stat-value">۱۲.۵B</div>
           </div>
           <div class="hero-stat">
-            <div class="hero-stat-label">🪙 توکن صادرشده</div>
+            <div class="hero-stat-label"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M9 10c1-2 4-2 5 0M9 14c1 2 4 2 5 0M12 7v10"/></svg></span> توکن صادرشده</div>
             <div class="hero-stat-value green">۳,۰۰۰</div>
           </div>
           <div class="hero-stat">
-            <div class="hero-stat-label">👥 مشارکت‌کنندگان</div>
+            <div class="hero-stat-label"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0M16 11a3 3 0 0 1 5 2v7"/></svg></span> مشارکت‌کنندگان</div>
             <div class="hero-stat-value blue">۱۸۲</div>
           </div>
         </div>
@@ -1560,7 +1560,7 @@ body {
             <div class="card-body">
               <div class="info-grid">
                 <div class="info-item">
-                  <div class="label">📋 نام پروژه</div>
+                  <div class="label"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 9h6M9 13h6M9 17h4"/></svg></span> نام پروژه</div>
                   <div class="value">دامداری نمونه</div>
                 </div>
                 <div class="info-item">
@@ -1572,19 +1572,19 @@ body {
                   <div class="value">شرکت دام‌آوران پارس</div>
                 </div>
                 <div class="info-item">
-                  <div class="label">🎯 حوزه فعالیت</div>
+                  <div class="label"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg></span> حوزه فعالیت</div>
                   <div class="value">دامپروری و کشاورزی</div>
                 </div>
                 <div class="info-item">
-                  <div class="label">📍 محل اجرا</div>
+                  <div class="label"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 10c0 5-7 10-7 10S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2"/></svg></span> محل اجرا</div>
                   <div class="value">اصفهان، نجف‌آباد</div>
                 </div>
                 <div class="info-item">
-                  <div class="label">📅 تاریخ ثبت</div>
+                  <div class="label"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 9h16"/></svg></span> تاریخ ثبت</div>
                   <div class="value">۱۴۰۳/۰۴/۱۰</div>
                 </div>
                 <div class="info-item">
-                  <div class="label">🎯 مدل توکن</div>
+                  <div class="label"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg></span> مدل توکن</div>
                   <div class="value blue">ظرفیت تولید</div>
                 </div>
                 <div class="info-item">
@@ -1592,7 +1592,7 @@ body {
                   <div class="value green">فعال</div>
                 </div>
                 <div class="info-item">
-                  <div class="label">📊 ظرفیت</div>
+                  <div class="label"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 19V9M10 19V5M15 19v-7M20 19V3"/></svg></span> ظرفیت</div>
                   <div class="value">۵۰۰ راس دام مولد</div>
                 </div>
                 <div class="info-item">
@@ -1604,7 +1604,7 @@ body {
                   <div class="value">۳ سال (۱۴۰۳-۱۴۰۶)</div>
                 </div>
                 <div class="info-item">
-                  <div class="label">📈 مرحله توسعه</div>
+                  <div class="label"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 16 5-5 4 3 7-8"/><path d="M15 6h5v5"/></svg></span> مرحله توسعه</div>
                   <div class="value">اعتبارسنجی نهایی</div>
                 </div>
               </div>
@@ -1798,7 +1798,7 @@ body {
               <div class="doc-list">
 
                 <div class="doc-item">
-                  <div class="doc-icon pdf">📄</div>
+                  <div class="doc-icon pdf"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h5"/></svg></span></div>
                   <div class="doc-body">
                     <strong>سند مالکیت زمین</strong>
                     <small><span>PDF</span><span class="dot-sep">·</span><span>۲.۴ MB</span></small>
@@ -1816,16 +1816,16 @@ body {
                 </div>
 
                 <div class="doc-item">
-                  <div class="doc-icon sheet">📊</div>
+                  <div class="doc-icon sheet"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 19V9M10 19V5M15 19v-7M20 19V3"/></svg></span></div>
                   <div class="doc-body">
                     <strong>گزارش ارزیابی</strong>
                     <small><span>XLSX</span><span class="dot-sep">·</span><span>۱.۸ MB</span></small>
                   </div>
-                  <span class="doc-status pending">⏱ انتظار</span>
+                  <span class="doc-status pending"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg></span> انتظار</span>
                 </div>
 
                 <div class="doc-item">
-                  <div class="doc-icon doc">📝</div>
+                  <div class="doc-icon doc"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 20 4-1 10-10a2.8 2.8 0 0 0-4-4L4 15z"/></svg></span></div>
                   <div class="doc-body">
                     <strong>قرارداد مشارکت</strong>
                     <small><span>DOCX</span><span class="dot-sep">·</span><span>۹۴۰ KB</span></small>
@@ -1856,7 +1856,7 @@ body {
               ⇅ فیلتر
             </button>
             <button class="btn btn-primary btn-sm" onclick="showToast('success','بارگذاری','پنجره بارگذاری سند جدید باز شد.')">
-              ➕ سند جدید
+              <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span> سند جدید
             </button>
           </div>
         </div>
@@ -1864,7 +1864,7 @@ body {
           <div class="doc-list">
 
             <div class="doc-item">
-              <div class="doc-icon pdf">📄</div>
+              <div class="doc-icon pdf"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h5"/></svg></span></div>
               <div class="doc-body">
                 <strong>سند مالکیت زمین</strong>
                 <small><span>PDF · ۲.۴ MB</span><span class="dot-sep">·</span><span>۱۴۰۳/۰۵/۱۲</span><span class="dot-sep">·</span><span>بارگذاری: محمد احمدی</span></small>
@@ -1874,7 +1874,7 @@ body {
             </div>
 
             <div class="doc-item">
-              <div class="doc-icon pdf">📄</div>
+              <div class="doc-icon pdf"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h5"/></svg></span></div>
               <div class="doc-body">
                 <strong>مجوز بهره‌برداری</strong>
                 <small><span>PDF · ۱.۱ MB</span><span class="dot-sep">·</span><span>۱۴۰۳/۰۵/۱۰</span><span class="dot-sep">·</span><span>بارگذاری: سارا رضایی</span></small>
@@ -1884,17 +1884,17 @@ body {
             </div>
 
             <div class="doc-item">
-              <div class="doc-icon sheet">📊</div>
+              <div class="doc-icon sheet"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 19V9M10 19V5M15 19v-7M20 19V3"/></svg></span></div>
               <div class="doc-body">
                 <strong>گزارش ارزیابی دارایی</strong>
                 <small><span>XLSX · ۳.۸ MB</span><span class="dot-sep">·</span><span>۱۴۰۳/۰۴/۲۸</span><span class="dot-sep">·</span><span>بارگذاری: علی کریمی</span></small>
               </div>
-              <span class="doc-status pending">⏱ انتظار</span>
+              <span class="doc-status pending"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg></span> انتظار</span>
               <button class="doc-action">⇩</button>
             </div>
 
             <div class="doc-item">
-              <div class="doc-icon doc">📝</div>
+              <div class="doc-icon doc"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 20 4-1 10-10a2.8 2.8 0 0 0-4-4L4 15z"/></svg></span></div>
               <div class="doc-body">
                 <strong>قرارداد مشارکت</strong>
                 <small><span>DOCX · ۲.۱ MB</span><span class="dot-sep">·</span><span>۱۴۰۳/۰۴/۱۵</span><span class="dot-sep">·</span><span>بارگذاری: محمد احمدی</span></small>
@@ -1914,7 +1914,7 @@ body {
             </div>
 
             <div class="doc-item">
-              <div class="doc-icon pdf">📄</div>
+              <div class="doc-icon pdf"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h5"/></svg></span></div>
               <div class="doc-body">
                 <strong>گزارش فنی دام‌ها</strong>
                 <small><span>PDF · ۳.۲ MB</span><span class="dot-sep">·</span><span>۱۴۰۳/۰۴/۰۸</span><span class="dot-sep">·</span><span>بارگذاری: دامپزشک</span></small>
@@ -1924,7 +1924,7 @@ body {
             </div>
 
             <div class="doc-item">
-              <div class="doc-icon doc">📝</div>
+              <div class="doc-icon doc"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 20 4-1 10-10a2.8 2.8 0 0 0-4-4L4 15z"/></svg></span></div>
               <div class="doc-body">
                 <strong>صورت‌های مالی ۱۴۰۲</strong>
                 <small><span>DOCX · ۱.۵ MB</span><span class="dot-sep">·</span><span>۱۴۰۳/۰۳/۲۵</span><span class="dot-sep">·</span><span>بارگذاری: حسابدار</span></small>
@@ -1934,7 +1934,7 @@ body {
             </div>
 
             <div class="doc-item">
-              <div class="doc-icon pdf">📄</div>
+              <div class="doc-icon pdf"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h5"/></svg></span></div>
               <div class="doc-body">
                 <strong>تأییدیه کارشناس رسمی</strong>
                 <small><span>PDF · ۸۵۰ KB</span><span class="dot-sep">·</span><span>۱۴۰۳/۰۳/۲۰</span><span class="dot-sep">·</span><span>بارگذاری: کارشناس رسمی</span></small>
@@ -1944,7 +1944,7 @@ body {
             </div>
 
             <div class="doc-item">
-              <div class="doc-icon pdf">📄</div>
+              <div class="doc-icon pdf"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h5"/></svg></span></div>
               <div class="doc-body">
                 <strong>گزارش بازدید میدانی</strong>
                 <small><span>PDF · ۱.۲ MB</span><span class="dot-sep">·</span><span>۱۴۰۳/۰۳/۱۵</span><span class="dot-sep">·</span><span>بارگذاری: ناظر</span></small>
@@ -1954,7 +1954,7 @@ body {
             </div>
 
             <div class="doc-item">
-              <div class="doc-icon sheet">📊</div>
+              <div class="doc-icon sheet"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 19V9M10 19V5M15 19v-7M20 19V3"/></svg></span></div>
               <div class="doc-body">
                 <strong>پیش‌بینی درآمد</strong>
                 <small><span>XLSX · ۲.۴ MB</span><span class="dot-sep">·</span><span>۱۴۰۳/۰۳/۱۰</span><span class="dot-sep">·</span><span>بارگذاری: مالی</span></small>
@@ -1964,7 +1964,7 @@ body {
             </div>
 
             <div class="doc-item">
-              <div class="doc-icon doc">📝</div>
+              <div class="doc-icon doc"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 20 4-1 10-10a2.8 2.8 0 0 0-4-4L4 15z"/></svg></span></div>
               <div class="doc-body">
                 <strong>اساسنامه شرکت</strong>
                 <small><span>DOCX · ۹۸۰ KB</span><span class="dot-sep">·</span><span>۱۴۰۳/۰۳/۰۵</span><span class="dot-sep">·</span><span>بارگذاری: حقوقی</span></small>
@@ -1974,7 +1974,7 @@ body {
             </div>
 
             <div class="doc-item">
-              <div class="doc-icon pdf">📄</div>
+              <div class="doc-icon pdf"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h5"/></svg></span></div>
               <div class="doc-body">
                 <strong>ارزیابی ریسک</strong>
                 <small><span>PDF · ۱.۸ MB</span><span class="dot-sep">·</span><span>۱۴۰۳/۰۳/۰۱</span><span class="dot-sep">·</span><span>بارگذاری: ریسک</span></small>
@@ -1997,7 +1997,7 @@ body {
             <p>مدل‌های توکن فعال برای این پروژه</p>
           </div>
           <button class="btn btn-gold btn-sm" onclick="showToast('success','توکن جدید','فرم ایجاد توکن جدید باز شد.')">
-            ➕ ایجاد توکن
+            <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span> ایجاد توکن
           </button>
         </div>
         <div class="card-body">
@@ -2122,7 +2122,7 @@ body {
             <p>اشخاص و سازمان‌های درگیر در این پروژه</p>
           </div>
           <button class="btn btn-primary btn-sm" onclick="showToast('info','دعوت','فرم دعوت مشارکت‌کننده جدید باز شد.')">
-            ➕ دعوت جدید
+            <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span> دعوت جدید
           </button>
         </div>
         <div class="card-body">
@@ -2219,49 +2219,49 @@ body {
 
             <div class="tl-item done">
               <h5>ثبت اولیه پروژه</h5>
-              <div class="tl-date">📅 ۱۴۰۳/۰۴/۱۰</div>
+              <div class="tl-date"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 9h16"/></svg></span> ۱۴۰۳/۰۴/۱۰</div>
               <p>پروژه دامداری نمونه با کد IRT-1403-001 در سامانه ایرانیان توکن ثبت شد.</p>
             </div>
 
             <div class="tl-item done">
               <h5>ارزیابی اولیه</h5>
-              <div class="tl-date">📅 ۱۴۰۳/۰۴/۱۸</div>
+              <div class="tl-date"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 9h16"/></svg></span> ۱۴۰۳/۰۴/۱۸</div>
               <p>موضوع، مالکیت، ظرفیت و مدارک پروژه بررسی و تأیید شد. ۵۰۰ راس دام مولد تأیید شد.</p>
             </div>
 
             <div class="tl-item done">
               <h5>بارگذاری اسناد مالکیت</h5>
-              <div class="tl-date">📅 ۱۴۰۳/۰۴/۲۵</div>
+              <div class="tl-date"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 9h16"/></svg></span> ۱۴۰۳/۰۴/۲۵</div>
               <p>سند مالکیت زمین، مجوز بهره‌برداری و ۴ سند دیگر بارگذاری و تأیید شد.</p>
             </div>
 
             <div class="tl-item done">
               <h5>طراحی مدل حقوقی و اقتصادی</h5>
-              <div class="tl-date">📅 ۱۴۰۳/۰۵/۰۲</div>
+              <div class="tl-date"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 9h16"/></svg></span> ۱۴۰۳/۰۵/۰۲</div>
               <p>مدل اقتصادی و حقوقی پروژه طراحی و تصویب شد. ارزش پایه ۱۲.۵ میلیارد تومان تعیین شد.</p>
             </div>
 
             <div class="tl-item done">
               <h5>ایجاد ساختار دیجیتال</h5>
-              <div class="tl-date">📅 ۱۴۰۳/۰۵/۱۵</div>
+              <div class="tl-date"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 9h16"/></svg></span> ۱۴۰۳/۰۵/۱۵</div>
               <p>۳,۰۰۰ توکن برای پروژه ایجاد و ثبت شد. ۱,۵۰۰ توکن درآمدی و ۵۰۰ توکن مشارکتی نیز صادر شد.</p>
             </div>
 
             <div class="tl-item done">
               <h5>شروع اعتبارسنجی نهایی</h5>
-              <div class="tl-date">📅 ۱۴۰۳/۰۵/۲۰</div>
+              <div class="tl-date"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 9h16"/></svg></span> ۱۴۰۳/۰۵/۲۰</div>
               <p>فرآیند اعتبارسنجی نهایی توسط تیم کارشناسی آغاز شد. تا این لحظه ۴۷ سند تأیید شده است.</p>
             </div>
 
             <div class="tl-item current">
               <h5>اعتبارسنجی نهایی</h5>
-              <div class="tl-date">📅 در جریان</div>
+              <div class="tl-date"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 9h16"/></svg></span> در جریان</div>
               <p>در انتظار تأیید نهایی اسناد و ارزیابی دارایی. تخمین: ۵ روز کاری دیگر.</p>
             </div>
 
             <div class="tl-item pending">
               <h5>شروع بهره‌برداری</h5>
-              <div class="tl-date">📅 در انتظار</div>
+              <div class="tl-date"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 9h16"/></svg></span> در انتظار</div>
               <p>پس از تأیید نهایی، پروژه وارد فاز بهره‌برداری و پایش مستمر خواهد شد.</p>
             </div>
 
@@ -2296,15 +2296,15 @@ body {
             <div class="card-body">
               <div class="info-grid" style="grid-template-columns: 1fr;">
                 <div class="info-item">
-                  <div class="label">📍 آدرس</div>
+                  <div class="label"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 10c0 5-7 10-7 10S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2"/></svg></span> آدرس</div>
                   <div class="value">استان اصفهان، شهرستان نجف‌آباد، جاده کمربندی، پلاک ۱۲۵</div>
                 </div>
                 <div class="info-item">
-                  <div class="label">🌐 مختصات</div>
+                  <div class="label"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M4 12h16"/></svg></span> مختصات</div>
                   <div class="value mono">32.6306° N, 51.3667° E</div>
                 </div>
                 <div class="info-item">
-                  <div class="label">📐 مساحت کل</div>
+                  <div class="label"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 19 14-14 2 2-14 14z"/></svg></span> مساحت کل</div>
                   <div class="value">۲۵,۰۰۰ متر مربع</div>
                 </div>
                 <div class="info-item">
@@ -2419,7 +2419,7 @@ body {
             </div>
 
             <div class="activity-item">
-              <div class="activity-icon blue">✎</div>
+              <div class="activity-icon blue"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 20 4-1 10-10a2.8 2.8 0 0 0-4-4L4 15z"/></svg></span></div>
               <div class="activity-body">
                 <p>اطلاعات پایه <strong>پروژه</strong> توسط سارا رضایی ویرایش شد</p>
                 <small>۲۵ دقیقه پیش · Audit ID: #A-2450</small>
@@ -2483,7 +2483,7 @@ body {
             </div>
 
             <div class="activity-item">
-              <div class="activity-icon purple">✎</div>
+              <div class="activity-icon purple"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 20 4-1 10-10a2.8 2.8 0 0 0-4-4L4 15z"/></svg></span></div>
               <div class="activity-body">
                 <p>مدل توکن <strong>$DAM</strong> توسط محمد احمدی ویرایش شد</p>
                 <small>۲ روز پیش · Audit ID: #A-2442</small>
@@ -2523,7 +2523,7 @@ overlay.addEventListener('click', () => {
 /* ==================== TOAST ==================== */
 function showToast(type, title, message) {
   const container = document.getElementById('toastContainer');
-  const icons = { success: '✓', error: '✗', warning: '!', info: 'ℹ' };
+  const icons = { success: '✓', error: '✗', warning: '!', info: '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 11v5M12 8h.01"/></svg></span>' };
 
   const toast = document.createElement('div');
   toast.className = `toast ${type}`;
@@ -2735,7 +2735,7 @@ try {
 
   const customIcon = L.divIcon({
     className: 'custom-marker',
-    html: '<div style="background: linear-gradient(135deg, #1a5fb4, #3584e4); width: 40px; height: 40px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); display: flex; align-items: center; justify-content: center; border: 3px solid #fff; box-shadow: 0 8px 20px rgba(26,95,180,0.4);"><span style="transform: rotate(45deg); color: #fff; font-size: 18px;">🐄</span></div>',
+    html: '<div style="background: linear-gradient(135deg, #1a5fb4, #3584e4); width: 40px; height: 40px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); display: flex; align-items: center; justify-content: center; border: 3px solid #fff; box-shadow: 0 8px 20px rgba(26,95,180,0.4);"><span style="transform: rotate(45deg); color: #fff; font-size: 18px;"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M8 9 6 6M16 9l2-3M9 14h.01M15 14h.01"/></svg></span></span></div>',
     iconSize: [40, 40],
     iconAnchor: [20, 40],
     popupAnchor: [0, -40]
@@ -2745,7 +2745,7 @@ try {
     .addTo(map)
     .bindPopup(`
       <div style="text-align: right; direction: rtl; padding: 4px;">
-        <strong style="font-size: 14px; display: block; margin-bottom: 4px;">🐄 دامداری نمونه</strong>
+        <strong style="font-size: 14px; display: block; margin-bottom: 4px;"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M8 9 6 6M16 9l2-3M9 14h.01M15 14h.01"/></svg></span> دامداری نمونه</strong>
         <span style="font-size: 12px; color: #64748b;">اصفهان، نجف‌آباد</span>
       </div>
     `)
