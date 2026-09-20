@@ -361,7 +361,7 @@ body {
   margin-bottom: 20px;
 }
 .housing-badge::before {
-  content: '🏠';
+  content: '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 11 8-7 8 7"/><path d="M6 10v10h12V10M10 20v-6h4v6"/></svg></span>';
 }
 .housing-hero h1 {
   font-size: clamp(26px, 4vw, 42px);
@@ -1142,7 +1142,7 @@ body {
 
   <!-- TOPBAR -->
   <header class="topbar">
-    <button class="toggle-btn" id="toggleBtn">☰</button>
+    <button class="toggle-btn" id="toggleBtn"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span></button>
     <div class="breadcrumb">
       <a href="dashboard.html">داشبورد</a>
       <span>›</span>
@@ -1175,7 +1175,7 @@ body {
             🏗️ مشاهده پروژه‌ها
           </a>
           <button class="btn btn-outline btn-lg" onclick="showToast('info','راهنما','راهنمای کامل توکن مسکن در حال بارگذاری...')" style="background: rgba(255,255,255,0.1); color: #fff; border-color: rgba(255,255,255,0.2);">
-            📖 راهنمای کامل
+            <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v17H6.5A2.5 2.5 0 0 1 4 17.5z"/><path d="M4 17.5A2.5 2.5 0 0 1 6.5 15H20"/></svg></span> راهنمای کامل
           </button>
         </div>
       </div>
@@ -1220,10 +1220,10 @@ body {
         <span>◫</span> فرآیند توکنیزه‌سازی
       </button>
       <button class="tab-btn" data-tab="calculator">
-        <span>🧮</span> ماشین‌حساب سرمایه‌گذاری
+        <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 12h2M14 12h2M8 16h2M14 16h2"/></svg></span></span> ماشین‌حساب سرمایه‌گذاری
       </button>
       <button class="tab-btn" data-tab="faq">
-        <span>❓</span> پرسش‌های متداول
+        <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M9.8 9a2.5 2.5 0 1 1 4.1 1.9c-1 .7-1.6 1.1-1.6 2.4"/><path d="M12 16.5h.01"/></svg></span></span> پرسش‌های متداول
       </button>
     </nav>
 
@@ -1260,7 +1260,7 @@ body {
         <!-- Project 1 -->
         <div class="housing-project-card" onclick="showToast('info','جزئیات','صفحه جزئیات پروژه در حال بارگذاری...')">
           <div class="housing-project-cover">
-            🏢
+            <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 20V4h10v16M15 8h4v12M8 7h4M8 11h4M8 15h4M17 12h1M17 16h1"/></svg></span>
             <span class="housing-project-status construction">در حال ساخت</span>
             <span class="housing-project-progress-badge">۶۵٪ پیشرفت</span>
           </div>
@@ -1270,7 +1270,7 @@ body {
               <span class="type-badge">مشارکت در ساخت</span>
             </div>
             <div class="housing-project-location">
-              <span>📍</span> تهران، سعادت‌آباد
+              <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 10c0 5-7 10-7 10S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2"/></svg></span></span> تهران، سعادت‌آباد
             </div>
             <div class="housing-project-stats">
               <div class="housing-stat-item">
@@ -1301,7 +1301,7 @@ body {
             </div>
             <div class="housing-project-footer">
               <button class="btn btn-outline btn-sm" onclick="event.stopPropagation(); showToast('info','جزئیات','صفحه جزئیات باز شد.')">◉ جزئیات</button>
-              <button class="btn btn-teal btn-sm" onclick="event.stopPropagation(); showToast('success','خرید','فرم خرید توکن باز شد.')">🛒 خرید توکن</button>
+              <button class="btn btn-teal btn-sm" onclick="event.stopPropagation(); showToast('success','خرید','فرم خرید توکن باز شد.')"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h2l2 10h9l2-7H7"/><circle cx="10" cy="19" r="1"/><circle cx="17" cy="19" r="1"/></svg></span> خرید توکن</button>
             </div>
           </div>
         </div>
@@ -1319,7 +1319,7 @@ body {
               <span class="type-badge">مشارکت در ساخت</span>
             </div>
             <div class="housing-project-location">
-              <span>📍</span> اصفهان، چهارباغ
+              <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 10c0 5-7 10-7 10S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2"/></svg></span></span> اصفهان، چهارباغ
             </div>
             <div class="housing-project-stats">
               <div class="housing-stat-item">
@@ -1350,7 +1350,7 @@ body {
             </div>
             <div class="housing-project-footer">
               <button class="btn btn-outline btn-sm">◉ جزئیات</button>
-              <button class="btn btn-teal btn-sm">🛒 خرید توکن</button>
+              <button class="btn btn-teal btn-sm"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h2l2 10h9l2-7H7"/><circle cx="10" cy="19" r="1"/><circle cx="17" cy="19" r="1"/></svg></span> خرید توکن</button>
             </div>
           </div>
         </div>
@@ -1368,7 +1368,7 @@ body {
               <span class="type-badge">پیش‌فروش رسمی</span>
             </div>
             <div class="housing-project-location">
-              <span>📍</span> تهران، الهیه
+              <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 10c0 5-7 10-7 10S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2"/></svg></span></span> تهران، الهیه
             </div>
             <div class="housing-project-stats">
               <div class="housing-stat-item">
@@ -1399,7 +1399,7 @@ body {
             </div>
             <div class="housing-project-footer">
               <button class="btn btn-outline btn-sm">◉ جزئیات</button>
-              <button class="btn btn-teal btn-sm">🛒 خرید توکن</button>
+              <button class="btn btn-teal btn-sm"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h2l2 10h9l2-7H7"/><circle cx="10" cy="19" r="1"/><circle cx="17" cy="19" r="1"/></svg></span> خرید توکن</button>
             </div>
           </div>
         </div>
@@ -1417,7 +1417,7 @@ body {
               <span class="type-badge">پیش‌فروش</span>
             </div>
             <div class="housing-project-location">
-              <span>📍</span> مشهد، احمدآباد
+              <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 10c0 5-7 10-7 10S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2"/></svg></span></span> مشهد، احمدآباد
             </div>
             <div class="housing-project-stats">
               <div class="housing-stat-item">
@@ -1448,7 +1448,7 @@ body {
             </div>
             <div class="housing-project-footer">
               <button class="btn btn-outline btn-sm">◉ جزئیات</button>
-              <button class="btn btn-teal btn-sm" disabled style="opacity: 0.5; cursor: not-allowed;">⏳ در انتظار</button>
+              <button class="btn btn-teal btn-sm" disabled style="opacity: 0.5; cursor: not-allowed;"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg></span> در انتظار</button>
             </div>
           </div>
         </div>
@@ -1456,7 +1456,7 @@ body {
         <!-- Project 5 -->
         <div class="housing-project-card" onclick="showToast('info','جزئیات','صفحه جزئیات پروژه در حال بارگذاری...')">
           <div class="housing-project-cover" style="background: linear-gradient(135deg, #be123c 0%, #ec4899 50%, #f472b6 100%);">
-            🏡
+            <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 11 8-7 8 7"/><path d="M6 10v10h12V10M10 20v-6h4v6"/></svg></span>
             <span class="housing-project-status construction">در حال ساخت</span>
             <span class="housing-project-progress-badge">۴۵٪ پیشرفت</span>
           </div>
@@ -1466,7 +1466,7 @@ body {
               <span class="type-badge">مشارکت در ساخت</span>
             </div>
             <div class="housing-project-location">
-              <span>📍</span> کیش، مروارید
+              <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 10c0 5-7 10-7 10S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2"/></svg></span></span> کیش، مروارید
             </div>
             <div class="housing-project-stats">
               <div class="housing-stat-item">
@@ -1497,7 +1497,7 @@ body {
             </div>
             <div class="housing-project-footer">
               <button class="btn btn-outline btn-sm">◉ جزئیات</button>
-              <button class="btn btn-teal btn-sm">🛒 خرید توکن</button>
+              <button class="btn btn-teal btn-sm"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h2l2 10h9l2-7H7"/><circle cx="10" cy="19" r="1"/><circle cx="17" cy="19" r="1"/></svg></span> خرید توکن</button>
             </div>
           </div>
         </div>
@@ -1634,7 +1634,7 @@ body {
           <div class="card">
             <div class="card-header">
               <div class="card-header-left">
-                <h3><span class="icon">📊</span> مزایا و محدودیت‌ها</h3>
+                <h3><span class="icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 19V9M10 19V5M15 19v-7M20 19V3"/></svg></span></span> مزایا و محدودیت‌ها</h3>
               </div>
             </div>
             <div class="card-body">
@@ -1679,7 +1679,7 @@ body {
         <div class="content-col">
           <div class="calculator">
             <div class="calculator-title">
-              🧮 ماشین‌حساب سرمایه‌گذاری در توکن مسکن
+              <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 12h2M14 12h2M8 16h2M14 16h2"/></svg></span> ماشین‌حساب سرمایه‌گذاری در توکن مسکن
             </div>
             <div class="calculator-desc">
               با وارد کردن بودجه و انتخاب پروژه، تعداد توکن قابل خرید و بازدهی تخمینی را مشاهده کنید.
@@ -1739,7 +1739,7 @@ body {
           <div class="card">
             <div class="card-header">
               <div class="card-header-left">
-                <h3><span class="icon">📈</span> روند ارزش‌گذاری</h3>
+                <h3><span class="icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 16 5-5 4 3 7-8"/><path d="M15 6h5v5"/></svg></span></span> روند ارزش‌گذاری</h3>
                 <p>میانگین رشد ارزش پروژه‌های مسکن</p>
               </div>
             </div>
@@ -1753,7 +1753,7 @@ body {
           <div class="card">
             <div class="card-header">
               <div class="card-header-left">
-                <h3><span class="icon">💡</span> نکات مهم</h3>
+                <h3><span class="icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M8 14a6 6 0 1 1 8 0c-1 1-1 2-1 4H9c0-2 0-3-1-4Z"/></svg></span></span> نکات مهم</h3>
               </div>
             </div>
             <div class="card-body">
@@ -1766,7 +1766,7 @@ body {
                   </div>
                 </div>
                 <div class="info-row">
-                  <div class="info-row-icon teal">📊</div>
+                  <div class="info-row-icon teal"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 19V9M10 19V5M15 19v-7M20 19V3"/></svg></span></div>
                   <div class="info-row-body">
                     <strong>محاسبه تخمینی</strong>
                     <p>نتایج بر اساس میانگین رشد بازار مسکن محاسبه می‌شود.</p>
@@ -1792,7 +1792,7 @@ body {
       <div class="card">
         <div class="card-header">
           <div class="card-header-left">
-            <h3><span class="icon">❓</span> پرسش‌های متداول درباره توکن مسکن</h3>
+            <h3><span class="icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M9.8 9a2.5 2.5 0 1 1 4.1 1.9c-1 .7-1.6 1.1-1.6 2.4"/><path d="M12 16.5h.01"/></svg></span></span> پرسش‌های متداول درباره توکن مسکن</h3>
             <p>پاسخ به مهم‌ترین سوالات حقوقی و اقتصادی</p>
           </div>
         </div>
@@ -1934,7 +1934,7 @@ overlay.addEventListener('click', () => {
 /* ==================== TOAST ==================== */
 function showToast(type, title, message) {
   const container = document.getElementById('toastContainer');
-  const icons = { success: '✓', error: '✗', warning: '!', info: 'ℹ' };
+  const icons = { success: '✓', error: '✗', warning: '!', info: '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 11v5M12 8h.01"/></svg></span>' };
   const toast = document.createElement('div');
   toast.className = `toast ${type}`;
   toast.innerHTML = `
