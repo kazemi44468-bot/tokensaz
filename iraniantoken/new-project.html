@@ -1355,7 +1355,7 @@ body {
     </div>
 
     <div class="topbar-actions">
-      <button class="icon-btn" onclick="saveDraft(true)" title="ذخیره پیش‌نویس">💾</button>
+      <button class="icon-btn" onclick="saveDraft(true)" title="ذخیره پیش‌نویس"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></button>
       <button class="icon-btn" onclick="showHelp()" title="راهنما">؟</button>
       <button class="icon-btn" id="notifBtn" title="اعلان‌ها">◉<span style="position: absolute; top: 8px; left: 8px; width: 8px; height: 8px; background: var(--danger); border-radius: 50%; border: 2px solid #fff;"></span></button>
     </div>
@@ -1461,7 +1461,7 @@ body {
               <div class="form-group">
                 <label class="form-label">نام پروژه <span class="required">*</span></label>
                 <input type="text" class="form-input" id="f_projectName" placeholder="مثلاً: دامداری نمونه" required>
-                <div class="error-message" id="e_projectName">⚠ نام پروژه را وارد کنید.</div>
+                <div class="error-message" id="e_projectName"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> نام پروژه را وارد کنید.</div>
               </div>
               <div class="form-group">
                 <label class="form-label">کد پروژه <span class="required">*</span> <span class="hint">(سیستمی)</span></label>
@@ -1473,7 +1473,7 @@ body {
               <div class="form-group">
                 <label class="form-label">مالک / مجری <span class="required">*</span></label>
                 <input type="text" class="form-input" id="f_owner" placeholder="نام شخص یا شرکت مالک" required>
-                <div class="error-message" id="e_owner">⚠ نام مالک را وارد کنید.</div>
+                <div class="error-message" id="e_owner"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> نام مالک را وارد کنید.</div>
               </div>
               <div class="form-group">
                 <label class="form-label">حوزه فعالیت <span class="required">*</span></label>
@@ -1481,20 +1481,20 @@ body {
                   <option value="">انتخاب کنید...</option>
                   <option value="agriculture"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 4C10 4 4 9 4 16c0 3 2 4 4 4 7 0 12-6 12-16Z"/><path d="M4 20c3-4 7-7 12-9"/></svg></span> کشاورزی</option>
                   <option value="livestock"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M8 9 6 6M16 9l2-3M9 14h.01M15 14h.01M10 17h4"/></svg></span> دامپروری</option>
-                  <option value="construction">🏗️ ساختمانی</option>
+                  <option value="construction"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> ساختمانی</option>
                   <option value="industry"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V8l6 4V8l6 4V5h4v15z"/><path d="M8 16h2M13 16h2M17 16h2"/></svg></span> صنعتی</option>
                   <option value="technology"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="12" rx="2"/><path d="M9 21h6M12 17v4"/></svg></span> فناوری</option>
                   <option value="energy"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13 2-8 12h6l-1 8 8-12h-6z"/></svg></span> انرژی</option>
-                  <option value="services">🛎️ خدماتی</option>
+                  <option value="services"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> خدماتی</option>
                   <option value="tourism"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 20V4h10v16M15 8h4v12M8 7h4M8 11h4M8 15h4M17 12h1M17 16h1"/></svg></span> گردشگری</option>
                   <option value="knowledge"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3 9 9-5 9 5-9 5z"/><path d="M7 12v4c3 2 7 2 10 0v-4M21 9v6"/></svg></span> دانش‌بنیان</option>
                   <option value="realestate"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 20V4h10v16M15 8h4v12M8 7h4M8 11h4M8 15h4M17 12h1M17 16h1"/></svg></span> دارایی و املاک</option>
                   <option value="culture"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 5c4 2 10 2 14 0v8c-4 5-10 5-14 0z"/><path d="M8 10h2M14 10h2"/></svg></span> فرهنگی</option>
-                  <option value="urban">🏙️ شهری</option>
+                  <option value="urban"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> شهری</option>
                   <option value="cooperative"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0M16 11a3 3 0 0 1 5 2v7M15 6a3 3 0 0 1 4 3"/></svg></span> تعاونی</option>
                   <option value="other"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 10c0 5-7 10-7 10S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2"/></svg></span> سایر</option>
                 </select>
-                <div class="error-message" id="e_sector">⚠ حوزه فعالیت را انتخاب کنید.</div>
+                <div class="error-message" id="e_sector"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> حوزه فعالیت را انتخاب کنید.</div>
               </div>
             </div>
 
@@ -1520,7 +1520,7 @@ body {
               <div class="form-group">
                 <label class="form-label">شهر <span class="required">*</span></label>
                 <input type="text" class="form-input" id="f_city" placeholder="نام شهر" required>
-                <div class="error-message" id="e_city">⚠ نام شهر را وارد کنید.</div>
+                <div class="error-message" id="e_city"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> نام شهر را وارد کنید.</div>
               </div>
             </div>
 
@@ -1532,7 +1532,7 @@ body {
             <div class="form-group">
               <label class="form-label">توضیحات پروژه <span class="required">*</span></label>
               <textarea class="form-textarea" id="f_description" placeholder="توضیح مختصری از پروژه، اهداف و برنامه‌ها..." required></textarea>
-              <div class="error-message" id="e_description">⚠ توضیحات پروژه را وارد کنید (حداقل ۲۰ کاراکتر).</div>
+              <div class="error-message" id="e_description"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> توضیحات پروژه را وارد کنید (حداقل ۲۰ کاراکتر).</div>
               <div class="form-hint"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M8 14a6 6 0 1 1 8 0c-1 1-1 2-1 4H9c0-2 0-3-1-4Z"/></svg></span> توضیح واضح و دقیق به ارزیابان و سرمایه‌گذاران کمک می‌کند.</div>
             </div>
 
@@ -1576,7 +1576,7 @@ body {
                   <div class="option-card-desc">توکن با محصول یا ظرفیت تولید مرتبط است</div>
                 </div>
                 <div class="option-card" data-value="service" onclick="selectOption(this, 'tokenModel')">
-                  <span class="option-card-icon">🛎️</span>
+                  <span class="option-card-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></span>
                   <div class="option-card-title">خدمت‌محور</div>
                   <div class="option-card-desc">توکن نماینده اعتبار یا حق خدمت است</div>
                 </div>
@@ -1591,13 +1591,13 @@ body {
                   <div class="option-card-desc">ترکیب چند مدل در یک پروژه</div>
                 </div>
               </div>
-              <div class="error-message" id="e_tokenModel">⚠ یک مدل را انتخاب کنید.</div>
+              <div class="error-message" id="e_tokenModel"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> یک مدل را انتخاب کنید.</div>
             </div>
 
             <div class="form-group">
               <label class="form-label">موضوع / دارایی پایه <span class="required">*</span></label>
               <input type="text" class="form-input" id="f_baseAsset" placeholder="مثلاً: ۵۰۰ راس دام مولد، ساختمان ۲۰ طبقه، نیروگاه ۱۰ مگاواتی" required>
-              <div class="error-message" id="e_baseAsset">⚠ موضوع یا دارایی پایه را وارد کنید.</div>
+              <div class="error-message" id="e_baseAsset"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> موضوع یا دارایی پایه را وارد کنید.</div>
             </div>
 
             <div class="form-row">
@@ -1686,7 +1686,7 @@ body {
             <div class="form-group">
               <label class="form-label">تصاویر و ویدیوهای پروژه</label>
               <div class="upload-zone" onclick="document.getElementById('fileInput4').click()">
-                <div class="upload-zone-icon">🖼️</div>
+                <div class="upload-zone-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></div>
                 <div class="upload-zone-title">تصاویر پروژه را بارگذاری کنید</div>
                 <div class="upload-zone-desc">تصاویر هوایی، موقعیت و فضای پروژه</div>
                 <button class="btn btn-outline btn-sm">انتخاب فایل</button>
@@ -1716,7 +1716,7 @@ body {
                 <label class="form-label">ارزش پایه پروژه <span class="required">*</span></label>
                 <input type="number" class="form-input" id="f_baseValue" placeholder="مثلاً: 12500000000" required>
                 <div class="form-hint"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="12" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M7 9h.01M17 15h.01"/></svg></span> ارزش کل پروژه به تومان</div>
-                <div class="error-message" id="e_baseValue">⚠ ارزش پایه را وارد کنید.</div>
+                <div class="error-message" id="e_baseValue"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> ارزش پایه را وارد کنید.</div>
               </div>
               <div class="form-group">
                 <label class="form-label">واحد پول</label>
@@ -1733,12 +1733,12 @@ body {
               <div class="form-group">
                 <label class="form-label">درآمد سالانه پیش‌بینی‌شده <span class="required">*</span></label>
                 <input type="number" class="form-input" id="f_annualRevenue" placeholder="مثلاً: 2800000000" required>
-                <div class="error-message" id="e_annualRevenue">⚠ درآمد سالانه را وارد کنید.</div>
+                <div class="error-message" id="e_annualRevenue"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> درآمد سالانه را وارد کنید.</div>
               </div>
               <div class="form-group">
                 <label class="form-label">هزینه سالانه پیش‌بینی‌شده <span class="required">*</span></label>
                 <input type="number" class="form-input" id="f_annualCost" placeholder="مثلاً: 1200000000" required>
-                <div class="error-message" id="e_annualCost">⚠ هزینه سالانه را وارد کنید.</div>
+                <div class="error-message" id="e_annualCost"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> هزینه سالانه را وارد کنید.</div>
               </div>
             </div>
 
@@ -1766,7 +1766,7 @@ body {
             </div>
 
             <div class="form-hint" style="background: rgba(245,194,17,0.06); padding: 14px; border-radius: 12px; border: 1px solid rgba(245,194,17,0.2);">
-              <span>⚠</span>
+              <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></span>
               <span>طبق اصل سند، ارزش باید از <strong>موضوع، دارایی، فعالیت، خدمت یا منفعت واقعی پروژه</strong> ناشی شود، نه از قیمت‌گذاری مصنوعی.</span>
             </div>
 
@@ -1785,12 +1785,12 @@ body {
               <div class="form-group">
                 <label class="form-label">تعداد کل توکن <span class="required">*</span></label>
                 <input type="number" class="form-input" id="f_tokenCount" placeholder="مثلاً: 3000" required oninput="updateTokenValue()">
-                <div class="error-message" id="e_tokenCount">⚠ تعداد توکن را وارد کنید.</div>
+                <div class="error-message" id="e_tokenCount"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> تعداد توکن را وارد کنید.</div>
               </div>
               <div class="form-group">
                 <label class="form-label">نماد توکن <span class="required">*</span></label>
                 <input type="text" class="form-input" id="f_tokenSymbol" placeholder="مثلاً: DAM" required style="font-family: monospace; text-transform: uppercase;">
-                <div class="error-message" id="e_tokenSymbol">⚠ نماد توکن را وارد کنید.</div>
+                <div class="error-message" id="e_tokenSymbol"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> نماد توکن را وارد کنید.</div>
               </div>
             </div>
 
@@ -1803,7 +1803,7 @@ body {
               <div class="form-group">
                 <label class="form-label">امکان انتقال</label>
                 <select class="form-select" id="f_transferable">
-                  <option value="yes">✅ قابل انتقال</option>
+                  <option value="yes"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> قابل انتقال</option>
                   <option value="no"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></span> غیرقابل انتقال</option>
                   <option value="conditional"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span> مشروط</option>
                 </select>
@@ -2018,7 +2018,7 @@ body {
               → مرحله قبل
             </button>
             <button class="btn btn-outline" onclick="saveDraft(true)">
-              💾 ذخیره پیش‌نویس
+              <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> ذخیره پیش‌نویس
             </button>
           </div>
           <div class="wizard-footer-right">
@@ -2487,7 +2487,7 @@ function handleFileUpload(input, targetId) {
 
     const ext = file.name.split('.').pop().toLowerCase();
     let icon = '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h5M9 12h6M9 16h6"/></svg></span>';
-    if (['jpg', 'jpeg', 'png', 'gif', 'webp'].includes(ext)) icon = '🖼️';
+    if (['jpg', 'jpeg', 'png', 'gif', 'webp'].includes(ext)) icon = '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span>';
     else if (['xlsx', 'xls', 'csv'].includes(ext)) icon = '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 19V9M10 19V5M15 19v-7M20 19V3"/></svg></span>';
     else if (['docx', 'doc'].includes(ext)) icon = '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 20 4-1 10-10a2.8 2.8 0 0 0-4-4L4 15z"/><path d="m13 6 4 4"/></svg></span>';
     else if (ext === 'pdf') icon = '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h5M9 12h6M9 16h6"/></svg></span>';
