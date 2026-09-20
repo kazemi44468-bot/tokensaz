@@ -2351,6 +2351,7 @@ body:has(.sidebar) .sidebar::after{display:none!important;content:none!important
   </div>
 </aside>
 
+<script src="data.js"></script>
 <script>
 /* ==================== SIDEBAR ==================== */
 const sidebar = document.getElementById('sidebar');
@@ -2419,14 +2420,7 @@ document.querySelectorAll('.view-toggle button').forEach(btn => {
 const projectDrawer = document.getElementById('projectDrawer');
 const drawerOverlay = document.getElementById('drawerOverlay');
 
-const projectData = {
-  1: { title: 'دامداری نمونه', subtitle: 'IRT-1403-001 · پروژه دامپروری' },
-  2: { title: 'کشاورزی پایدار', subtitle: 'IRT-1403-002 · پروژه کشاورزی' },
-  3: { title: 'برج تجاری آرین', subtitle: 'IRT-1403-003 · پروژه ساختمانی' },
-  4: { title: 'نیروگاه خورشیدی', subtitle: 'IRT-1403-004 · پروژه انرژی' },
-  5: { title: 'کارخانه فولاد', subtitle: 'IRT-1403-005 · پروژه صنعتی' },
-  6: { title: 'هتل گردشگری کیش', subtitle: 'IRT-1403-006 · پروژه گردشگری' },
-};
+const projectData = Object.fromEntries(ITData.projects.map(p=>[p.id,{title:p.name,subtitle:p.code+" · "+p.domain,detail:p.detail}]));
 
 function openProject(id) {
   const data = projectData[id];
