@@ -1444,7 +1444,7 @@ body:has(.sidebar) .sidebar::after{display:none!important;content:none!important
                   <small>فرمت JPG یا PNG، حداکثر ۲ مگابایت</small>
                   <div class="avatar-btns">
                     <button class="btn btn-primary btn-sm" onclick="changeAvatar()"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 7h3l1-2h6l1 2h3v12H5z"/><circle cx="12" cy="13" r="3"/></svg></span> تغییر تصویر</button>
-                    <button class="btn btn-outline btn-sm" onclick="removeAvatar()">🗑️ حذف</button>
+                    <button class="btn btn-outline btn-sm" onclick="removeAvatar()"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> حذف</button>
                   </div>
                 </div>
               </div>
@@ -1949,7 +1949,7 @@ body:has(.sidebar) .sidebar::after{display:none!important;content:none!important
                 <div class="api-key-actions">
                   <button class="api-key-btn" title="کپی" onclick="copyApiKey('irt_live_sk_xxxxxxxx4a2f')">▤</button>
                   <button class="api-key-btn" title="نمایش" onclick="showToast('info','نمایش کلید','کلید کامل در لاگ سیستم ثبت شد.')">◉</button>
-                  <button class="api-key-btn danger" title="حذف" onclick="confirmDeleteKey('کلید اصلی')">🗑️</button>
+                  <button class="api-key-btn danger" title="حذف" onclick="confirmDeleteKey('کلید اصلی')"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></button>
                 </div>
               </div>
 
@@ -1962,7 +1962,7 @@ body:has(.sidebar) .sidebar::after{display:none!important;content:none!important
                 <div class="api-key-actions">
                   <button class="api-key-btn" title="کپی" onclick="copyApiKey('irt_test_sk_xxxxxxxx8b1c')">▤</button>
                   <button class="api-key-btn" title="نمایش" onclick="showToast('info','نمایش کلید','کلید کامل در لاگ سیستم ثبت شد.')">◉</button>
-                  <button class="api-key-btn danger" title="حذف" onclick="confirmDeleteKey('کلید تست')">🗑️</button>
+                  <button class="api-key-btn danger" title="حذف" onclick="confirmDeleteKey('کلید تست')"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></button>
                 </div>
               </div>
 
@@ -1974,7 +1974,7 @@ body:has(.sidebar) .sidebar::after{display:none!important;content:none!important
                 </div>
                 <div class="api-key-actions">
                   <button class="api-key-btn" title="کپی" onclick="copyApiKey('irt_wh_xxxxxxxx9d3e')">▤</button>
-                  <button class="api-key-btn danger" title="حذف" onclick="confirmDeleteKey('کلید وب‌هوک')">🗑️</button>
+                  <button class="api-key-btn danger" title="حذف" onclick="confirmDeleteKey('کلید وب‌هوک')"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span></button>
                 </div>
               </div>
 
@@ -2044,7 +2044,7 @@ body:has(.sidebar) .sidebar::after{display:none!important;content:none!important
                   <strong>غیرفعال‌سازی حساب</strong>
                   <small>حساب شما به‌طور موقت غیرفعال می‌شود و می‌توانید دوباره فعال کنید.</small>
                 </div>
-                <button class="btn btn-outline btn-sm" onclick="deactivateAccount()">⏸️ غیرفعال</button>
+                <button class="btn btn-outline btn-sm" onclick="deactivateAccount()"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> غیرفعال</button>
               </div>
 
               <div class="danger-action">
@@ -2052,7 +2052,7 @@ body:has(.sidebar) .sidebar::after{display:none!important;content:none!important
                   <strong>حذف دائمی حساب کاربری</strong>
                   <small>تمام داده‌ها، پروژه‌ها و اطلاعات شما برای همیشه حذف خواهد شد.</small>
                 </div>
-                <button class="btn btn-danger btn-sm" onclick="openDeleteModal()">🗑️ حذف حساب</button>
+                <button class="btn btn-danger btn-sm" onclick="openDeleteModal()"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span> حذف حساب</button>
               </div>
 
             </div>
@@ -2132,7 +2132,7 @@ overlay.addEventListener('click', () => {
 /* ==================== TOAST ==================== */
 function showToast(type, title, message) {
   const container = document.getElementById('toastContainer');
-  const icons = { success: '✓', error: '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></span>', warning: '!', info: 'ℹ️' };
+  const icons = { success: '✓', error: '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></span>', warning: '!', info: '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v7l4 2"/></svg></span>' };
 
   const toast = document.createElement('div');
   toast.className = `toast ${type}`;
