@@ -359,7 +359,7 @@ body {
   margin-bottom: 20px;
   backdrop-filter: blur(10px);
 }
-.car-badge::before { content: '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 16h14l-1-6H6z"/><path d="M7 10l2-4h6l2 4M7 16v2M17 16v2"/><circle cx="8" cy="16" r="1"/><circle cx="16" cy="16" r="1"/></svg></span>'; }
+.car-badge::before { content:"";width:6px;height:6px;border-radius:50%;background:currentColor; }
 .car-hero h1 {
   font-size: clamp(26px, 4vw, 42px);
   font-weight: 900;
@@ -862,7 +862,7 @@ body {
   overflow: hidden;
 }
 .calc-result::before {
-  content: '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 16h14l-1-6H6z"/><path d="M7 10l2-4h6l2 4M7 16v2M17 16v2"/><circle cx="8" cy="16" r="1"/><circle cx="16" cy="16" r="1"/></svg></span>';
+  content:"";width:6px;height:6px;border-radius:50%;background:currentColor;
   position: absolute;
   top: -20px; left: -20px;
   font-size: 120px;
