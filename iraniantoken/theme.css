@@ -1221,3 +1221,149 @@ body:has(.sidebar) td{border-color:#e5edf2!important;color:#314b61!important}
   body:has(.sidebar) .topbar{padding:11px 15px!important}
   body:has(.sidebar) .page-title h1{font-size:23px!important}
 }
+
+
+/* === FINAL SIDEBAR: CLEAN SOLID WORKSPACE === */
+body:has(.sidebar) .sidebar{
+  width:260px!important;
+  background:#0d2439!important;
+  background-image:none!important;
+  background-repeat:no-repeat!important;
+  background-size:auto!important;
+  border-left:1px solid rgba(255,255,255,.07)!important;
+  box-shadow:-10px 0 30px rgba(5,24,40,.12)!important;
+}
+body:has(.sidebar) .sidebar:before,
+body:has(.sidebar) .sidebar:after{
+  display:none!important;
+  content:none!important;
+  background:none!important;
+}
+body:has(.sidebar) .sidebar-brand{
+  min-height:78px!important;
+  padding:15px 16px!important;
+  background:#102b43!important;
+  border-bottom:1px solid rgba(255,255,255,.08)!important;
+}
+body:has(.sidebar) .sidebar-logo{
+  width:42px!important;
+  height:42px!important;
+  padding:0!important;
+  background:transparent!important;
+  border:0!important;
+  border-radius:10px!important;
+  box-shadow:none!important;
+}
+body:has(.sidebar) .sidebar-logo img{
+  width:42px!important;
+  height:42px!important;
+  object-fit:contain!important;
+}
+body:has(.sidebar) .sidebar-brand-text strong{
+  color:#fff!important;
+  font-size:14px!important;
+  font-weight:800!important;
+}
+body:has(.sidebar) .sidebar-brand-text small{
+  color:rgba(255,255,255,.58)!important;
+  font-size:10px!important;
+}
+body:has(.sidebar) .sidebar-nav{
+  padding:13px 11px 20px!important;
+  gap:4px!important;
+}
+body:has(.sidebar) .nav-section-title{
+  color:rgba(255,255,255,.42)!important;
+  font-size:10px!important;
+  font-weight:700!important;
+  padding:15px 7px 6px!important;
+  border:0!important;
+}
+body:has(.sidebar) .nav-item{
+  min-height:40px!important;
+  padding:8px 10px!important;
+  margin:0!important;
+  border:1px solid transparent!important;
+  border-radius:9px!important;
+  background:transparent!important;
+  color:rgba(255,255,255,.72)!important;
+  box-shadow:none!important;
+  transform:none!important;
+}
+body:has(.sidebar) .nav-item .icon{
+  color:rgba(255,255,255,.52)!important;
+  width:22px!important;
+}
+body:has(.sidebar) .nav-item:hover{
+  background:rgba(255,255,255,.065)!important;
+  border-color:rgba(255,255,255,.055)!important;
+  color:#fff!important;
+}
+body:has(.sidebar) .nav-item:hover .icon{
+  color:rgba(255,255,255,.85)!important;
+}
+body:has(.sidebar) .nav-item.active{
+  background:#1769c2!important;
+  border-color:rgba(255,255,255,.10)!important;
+  color:#fff!important;
+  box-shadow:0 5px 14px rgba(23,105,194,.20)!important;
+}
+body:has(.sidebar) .nav-item.active .icon{color:#fff!important}
+body:has(.sidebar) .nav-parent-row{
+  display:flex!important;
+  align-items:center!important;
+  gap:4px!important;
+  margin:0!important;
+}
+body:has(.sidebar) .nav-parent-row>.nav-item{flex:1!important}
+body:has(.sidebar) .nav-expand{
+  width:34px!important;
+  min-width:34px!important;
+  height:40px!important;
+  padding:0!important;
+  border:1px solid transparent!important;
+  border-radius:8px!important;
+  background:transparent!important;
+  color:rgba(255,255,255,.48)!important;
+  box-shadow:none!important;
+}
+body:has(.sidebar) .nav-expand:hover,
+body:has(.sidebar) .nav-group.open>.nav-parent-row>.nav-expand{
+  background:rgba(255,255,255,.065)!important;
+  color:#fff!important;
+  border-color:rgba(255,255,255,.06)!important;
+}
+body:has(.sidebar) .nav-sub{
+  margin:3px 0 5px!important;
+  padding:0 5px 0 0!important;
+}
+body:has(.sidebar) .nav-sub-inner{
+  padding:2px 0 2px 0!important;
+  border-right:1px solid rgba(255,255,255,.10)!important;
+}
+body:has(.sidebar) .nav-sub a{
+  min-height:34px!important;
+  display:flex!important;
+  align-items:center!important;
+  padding:7px 10px!important;
+  margin:2px 0!important;
+  border:0!important;
+  border-radius:7px!important;
+  background:transparent!important;
+  color:rgba(255,255,255,.56)!important;
+  box-shadow:none!important;
+  font-size:11px!important;
+}
+body:has(.sidebar) .nav-sub a:hover{
+  background:rgba(255,255,255,.055)!important;
+  color:#fff!important;
+}
+body:has(.sidebar) .nav-sub a.active{
+  background:rgba(23,105,194,.28)!important;
+  color:#fff!important;
+}
+body:has(.sidebar) .main{margin-right:260px!important}
+@media(max-width:900px){
+  body:has(.sidebar) .sidebar{width:min(290px,88vw)!important}
+  body:has(.sidebar) .main{margin-right:0!important}
+}
