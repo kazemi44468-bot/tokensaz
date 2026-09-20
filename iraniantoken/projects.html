@@ -1516,7 +1516,7 @@ body:has(.sidebar) .sidebar::after{display:none!important;content:none!important
 
   <!-- TOPBAR -->
   <header class="topbar">
-    <button class="toggle-btn" id="toggleBtn">☰</button>
+    <button class="toggle-btn" id="toggleBtn"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span></button>
     <div class="breadcrumb" id="breadcrumb">
       <span>خانه</span>
       <span>›</span>
@@ -1531,7 +1531,7 @@ body:has(.sidebar) .sidebar::after{display:none!important;content:none!important
     <div class="topbar-actions">
       <button class="icon-btn">◉<span class="dot"></span></button>
       <button class="icon-btn">◌</button>
-      <button class="icon-btn">⚙︎</button>
+      <button class="icon-btn"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="m19 15 2 1-2 3-2-1a8 8 0 0 1-2 1v2h-4v-2a8 8 0 0 1-2-1l-2 1-2-3 2-1a8 8 0 0 1 0-2l-2-1 2-3 2 1a8 8 0 0 1 2-1V6h4v2a8 8 0 0 1 2 1l2-1 2 3-2 1a8 8 0 0 1 0 2z"/></svg></span>︎</button>
     </div>
   </header>
 
@@ -1547,8 +1547,8 @@ body:has(.sidebar) .sidebar::after{display:none!important;content:none!important
           <p>مدیریت، فیلتر و مشاهده جزئیات تمام پروژه‌های ثبت‌شده</p>
         </div>
         <div class="page-actions">
-          <button class="btn btn-outline">📥 خروجی Excel</button>
-          <button class="btn btn-primary">➕ پروژه جدید</button>
+          <button class="btn btn-outline"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 4v11M8 11l4 4 4-4M5 20h14"/></svg></span> خروجی Excel</button>
+          <button class="btn btn-primary"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span> پروژه جدید</button>
         </div>
       </div>
 
@@ -1578,7 +1578,7 @@ body:has(.sidebar) .sidebar::after{display:none!important;content:none!important
         </div>
         <div class="view-toggle">
           <button class="active" data-view="grid" title="نمایش کارتی">▦</button>
-          <button data-view="list" title="نمایش لیستی">☰</button>
+          <button data-view="list" title="نمایش لیستی"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span></button>
         </div>
       </div>
 
@@ -1620,7 +1620,7 @@ body:has(.sidebar) .sidebar::after{display:none!important;content:none!important
             </div>
             <div class="project-card-footer">
               <button class="btn btn-outline btn-sm" onclick="openProject(1)">◉ مشاهده</button>
-              <button class="btn btn-primary btn-sm">✎ ویرایش</button>
+              <button class="btn btn-primary btn-sm"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 20 4-1 10-10a2.8 2.8 0 0 0-4-4L4 15z"/></svg></span> ویرایش</button>
             </div>
           </div>
         </div>
@@ -1660,7 +1660,7 @@ body:has(.sidebar) .sidebar::after{display:none!important;content:none!important
             </div>
             <div class="project-card-footer">
               <button class="btn btn-outline btn-sm" onclick="openProject(2)">◉ مشاهده</button>
-              <button class="btn btn-primary btn-sm">✎ ویرایش</button>
+              <button class="btn btn-primary btn-sm"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 20 4-1 10-10a2.8 2.8 0 0 0-4-4L4 15z"/></svg></span> ویرایش</button>
             </div>
           </div>
         </div>
@@ -1700,7 +1700,7 @@ body:has(.sidebar) .sidebar::after{display:none!important;content:none!important
             </div>
             <div class="project-card-footer">
               <button class="btn btn-outline btn-sm" onclick="openProject(3)">◉ مشاهده</button>
-              <button class="btn btn-primary btn-sm">✎ ویرایش</button>
+              <button class="btn btn-primary btn-sm"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 20 4-1 10-10a2.8 2.8 0 0 0-4-4L4 15z"/></svg></span> ویرایش</button>
             </div>
           </div>
         </div>
@@ -1740,14 +1740,14 @@ body:has(.sidebar) .sidebar::after{display:none!important;content:none!important
             </div>
             <div class="project-card-footer">
               <button class="btn btn-outline btn-sm" onclick="openProject(4)">◉ مشاهده</button>
-              <button class="btn btn-primary btn-sm">✎ ویرایش</button>
+              <button class="btn btn-primary btn-sm"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 20 4-1 10-10a2.8 2.8 0 0 0-4-4L4 15z"/></svg></span> ویرایش</button>
             </div>
           </div>
         </div>
 
         <div class="project-card" data-project="5">
           <div class="project-card-cover red">
-            🏭
+            <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V8l6 4V8l6 4V5h4v15z"/></svg></span>
             <span class="project-card-status paused">متوقف</span>
             <span class="project-card-code">IRT-1403-005</span>
           </div>
@@ -1780,14 +1780,14 @@ body:has(.sidebar) .sidebar::after{display:none!important;content:none!important
             </div>
             <div class="project-card-footer">
               <button class="btn btn-outline btn-sm" onclick="openProject(5)">◉ مشاهده</button>
-              <button class="btn btn-primary btn-sm">✎ ویرایش</button>
+              <button class="btn btn-primary btn-sm"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 20 4-1 10-10a2.8 2.8 0 0 0-4-4L4 15z"/></svg></span> ویرایش</button>
             </div>
           </div>
         </div>
 
         <div class="project-card" data-project="6">
           <div class="project-card-cover">
-            🏨
+            <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 20V4h14v16M8 8h2M14 8h2M8 12h2M14 12h2"/></svg></span>
             <span class="project-card-status done">تکمیل</span>
             <span class="project-card-code">IRT-1403-006</span>
           </div>
@@ -1820,7 +1820,7 @@ body:has(.sidebar) .sidebar::after{display:none!important;content:none!important
             </div>
             <div class="project-card-footer">
               <button class="btn btn-outline btn-sm" onclick="openProject(6)">◉ مشاهده</button>
-              <button class="btn btn-primary btn-sm">✎ ویرایش</button>
+              <button class="btn btn-primary btn-sm"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 20 4-1 10-10a2.8 2.8 0 0 0-4-4L4 15z"/></svg></span> ویرایش</button>
             </div>
           </div>
         </div>
@@ -1847,7 +1847,7 @@ body:has(.sidebar) .sidebar::after{display:none!important;content:none!important
           <p>مدیریت، تخصیص و پایش توکن‌های پروژه‌های مختلف</p>
         </div>
         <div class="page-actions">
-          <button class="btn btn-outline">📥 خروجی</button>
+          <button class="btn btn-outline"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 4v11M8 11l4 4 4-4M5 20h14"/></svg></span> خروجی</button>
           <button class="btn btn-gold">◈ ایجاد توکن جدید</button>
         </div>
       </div>
@@ -2110,7 +2110,7 @@ body:has(.sidebar) .sidebar::after{display:none!important;content:none!important
         <!-- Token 5 -->
         <div class="token-card">
           <div class="token-card-header">
-            <div class="token-coin gold">🏭</div>
+            <div class="token-coin gold"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V8l6 4V8l6 4V5h4v15z"/></svg></span></div>
             <div class="token-card-title">
               <h4>توکن کارخانه فولاد</h4>
               <span class="symbol">$STL · IRT-1403-005</span>
@@ -2158,7 +2158,7 @@ body:has(.sidebar) .sidebar::after{display:none!important;content:none!important
         <!-- Token 6 -->
         <div class="token-card">
           <div class="token-card-header">
-            <div class="token-coin green">🏨</div>
+            <div class="token-coin green"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 20V4h14v16M8 8h2M14 8h2M8 12h2M14 12h2"/></svg></span></div>
             <div class="token-card-title">
               <h4>توکن هتل کیش</h4>
               <span class="symbol">$HTL · IRT-1403-006</span>
@@ -2351,7 +2351,7 @@ body:has(.sidebar) .sidebar::after{display:none!important;content:none!important
 
   <div class="drawer-footer">
     <button class="btn btn-outline">□ دانلود گزارش</button>
-    <button class="btn btn-primary">✎ ویرایش پروژه</button>
+    <button class="btn btn-primary"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 20 4-1 10-10a2.8 2.8 0 0 0-4-4L4 15z"/></svg></span> ویرایش پروژه</button>
   </div>
 </aside>
 
