@@ -1072,7 +1072,7 @@ body {
   align-items: flex-start;
 }
 .tips-list li::before {
-  content: '💡';
+  content: '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M8 14a6 6 0 1 1 8 0c-1 1-1 2-1 4H9c0-2 0-3-1-4Z"/></svg></span>';
   flex-shrink: 0;
 }
 
@@ -1345,7 +1345,7 @@ body {
 
   <!-- TOPBAR -->
   <header class="topbar">
-    <button class="toggle-btn" id="toggleBtn">☰</button>
+    <button class="toggle-btn" id="toggleBtn"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span></button>
     <div class="breadcrumb">
       <a href="dashboard.html">داشبورد</a>
       <span>›</span>
@@ -1479,20 +1479,20 @@ body {
                 <label class="form-label">حوزه فعالیت <span class="required">*</span></label>
                 <select class="form-select" id="f_sector" required>
                   <option value="">انتخاب کنید...</option>
-                  <option value="agriculture">🌾 کشاورزی</option>
-                  <option value="livestock">🐄 دامپروری</option>
+                  <option value="agriculture"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 4C10 4 4 9 4 16c0 3 2 4 4 4 7 0 12-6 12-16Z"/><path d="M4 20c3-4 7-7 12-9"/></svg></span> کشاورزی</option>
+                  <option value="livestock"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M8 9 6 6M16 9l2-3M9 14h.01M15 14h.01M10 17h4"/></svg></span> دامپروری</option>
                   <option value="construction">🏗️ ساختمانی</option>
-                  <option value="industry">🏭 صنعتی</option>
-                  <option value="technology">💻 فناوری</option>
-                  <option value="energy">⚡ انرژی</option>
+                  <option value="industry"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V8l6 4V8l6 4V5h4v15z"/><path d="M8 16h2M13 16h2M17 16h2"/></svg></span> صنعتی</option>
+                  <option value="technology"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="12" rx="2"/><path d="M9 21h6M12 17v4"/></svg></span> فناوری</option>
+                  <option value="energy"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13 2-8 12h6l-1 8 8-12h-6z"/></svg></span> انرژی</option>
                   <option value="services">🛎️ خدماتی</option>
-                  <option value="tourism">🏨 گردشگری</option>
-                  <option value="knowledge">🎓 دانش‌بنیان</option>
-                  <option value="realestate">🏢 دارایی و املاک</option>
-                  <option value="culture">🎭 فرهنگی</option>
+                  <option value="tourism"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 20V4h10v16M15 8h4v12M8 7h4M8 11h4M8 15h4M17 12h1M17 16h1"/></svg></span> گردشگری</option>
+                  <option value="knowledge"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3 9 9-5 9 5-9 5z"/><path d="M7 12v4c3 2 7 2 10 0v-4M21 9v6"/></svg></span> دانش‌بنیان</option>
+                  <option value="realestate"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 20V4h10v16M15 8h4v12M8 7h4M8 11h4M8 15h4M17 12h1M17 16h1"/></svg></span> دارایی و املاک</option>
+                  <option value="culture"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 5c4 2 10 2 14 0v8c-4 5-10 5-14 0z"/><path d="M8 10h2M14 10h2"/></svg></span> فرهنگی</option>
                   <option value="urban">🏙️ شهری</option>
-                  <option value="cooperative">🤝 تعاونی</option>
-                  <option value="other">📌 سایر</option>
+                  <option value="cooperative"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0M16 11a3 3 0 0 1 5 2v7M15 6a3 3 0 0 1 4 3"/></svg></span> تعاونی</option>
+                  <option value="other"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 10c0 5-7 10-7 10S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2"/></svg></span> سایر</option>
                 </select>
                 <div class="error-message" id="e_sector">⚠ حوزه فعالیت را انتخاب کنید.</div>
               </div>
@@ -1533,7 +1533,7 @@ body {
               <label class="form-label">توضیحات پروژه <span class="required">*</span></label>
               <textarea class="form-textarea" id="f_description" placeholder="توضیح مختصری از پروژه، اهداف و برنامه‌ها..." required></textarea>
               <div class="error-message" id="e_description">⚠ توضیحات پروژه را وارد کنید (حداقل ۲۰ کاراکتر).</div>
-              <div class="form-hint">💡 توضیح واضح و دقیق به ارزیابان و سرمایه‌گذاران کمک می‌کند.</div>
+              <div class="form-hint"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M8 14a6 6 0 1 1 8 0c-1 1-1 2-1 4H9c0-2 0-3-1-4Z"/></svg></span> توضیح واضح و دقیق به ارزیابان و سرمایه‌گذاران کمک می‌کند.</div>
             </div>
 
           </div>
@@ -1551,27 +1551,27 @@ body {
               <label class="form-label">مدل توکنیزه‌سازی <span class="required">*</span></label>
               <div class="option-cards" id="tokenModels">
                 <div class="option-card" data-value="asset" onclick="selectOption(this, 'tokenModel')">
-                  <span class="option-card-icon">💎</span>
+                  <span class="option-card-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 7 7-7 11L5 10z"/><path d="M5 10h14M9 4l3 6 3-6"/></svg></span></span>
                   <div class="option-card-title">دارایی‌محور</div>
                   <div class="option-card-desc">توکن به دارایی فیزیکی مشخصی مرتبط است</div>
                 </div>
                 <div class="option-card" data-value="revenue" onclick="selectOption(this, 'tokenModel')">
-                  <span class="option-card-icon">💰</span>
+                  <span class="option-card-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="12" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M7 9h.01M17 15h.01"/></svg></span></span>
                   <div class="option-card-title">درآمدی</div>
                   <div class="option-card-desc">توکن به جریان درآمد مشخصی مرتبط است</div>
                 </div>
                 <div class="option-card" data-value="participatory" onclick="selectOption(this, 'tokenModel')">
-                  <span class="option-card-icon">🤝</span>
+                  <span class="option-card-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0M16 11a3 3 0 0 1 5 2v7M15 6a3 3 0 0 1 4 3"/></svg></span></span>
                   <div class="option-card-title">مشارکتی</div>
                   <div class="option-card-desc">توکن نماینده مشارکت در پروژه است</div>
                 </div>
                 <div class="option-card" data-value="right" onclick="selectOption(this, 'tokenModel')">
-                  <span class="option-card-icon">📜</span>
+                  <span class="option-card-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h5M9 12h6M9 16h6"/></svg></span></span>
                   <div class="option-card-title">حق‌محور</div>
                   <div class="option-card-desc">توکن نماینده حق قراردادی است</div>
                 </div>
                 <div class="option-card" data-value="product" onclick="selectOption(this, 'tokenModel')">
-                  <span class="option-card-icon">📦</span>
+                  <span class="option-card-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 7 8-4 8 4v10l-8 4-8-4z"/><path d="m4 7 8 4 8-4M12 11v10"/></svg></span></span>
                   <div class="option-card-title">محصول‌محور</div>
                   <div class="option-card-desc">توکن با محصول یا ظرفیت تولید مرتبط است</div>
                 </div>
@@ -1581,12 +1581,12 @@ body {
                   <div class="option-card-desc">توکن نماینده اعتبار یا حق خدمت است</div>
                 </div>
                 <div class="option-card" data-value="membership" onclick="selectOption(this, 'tokenModel')">
-                  <span class="option-card-icon">🎫</span>
+                  <span class="option-card-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16v4a2 2 0 0 0 0 4v2H4v-2a2 2 0 0 0 0-4z"/><path d="M12 8v8"/></svg></span></span>
                   <div class="option-card-title">عضویت</div>
                   <div class="option-card-desc">توکن نماینده عضویت یا سطح دسترسی</div>
                 </div>
                 <div class="option-card" data-value="hybrid" onclick="selectOption(this, 'tokenModel')">
-                  <span class="option-card-icon">🔗</span>
+                  <span class="option-card-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 13a4 4 0 0 0 6 0l2-2a4 4 0 0 0-6-6l-1 1M14 11a4 4 0 0 0-6 0l-2 2a4 4 0 0 0 6 6l1-1"/></svg></span></span>
                   <div class="option-card-title">ترکیبی</div>
                   <div class="option-card-desc">ترکیب چند مدل در یک پروژه</div>
                 </div>
@@ -1650,7 +1650,7 @@ body {
             <div class="form-group">
               <label class="form-label">سند مالکیت / مدارک اصلی <span class="required">*</span></label>
               <div class="upload-zone" onclick="document.getElementById('fileInput1').click()">
-                <div class="upload-zone-icon">📄</div>
+                <div class="upload-zone-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h5M9 12h6M9 16h6"/></svg></span></div>
                 <div class="upload-zone-title">سند را اینجا رها کنید یا کلیک کنید</div>
                 <div class="upload-zone-desc">فرمت‌های PDF، JPG، PNG · حداکثر ۲۰ مگابایت</div>
                 <button class="btn btn-outline btn-sm">انتخاب فایل</button>
@@ -1662,7 +1662,7 @@ body {
             <div class="form-group">
               <label class="form-label">مجوزها و تأییدیه‌ها</label>
               <div class="upload-zone" onclick="document.getElementById('fileInput2').click()">
-                <div class="upload-zone-icon">📋</div>
+                <div class="upload-zone-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 4V3h6v1M9 9h6M9 13h6M9 17h4"/></svg></span></div>
                 <div class="upload-zone-title">مجوزها را اینجا بارگذاری کنید</div>
                 <div class="upload-zone-desc">مجوز بهره‌برداری، تأییدیه‌های دولتی و ...</div>
                 <button class="btn btn-outline btn-sm">انتخاب فایل</button>
@@ -1674,7 +1674,7 @@ body {
             <div class="form-group">
               <label class="form-label">گزارش‌های کارشناسی</label>
               <div class="upload-zone" onclick="document.getElementById('fileInput3').click()">
-                <div class="upload-zone-icon">📊</div>
+                <div class="upload-zone-icon"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 19V9M10 19V5M15 19v-7M20 19V3"/></svg></span></div>
                 <div class="upload-zone-title">گزارش‌ها را بارگذاری کنید</div>
                 <div class="upload-zone-desc">ارزیابی، گزارش فنی، صورت‌های مالی</div>
                 <button class="btn btn-outline btn-sm">انتخاب فایل</button>
@@ -1696,7 +1696,7 @@ body {
             </div>
 
             <div class="form-hint" style="background: rgba(59,130,246,0.06); padding: 14px; border-radius: 12px; border: 1px solid rgba(59,130,246,0.15);">
-              <span>💡</span>
+              <span><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M8 14a6 6 0 1 1 8 0c-1 1-1 2-1 4H9c0-2 0-3-1-4Z"/></svg></span></span>
               <span>می‌توانید بعداً اسناد بیشتری اضافه کنید. اما اسناد مالکیت و مجوزهای اصلی برای تأیید ضروری هستند.</span>
             </div>
 
@@ -1715,7 +1715,7 @@ body {
               <div class="form-group">
                 <label class="form-label">ارزش پایه پروژه <span class="required">*</span></label>
                 <input type="number" class="form-input" id="f_baseValue" placeholder="مثلاً: 12500000000" required>
-                <div class="form-hint">💰 ارزش کل پروژه به تومان</div>
+                <div class="form-hint"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="12" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M7 9h.01M17 15h.01"/></svg></span> ارزش کل پروژه به تومان</div>
                 <div class="error-message" id="e_baseValue">⚠ ارزش پایه را وارد کنید.</div>
               </div>
               <div class="form-group">
@@ -1746,12 +1746,12 @@ body {
               <div class="form-group">
                 <label class="form-label">سود خالص سالانه</label>
                 <input type="text" class="form-input" id="f_netProfit" placeholder="محاسبه خودکار" readonly style="background: var(--bg); font-weight: 700; color: var(--success);">
-                <div class="form-hint">💰 به‌صورت خودکار محاسبه می‌شود</div>
+                <div class="form-hint"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="12" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M7 9h.01M17 15h.01"/></svg></span> به‌صورت خودکار محاسبه می‌شود</div>
               </div>
               <div class="form-group">
                 <label class="form-label">دوره بازگشت سرمایه (سال)</label>
                 <input type="text" class="form-input" id="f_payback" placeholder="محاسبه خودکار" readonly style="background: var(--bg); font-weight: 700; color: var(--primary);">
-                <div class="form-hint">⏱ بر اساس سود خالص</div>
+                <div class="form-hint"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg></span> بر اساس سود خالص</div>
               </div>
             </div>
 
@@ -1798,14 +1798,14 @@ body {
               <div class="form-group">
                 <label class="form-label">ارزش هر توکن (محاسبه خودکار)</label>
                 <input type="text" class="form-input" id="f_tokenValue" placeholder="محاسبه خودکار" readonly style="background: var(--bg); font-weight: 700; color: var(--accent-dark);">
-                <div class="form-hint">💰 ارزش پایه ÷ تعداد توکن</div>
+                <div class="form-hint"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="12" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M7 9h.01M17 15h.01"/></svg></span> ارزش پایه ÷ تعداد توکن</div>
               </div>
               <div class="form-group">
                 <label class="form-label">امکان انتقال</label>
                 <select class="form-select" id="f_transferable">
                   <option value="yes">✅ قابل انتقال</option>
-                  <option value="no">❌ غیرقابل انتقال</option>
-                  <option value="conditional">🔒 مشروط</option>
+                  <option value="no"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></span> غیرقابل انتقال</option>
+                  <option value="conditional"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span> مشروط</option>
                 </select>
               </div>
             </div>
@@ -1860,7 +1860,7 @@ body {
             <div class="review-section">
               <div class="review-section-header">
                 <h4>▤ اطلاعات پایه</h4>
-                <button class="edit-btn" onclick="goToStep(1)">✎ ویرایش</button>
+                <button class="edit-btn" onclick="goToStep(1)"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 20 4-1 10-10a2.8 2.8 0 0 0-4-4L4 15z"/><path d="m13 6 4 4"/></svg></span> ویرایش</button>
               </div>
               <div class="review-grid">
                 <div class="review-item">
@@ -1893,8 +1893,8 @@ body {
             <!-- دارایی پایه -->
             <div class="review-section">
               <div class="review-section-header">
-                <h4>💎 دارایی پایه</h4>
-                <button class="edit-btn" onclick="goToStep(2)">✎ ویرایش</button>
+                <h4><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 7 7-7 11L5 10z"/><path d="M5 10h14M9 4l3 6 3-6"/></svg></span> دارایی پایه</h4>
+                <button class="edit-btn" onclick="goToStep(2)"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 20 4-1 10-10a2.8 2.8 0 0 0-4-4L4 15z"/><path d="m13 6 4 4"/></svg></span> ویرایش</button>
               </div>
               <div class="review-grid">
                 <div class="review-item">
@@ -1920,7 +1920,7 @@ body {
             <div class="review-section">
               <div class="review-section-header">
                 <h4>▤ اسناد بارگذاری‌شده</h4>
-                <button class="edit-btn" onclick="goToStep(3)">✎ ویرایش</button>
+                <button class="edit-btn" onclick="goToStep(3)"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 20 4-1 10-10a2.8 2.8 0 0 0-4-4L4 15z"/><path d="m13 6 4 4"/></svg></span> ویرایش</button>
               </div>
               <div class="review-grid">
                 <div class="review-item">
@@ -1933,8 +1933,8 @@ body {
             <!-- مدل اقتصادی -->
             <div class="review-section">
               <div class="review-section-header">
-                <h4>💰 مدل اقتصادی</h4>
-                <button class="edit-btn" onclick="goToStep(4)">✎ ویرایش</button>
+                <h4><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="12" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M7 9h.01M17 15h.01"/></svg></span> مدل اقتصادی</h4>
+                <button class="edit-btn" onclick="goToStep(4)"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 20 4-1 10-10a2.8 2.8 0 0 0-4-4L4 15z"/><path d="m13 6 4 4"/></svg></span> ویرایش</button>
               </div>
               <div class="review-grid">
                 <div class="review-item">
@@ -1960,7 +1960,7 @@ body {
             <div class="review-section">
               <div class="review-section-header">
                 <h4>◈ مدل توکن</h4>
-                <button class="edit-btn" onclick="goToStep(5)">✎ ویرایش</button>
+                <button class="edit-btn" onclick="goToStep(5)"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 20 4-1 10-10a2.8 2.8 0 0 0-4-4L4 15z"/><path d="m13 6 4 4"/></svg></span> ویرایش</button>
               </div>
               <div class="review-grid">
                 <div class="review-item">
@@ -2117,7 +2117,7 @@ body {
 
         <!-- Tips -->
         <div class="tips-card">
-          <div class="tips-card-title">💡 راهنما</div>
+          <div class="tips-card-title"><span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M8 14a6 6 0 1 1 8 0c-1 1-1 2-1 4H9c0-2 0-3-1-4Z"/></svg></span> راهنما</div>
           <ul class="tips-list" id="tipsList">
             <li>اطلاعات پایه باید دقیق و مطابق واقعیت باشد.</li>
             <li>مدل توکنیزه‌سازی را بر اساس ماهیت پروژه انتخاب کنید.</li>
@@ -2169,7 +2169,7 @@ body {
       </div>
 
       <p style="font-size: 12px; color: var(--success); font-weight: 700;">
-        ⏱ زمان تقریبی اعتبارسنجی: ۳ تا ۷ روز کاری
+        <span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg></span> زمان تقریبی اعتبارسنجی: ۳ تا ۷ روز کاری
       </p>
     </div>
     <div class="modal-footer">
@@ -2222,7 +2222,7 @@ overlay.addEventListener('click', () => {
 /* ==================== TOAST ==================== */
 function showToast(type, title, message) {
   const container = document.getElementById('toastContainer');
-  const icons = { success: '✓', error: '✗', warning: '!', info: 'ℹ' };
+  const icons = { success: '✓', error: '✗', warning: '!', info: '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 11v5M12 8h.01"/></svg></span>' };
   const toast = document.createElement('div');
   toast.className = `toast ${type}`;
   toast.innerHTML = `
@@ -2486,11 +2486,11 @@ function handleFileUpload(input, targetId) {
     formData.files[step].push({ id, name: file.name, size: file.size });
 
     const ext = file.name.split('.').pop().toLowerCase();
-    let icon = '📄';
+    let icon = '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h5M9 12h6M9 16h6"/></svg></span>';
     if (['jpg', 'jpeg', 'png', 'gif', 'webp'].includes(ext)) icon = '🖼️';
-    else if (['xlsx', 'xls', 'csv'].includes(ext)) icon = '📊';
-    else if (['docx', 'doc'].includes(ext)) icon = '📝';
-    else if (ext === 'pdf') icon = '📄';
+    else if (['xlsx', 'xls', 'csv'].includes(ext)) icon = '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 19V9M10 19V5M15 19v-7M20 19V3"/></svg></span>';
+    else if (['docx', 'doc'].includes(ext)) icon = '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 20 4-1 10-10a2.8 2.8 0 0 0-4-4L4 15z"/><path d="m13 6 4 4"/></svg></span>';
+    else if (ext === 'pdf') icon = '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h5M9 12h6M9 16h6"/></svg></span>';
 
     const div = document.createElement('div');
     div.className = 'uploaded-file';
@@ -2667,7 +2667,7 @@ function closeSubmitModal() {
 function submitProject() {
   const btn = event.target;
   btn.disabled = true;
-  btn.innerHTML = '⏳ در حال ثبت...';
+  btn.innerHTML = '<span class="it-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg></span> در حال ثبت...';
 
   setTimeout(() => {
     closeSubmitModal();
